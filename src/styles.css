@@ -4,3 +4,8 @@ body {
   color:navy;
   background-color:honeydew;
 }
+
+.st {
+  text-decoration:line-through;
+  color:#2A2A2A;
+}
