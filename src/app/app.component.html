@@ -55,14 +55,14 @@
             <small>
               VMware, Inc. - VMware Virtual Platform<br>
               Processor(s): 2<br>
-              GenuineIntel - Intel(R) Xeon(R) CPU E5-2680 v2 &#64; 2.80GHz<br>
-              GenuineIntel - Intel(R) Xeon(R) CPU E5-2680 v2 &#64; 2.80GHz<br>
+              GenuineIntel - Intel&#174; Xeon&#174; CPU E5-2680 v2 &#64; 2.80GHz<br>
+              GenuineIntel - Intel&#174; Xeon&#174; CPU E5-2680 v2 &#64; 2.80GHz<br>
               Total RAM Memory: 33,554,432K<br>
               Microsoft Windows Server 2012 R2 Standard - 6.3.9600 &#123; spk:0 &#125;<br>
               C: - Local Fixed Disk - NTFS &#123; Size: 59.6GB - Free Space: 12.9GB / 21.7% &#125;<br>
               IP(s): &#123; ::1, 10.1.10.54 &#125;<br>
               Runtime: v4.0.30319<br>
-              Temp Directory: c:&92;windows&92;temp&92;<br>
+              Temp Directory: c:\windows\temp\<br>
               IsProd Environment: False<br>
               DB Instance Name: itdev
             </small>
@@ -81,82 +81,12 @@
     </div>
   </div>
 
-  <div class="container">
-    <h3>Update Report</h3>
-    Added:
-    <ul>
-      <li>Bootstrap<br>
-      <span class="small text-success">&nbsp;&nbsp;&nbsp;No problems</span></li>
-      <li>CSS Theme<br>
-      <span class="small text-success">&nbsp;&nbsp;&nbsp;Looks good</span></li>
-      <li>Unfilled table with proper number of columns<br>
-      <span class="small text-warning">&nbsp;&nbsp;&nbsp;It's a start, at least</span></li>
-    </ul>
-    In Progress:
-    <ul>
-      <li>Working Navs<br>
-      <span class="small text-success">&nbsp;&nbsp;&nbsp;Navs in place</span><br>
-      <span class="small text-warning">&nbsp;&nbsp;&nbsp;No links/popups implemented</span></li>
-      <li>Table Page Switcher<br>
-      <span class="small text-success">&nbsp;&nbsp;&nbsp;Buttons in place</span><br>
-      <span class="small text-warning">&nbsp;&nbsp;&nbsp;No alt. pages to switch to</span></li>
-      <li>Page Layout</li>
-    </ul>
-    To Do:
-    <ul>
-      <li>Server Info Dropdown<br>
-      <span class="small text-danger"></span></li>
-      <li>Table Data<br>
-      <span class="small text-danger">&nbsp;&nbsp;&nbsp;Don't know how to get the data</span><br>
-      <span class="small text-danger">&nbsp;&nbsp;&nbsp;Don't know how to make table update rows and data</span></li>
-      <li>Form for Table Search<br>
-      <span class="small text-success">&nbsp;&nbsp;&nbsp;Comments on what's needed written in code</span><br>
-      <span class="small text-danger">&nbsp;&nbsp;&nbsp;Forms won't cooperate with me</span></li>
-    </ul>
-    <br>
-  </div>
-
   <div class="d-flex flex-wrap justify-content-center">
-    <form>
-      <!--Form Goes Here-->
-      <!--
-        Process:
-          Dropdown
-            Contains
-            Begins With
-            Ends With
-          Search Box
-        Trace:
-          Dropdown
-            Contains
-            Begins With
-            Ends With
-          Search Box
-        Environment:
-          Dropdown
-            Contains
-            Begins With
-            Ends With
-          Search Box
-        System:
-          Dropdown
-        Include:
-          Dropdown
-            All
-            Errors
-            Informational
-        <LINE BREAK>
-        From:
-          Date Select
-        To:
-          Date Select
-        Refresh Page:
-          Number Input
-        Lines/Page:
-          Number Input
-        Reload Button
-      -->
-    </form>
+    <div class="d-flex flex-wrap">
+      <form>
+        <p>Form Goes Here</p>
+      </form>
+    </div>
 
     <div class="d-flex flex-wrap justify-content-center">
       <span id="ctl00_contentPlaceHolder_lblTotalRows" class="label_left">|&nbsp;Total&nbsp;Rows:&nbsp;<b>445</b>&nbsp;|&nbsp;Page:&nbsp;<b>1</b>&nbsp;of&nbsp;<b>18</b>&nbsp;|</span>&nbsp;&nbsp;&nbsp;
@@ -227,5 +157,57 @@
         </tr>
       </tbody>
     </table>
+  </div>
+
+  <br>
+
+  <div class="container" style="text-align: left">
+    <h3>Update Report</h3>
+    <div class="d-flex flex-wrap justify-content-flex-start">
+      <div class="card border-success mb-3" style="max-width: 20rem;">
+        <div class="card-header">Added:</div>
+        <div class="card-body">
+          <ul>
+            <li>Bootstrap<br>
+            <span class="small text-success">No problems</span></li>
+            <li>CSS Theme<br>
+            <span class="small text-success">Looks good</span></li>
+            <li>Unfilled table with proper number of columns<br>
+            <span class="small text-warning">It's a start, at least</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card border-warning mb-3" style="max-width: 20rem;">
+        <div class="card-header">In Progress:</div>
+        <div class="card-body">
+          <ul>
+            <li>Working Navs<br>
+            <span class="small text-success">Navs in place</span><br>
+            <span class="small text-warning">No links/popups implemented</span></li>
+            <li>Table Page Switcher<br>
+            <span class="small text-success">Buttons in place</span><br>
+            <span class="small text-warning">No alt. pages to switch to</span></li>
+            <li>Page Layout</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card border-danger mb-3" style="max-width: 20rem;">
+        <div class="card-header">To Do:</div>
+        <div class="card-body">
+          <ul>
+            <li>Server Info Dropdown<br>
+            <span class="small text-danger"></span></li>
+            <li>Table Data<br>
+            <span class="small text-danger">Don't know how to get the data</span><br>
+            <span class="small text-danger">Don't know how to make table update rows and data</span></li>
+            <li>Form for Table Search<br>
+            <span class="small text-success">Comments on what's needed written in code</span><br>
+            <span class="small text-danger">Forms won't cooperate with me</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
