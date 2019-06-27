@@ -38,44 +38,86 @@
 <div class="container">
   <div class="jumbotron">
     <h1>HAL <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/HAL9000.svg/1024px-HAL9000.svg.png" width="35" height="35"></h1>
-  </div>
-
-  <div class="container">
-    <h3>Status</h3>
-    <ul>
-      <li>Bootstrap Implemented!</li>
-      <li>CSS Theme Added!</li>
-    </ul>
-    <br>
+    <p class="small text-info">Insert Server/Service Info Dropdown Here</p>
   </div>
 
   <div class="container">
     <h3>Update Report</h3>
     Added:
     <ul>
-      <li>Unfilled table with proper number of rows</li>
+      <li>Bootstrap<br>
+      <span class="small text-success">&nbsp;&nbsp;&nbsp;No problems</span></li>
+      <li>CSS Theme<br>
+      <span class="small text-success">&nbsp;&nbsp;&nbsp;Looks good</span></li>
+      <li>Unfilled table with proper number of columns<br>
+      <span class="small text-warning">&nbsp;&nbsp;&nbsp;It's a start, at least</span></li>
     </ul>
     In Progress:
     <ul>
-      <li>Working Navs</li>
-      <li>Table Page Switcher</li>
+      <li>Working Navs<br>
+      <span class="small text-success">&nbsp;&nbsp;&nbsp;Navs in place</span><br>
+      <span class="small text-warning">&nbsp;&nbsp;&nbsp;No links/popups implemented</span></li>
+      <li>Table Page Switcher<br>
+      <span class="small text-success">&nbsp;&nbsp;&nbsp;Buttons in place</span><br>
+      <span class="small text-warning">&nbsp;&nbsp;&nbsp;No alt. pages to switch to</span></li>
+      <li>Page Layout</li>
     </ul>
     To Do:
     <ul>
-      <li>Server Info Dropdown</li>
-      <li>Table Data</li>
-      <li>Form for table search</li>
+      <li>Server Info Dropdown<br>
+      <span class="small text-danger"></span></li>
+      <li>Table Data<br>
+      <span class="small text-danger">&nbsp;&nbsp;&nbsp;Don't know how to get the data</span></li>
+      <li>Form for Table Search<br>
+      <span class="small text-danger">&nbsp;&nbsp;&nbsp;Forms won't cooperate with me</span></li>
     </ul>
     <br>
   </div>
 
-  <div class="container">
+  <div class="d-flex flex-wrap justify-content-center">
     <form>
       <!--Form Goes Here-->
+      <!--
+        Process:
+          Dropdown
+            Contains
+            Begins With
+            Ends With
+          Search Box
+        Trace:
+          Dropdown
+            Contains
+            Begins With
+            Ends With
+          Search Box
+        Environment:
+          Dropdown
+            Contains
+            Begins With
+            Ends With
+          Search Box
+        System:
+          Dropdown
+        Include:
+          Dropdown
+            All
+            Errors
+            Informational
+        <LINE BREAK>
+        From:
+          Date Select
+        To:
+          Date Select
+        Refresh Page:
+          Number Input
+        Lines/Page:
+          Number Input
+        Reload Button
+      -->
     </form>
 
-    <div>
-      <span id="ctl00_contentPlaceHolder_lblTotalRows" class="label_left">|&nbsp; Total Rows: <b>445</b> &nbsp;|&nbsp; Page:&nbsp;<b>1</b>&nbsp;of&nbsp;<b>18</b> &nbsp;|</span>
+    <div class="d-flex flex-wrap justify-content-center">
+      <span id="ctl00_contentPlaceHolder_lblTotalRows" class="label_left">|&nbsp;Total&nbsp;Rows:&nbsp;<b>445</b>&nbsp;|&nbsp;Page:&nbsp;<b>1</b>&nbsp;of&nbsp;<b>18</b>&nbsp;|</span>&nbsp;&nbsp;&nbsp;
       <ul class="pagination pagination-sm">
         <li class="page-item">
           <a class="page-link" href="#">&lt;&lt;</a>
