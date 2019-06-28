@@ -35,7 +35,7 @@
   </div>
 </nav>
 
-<div class="container">
+<div class="container" style="margin-bottom: 8rem">
   <div class="jumbotron">
     <h1 style="text-align: center">HAL <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/HAL9000.svg/1024px-HAL9000.svg.png" width="35" height="35"></h1>
     <p></p>
@@ -83,14 +83,14 @@
 
   <div class="d-flex flex-wrap justify-content-center">
     <div class="d-flex flex-wrap">
-      <div class="card border-secondary mb-3">
+      <div class="card border-secondary mb-3" style="min-width: 47rem;">
         <div class="card-header">Set Search Criteria</div>
         <div class="card-body">
           <form>
             <table class="table table-hover">
               <tbody>
                 <tr>
-                  <td>
+                  <td colspan="2" style="width:22.2%">
                     <label class="col-form-label col-form-label-sm">Process:&nbsp;</label>
                     <div class="form-group">
                       <div class="input-group mb-3">
@@ -103,7 +103,7 @@
                       </div>
                     </div>
                   </td>
-                  <td>
+                  <td colspan="2" style="width:22.2%">
                     <label class="col-form-label col-form-label-sm">Trace:&nbsp;</label>
                     <div class="form-group">
                       <div class="input-group mb-3">
@@ -116,7 +116,7 @@
                       </div>
                     </div>
                   </td>
-                  <td>
+                  <td colspan="2" style="width:22.2%">
                     <label class="col-form-label col-form-label-sm">Environment:&nbsp;</label>
                     <div class="form-group">
                       <div class="input-group mb-3">
@@ -129,7 +129,7 @@
                       </div>
                     </div>
                   </td>
-                  <td>
+                  <td colspan="2" style="width:22.2%">
                     <label class="col-form-label col-form-label-sm">System:</label>
                     <select class="form-control form-control-sm" id="SystSelect">
 	                    <option selected="selected" value="">All</option>
@@ -180,32 +180,48 @@
 	                    <option value="AGENCYMGMT">Agency Management</option>
                     </select>
                   </td>
-                  <td>
+                  <td style="width:11.2%">
                     <label class="col-form-label col-form-label-sm">Include:</label>
                       <select class="form-control form-control-sm" id="IncluSelect">
 	                      <option selected="selected" value="">All</option>
 	                      <option value="Y">Errors</option>
 	                      <option value="N">Informational</option>
                       </select>
-                    </td>
+                  </td>
                 </tr>
                 <tr>
-                  <td>[insert "From Date" select]</td>
-                  <td>[insert "To Date" select]</td>
-                  <td>
-                    <div class="form-group">
+                  <td style="width:11.1%">
+                  </td>
+                  <td colspan="2" style="width:22.2%">
+                    <div class="form-group d-flex flex-wrap justify-content-center">
+                      <label class="col-form-label col-form-label-sm" for="inputSmall">From:</label>
+                      <input class="form-control form-control-sm" type="text" placeholder="30" id="PageRef">
+                    </div>
+                  </td>
+                  <td colspan="2" style="width:22.2%">
+                    <div class="form-group d-flex flex-wrap justify-content-center">
+                      <label class="col-form-label col-form-label-sm" for="inputSmall">To:</label>
+                      <input class="form-control form-control-sm" type="text" placeholder="30" id="PageRef">
+                    </div>
+                  </td>
+                  <td colspan="1" style="width:11.1%">
+                    <div class="form-group d-flex flex-wrap justify-content-center">
                       <label class="col-form-label col-form-label-sm" for="inputSmall">Refresh Page:</label>
                       <input class="form-control form-control-sm" type="text" placeholder="30" id="PageRef">
                     </div>
                   </td>
-                  <td>
-                    <div class="form-group">
-                      <label class="col-form-label col-form-label-sm" for="inputSmall">Lines/Page</label>
-                      <input class="form-control form-control-sm" type="text" placeholder="20" id="LPage">
+                  <td style="width:11.1%">
+                    <div class="form-group d-flex flex-wrap justify-content-center">
+                      <label class="col-form-label col-form-label-sm" for="inputSmall">Lines/Page:</label>
+                      <input class="form-control form-control-sm" type="text" placeholder="" id="LPage">
                     </div>
                   </td>
-                  <td>
-                    <button type="button" class="btn btn-secondary btn-sm">Reload</button>
+                  <td style="width:11.2%">
+                    <div class="d-flex flex-wrap justify-content-center" style="margin-top:40%">
+                      <button type="button" class="btn btn-secondary btn-sm">Reload</button>
+                    </div>
+                  </td>
+                  <td style="width:11.1%">
                   </td>
                 </tr>
               </tbody>
@@ -233,7 +249,7 @@
       </ul>
     </div>
 
-    <table class="table table-hover">
+    <table class="table table-hover" style="min-width: 47rem;">
       <thead>
         <tr class="table-primary">
           <th scope="col">System</th>
@@ -290,22 +306,22 @@
 
   <div class="container" style="text-align: left">
     <h3>Update Report</h3>
-    <div class="d-flex flex-wrap justify-content-flex-start">
-      <div class="card border-success mb-3" style="max-width: 20rem;">
+    <div class="d-flex flex-wrap justify-content-center">
+      <div class="card border-success mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
         <div class="card-header">Added:</div>
         <div class="card-body">
           <ul>
-            <li>Bootstrap<br>
-            <span class="small text-success">No problems</span></li>
-            <li>CSS Theme<br>
-            <span class="small text-success">Looks good</span></li>
-            <li>Unfilled table with proper number of columns<br>
-            <span class="small text-warning">It's a start, at least</span></li>
+            <li>Bootstrap</li>
+            <li>CSS Theme</li>
+            <li>Table<br>
+            <span class="small text-success">Correct number of columns</span><br>
+            <span class="small text-warning">Unfilled</span></li>
+            <li>Page Layout</li>
           </ul>
         </div>
       </div>
 
-      <div class="card border-warning mb-3" style="max-width: 20rem;">
+      <div class="card border-warning mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
         <div class="card-header">In Progress:</div>
         <div class="card-body">
           <ul>
@@ -315,23 +331,23 @@
             <li>Table Page Switcher<br>
             <span class="small text-success">Buttons in place</span><br>
             <span class="small text-warning">No alt. pages to switch to</span></li>
-            <li>Page Layout</li>
+            <li>Server Info Dropdown<br>
+            <span class="small text-success">Cards in place</span><br>
+            <span class="small text-warning">Some info filled</span><br>
+            <span class="small text-danger">Dropdown process not cooperating</span></li>
+            <li>Form for Table Search<br>
+            <span class="small text-warning">Date selectors need implementing</span></li>
           </ul>
         </div>
       </div>
 
-      <div class="card border-danger mb-3" style="max-width: 20rem;">
+      <div class="card border-danger mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
         <div class="card-header">To Do:</div>
         <div class="card-body">
           <ul>
-            <li>Server Info Dropdown<br>
-            <span class="small text-danger"></span></li>
             <li>Table Data<br>
             <span class="small text-danger">Don't know how to get the data</span><br>
             <span class="small text-danger">Don't know how to make table update rows and data</span></li>
-            <li>Form for Table Search<br>
-            <span class="small text-success">Comments on what's needed written in code</span><br>
-            <span class="small text-danger">Forms won't cooperate with me</span></li>
           </ul>
         </div>
       </div>
