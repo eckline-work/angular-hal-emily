@@ -35,48 +35,54 @@
   </div>
 </nav>
 
-<div class="container" style="margin-bottom: 8rem">
+<div class="container" style="margin-bottom: 8rem;">
   <div class="jumbotron">
     <h1 style="text-align: center">HAL <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/HAL9000.svg/1024px-HAL9000.svg.png" width="35" height="35"></h1>
-    <p></p>
-    <div class="row flex-wrap" id="SI">
-      <div class="list-group col-lg-4">
-        <a href="#" class="list-group-item list-group-item-action">Current Date:</a>
-        <a href="#" class="list-group-item list-group-item-action">Application Started:</a>
-        <a href="#" class="list-group-item list-group-item-action">Application / ID:</a>
-        <a href="#" class="list-group-item list-group-item-action">Application User:</a>
-        <a href="#" class="list-group-item list-group-item-action">Listener Interval / Count</a>
-        <a href="#" class="list-group-item list-group-item-action">Listener Last Run:</a>
-        <a href="#" class="list-group-item list-group-item-action">Email Info:</a>
-      </div>
-      <div class="list-group col-lg-4">
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-          <div class="d-flex w-100 justify-content-center" style="text-align: center">
-            <small>
-              VMware, Inc. - VMware Virtual Platform<br>
-              Processor(s): 2<br>
-              GenuineIntel - Intel&#174; Xeon&#174; CPU E5-2680 v2 &#64; 2.80GHz<br>
-              GenuineIntel - Intel&#174; Xeon&#174; CPU E5-2680 v2 &#64; 2.80GHz<br>
-              Total RAM Memory: 33,554,432K<br>
-              Microsoft Windows Server 2012 R2 Standard - 6.3.9600 &#123; spk:0 &#125;<br>
-              C: - Local Fixed Disk - NTFS &#123; Size: 59.6GB - Free Space: 12.9GB / 21.7% &#125;<br>
-              IP(s): &#123; ::1, 10.1.10.54 &#125;<br>
-              Runtime: v4.0.30319<br>
-              Temp Directory: c:\windows\temp\<br>
-              IsProd Environment: False<br>
-              DB Instance Name: itdev
-            </small>
-          </div>
-        </a>
-      </div>
-      <div class="list-group col-lg-4">
-        <a href="#" class="list-group-item list-group-item-action">Up Time:</a>
-        <a href="#" class="list-group-item list-group-item-action">CPU Time:</a>
-        <a href="#" class="list-group-item list-group-item-action">Current Memory:</a>
-        <a href="#" class="list-group-item list-group-item-action">Peak Memory:</a>
-        <a href="#" class="list-group-item list-group-item-action">Handles / Threads:</a>
-        <a href="#" class="list-group-item list-group-item-action">Data Base:</a>
-        <a href="#" class="list-group-item list-group-item-action">Messages / Last Received:</a>
+    <div class="d-flex flex-wrap justify-content-center">
+      <p>
+        <button type="button" class="btn btn-info">Server/Service Information</button>
+      </p>
+    </div>
+    <div id class style="visibility: visible; height: auto; display: block;">
+      <div id="SI" class="collapsePanel row flex-wrap justify-content-center" style="height: auto; visibility: visible;">
+        <div class="list-group col-lg-3">
+          <a href="#" class="list-group-item list-group-item-action small">Current Date:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Application Started:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Application / ID:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Application User:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Listener Interval / Count</a>
+          <a href="#" class="list-group-item list-group-item-action small">Listener Last Run:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Email Info:</a>
+        </div>
+        <div class="list-group col-lg-5">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-center" style="text-align: center;">
+              <small>
+                VMware, Inc. - VMware Virtual Platform<br>
+                Processor(s): 2<br>
+                GenuineIntel - Intel&#174; Xeon&#174; CPU E5-2680 v2 &#64; 2.80GHz<br>
+                GenuineIntel - Intel&#174; Xeon&#174; CPU E5-2680 v2 &#64; 2.80GHz<br>
+                Total RAM Memory: 33,554,432K<br>
+                Microsoft Windows Server 2012 R2 Standard - 6.3.9600 &#123; spk:0 &#125;<br>
+                C: - Local Fixed Disk - NTFS &#123; Size: 59.6GB - Free Space: 12.9GB / 21.7% &#125;<br>
+                IP(s): &#123; ::1, 10.1.10.54 &#125;<br>
+                Runtime: v4.0.30319<br>
+                Temp Directory: c:\windows\temp\<br>
+                IsProd Environment: False<br>
+                DB Instance Name: itdev
+              </small>
+            </div>
+          </a>
+        </div>
+        <div class="list-group col-lg-3">
+          <a href="#" class="list-group-item list-group-item-action small">Up Time:</a>
+          <a href="#" class="list-group-item list-group-item-action small">CPU Time:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Current Memory:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Peak Memory:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Handles / Threads:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Data Base:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Messages / Last Received:</a>
+        </div>
       </div>
     </div>
   </div>
