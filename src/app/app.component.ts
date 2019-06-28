@@ -6,7 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  public show: boolean = false;
+  public SIB: any = 'Show Server/Service Information';
+
+  ngOnInit() { }
+
+  toggle() {
+    this.show = !this.show;
+    if (this.show) {
+      this.SIB = 'Hide Server/Service Information';
+    }
+    else {
+      this.SIB = 'Show Server/Service Information';
+    }
+  }
 }
 
 

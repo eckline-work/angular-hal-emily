@@ -40,11 +40,11 @@
     <h1 style="text-align: center">HAL <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/HAL9000.svg/1024px-HAL9000.svg.png" width="35" height="35"></h1>
     <div class="d-flex flex-wrap justify-content-center">
       <p>
-        <button type="button" class="btn btn-info">Server/Service Information</button>
+        <button type="button" class="btn btn-info" (click)="toggle()">{{SIB}}</button>
       </p>
     </div>
-    <div id class style="visibility: visible; height: auto; display: block;">
-      <div id="SI" class="collapsePanel row flex-wrap justify-content-center" style="height: auto; visibility: visible;">
+    <ng-container *ngIf="show">
+      <div class="d-flex flex-wrap justify-content-center">
         <div class="list-group col-lg-3">
           <a href="#" class="list-group-item list-group-item-action small">Current Date:</a>
           <a href="#" class="list-group-item list-group-item-action small">Application Started:</a>
@@ -84,7 +84,7 @@
           <a href="#" class="list-group-item list-group-item-action small">Messages / Last Received:</a>
         </div>
       </div>
-    </div>
+    </ng-container>
   </div>
 
   <div class="d-flex flex-wrap justify-content-center">
@@ -319,9 +319,8 @@
           <ul>
             <li>Bootstrap</li>
             <li>CSS Theme</li>
-            <li>Table<br>
-            <span class="small text-success">Correct number of columns</span><br>
-            <span class="small text-warning">Unfilled</span></li>
+            <li>Server Info Dropdown</li>
+            <li>Table</li>
             <li>Page Layout</li>
           </ul>
         </div>
@@ -333,16 +332,15 @@
           <ul>
             <li>Working Navs<br>
             <span class="small text-success">Navs in place</span><br>
-            <span class="small text-warning">No links/popups implemented</span></li>
+            <span class="small text-warning">No links/popups implemented</span>
+            </li>
             <li>Table Page Switcher<br>
             <span class="small text-success">Buttons in place</span><br>
-            <span class="small text-warning">No alt. pages to switch to</span></li>
-            <li>Server Info Dropdown<br>
-            <span class="small text-success">Cards in place</span><br>
-            <span class="small text-warning">Some info filled</span><br>
-            <span class="small text-danger">Dropdown process not cooperating</span></li>
-            <li>Form for Table Search<br>
-            <span class="small text-warning">Date selectors need implementing</span></li>
+            <span class="small text-warning">No alt. pages to switch to</span>
+            </li>
+            <li>Search Criteria Form<br>
+            <span class="small text-warning">Date selectors need implementing</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -353,7 +351,8 @@
           <ul>
             <li>Table Data<br>
             <span class="small text-danger">Don't know how to get the data</span><br>
-            <span class="small text-danger">Don't know how to make table update rows and data</span></li>
+            <span class="small text-danger">Don't know how to make table update rows and data</span>
+            </li>
           </ul>
         </div>
       </div>
