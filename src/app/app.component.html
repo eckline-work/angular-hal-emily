@@ -25,7 +25,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#about">Help</a>
+        <button type="button" class="btn" (click)="toggle2()">Help</button>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -35,18 +35,13 @@
   </div>
 </nav>
 
-<div id="about" class="modal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">HAL - About <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/HAL9000.svg/1024px-HAL9000.svg.png" width="27" height="27"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="d-flex w-100 justify-content-center" style="text-align: center;">
-          <small>
+<div class="container" style="margin-bottom: 8rem;">
+  <ng-container *ngIf="show2">
+    <div class="alert alert-info" style="margin: 1rem;">
+      <h5 style="text-align: center;">HAL&nbsp;-&nbsp;About&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/HAL9000.svg/1024px-HAL9000.svg.png" width="27" height="27"></h5>
+      <div class="d-flex w-100 justify-content-center">
+        <div class="col-lg-5" style="min-width: 35rem; max-width: 35rem; text-align:center">
+          <p class="small">
             VMware, Inc. - VMware Virtual Platform<br>
             Processor(s): 2<br>
             GenuineIntel - Intel&#174; Xeon&#174; CPU E5-2680 v2 &#64; 2.80GHz<br>
@@ -58,41 +53,48 @@
             Runtime: v4.0.30319<br>
             Temp Directory: c:\windows\temp\<br>
             IsProd Environment: False<br>
-            DB Instance Name: itdev
-          </small>
-          <table>
-             <thead>
-              <tr class="table-primary">
-                <th scope="col" class="small">Key</th>
-                <th scope="col" class="small">Value</th>
+            DB Instance Name: it-novadeverrors
+          </p>
+        </div>
+      </div>
+      <div div class="d-flex w-100 justify-content-center">
+        <div class="justify-content-center">
+          <table class="table small">
+            <thead>
+              <tr class="table-dark">
+                <th scope="col" style="text-align:center">Key</th>
+                <th scope="col" style="width:6px;"></th>
+                <th scope="col" style="text-align:center">Value</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="table-light small">
-                <td>internal.applog.error.email.to</td>
-                <td>it-novadeverrors@thedoctors.com</td>
+              <tr class="table-light">
+                <td style="text-align:left">internal.applog.error.email.to</td>
+                <td style="width:6px;"></td>
+                <td style="text-align:right">it-novadeverrors@thedoctors.com</td>
               </tr>
-              <tr class="table-light small">
-                <td>ValidationSettings:UnobtrusiveValidationMode</td>
-                <td>None</td>
+              <tr class="table-light">
+                <td style="text-align:left">ValidationSettings:UnobtrusiveValidationMode</td>
+                <td style="width:6px;"></td>
+                <td style="text-align:right">None</td>
               </tr>
-              <tr class="table-light small">
-                <td>starteam.listener.active</td>
-                <td>False</td>
+              <tr class="table-light">
+                <td style="text-align:left">starteam.listener.active</td>
+                <td style="width:6px;"></td>
+                <td style="text-align:right">False</td>
               </tr>
-              <tr class="table-light small">
-                <td>config.database.connection</td>
-                <td>applog@itdev</td>
+              <tr class="table-light">
+                <td style="text-align:left">config.database.connection</td>
+                <td style="width:6px;"></td>
+                <td style="text-align:right">applog@itdev</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </ng-container>
 
-<div class="container" style="margin-bottom: 8rem;">
   <div class="jumbotron">
     <h1 style="text-align: center">HAL <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/HAL9000.svg/1024px-HAL9000.svg.png" width="35" height="35"></h1>
     <div class="d-flex flex-wrap justify-content-center">
@@ -256,28 +258,20 @@
                   <td style="width:11.1%">
                   </td>
                   <td colspan="2" style="width:22.2%">
-                    <div class="form-group d-flex flex-wrap justify-content-center">
-                      <label class="col-form-label col-form-label-sm" for="inputSmall">From:</label>
-                      <input class="form-control form-control-sm" type="text" placeholder="Choose a Date" id="PageRef">
-                    </div>
+                    <label class="col-form-label col-form-label-sm" for="inputSmall">From:</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="Choose a Date" id="PageRef">
                   </td>
                   <td colspan="2" style="width:22.2%">
-                    <div class="form-group d-flex flex-wrap justify-content-center">
-                      <label class="col-form-label col-form-label-sm" for="inputSmall">To:</label>
-                      <input class="form-control form-control-sm" type="text" placeholder="Choose a Date" id="PageRef">
-                    </div>
+                    <label class="col-form-label col-form-label-sm" for="inputSmall">To:</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="Choose a Date" id="PageRef">
                   </td>
                   <td colspan="1" style="width:11.1%">
-                    <div class="form-group d-flex flex-wrap justify-content-center">
-                      <label class="col-form-label col-form-label-sm" for="inputSmall">Refresh Page:</label>
-                      <input class="form-control form-control-sm" type="text" placeholder="30" id="PageRef">
-                    </div>
+                    <label class="col-form-label col-form-label-sm" for="inputSmall">Refresh Page:</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="30" id="PageRef">
                   </td>
                   <td style="width:11.1%">
-                    <div class="form-group d-flex flex-wrap justify-content-center">
-                      <label class="col-form-label col-form-label-sm" for="inputSmall">Lines/Page:</label>
-                      <input class="form-control form-control-sm" type="text" placeholder="" id="LPage">
-                    </div>
+                    <label class="col-form-label col-form-label-sm" for="inputSmall">Lines/Page:</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="" id="LPage">
                   </td>
                   <td style="width:11.2%">
                     <div class="d-flex flex-wrap justify-content-center" style="margin-top:40%">
@@ -295,7 +289,7 @@
     </div>
 
     <div class="d-flex flex-wrap justify-content-center">
-      <span id="Row-Info">|&nbsp;Total&nbsp;Rows:&nbsp;<b>445</b>&nbsp;|&nbsp;Page:&nbsp;<b>1</b>&nbsp;of&nbsp;<b>18</b>&nbsp;|</span>&nbsp;&nbsp;&nbsp;
+      <span id="Row-Info">|&nbsp;Total&nbsp;Rows:&nbsp;<b>x</b>&nbsp;|&nbsp;Page:&nbsp;<b>y</b>&nbsp;of&nbsp;<b>z</b>&nbsp;|</span>&nbsp;&nbsp;&nbsp;
       <ul class="pagination pagination-sm">
         <li class="page-item">
           <a class="page-link" href="#">&lt;&lt;</a>
