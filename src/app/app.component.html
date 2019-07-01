@@ -35,6 +35,17 @@
   </div>
 </nav>
 
+<div id="modal-container" class="hidden">
+  <div class="sample-text">
+    This is the sample modal
+  </div>
+  <div class="sample-close">
+    <button (click)="close()">
+      Close Modal
+    </button>
+  </div>
+</div>
+
 <div class="container" style="margin-bottom: 8rem;">
   <div class="jumbotron">
     <h1 style="text-align: center">HAL <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/HAL9000.svg/1024px-HAL9000.svg.png" width="35" height="35"></h1>
@@ -325,8 +336,8 @@
         <div class="card-body">
           <ul>
             <li>Table Data<br>
-            <span class="small text-danger">Don't know how to get the data</span><br>
-            <span class="small text-danger">Don't know how to make table update rows and data</span>
+            <span class="small text-warning">Found some help to implement data updates, implementation WIP</span><br>
+            <span class="small text-danger">Don't know how to get the data</span>
             </li>
           </ul>
         </div>
