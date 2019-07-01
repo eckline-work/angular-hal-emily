@@ -389,6 +389,385 @@
     </div>
   </div>
 </div>
-<!--Nav idea: buttons that toggle visibility of different divs-->
-<!--Probably won't work but...-->
-<!--Nav idea: buttons that toggle visibility of different divs-->
+
+<!--Nav idea: buttons that toggle visibility of different divs: WIP-->
+
+<ng-container *ngIf="showMain">
+<div class="container" style="margin-bottom: 8rem;">
+  <ng-container *ngIf="show2">
+    <div class="alert alert-info" style="margin: 1rem;">
+      <h5 style="text-align: center;">HAL&nbsp;-&nbsp;About&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/HAL9000.svg/1024px-HAL9000.svg.png" width="27" height="27"></h5>
+      <div class="d-flex w-100 justify-content-center">
+        <div class="col-lg-5" style="min-width: 35rem; max-width: 35rem; text-align:center">
+          <p class="small">
+            VMware, Inc. - VMware Virtual Platform<br>
+            Processor(s): 2<br>
+            GenuineIntel - Intel&#174; Xeon&#174; CPU E5-2680 v2 &#64; 2.80GHz<br>
+            GenuineIntel - Intel&#174; Xeon&#174; CPU E5-2680 v2 &#64; 2.80GHz<br>
+            Total RAM Memory: 33,554,432K<br>
+            Microsoft Windows Server 2012 R2 Standard - 6.3.9600 &#123; spk:0 &#125;<br>
+            C: - Local Fixed Disk - NTFS &#123; Size: 59.6GB - Free Space: 12.9GB / 21.7% &#125;<br>
+            IP(s): &#123; ::1, 10.1.10.54 &#125;<br>
+            Runtime: v4.0.30319<br>
+            Temp Directory: c:\windows\temp\<br>
+            IsProd Environment: False<br>
+            DB Instance Name: it-novadeverrors
+          </p>
+        </div>
+      </div>
+      <div div class="d-flex w-100 justify-content-center">
+        <div class="justify-content-center">
+          <table class="table small">
+            <thead>
+              <tr class="table-dark">
+                <th scope="col" style="text-align:center">Key</th>
+                <th scope="col" style="width:6px;"></th>
+                <th scope="col" style="text-align:center">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-light">
+                <td style="text-align:left">internal.applog.error.email.to</td>
+                <td style="width:6px;"></td>
+                <td style="text-align:right">it-novadeverrors@thedoctors.com</td>
+              </tr>
+              <tr class="table-light">
+                <td style="text-align:left">ValidationSettings:UnobtrusiveValidationMode</td>
+                <td style="width:6px;"></td>
+                <td style="text-align:right">None</td>
+              </tr>
+              <tr class="table-light">
+                <td style="text-align:left">starteam.listener.active</td>
+                <td style="width:6px;"></td>
+                <td style="text-align:right">False</td>
+              </tr>
+              <tr class="table-light">
+                <td style="text-align:left">config.database.connection</td>
+                <td style="width:6px;"></td>
+                <td style="text-align:right">applog@itdev</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <div class="jumbotron">
+    <h1 style="text-align: center">HAL <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/HAL9000.svg/1024px-HAL9000.svg.png" width="35" height="35"></h1>
+    <div class="d-flex flex-wrap justify-content-center">
+      <p>
+        <button type="button" class="btn btn-info" (click)="toggle()">{{SIB}}</button>
+      </p>
+    </div>
+    <ng-container *ngIf="show">
+      <div class="d-flex flex-wrap justify-content-center">
+        <div class="list-group col-lg-3">
+          <a href="#" class="list-group-item list-group-item-action small">Current Date:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Application Started:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Application / ID:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Application User:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Listener Interval / Count</a>
+          <a href="#" class="list-group-item list-group-item-action small">Listener Last Run:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Email Info:</a>
+        </div>
+        <div class="list-group col-lg-5">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <div class="d-flex w-100 justify-content-center" style="text-align: center;">
+              <small>
+                VMware, Inc. - VMware Virtual Platform<br>
+                Processor(s): 2<br>
+                GenuineIntel - Intel&#174; Xeon&#174; CPU E5-2680 v2 &#64; 2.80GHz<br>
+                GenuineIntel - Intel&#174; Xeon&#174; CPU E5-2680 v2 &#64; 2.80GHz<br>
+                Total RAM Memory: 33,554,432K<br>
+                Microsoft Windows Server 2012 R2 Standard - 6.3.9600 &#123; spk:0 &#125;<br>
+                C: - Local Fixed Disk - NTFS &#123; Size: 59.6GB - Free Space: 12.9GB / 21.7% &#125;<br>
+                IP(s): &#123; ::1, 10.1.10.54 &#125;<br>
+                Runtime: v4.0.30319<br>
+                Temp Directory: c:\windows\temp\<br>
+                IsProd Environment: False<br>
+                DB Instance Name: itdev
+              </small>
+            </div>
+          </a>
+        </div>
+        <div class="list-group col-lg-3">
+          <a href="#" class="list-group-item list-group-item-action small">Up Time:</a>
+          <a href="#" class="list-group-item list-group-item-action small">CPU Time:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Current Memory:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Peak Memory:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Handles / Threads:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Data Base:</a>
+          <a href="#" class="list-group-item list-group-item-action small">Messages / Last Received:</a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="d-flex flex-wrap justify-content-center">
+    <div class="d-flex flex-wrap">
+      <div class="card border-light mb-3" style="min-width: 47rem;">
+        <div class="card-header">Set Search Criteria</div>
+        <div class="card-body">
+          <form>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td colspan="2" style="width:22.2%">
+                    <label class="col-form-label col-form-label-sm">Process:&nbsp;</label>
+                    <div class="form-group">
+                      <div class="input-group mb-3">
+                        <select class="form-control form-control-sm" id="ProcSelect">
+                          <option>Contains</option>
+                          <option>Begins With</option>
+                          <option>Ends With</option>
+                        </select>
+                        <input type="text" class="form-control form-control-sm" aria-label="ProcessInput">
+                      </div>
+                    </div>
+                  </td>
+                  <td colspan="2" style="width:22.2%">
+                    <label class="col-form-label col-form-label-sm">Trace:&nbsp;</label>
+                    <div class="form-group">
+                      <div class="input-group mb-3">
+                        <select class="form-control form-control-sm" id="TraceSelect">
+                          <option>Contains</option>
+                          <option>Begins With</option>
+                          <option>Ends With</option>
+                        </select>
+                        <input type="text" class="form-control form-control-sm" aria-label="TraceInput">
+                      </div>
+                    </div>
+                  </td>
+                  <td colspan="2" style="width:22.2%">
+                    <label class="col-form-label col-form-label-sm">Environment:&nbsp;</label>
+                    <div class="form-group">
+                      <div class="input-group mb-3">
+                        <select class="form-control input-group-prepend form-control-sm" id="EnvSelect">
+                          <option>Contains</option>
+                          <option>Begins With</option>
+                          <option>Ends With</option>
+                        </select>
+                        <input type="text" class="form-control form-control-sm" aria-label="EnvironmentInput">
+                      </div>
+                    </div>
+                  </td>
+                  <td colspan="2" style="width:22.2%">
+                    <label class="col-form-label col-form-label-sm">System:</label>
+                    <select class="form-control form-control-sm" id="SystSelect">
+	                    <option selected="selected" value="">All</option>
+	                    <option value="CLAIMSMGMT">Claims Management</option>
+	                    <option value="CONTACTMGMT">Contact Managment</option>
+  	                  <option value="MMR">Mandatory Medicare Reporting</option>
+	                    <option value="PATIENTSAFETY">Patient Safety</option>
+                    	<option value="RATELOAD">Rate Load Database</option>
+  	                  <option value="RATESTAGE">Rate Staging Database</option>
+  	                  <option value="TDC.AGENCYMANAGEMENT.WEBAPI">Tdc Agency Management Web API</option>
+                    	<option value="AGENT">Agent Broker</option>
+	                    <option value="FRAMEWEBAP">Framework Web API Service</option>
+	                    <option value="APPLOG">Application Log</option>
+	                    <option value="APPLOG_DB">Application Log Database</option>
+	                    <option value="EDOC_CLEAN">EDoc - Clean Files</option>
+  	                  <option value="AP_INF">Accounts Payable -  Informatica</option>
+	                    <option value="DBA">DBA</option>
+	                    <option value="DW">Data Warehouse</option>
+	                    <option value="DWS">DWS</option>
+	                    <option value="EDOCDATA">EDoc Data Provider Server</option>
+  	                  <option value="EDOCSERVER">EDoc Server</option>
+    	                <option value="EMAILSERV">Email Server</option>
+	                    <option value="EOD">End of Day Jobs</option>
+	                    <option value="FSMP_SRV">Folder Splitter</option>
+	                    <option value="IMANAGESRV">iManage Server</option>
+	                    <option value="LBM">LBM Printer Server</option>
+	                    <option value="MEMBERS">Members Only</option>
+	                    <option value="MEMBERSCSU">Members Only Internal (CSU)</option>
+	                    <option value="MP">Macro Processor Server</option>
+	                    <option value="NOVA">Nova</option>
+	                    <option value="NOVA_INF">Nova Informatica</option>
+    	                <option value="ONLINE APP">Online  Application</option>
+	                    <option value="PBOWES">Pitney Bowes</option>
+  	                  <option value="PRINTSERV">Print Server</option>
+	                    <option value="PRODCOMP">Producer Compensation</option>
+	                    <option value="RET_BILL">Retention Billing</option>
+	                    <option value="REPORTAPI">Report API</option>
+	                    <option value="OPCO">OPCO Conversion</option>
+	                    <option value="SECURITY">Security</option>
+	                    <option value="Tdc.SecurityServer.WebAPI">Security Server</option>
+	                    <option value="STAR">Star</option>
+	                    <option value="VISTA">Vista</option>
+  	                  <option value="UNICENTER">Unicenter</option>
+    	                <option value="RPTSERVER">Report Server</option>
+	                    <option value="DW_SQLLOAD">DW - Nova Load</option>
+	                    <option value="TDCUTILS">SQL - SERVER</option>
+	                    <option value="UNKNOWN">Unknown</option>
+	                    <option value="AGENCYMGMT">Agency Management</option>
+                    </select>
+                  </td>
+                  <td style="width:11.2%">
+                    <label class="col-form-label col-form-label-sm">Include:</label>
+                      <select class="form-control form-control-sm" id="IncluSelect">
+	                      <option selected="selected" value="">All</option>
+	                      <option value="Y">Errors</option>
+	                      <option value="N">Informational</option>
+                      </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width:11.1%">
+                  </td>
+                  <td colspan="2" style="width:22.2%">
+                    <label class="col-form-label col-form-label-sm" for="inputSmall">From:</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="Choose a Date" id="PageRef">
+                  </td>
+                  <td colspan="2" style="width:22.2%">
+                    <label class="col-form-label col-form-label-sm" for="inputSmall">To:</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="Choose a Date" id="PageRef">
+                  </td>
+                  <td colspan="1" style="width:11.1%">
+                    <label class="col-form-label col-form-label-sm" for="inputSmall">Refresh Page:</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="30" id="PageRef">
+                  </td>
+                  <td style="width:11.1%">
+                    <label class="col-form-label col-form-label-sm" for="inputSmall">Lines/Page:</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="" id="LPage">
+                  </td>
+                  <td style="width:11.2%">
+                    <div class="d-flex flex-wrap justify-content-center" style="margin-top:40%">
+                      <button type="button" class="btn btn-secondary btn-sm">Reload</button>
+                    </div>
+                  </td>
+                  <td style="width:11.1%">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center">
+      <span id="Row-Info">|&nbsp;Total&nbsp;Rows:&nbsp;<b>x</b>&nbsp;|&nbsp;Page:&nbsp;<b>y</b>&nbsp;of&nbsp;<b>z</b>&nbsp;|</span>&nbsp;&nbsp;&nbsp;
+      <ul class="pagination pagination-sm">
+        <li class="page-item">
+          <a class="page-link" href="#">&lt;&lt;</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">&lt;</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">&gt;</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">&gt;&gt;</a>
+        </li>
+      </ul>
+    </div>
+
+    <table class="table table-hover" style="min-width: 47rem;">
+      <thead>
+        <tr class="table-primary">
+          <th scope="col">System</th>
+          <th scope="col">Message</th>
+          <th scope="col">Process</th>
+          <th scope="col">Trace</th>
+          <th scope="col">Environment</th>
+          <th scope="col">Created Date</th>
+          <th scope="col">ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-light" ng-repeat = "(System, Message, Process, Trace, Environment, CreatedDate, ID) in data">
+          <td>{{System}}</td>
+          <td>{{Message}}</td>
+          <td>{{Process}}</td>
+          <td>{{Trace}}</td>
+          <td>{{Environment}}</td>
+          <td>{{CreatedDate}}</td>
+          <td>{{ID}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <br>
+
+  <div class="container" style="text-align: left">
+    <h3>Update Report</h3>
+    <div class="d-flex flex-wrap justify-content-center">
+      <div class="card border-success mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
+        <div class="card-header">Added:</div>
+        <div class="card-body">
+          <ul>
+            <li>Bootstrap</li>
+            <li>CSS Theme</li>
+            <li>Server Info Dropdown<br>
+            <span class="small text-success">Used Angular to implement toggling</span>
+            </li>
+            <li>Table</li>
+            <li>Page Layout</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card border-warning mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
+        <div class="card-header">In Progress:</div>
+        <div class="card-body">
+          <ul>
+            <li>Working Navs<br>
+            <span class="small text-success">Navs in place</span><br>
+            <span class="small text-warning">Some links/popups implemented</span>
+            </li>
+            <li>Table Page Switcher<br>
+            <span class="small text-success">Buttons in place</span><br>
+            <span class="small text-warning">No alt. pages to switch to</span><br>
+            <span class="small text-danger">No programming done yet</span>
+            </li>
+            <li>Search Criteria Form<br>
+            <span class="small text-warning">Date selectors need implementing</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card border-danger mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
+        <div class="card-header">To Do:</div>
+        <div class="card-body">
+          <ul>
+            <li>Table Data<br>
+            <span class="small text-warning">Found some help to implement data updates, implementation WIP</span><br>
+            <span class="small text-danger">Don't know how to get the data</span>
+            </li>
+            <li>Angular<br>
+            <span class="small text-danger">Can't get into Pluralsight to watch lessons</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</ng-container>
+
+<ng-container *ngIf="showStA">
+</ng-container>
+
+<ng-container *ngIf="showLNtA">
+</ng-container>
+
+<ng-container *ngIf="showAct">
+</ng-container>
+
+<ng-container *ngIf="showSev">
+</ng-container>
+
+<ng-container *ngIf="showSS">
+</ng-container>
+
+<ng-container *ngIf="showLN">
+</ng-container>
+
+<ng-container *ngIf="showDL">
+</ng-container>
+
+<!--Will have to create all the divs, which isn't gonna be fun. BUT this method is prolly easier than making different html pages for each nav option, so... :/ -->
