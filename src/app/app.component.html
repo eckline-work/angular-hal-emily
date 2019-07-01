@@ -268,41 +268,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="table-light">
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="table-warning">
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="table-light">
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-        </tr>
-        <tr class="table-danger">
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
-          <td>Column content</td>
+        <tr class="table-light" ng-repeat = "(System, Message, Process, Trace, Environment, CreatedDate, ID) in data">
+          <td>{{System}}</td>
+          <td>{{Message}}</td>
+          <td>{{Process}}</td>
+          <td>{{Trace}}</td>
+          <td>{{Environment}}</td>
+          <td>{{CreatedDate}}</td>
+          <td>{{ID}}</td>
         </tr>
       </tbody>
     </table>
