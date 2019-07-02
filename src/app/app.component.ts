@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
+  //pages
   public showMain: boolean = true;
   public showStA: boolean = false;
   public showLNtA: boolean = false;
@@ -16,9 +17,12 @@ export class AppComponent  {
   public showDL: boolean = false;
   public show: boolean = false;
   public show2: boolean = false;
+
+  //names of things
   public SIB: any = 'Show Server/Service Information';
   public Title: any = 'HAL';
 
+  //functions
   ngOnInit() { }
 
   toggle() {
@@ -33,6 +37,14 @@ export class AppComponent  {
 
   toggle2() {
     this.show2 = !this.show2;
+  }
+
+  dtog1() {
+    //WIP
+  }
+
+  dtog2() {
+    //WIP
   }
 
   toMain() {
@@ -153,6 +165,10 @@ export class AppComponent  {
     this. show2 = false;
     this. SIB = 'Show Server/Service Information';
     this.Title = 'HAL Diagram - Logs grouped per day';
+  }
+
+  critSet(){
+    //WIP
   }
 }
 

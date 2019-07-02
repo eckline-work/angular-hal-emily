@@ -271,17 +271,18 @@
                     <label class="col-form-label col-form-label-sm" for="inputSmall">To:</label>
                     <input class="form-control form-control-sm" type="text" placeholder="Choose a Date" id="PageRef">
                   </td>
-                  <td colspan="1" style="width:11.1%">
+                  <td style="width:11.1%">
                     <label class="col-form-label col-form-label-sm" for="inputSmall">Refresh Page:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="30" id="PageRef">
+                    <input class="form-control form-control-sm" type="text" placeholder="30" id="PageRef" style="text-align:right;">
                   </td>
                   <td style="width:11.1%">
                     <label class="col-form-label col-form-label-sm" for="inputSmall">Lines/Page:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="" id="LPage">
+                    <input class="form-control form-control-sm" type="text" placeholder="26" id="LPage" style="text-align:right;">
                   </td>
                   <td style="width:11.2%">
-                    <div class="d-flex flex-wrap justify-content-center" style="margin-top:40%">
-                      <button type="button" class="btn btn-secondary btn-sm">Reload</button>
+                    <div class="d-flex flex-wrap justify-content-center">
+                      <label class="col-form-label col-form-label-sm" for="inputSmall">&nbsp;</label>
+                      <button type="button" class="btn btn-secondary btn-sm" (click)="critSet">Reload</button>
                     </div>
                   </td>
                   <td style="width:11.1%">
@@ -341,7 +342,7 @@
   <br>
 
   <div class="container" style="text-align: left">
-    <h3>Update Report</h3>
+    <h3>Progress Report</h3>
     <div class="d-flex flex-wrap justify-content-center">
       <div class="card border-success mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
         <div class="card-header">Added:</div>
