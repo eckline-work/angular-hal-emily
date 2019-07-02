@@ -158,10 +158,10 @@
         <div class="card-header">Set Search Criteria</div>
         <div class="card-body">
           <form>
-            <table class="table">
-              <tbody>
-                <tr>
-                  <td colspan="2" style="width:22.2%">
+            <fieldset>
+              <div class="d-flex flex-wrap justify-content-center">
+                <div class="row">
+                  <div class="container" style="max-width: 18rem; min-width: 18rem;">
                     <label class="col-form-label col-form-label-sm">Process:&nbsp;</label>
                     <div class="form-group">
                       <div class="input-group mb-3">
@@ -173,8 +173,8 @@
                         <input type="text" class="form-control form-control-sm" aria-label="ProcessInput" id="ProcInput">
                       </div>
                     </div>
-                  </td>
-                  <td colspan="2" style="width:22.2%">
+                  </div>
+                  <div class="container" style="max-width: 18rem; min-width: 18rem;">
                     <label class="col-form-label col-form-label-sm">Trace:&nbsp;</label>
                     <div class="form-group">
                       <div class="input-group mb-3">
@@ -186,8 +186,8 @@
                         <input type="text" class="form-control form-control-sm" aria-label="TraceInput" id="TraceInput">
                       </div>
                     </div>
-                  </td>
-                  <td colspan="2" style="width:22.2%">
+                  </div>
+                  <div class="container" style="max-width: 18rem; min-width: 18rem;">
                     <label class="col-form-label col-form-label-sm">Environment:&nbsp;</label>
                     <div class="form-group">
                       <div class="input-group mb-3">
@@ -199,97 +199,91 @@
                         <input type="text" class="form-control form-control-sm" aria-label="EnvironmentInput" id="EnvInput">
                       </div>
                     </div>
-                  </td>
-                  <td colspan="2" style="width:22.2%">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="container" style="max-width: 20rem; min-width: 20rem;">
                     <label class="col-form-label col-form-label-sm">System:</label>
                     <select class="form-control form-control-sm" id="S-Select">
-	                    <option selected="selected" value="">All</option>
-	                    <option value="CLAIMSMGMT">Claims Management</option>
-	                    <option value="CONTACTMGMT">Contact Managment</option>
-  	                  <option value="MMR">Mandatory Medicare Reporting</option>
-	                    <option value="PATIENTSAFETY">Patient Safety</option>
-                    	<option value="RATELOAD">Rate Load Database</option>
-  	                  <option value="RATESTAGE">Rate Staging Database</option>
-  	                  <option value="TDC.AGENCYMANAGEMENT.WEBAPI">Tdc Agency Management Web API</option>
-                    	<option value="AGENT">Agent Broker</option>
-	                    <option value="FRAMEWEBAP">Framework Web API Service</option>
-	                    <option value="APPLOG">Application Log</option>
-	                    <option value="APPLOG_DB">Application Log Database</option>
-	                    <option value="EDOC_CLEAN">EDoc - Clean Files</option>
-  	                  <option value="AP_INF">Accounts Payable -  Informatica</option>
-	                    <option value="DBA">DBA</option>
-	                    <option value="DW">Data Warehouse</option>
-	                    <option value="DWS">DWS</option>
-	                    <option value="EDOCDATA">EDoc Data Provider Server</option>
-  	                  <option value="EDOCSERVER">EDoc Server</option>
-    	                <option value="EMAILSERV">Email Server</option>
-	                    <option value="EOD">End of Day Jobs</option>
-	                    <option value="FSMP_SRV">Folder Splitter</option>
-	                    <option value="IMANAGESRV">iManage Server</option>
-	                    <option value="LBM">LBM Printer Server</option>
-	                    <option value="MEMBERS">Members Only</option>
-	                    <option value="MEMBERSCSU">Members Only Internal (CSU)</option>
-	                    <option value="MP">Macro Processor Server</option>
-	                    <option value="NOVA">Nova</option>
-	                    <option value="NOVA_INF">Nova Informatica</option>
-    	                <option value="ONLINE APP">Online  Application</option>
-	                    <option value="PBOWES">Pitney Bowes</option>
-  	                  <option value="PRINTSERV">Print Server</option>
-	                    <option value="PRODCOMP">Producer Compensation</option>
-	                    <option value="RET_BILL">Retention Billing</option>
-	                    <option value="REPORTAPI">Report API</option>
-	                    <option value="OPCO">OPCO Conversion</option>
-	                    <option value="SECURITY">Security</option>
-	                    <option value="Tdc.SecurityServer.WebAPI">Security Server</option>
-	                    <option value="STAR">Star</option>
-	                    <option value="VISTA">Vista</option>
-  	                  <option value="UNICENTER">Unicenter</option>
-    	                <option value="RPTSERVER">Report Server</option>
-	                    <option value="DW_SQLLOAD">DW - Nova Load</option>
-	                    <option value="TDCUTILS">SQL - SERVER</option>
-	                    <option value="UNKNOWN">Unknown</option>
-	                    <option value="AGENCYMGMT">Agency Management</option>
+      	            <option selected="selected" value="">All</option>
+	                  <option value="CLAIMSMGMT">Claims Management</option>
+    	              <option value="CONTACTMGMT">Contact Managment</option>
+                    <option value="MMR">Mandatory Medicare Reporting</option>
+	                  <option value="PATIENTSAFETY">Patient Safety</option>
+                  	<option value="RATELOAD">Rate Load Database</option>
+  	                <option value="RATESTAGE">Rate Staging Database</option>
+                    <option value="TDC.AGENCYMANAGEMENT.WEBAPI">Tdc Agency Management Web API</option>
+                    <option value="AGENT">Agent Broker</option>
+                    <option value="FRAMEWEBAP">Framework Web API Service</option>
+	                  <option value="APPLOG">Application Log</option>
+	                  <option value="APPLOG_DB">Application Log Database</option>
+	                  <option value="EDOC_CLEAN">EDoc - Clean Files</option>
+      	            <option value="AP_INF">Accounts Payable -  Informatica</option>
+	                  <option value="DBA">DBA</option>
+	                  <option value="DW">Data Warehouse</option>
+                    <option value="DWS">DWS</option>
+	                  <option value="EDOCDATA">EDoc Data Provider Server</option>
+      	            <option value="EDOCSERVER">EDoc Server</option>
+        	          <option value="EMAILSERV">Email Server</option>
+	                  <option value="EOD">End of Day Jobs</option>
+	                  <option value="FSMP_SRV">Folder Splitter</option>
+                    <option value="IMANAGESRV">iManage Server</option>
+    	              <option value="LBM">LBM Printer Server</option>
+	                  <option value="MEMBERS">Members Only</option>
+                    <option value="MEMBERSCSU">Members Only Internal (CSU)</option>
+                    <option value="MP">Macro Processor Server</option>
+	                  <option value="NOVA">Nova</option>
+	                  <option value="NOVA_INF">Nova Informatica</option>
+    	              <option value="ONLINE APP">Online  Application</option>
+	                  <option value="PBOWES">Pitney Bowes</option>
+  	                <option value="PRINTSERV">Print Server</option>
+  	                <option value="PRODCOMP">Producer Compensation</option>
+                    <option value="RET_BILL">Retention Billing</option>
+	                  <option value="REPORTAPI">Report API</option>
+                    <option value="OPCO">OPCO Conversion</option>
+	                  <option value="SECURITY">Security</option>
+	                  <option value="Tdc.SecurityServer.WebAPI">Security Server</option>
+  	                <option value="STAR">Star</option>
+	                  <option value="VISTA">Vista</option>
+                    <option value="UNICENTER">Unicenter</option>
+  	                <option value="RPTSERVER">Report Server</option>
+	                  <option value="DW_SQLLOAD">DW - Nova Load</option>
+  	                <option value="TDCUTILS">SQL - SERVER</option>
+                    <option value="UNKNOWN">Unknown</option>
+                    <option value="AGENCYMGMT">Agency Management</option>
                     </select>
-                  </td>
-                  <td style="width:11.2%">
+                  </div>
+                  <div class="container" style="max-width: 20rem; min-width: 20rem;">
                     <label class="col-form-label col-form-label-sm">Include:</label>
-                      <select class="form-control form-control-sm" id="I-Select">
-	                      <option selected="selected" value="">All</option>
-	                      <option value="Y">Errors</option>
-	                      <option value="N">Informational</option>
-                      </select>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="width:11.1%">
-                  </td>
-                  <td colspan="2" style="width:22.2%">
-                    <label class="col-form-label col-form-label-sm" for="inputSmall">From:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Choose a Date" id="fromDate">
-                  </td>
-                  <td colspan="2" style="width:22.2%">
-                    <label class="col-form-label col-form-label-sm" for="inputSmall">To:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="Choose a Date" id="ToDate">
-                  </td>
-                  <td style="width:11.1%">
-                    <label class="col-form-label col-form-label-sm" for="inputSmall">Refresh Page:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="30" id="RefTime" style="text-align:right;">
-                  </td>
-                  <td style="width:11.1%">
-                    <label class="col-form-label col-form-label-sm" for="inputSmall">Lines/Page:</label>
-                    <input class="form-control form-control-sm" type="text" placeholder="26" id="LPage" style="text-align:right;">
-                  </td>
-                  <td style="width:11.2%">
-                    <div class="d-flex flex-wrap justify-content-center">
-                      <label class="col-form-label col-form-label-sm clear" for="inputSmall">_&nbsp;</label>
-                      <button type="button" class="btn btn-secondary btn-sm" (click)="critSet">Reload</button>
-                    </div>
-                  </td>
-                  <td style="width:11.1%">
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                    <select class="form-control form-control-sm" id="I-Select">
+	                    <option selected="selected" value="">All</option>
+	                    <option value="Y">Errors</option>
+	                    <option value="N">Informational</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="container" style="max-width: 20rem; min-width: 20rem;">
+                  <label class="col-form-label col-form-label-sm" for="inputSmall">From:</label>
+                  <input class="form-control form-control-sm" type="text" placeholder="Choose a Date" id="fromDate">
+                </div>
+                <div class="container" style="max-width: 20rem; min-width: 20rem;">
+                  <label class="col-form-label col-form-label-sm" for="inputSmall">To:</label>
+                  <input class="form-control form-control-sm" type="text" placeholder="Choose a Date" id="toDate">
+                </div>
+                <div class="container" style="max-width: 10rem; min-width: 10rem;">
+                  <label class="col-form-label col-form-label-sm" for="inputSmall">Refresh Page:</label>
+                  <input class="form-control form-control-sm" type="text" placeholder="30" id="RefTime" style="text-align:right;">
+                </div>
+                <div class="container" style="max-width: 105rem; min-width: 10rem;">
+                  <label class="col-form-label col-form-label-sm" for="inputSmall">Lines/Page:</label>
+                  <input class="form-control form-control-sm" type="text" placeholder="30" id="LPg" style="text-align:right;">
+                </div>
+              </div>
+                <br>
+              <div class="d-flex flex-wrap justify-content-center">
+                <button type="button" class="btn btn-secondary btn-sm" (click)="critSet">Reload</button>
+              </div>
+            </fieldset>
           </form>
         </div>
       </div>
