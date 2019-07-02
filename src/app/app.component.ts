@@ -37,7 +37,15 @@ export class AppComponent  {
 
   toMain() {
     this.showMain = true;
-    this.showStA, this.showLNtA, this. showAct, this. showSev, this. showSS, this. showLN, this. showDL, this. show, this. show2 = false;
+    this.showStA = false;
+    this.showLNtA = false;
+    this. showAct = false;
+    this. showSev = false;
+    this. showSS = false;
+    this. showLN = false;
+    this. showDL = false;
+    this. show = false;
+    this. show2 = false;
     this. SIB = 'Show Server/Service Information';
     this.Title = 'HAL';
   }

@@ -397,24 +397,258 @@
 </ng-container>
 
 <ng-container *ngIf="showStA">
+  <p>Page is incomplete, check back later.</p>
 </ng-container>
 
 <ng-container *ngIf="showLNtA">
+  <p>Page is incomplete, check back later.</p>
 </ng-container>
 
 <ng-container *ngIf="showAct">
+  <div class="d-flex flex-wrap justify-content-center">
+      <table class="table table-hover">
+        <thead>
+          <tr class="table-primary small" style="text-align: center;">
+            <th scope="col">Code</th>
+            <th scope="col">Description</th>
+            <th scope="col">Email</th>
+            <th scope="col">Pager</th>
+            <th scope="col">Color</th>
+            <th scope="col">Effective/To Dates</th>
+            <th scope="col">Created</th>
+            <th scope="col">Last Updated</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-light small">
+            <td>PB_ERROR</td>
+            <td>Pitney Bowes Error</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="text-danger"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 07/08/2010</td>
+            <td>applog - 01/25/2011</td>
+          </tr>
+          <tr class="table-light small">
+            <td>DBA_ERROR</td>
+            <td>DBA Error</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="text-danger"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 12/04/2007</td>
+            <td>applog - 03/26/2014</td>
+          </tr>
+          <tr class="table-light small">
+            <td>DBA_MSG</td>
+            <td>DBA Message</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 12/04/2007</td>
+            <td>applog - 12/04/2007</td>
+          </tr>
+          <tr class="table-light small">
+            <td>DB_ERROR</td>
+            <td>Database Error</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="text-danger"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 12/14/2005</td>
+            <td>applog - 01/15/2008</td>
+          </tr>
+          <tr class="table-light small">
+            <td>ED_NOTIFIC</td>
+            <td>Edoc Server Informational Message</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 01/13/2014</td>
+            <td>applog - 01/13/2014</td>
+          </tr>
+          <tr class="table-light small">
+            <td>FSMP_TEAM</td>
+            <td>Form Splitter Team</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="text-warning"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 12/30/2005</td>
+            <td>applog - 03/26/2014</td>
+          </tr>
+          <tr class="table-light small">
+            <td>INFO</td>
+            <td>Informational</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 12/15/2006</td>
+            <td>applog - 03/03/2008</td>
+          </tr>
+          <tr class="table-light small">
+            <td>NOVA_ERROR</td>
+            <td>Nova Errors</td>
+            <td><b>&radic;</b></td>
+            <td>&nbsp;</td>
+            <td class="text-warning"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 12/14/2005</td>
+            <td>applog - 01/31/2019</td>
+          </tr>
+          <tr class="table-light small">
+            <td>NOVA_NOTI</td>
+            <td>Nova Notification</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 02/13/2008</td>
+            <td>applog - 03/26/2014</td>
+          </tr>
+          <tr class="table-light small">
+            <td>NOVA_TEAM</td>
+            <td>Nova - Team</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 12/15/2005</td>
+            <td>applog - 03/26/2014</td>
+          </tr>
+          <tr class="table-light small">
+            <td>PC_ERROR</td>
+            <td>ProdComp Group Error</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="text-danger"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 03/08/2006</td>
+            <td>applog - 03/26/2014</td>
+          </tr>
+          <tr class="table-light small">
+            <td>RB_TEAM</td>
+            <td>Retention Billing Team</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="text-warning"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 06/16/2006</td>
+            <td>applog - 03/26/2014</td>
+          </tr>
+          <tr class="table-light small">
+            <td>UNICTR_BAD</td>
+            <td>Unicenter Bad Message</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="text-danger"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>Initial Load - 12/14/2005</td>
+            <td>Initial Load - 01/15/2008</td>
+          </tr>
+          <tr class="table-light small">
+            <td>DW_EMAIL</td>
+            <td>DW E-mail Nofication</td>
+            <td><b>&radic;</b></td>
+            <td>&nbsp;</td>
+            <td class="text-secondary"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 11/21/2017</td>
+            <td>applog - 11/21/2017</td>
+          </tr>
+          <tr class="table-light small">
+            <td>UNICTR_OK</td>
+            <td>Unicenter</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>Initial Load - 12/14/2005</td>
+            <td>Initial Load - 12/14/2005</td>
+          </tr>
+          <tr class="table-light small">
+            <td>ARCH</td>
+            <td>Architecture Alert</td>
+            <td><b>&radic;</b></td>
+            <td>&nbsp;</td>
+            <td class="text-danger"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 04/26/2018</td>
+            <td>applog - 04/26/2018</td>
+          </tr>
+          <tr class="table-light small">
+            <td>UNIC_TEAM</td>
+            <td>Unicenter Team</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="text-danger"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 04/01/2007</td>
+            <td>applog - 03/26/2014</td>
+          </tr>
+          <tr class="table-light small">
+            <td>66000</td>
+            <td>Hal Email Sleep Stop/Start</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="text-success"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 01/14/2011</td>
+            <td>applog - 01/25/2011</td>
+          </tr>
+          <tr class="table-light small">
+            <td>HAL_SLEEP</td>
+            <td>Hal Email Sleep Stop/Start</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="text-info"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>applog - 01/18/2011</td>
+            <td>applog - 11/16/2018</td>
+          </tr>
+          <tr class="table-light small">
+            <td>UNDEFINED</td>
+            <td>Undefined</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="text-warning"><b>&radic;</b></td>
+            <td>01/01/1976 12/31/9999</td>
+            <td>Initial Load - 12/14/2005</td>
+            <td>Initial Load - 11/16/2018</td>
+          </tr>
+          <tr class="table-light small">
+            <td>Add New</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table> 
+  </div>
 </ng-container>
 
 <ng-container *ngIf="showSev">
+  <p>Page is incomplete, check back later.</p>
 </ng-container>
 
 <ng-container *ngIf="showSS">
+  <p>Page is incomplete, check back later.</p>
 </ng-container>
 
 <ng-container *ngIf="showLN">
+  <p>Page is incomplete, check back later.</p>
 </ng-container>
 
 <ng-container *ngIf="showDL">
+  <p>Page is incomplete, check back later.</p>
 </ng-container>
 
   <div class="container" style="text-align: right;">
@@ -422,4 +656,5 @@
       <a href="#nav">Return to Top</a>
     </button>
   </div>
+  
 </div>
