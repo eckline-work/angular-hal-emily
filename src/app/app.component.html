@@ -1,5 +1,5 @@
 <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/HAL9000.svg/1024px-HAL9000.svg.png" width="27" height="27"> Fake HAL Test</a>
+  <a class="navbar-brand" href="#nav"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/HAL9000.svg/1024px-HAL9000.svg.png" width="27" height="27"> Fake HAL Test</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -161,7 +161,7 @@
             <fieldset>
               <div class="d-flex flex-wrap justify-content-center">
                 <div class="row">
-                  <div class="container" style="max-width: 18rem; min-width: 18rem;">
+                  <div class="container col-lg-3">
                     <label class="col-form-label col-form-label-sm">Process:&nbsp;</label>
                     <div class="form-group">
                       <div class="input-group mb-3">
@@ -174,7 +174,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="container" style="max-width: 18rem; min-width: 18rem;">
+                  <div class="container col-lg-3">
                     <label class="col-form-label col-form-label-sm">Trace:&nbsp;</label>
                     <div class="form-group">
                       <div class="input-group mb-3">
@@ -187,7 +187,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="container" style="max-width: 18rem; min-width: 18rem;">
+                  <div class="container col-lg-3">
                     <label class="col-form-label col-form-label-sm">Environment:&nbsp;</label>
                     <div class="form-group">
                       <div class="input-group mb-3">
@@ -200,9 +200,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="container" style="max-width: 20rem; min-width: 20rem;">
+                  <div class="container col-lg-4">
                     <label class="col-form-label col-form-label-sm">System:</label>
                     <select class="form-control form-control-sm" id="S-Select">
       	            <option selected="selected" value="">All</option>
@@ -253,7 +251,7 @@
                     <option value="AGENCYMGMT">Agency Management</option>
                     </select>
                   </div>
-                  <div class="container" style="max-width: 20rem; min-width: 20rem;">
+                  <div class="container col-lg-3">
                     <label class="col-form-label col-form-label-sm">Include:</label>
                     <select class="form-control form-control-sm" id="I-Select">
 	                    <option selected="selected" value="">All</option>
@@ -262,22 +260,24 @@
                     </select>
                   </div>
                 </div>
-                <div class="row" style="margin-left: 3px; margin-right: 3px;">
-                <div class="container" style="max-width: 20rem; min-width: 20rem;">
+                <div class="row" style="margin-top: 10px;">
+                <div class="container col-lg-3">
                   <label class="col-form-label col-form-label-sm" for="inputSmall">From:</label>
-                  <input class="form-control form-control-sm" type="text" placeholder="Choose a Date" id="fromDate">
+                  <input id="dp1" type="text" value="" class="form-control form-control-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">
+                  <div class="dropdown-menu" aria-labelledby="dp1">
+                  </div>
                 </div>
-                <div class="container" style="max-width: 20rem; min-width: 20rem;">
+                <div class="container col-lg-3">
                   <label class="col-form-label col-form-label-sm" for="inputSmall">To:</label>
-                  <input class="form-control form-control-sm" type="text" placeholder="Choose a Date" id="toDate">
+                  <input id="dp2" type="text" value="" class="form-control form-control-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">
+                  <div class="dropdown-menu" aria-labelledby="dp2">
+                  </div>
                 </div>
-                </div>
-                <div class="row" style="margin-left: 3px; margin-right: 3px;">
-                  <div class="container" style="max-width: 10rem; min-width: 10rem;">
+                  <div class="container col-lg-2">
                     <label class="col-form-label col-form-label-sm" for="inputSmall">Refresh Page:</label>
                     <input class="form-control form-control-sm" type="text" placeholder="30" id="RefTime" style="text-align:right;">
                   </div>
-                  <div class="container" style="max-width: 10rem; min-width: 10rem;">
+                  <div class="container col-lg-2">
                     <label class="col-form-label col-form-label-sm" for="inputSmall">Lines/Page:</label>
                     <input class="form-control form-control-sm" type="text" placeholder="30" id="LPg" style="text-align:right;">
                   </div>
@@ -659,5 +659,4 @@
       <a href="#nav">Return to Top</a>
     </button>
   </div>
-  
 </div>
