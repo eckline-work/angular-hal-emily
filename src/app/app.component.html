@@ -272,6 +272,7 @@
                     </div>
                   </div>
                 </div>
+                <!--The inputs are linked. I'll work on a way to fix that.-->
                 <div class="container col-lg-3">
                   <div class="form-group">
                     <label class="col-form-label col-form-label-sm" for="inputSmall">To:</label>
@@ -295,7 +296,7 @@
               </div>
               <br>
               <div class="d-flex flex-wrap justify-content-center">
-                <button type="button" class="btn btn-secondary btn-sm" (click)="critSet">Reload</button>
+                <button type="button" class="btn btn-secondary btn-sm" (click)="critSet">Refresh Table</button>
               </div>
             </fieldset>
           </form>
@@ -435,16 +436,16 @@
         <div class="card-header">In Progress:</div>
         <div class="card-body">
           <ul>
+            <li>Search Criteria Form<br>
+            <span class="small text-success">Date selectors in (finally!)</span><br>
+            <span class="small text-warning">Date selectors need debugging</span>
+            </li>
             <li>Table Page Switcher<br>
             <span class="small text-success">Buttons in place</span><br>
-            <span class="small text-warning">No alt. pages to switch to</span><br>
-            <span class="small text-danger">No programming done yet</span>
-            </li>
-            <li>Search Criteria Form<br>
-            <span class="small text-warning">Date selectors need implementing</span>
+            <span class="small text-danger">No alt. pages to switch to, no programming done yet</span>
             </li>
             <li>Angular<br>
-            <span class="small text-warning">Some implemented, most WIP</span>
+            <span class="small text-warning">More implemented, some still WIP</span>
             </li>
           </ul>
         </div>
@@ -455,8 +456,8 @@
         <div class="card-body">
           <ul>
             <li>Table Data<br>
-            <span class="small text-warning">Found some help to implement data updates, implementation WIP</span><br>
-            <span class="small text-danger">Don't know how to <i>get</i> the data</span>
+            <span class="small text-danger">Everything falls apart whenever I try to import data<br>
+            I'll just wait to work on this part until I finish the rest</span>
             </li>
           </ul>
         </div>
