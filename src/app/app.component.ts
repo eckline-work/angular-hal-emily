@@ -17,6 +17,7 @@ export class AppComponent  {
   public showDL: boolean = false;
   public show: boolean = false;
   public show2: boolean = false;
+  public idPicked: boolean = false;
 
   //names of things
   public SIB: any = 'Show Server/Service Information';
@@ -34,19 +35,11 @@ export class AppComponent  {
       this.SIB = 'Show Server/Service Information';
     }
   }
-
   toggle2() {
     this.show2 = !this.show2;
   }
-
-  dtog1() {
-    //WIP
-  }
-
-  dtog2() {
-    //WIP
-  }
-
+  
+  //Page Switchers
   toMain() {
     this.showMain = true;
     this.showStA = false;
@@ -61,7 +54,6 @@ export class AppComponent  {
     this. SIB = 'Show Server/Service Information';
     this.Title = 'HAL';
   }
-
   toStA() {
     this.showStA = true;
     this.showMain = false;
@@ -76,7 +68,6 @@ export class AppComponent  {
     this. SIB = 'Show Server/Service Information';
     this.Title = 'Severities Actions';
   }
-
   toLNtA() {
     this.showLNtA = true;
     this.showMain = false;
@@ -91,7 +82,6 @@ export class AppComponent  {
     this. SIB = 'Show Server/Service Information';
     this.Title = 'Numbers Severities';
   }
-
   toAct() {
     this.showAct = true;
     this.showMain = false;
@@ -106,7 +96,6 @@ export class AppComponent  {
     this. SIB = 'Show Server/Service Information';
     this.Title = 'Actions Definitions';
   }
-
   toSev() {
     this.showSev = true;
     this.showMain = false;
@@ -121,7 +110,6 @@ export class AppComponent  {
     this. SIB = 'Show Server/Service Information';
     this.Title = 'Severities by Source System';
   }
-
   toSS() {
     this.showSS = true;
     this.showMain = false;
@@ -136,7 +124,6 @@ export class AppComponent  {
     this. SIB = 'Show Server/Service Information';
     this.Title = 'Source System Definitions';
   }
-
   toLN() {
     this.showLN = true;
     this.showMain = false;
@@ -151,7 +138,6 @@ export class AppComponent  {
     this. SIB = 'Show Server/Service Information';
     this.Title = 'Log Numbers by Source Systems';
   }
-
   toDL() {
     this.showDL = true;
     this.showMain = false;
@@ -165,10 +151,6 @@ export class AppComponent  {
     this. show2 = false;
     this. SIB = 'Show Server/Service Information';
     this.Title = 'HAL Diagram - Logs grouped per day';
-  }
-
-  critSet(){
-    //WIP
   }
 }
 
