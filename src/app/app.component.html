@@ -14,14 +14,14 @@
         <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 40px, 0px); top: 0px; left: 0px; will-change: transform;">
           <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Associations</a>
           <div class="dropdown-menu hide" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(220px, -3px, 0px);">
-            <button class="dropdown-item" (click)="toStA()">Severities to Actions</button>
-            <button class="dropdown-item" (click)="toLNtA()">Log Numbers to Severities</button>
+            <button class="dropdown-item disabled" (click)="toStA()">Severities to Actions</button>
+            <button class="dropdown-item disabled" (click)="toLNtA()">Log Numbers to Severities</button>
           </div>
           <button class="dropdown-item" (click)="toAct()">Actions</button>
-          <button class="dropdown-item" (click)="toSev()">Severities</button>
-          <button class="dropdown-item" (click)="toSS()">Source Systems</button>
-          <button class="dropdown-item" (click)="toLN()">Log Numbers By Systems</button>
-          <button class="dropdown-item" (click)="toDL()">Diagram Logs</button>
+          <button class="dropdown-item disabled" (click)="toSev()">Severities</button>
+          <button class="dropdown-item disabled" (click)="toSS()">Source Systems</button>
+          <button class="dropdown-item disabled" (click)="toLN()">Log Numbers By Systems</button>
+          <button class="dropdown-item disabled" (click)="toDL()">Diagram Logs</button>
         </div>
       </li>
       <li class="nav-item">
@@ -335,6 +335,67 @@
         </tr>
       </tbody>
     </table>
+
+    <div class="container">
+      <table class="table table-hover">
+        <thead>
+          <tr class="table-primary" style="text-align:center;">
+            <th colspan="2"> HAL Message Viewer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-light small">
+            <th scope="row">ID:</th>
+            <td></td>
+          </tr>
+          <tr class="table-light small">
+            <th scope="row">System:</th>
+            <td></td>
+          </tr>
+          <tr class="table-light small">
+            <th scope="row">Number/Message:</th>
+            <td></td>
+          </tr>
+          <tr class="table-light small">
+            <th scope="row">Process:</th>
+            <td></td>
+          </tr>
+          <tr class="table-light small">
+            <th scope="row">Trace:</th>
+            <td></td>
+          </tr>
+          <tr class="table-light small">
+            <th scope="row">Environment Info:</th>
+            <td></td>
+          </tr>
+          <tr class="table-light small">
+            <th scope="row">Created:</th>
+            <td></td>
+          </tr>
+          <tr class="table-light small">
+            <th scope="row">Processed:</th>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-hover">
+        <thead>
+          <tr class="table-secondary">
+            <th scope="col">Action</th>
+            <th scope="col">Email</th>
+            <th scope="col">Pager No.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-light small">
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 
   <br>
@@ -385,12 +446,6 @@
             <span class="small text-warning">Found some help to implement data updates, implementation WIP</span><br>
             <span class="small text-danger">Don't know how to <i>get</i> the data</span>
             </li>
-            <li>Severities to Actions Page</li>
-            <li>Log Numbers to Severities Page</li>
-            <li>Severities Page</li>
-            <li>Source Systems Page</li>
-            <li>Log Numbers By Systems Page</li>
-            <li>Diagram Logs Page</li>
           </ul>
         </div>
       </div>
