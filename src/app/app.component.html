@@ -325,16 +325,14 @@
       </thead>
       <!--Is there a way to program this so that when a row is selected the message viewer appears with the correct info? most of the info will match between the two, message viewer just displays all text, main table cuts off after a bit b/c space limitations exist-->
       <tbody>
-        <tr class="table-light" ng-repeat = "(System, Message, Process, Trace, Environment, CreatedDate, ID) in data">
-          <td>{{System}}</td>
-          <td>{{Message}}</td>
-          <td>{{Process}}</td>
-          <td>{{Trace}}</td>
-          <td>{{Environment}}</td>
-          <td>{{CreatedDate}}</td>
-          <td scope="row">
-            <button type="button" class="btn btn-link">{{ID}}</button>
-          </td>
+        <tr class="table-light" ng-repeat = "x in data">
+          <td>{{x.System}}</td>
+          <td>{{x.Message}}</td>
+          <td>{{x.Process}}</td>
+          <td>{{x.Trace}}</td>
+          <td>{{x.Environment}}</td>
+          <td>{{x.CreatedDate}}</td>
+          <td><button type="button" class="btn btn-link">{{x.ID}}</button></td>
         </tr>
       </tbody>
     </table>

@@ -17,7 +17,11 @@
   <script>
     var app = angular.module('my-app', []);
     app.controller('myCtrl', function($scope){
-      
+      $scope.data =[
+        {System:'a', Message:'adfa', Process:'f', Trace:'dssd', Environment:'aa', CreatedDate:'123', ProcessedDate:'123', ID:'1'},
+        {System:'a', Message:'adfa', Process:'f', Trace:'dssd', Environment:'aa', CreatedDate:'123', ProcessedDate:'123', ID:'2'},
+        {System:'a', Message:'adfa', Process:'f', Trace:'dssd', Environment:'aa', CreatedDate:'123', ProcessedDate:'123', ID:'3'}
+      ];
     });
   </script>
   <base href="/#nav">
