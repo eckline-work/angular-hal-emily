@@ -151,7 +151,7 @@
     </ng-container>
   </div>
 
-<ng-container ng-controller="myCtrl" *ngIf="showMain">
+<ng-container *ngIf="showMain">
   <div class="d-flex flex-wrap justify-content-center">
     <div class="d-flex flex-wrap">
       <div class="card border-primary mb-3" style="min-width: 47rem;">
@@ -263,14 +263,16 @@
                 <div class="row" style="margin-top: 10px;">
                 <div class="container col-lg-3">
                   <label class="col-form-label col-form-label-sm" for="inputSmall">From:</label>
-                  <input id="dp1" type="text" value="" class="form-control form-control-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">
+                  <input id="dp1" type="text" value="{{ model | json }}" class="form-control form-control-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">
                   <div class="dropdown-menu" aria-labelledby="dp1">
+                    <ngb-datepicker #dp1 [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
                   </div>
                 </div>
                 <div class="container col-lg-3">
                   <label class="col-form-label col-form-label-sm" for="inputSmall">To:</label>
-                  <input id="dp2" type="text" value="" class="form-control form-control-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">
+                  <input id="dp2" type="text" value="{{ model2 | json }}" class="form-control form-control-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">
                   <div class="dropdown-menu" aria-labelledby="dp2">
+                    <ngb-datepicker #dp2 [(ngModel)]="model2" (navigate)="date2 = $event.next"></ngb-datepicker>
                   </div>
                 </div>
                   <div class="container col-lg-2">
@@ -325,14 +327,14 @@
       </thead>
       <!--Is there a way to program this so that when a row is selected the message viewer appears with the correct info? most of the info will match between the two, message viewer just displays all text, main table cuts off after a bit b/c space limitations exist-->
       <tbody>
-        <tr class="table-light" ng-repeat = "(System, Message, Process, Trace, Environment, CreatedDate, ID) in data">
-          <td>{{System}}</td>
-          <td>{{Message}}</td>
-          <td>{{Process}}</td>
-          <td>{{Trace}}</td>
-          <td>{{Environment}}</td>
-          <td>{{CreatedDate}}</td>
-          <td><button type="button" class="btn btn-link">{{ID}}</button></td>
+        <tr class="table-light">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><!--<button type="button" class="btn btn-link"></button>--></td>
         </tr>
       </tbody>
     </table>
@@ -349,35 +351,35 @@
           <tbody>
             <tr class="table-light small">
               <th scope="row">ID:</th>
-              <td>{{val}}</td>
+              <td></td>
             </tr>
             <tr class="table-light small">
               <th scope="row">System:</th>
-              <td>{{sys}}</td>
+              <td></td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Number/Message:</th>
-              <td>{{mss}}</td>
+              <td></td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Process:</th>
-              <td>{{pro}}</td>
+              <td></td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Trace:</th>
-              <td>{{tc}}</td>
+              <td></td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Environment Info:</th>
-              <td>{{ei}}</td>
+              <td></td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Created:</th>
-              <td>{{cd}}</td>
+              <td></td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Processed:</th>
-              <td>{{pd}}</td>
+              <td></td>
             </tr>
           </tbody>  
         </table>
