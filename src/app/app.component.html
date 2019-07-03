@@ -151,7 +151,7 @@
     </ng-container>
   </div>
 
-<ng-container *ngIf="showMain">
+<ng-container ng-controller="myCtrl" *ngIf="showMain">
   <div class="d-flex flex-wrap justify-content-center">
     <div class="d-flex flex-wrap">
       <div class="card border-primary mb-3" style="min-width: 47rem;">
@@ -340,7 +340,7 @@
     </table>
 
     <div class="container">
-      <!--<ng-container *ngIf="idPicked">-->
+      <ng-container *ngIf="idPicked">
         <table class="table table-hover">
           <thead>
             <tr class="table-secondary" style="text-align:center;">
@@ -351,35 +351,35 @@
           <tbody>
             <tr class="table-light small">
               <th scope="row">ID:</th>
-              <td></td>
+              <td>{{id}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">System:</th>
-              <td></td>
+              <td>{{sys}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Number/Message:</th>
-              <td></td>
+              <td>{{mss}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Process:</th>
-              <td></td>
+              <td>{{pro}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Trace:</th>
-              <td></td>
+              <td>{{tc}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Environment Info:</th>
-              <td></td>
+              <td>{{ei}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Created:</th>
-              <td></td>
+              <td>{{cd}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Processed:</th>
-              <td></td>
+              <td>{{pd}}</td>
             </tr>
           </tbody>  
         </table>
@@ -399,7 +399,7 @@
             </tr>
           </tbody>
         </table>
-      <!--</ng-container>-->
+      </ng-container>
     </div>
 
   </div>
