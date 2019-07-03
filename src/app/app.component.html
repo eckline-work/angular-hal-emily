@@ -262,17 +262,25 @@
                 </div>
                 <div class="row" style="margin-top: 10px;">
                 <div class="container col-lg-3">
-                  <label class="col-form-label col-form-label-sm" for="inputSmall">From:</label>
-                  <input id="dp1" type="text" value="{{ model | json }}" class="form-control form-control-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">
-                  <div class="dropdown-menu" aria-labelledby="dp1">
-                    <ngb-datepicker #dp1 [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
+                  <div class="form-group">
+                    <label class="col-form-label col-form-label-sm" for="inputSmall">From:</label>
+                    <div class="input-group">
+                      <input class="form-control form-control-sm" placeholder="yyyy-mm-dd" name="dp1" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                      <div class="input-group-append">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" (click)="d.toggle()" type="button"></button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="container col-lg-3">
-                  <label class="col-form-label col-form-label-sm" for="inputSmall">To:</label>
-                  <input id="dp2" type="text" value="{{ model2 | json }}" class="form-control form-control-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">
-                  <div class="dropdown-menu" aria-labelledby="dp2">
-                    <ngb-datepicker #dp2 [(ngModel)]="model2" (navigate)="date2 = $event.next"></ngb-datepicker>
+                  <div class="form-group">
+                    <label class="col-form-label col-form-label-sm" for="inputSmall">To:</label>
+                    <div class="input-group">
+                      <input class="form-control form-control-sm" placeholder="yyyy-mm-dd" name="dp2" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                      <div class="input-group-append">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" (click)="d.toggle()" type="button"></button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                   <div class="container col-lg-2">

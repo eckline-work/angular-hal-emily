@@ -9,9 +9,6 @@ import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 export class AppComponent  {
   //datepickers
   model: NgbDateStruct;
-  date: {year: number, month: number};
-  model2: NgbDateStruct;
-  date2: {year: number, month: number};
 
   constructor(private calendar: NgbCalendar) {
   }

@@ -6,8 +6,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [ AppComponent, ],
   imports:      [ BrowserModule, FormsModule, NgbModule ],
+  declarations: [ AppComponent ],
+  exports:      [ AppComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
