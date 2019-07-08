@@ -39,8 +39,6 @@ export class AppComponent  {
   toggle2() {
     this.show2 = !this.show2;
   }
-  //stuff for HMV switcher to go here
-
 
   //Page Switchers
   toMain() {
