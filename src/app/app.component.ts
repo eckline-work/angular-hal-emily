@@ -7,13 +7,6 @@ import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  //datepickers
-  model: NgbDateStruct;
-
-  constructor(private calendar: NgbCalendar) {
-  }
-
-
   //pages
   public showMain: boolean = true;
   public showStA: boolean = false;
