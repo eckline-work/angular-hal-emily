@@ -121,17 +121,17 @@
                 </div>
                 <div class="container col-lg-2">
                   <label class="col-form-label col-form-label-sm" for="RefTime">Refresh Page:</label>
-                  <input class="form-control form-control-sm" type="text" value="30" id="RefTime" style="text-align:right;">
+                  <input class="form-control form-control-sm" type="number" ng-model="refTime" value="{{refTime}}" id="RefTime" style="text-align:right;">
                 </div>
                 <div class="container col-lg-2">
                   <label class="col-form-label col-form-label-sm" for="LPg">Lines/Page:</label>
-                  <input class="form-control form-control-sm" type="text" value="26" id="LPg" style="text-align:right;">
+                  <input class="form-control form-control-sm" type="number" ng-model="pageSize" value="{{pageSize}}" id="LPg" style="text-align:right;">
                 </div>
               </div>
             </div>
             <br>
             <div class="d-flex flex-wrap justify-content-center">
-              <button type="button" class="btn btn-secondary btn-sm" id="fSubBtn">Refresh Table</button>
+              <button type="button" class="btn btn-primary" (click)="critSet">Refresh Table</button>
             </div>
           </fieldset>
         </form>

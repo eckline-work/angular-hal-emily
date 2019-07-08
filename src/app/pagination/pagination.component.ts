@@ -7,5 +7,9 @@ import {Component} from '@angular/core';
 export class NgbdPagination {
   page = 1;
   pageSize = 26;
+  refTime = 30;
+
+  critSet() {
+  }
 
 }
