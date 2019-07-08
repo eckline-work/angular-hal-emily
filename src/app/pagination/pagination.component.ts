@@ -8,7 +8,4 @@ export class NgbdPagination {
   page = 1;
   pageSize = 26;
 
-  critSet() {
-
-  }
 }
