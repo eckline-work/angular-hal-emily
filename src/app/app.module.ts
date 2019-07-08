@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
+import { NgbdDatepickerPopup } from './datepicker-popup';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, NgbModule ],
-  declarations: [ AppComponent ],
-  exports:      [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent, NgbdDatepickerPopup ],
+  exports:      [ AppComponent, NgbdDatepickerPopup ],
+  bootstrap:    [ AppComponent, NgbdDatepickerPopup ]
 })
 export class AppModule { }
