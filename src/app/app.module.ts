@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { NgbdDatepickerPopup } from './datepicker-popup';
-import { NgbdPagination } from './pagination';
+import { NgbdDatepickerPopup } from './datepicker.component';
+import { NgbdPagination } from './pagination.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, NgbModule ],

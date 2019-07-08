@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'ngbd-pagination',
-  templateUrl: './pagination.html'
+  templateUrl: './pagination.component.html'
 })
 export class NgbdPagination {
   page = 1;
