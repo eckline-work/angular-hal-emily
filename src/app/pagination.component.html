@@ -1,4 +1,233 @@
+    <div class="d-flex flex-wrap">
+      <div class="card border-primary mb-3">
+        <div class="card-header">Set Search Criteria</div>
+        <div class="card-body">
+          <form>
+            <fieldset>
+              <div class="d-flex flex-wrap justify-content-center">
+                <div class="row">
+                  <div class="container col-lg-3">
+                    <label class="col-form-label col-form-label-sm" for="ProcSelect; ProcInput;">Process:&nbsp;</label>
+                    <div class="form-group">
+                      <div class="input-group mb-3">
+                        <select class="form-control form-control-sm" id="ProcSelect">
+                          <option>Contains</option>
+                          <option>Begins With</option>
+                          <option>Ends With</option>
+                        </select>
+                        <input type="text" class="form-control form-control-sm" aria-label="ProcessInput" id="ProcInput">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container col-lg-3">
+                    <label class="col-form-label col-form-label-sm" for="TraceSelect; TraceInput;">Trace:&nbsp;</label>
+                    <div class="form-group">
+                      <div class="input-group mb-3">
+                        <select class="form-control form-control-sm" id="TraceSelect">
+                          <option>Contains</option>
+                          <option>Begins With</option>
+                          <option>Ends With</option>
+                        </select>
+                        <input type="text" class="form-control form-control-sm" aria-label="TraceInput" id="TraceInput">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container col-lg-3">
+                    <label class="col-form-label col-form-label-sm" for="EnvSelect; EnvInput;">Environment:&nbsp;</label>
+                    <div class="form-group">
+                      <div class="input-group mb-3">
+                        <select class="form-control input-group-prepend form-control-sm" id="EnvSelect">
+                          <option>Contains</option>
+                          <option>Begins With</option>
+                          <option>Ends With</option>
+                        </select>
+                        <input type="text" class="form-control form-control-sm" aria-label="EnvironmentInput" id="EnvInput">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container col-lg-4">
+                    <label class="col-form-label col-form-label-sm" for="S-Select">System:</label>
+                    <select class="form-control form-control-sm" id="S-Select">
+      	            <option selected="selected" value="">All</option>
+	                  <option value="CLAIMSMGMT">Claims Management</option>
+    	              <option value="CONTACTMGMT">Contact Managment</option>
+                    <option value="MMR">Mandatory Medicare Reporting</option>
+	                  <option value="PATIENTSAFETY">Patient Safety</option>
+                  	<option value="RATELOAD">Rate Load Database</option>
+  	                <option value="RATESTAGE">Rate Staging Database</option>
+                    <option value="TDC.AGENCYMANAGEMENT.WEBAPI">Tdc Agency Management Web API</option>
+                    <option value="AGENT">Agent Broker</option>
+                    <option value="FRAMEWEBAP">Framework Web API Service</option>
+	                  <option value="APPLOG">Application Log</option>
+	                  <option value="APPLOG_DB">Application Log Database</option>
+	                  <option value="EDOC_CLEAN">EDoc - Clean Files</option>
+      	            <option value="AP_INF">Accounts Payable -  Informatica</option>
+	                  <option value="DBA">DBA</option>
+	                  <option value="DW">Data Warehouse</option>
+                    <option value="DWS">DWS</option>
+	                  <option value="EDOCDATA">EDoc Data Provider Server</option>
+      	            <option value="EDOCSERVER">EDoc Server</option>
+        	          <option value="EMAILSERV">Email Server</option>
+	                  <option value="EOD">End of Day Jobs</option>
+	                  <option value="FSMP_SRV">Folder Splitter</option>
+                    <option value="IMANAGESRV">iManage Server</option>
+    	              <option value="LBM">LBM Printer Server</option>
+	                  <option value="MEMBERS">Members Only</option>
+                    <option value="MEMBERSCSU">Members Only Internal (CSU)</option>
+                    <option value="MP">Macro Processor Server</option>
+	                  <option value="NOVA">Nova</option>
+	                  <option value="NOVA_INF">Nova Informatica</option>
+    	              <option value="ONLINE APP">Online  Application</option>
+	                  <option value="PBOWES">Pitney Bowes</option>
+  	                <option value="PRINTSERV">Print Server</option>
+  	                <option value="PRODCOMP">Producer Compensation</option>
+                    <option value="RET_BILL">Retention Billing</option>
+	                  <option value="REPORTAPI">Report API</option>
+                    <option value="OPCO">OPCO Conversion</option>
+	                  <option value="SECURITY">Security</option>
+	                  <option value="Tdc.SecurityServer.WebAPI">Security Server</option>
+  	                <option value="STAR">Star</option>
+	                  <option value="VISTA">Vista</option>
+                    <option value="UNICENTER">Unicenter</option>
+  	                <option value="RPTSERVER">Report Server</option>
+	                  <option value="DW_SQLLOAD">DW - Nova Load</option>
+  	                <option value="TDCUTILS">SQL - SERVER</option>
+                    <option value="UNKNOWN">Unknown</option>
+                    <option value="AGENCYMGMT">Agency Management</option>
+                    </select>
+                  </div>
+                  <div class="container col-lg-3">
+                    <label class="col-form-label col-form-label-sm" for="I-Select">Include:</label>
+                    <select class="form-control form-control-sm" id="I-Select">
+	                    <option selected="selected" value="">All</option>
+	                    <option value="Y">Errors</option>
+	                    <option value="N">Informational</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row" style="margin-top: 10px;">
+                  <div class="container col-lg-3">
+                    <div class="form-group">
+                      <label class="col-form-label col-form-label-sm" for="input-small">From:</label>
+                      <ngbd-datepicker-popup></ngbd-datepicker-popup>
+                    </div>
+                  </div>
+                  <div class="container col-lg-3">
+                    <div class="form-group">
+                      <label class="col-form-label col-form-label-sm" for="input-small">To:</label>
+                      <ngbd-datepicker-popup></ngbd-datepicker-popup>
+                    </div>
+                  </div>
+                  <div class="container col-lg-2">
+                    <label class="col-form-label col-form-label-sm" for="RefTime">Refresh Page:</label>
+                    <input class="form-control form-control-sm" type="text" placeholder="30" id="RefTime" style="text-align:right;">
+                  </div>
+                  <div class="container col-lg-2">
+                    <label class="col-form-label col-form-label-sm" for="LPg">Lines/Page:</label>
+                    <input class="form-control form-control-sm" type="text" value="26" id="LPg" style="text-align:right;">
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="d-flex flex-wrap justify-content-center">
+                <button type="button" class="btn btn-secondary btn-sm" (click)="critSet">Refresh Table</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+
 <div class="d-flex flex-wrap justify-content-center">
-  &nbsp;&nbsp;&nbsp;<span id="Row-Info">|&nbsp;Total&nbsp;Rows:&nbsp;<b>{{collectionSize}}</b>&nbsp;|&nbsp;Page:&nbsp;<b>{{page}}</b>&nbsp;of&nbsp;<b>z</b>&nbsp;|</span>&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;<span id="Row-Info">|&nbsp;Total&nbsp;Rows:&nbsp;<b>{{collectionSize}}</b>&nbsp;|&nbsp;Page:&nbsp;<b>{{page}}</b>&nbsp;of&nbsp;<b>{{pageMax}}</b>&nbsp;|</span>&nbsp;&nbsp;&nbsp;
   <ngb-pagination class="pagination pagination-sm d-flex justify-content-center" [pageSize]="pageSize" [collectionSize]="120" [(page)]="page" [maxSize]="3" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
 </div>
+
+    <table class="table table-hover">
+      <thead>
+        <tr class="table-primary">
+          <th scope="col">System</th>
+          <th scope="col">Message</th>
+          <th scope="col">Process</th>
+          <th scope="col">Trace</th>
+          <th scope="col">Environment</th>
+          <th scope="col">Created&nbsp;Date</th>
+          <th scope="col">ID</th>
+        </tr>
+      </thead>
+      <!--Is there a way to program this so that when a row is selected the message viewer appears with the correct info? most of the info will match between the two, message viewer just displays all text, main table cuts off after a bit b/c space limitations exist-->
+      <tbody>
+        <tr class="table-light">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><!--<button type="button" class="btn btn-link"></button>--></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="container">
+      <ng-container *ngIf="idPicked">
+        <table class="table table-hover">
+          <thead>
+            <tr class="table-secondary" style="text-align:center;">
+              <th colspan="2"> HAL Message Viewer</th>
+            </tr>
+          </thead>
+          <!--fill with info from table-->
+          <tbody>
+            <tr class="table-light small">
+              <th scope="row">ID:</th>
+              <td></td>
+            </tr>
+            <tr class="table-light small">
+              <th scope="row">System:</th>
+              <td></td>
+            </tr>
+            <tr class="table-light small">
+              <th scope="row">Number/Message:</th>
+              <td></td>
+            </tr>
+            <tr class="table-light small">
+              <th scope="row">Process:</th>
+              <td></td>
+            </tr>
+            <tr class="table-light small">
+              <th scope="row">Trace:</th>
+              <td></td>
+            </tr>
+            <tr class="table-light small">
+              <th scope="row">Environment Info:</th>
+              <td></td>
+            </tr>
+            <tr class="table-light small">
+              <th scope="row">Created:</th>
+              <td></td>
+            </tr>
+            <tr class="table-light small">
+              <th scope="row">Processed:</th>
+              <td></td>
+            </tr>
+          </tbody>  
+        </table>
+        <table class="table table-hover">
+          <thead>
+            <tr class="table-info">
+              <th scope="col">Action</th>
+              <th scope="col">Email</th>
+              <th scope="col">Pager No.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-light small">
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </ng-container>
+    </div>
