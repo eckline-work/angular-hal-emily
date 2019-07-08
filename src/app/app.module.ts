@@ -5,11 +5,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { NgbdDatepickerPopup } from './datepicker-popup';
+import { NgbdPagination } from './pagination';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, NgbModule ],
-  declarations: [ AppComponent, NgbdDatepickerPopup ],
-  exports:      [ AppComponent, NgbdDatepickerPopup ],
-  bootstrap:    [ AppComponent, NgbdDatepickerPopup ]
+  declarations: [ AppComponent, NgbdDatepickerPopup, NgbdPagination ],
+  exports:      [ AppComponent, NgbdDatepickerPopup, NgbdPagination ],
+  bootstrap:    [ AppComponent, NgbdDatepickerPopup, NgbdPagination ]
 })
 export class AppModule { }
