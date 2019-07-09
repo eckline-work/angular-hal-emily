@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Inform} from '../data';
 
 @Component({
   selector: 'ngbd-pagination',
@@ -6,7 +7,7 @@ import {Component} from '@angular/core';
 })
 export class NgbdPagination {
 
-  items: data[] = [];
+  items: Inform[] = [];
 
   page = 1;
   pageSize = 26;
