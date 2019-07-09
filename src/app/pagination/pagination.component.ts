@@ -5,6 +5,9 @@ import {Component} from '@angular/core';
   templateUrl: './pagination.component.html'
 })
 export class NgbdPagination {
+
+  items: data[] = [];
+
   page = 1;
   pageSize = 26;
   collectionSize = 120;
