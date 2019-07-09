@@ -38,18 +38,18 @@ export class NgbdPagination {
       this.TD = TD;
 
     //Table Parsing
-    //???
+      //???
 
     //Pagi Dispaly
-    if (!LPg){
-      this.pageSize = 26;
-    }
-    else {
-      this.pageSize = LPg;
-    }
+      if (!LPg){
+        this.pageSize = 26;
+      }
+      else {
+        this.pageSize = LPg;
+      }
 
-    this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
-    this.page = 1;
+      this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
+      this.page = 1;
   }
 
   //I don't even know how I'll get the message viewer to work.
