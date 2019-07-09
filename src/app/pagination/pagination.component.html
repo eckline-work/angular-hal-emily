@@ -154,14 +154,14 @@
     </thead>
     <!--Is there a way to program this so that when a row is selected the message viewer appears with the correct info? most of the info will match between the two, message viewer just displays all text, main table cuts off after a bit b/c space limitations exist-->
     <tbody>
-      <tr class="table-light" *ngFor="let i of items | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+      <tr class="table-light" *ngFor="let i of items | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize" >
         <td>{{i.sys}}</td>
         <td>{{i.msg}}</td>
         <td>{{i.prc}}</td>
         <td>{{i.trc}}</td>
         <td>{{i.env}}</td>
         <td>{{i.CD}}</td>
-        <td>{{i.ID}}</td>
+        <td><button type="button" class="btn btn-small btn-link" (click)="openMsg(i.ID.value)">{{i.ID}}</button></td>
       </tr>
     </tbody>
   </table>

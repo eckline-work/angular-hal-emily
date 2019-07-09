@@ -5,5 +5,6 @@ export class Inform {
   trc: string;
   env: string;
   CD: string;
+  PD: string;
   ID: number;
 }
