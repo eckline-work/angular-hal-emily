@@ -121,7 +121,7 @@
                 </div>
                 <div class="container col-lg-2">
                   <label class="col-form-label col-form-label-sm" for="LPg">Lines/Page:</label>
-                  <input class="form-control form-control-sm" type="number" ng-model="pageSize" value="{{pageSize}}" id="LPg" style="text-align:right;" #LPg>
+                  <input class="form-control form-control-sm" type="text" ng-model="pageSize" value="{{pageSize}}" id="LPg" style="text-align:right;" #LPg>
                 </div>
               </div>
             </div>
@@ -156,10 +156,10 @@
     <tbody>
       <tr class="table-light" *ngFor="let i of items | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
         <td>{{i.sys}}</td>
-        <td>{{i.msg}}</td>
-        <td>{{i.prc}}</td>
-        <td>{{i.trc}}</td>
-        <td>{{i.env}}</td>
+        <td>{{i.msg | slice:0:30}}</td>
+        <td>{{i.prc | slice:0:30}}</td>
+        <td>{{i.trc | slice:0:30}}</td>
+        <td>{{i.env | slice:0:30}}</td>
         <td>{{i.CD}}</td>
         <td><button class="btn btn-link" (click)="openMsg(i.ID)">{{i.ID}}</button></td>
       </tr>
@@ -220,9 +220,9 @@
         </thead>
         <tbody>
           <tr class="table-light small">
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>how get?</td>
+            <td>how get?</td>
+            <td>how get?</td>
           </tr>
         </tbody>
       </table>
