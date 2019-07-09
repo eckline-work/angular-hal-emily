@@ -7,6 +7,36 @@ import {MOCK} from '../mock-data';
   templateUrl: './pagination.component.html'
 })
 export class NgbdPagination {
+  idPicked = -7;
+
+  sys: string;
+  msg: string;
+  prc: string;
+  trc: string;
+  env: string;
+  CD: string;
+  PD: string;
+
+  found: Inform;
+
+  openMsg(id: number) {
+    this.found = this.items.find(function(element) {
+      return element.ID == id;
+    });
+
+    this.prc = this.found.prc;
+    this.trc = this.found.trc;
+    this.env = this.found.env;
+    this.sys = this.found.sys;
+    this.msg = this.found.msg;
+    this.CD = this.found.CD;
+    this.PD = this.found.PD;
+    this.idPicked = id;
+  }
+
+  msgClose() {
+    this.idPicked = -7;
+  }
 
   items = MOCK;
   toShow = this.items;

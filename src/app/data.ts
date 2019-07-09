@@ -7,4 +7,5 @@ export class Inform {
   CD: string;
   PD: string;
   ID: number;
+  err: string;
 }

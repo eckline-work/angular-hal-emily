@@ -8,7 +8,8 @@ export const MOCK: Inform[] = [
   env: 'NPTES520',
   CD: 'today',
   PD: 'string',
-  ID: 3},
+  ID: 3,
+  err: 'N'},
   {sys: 'Nova',
   msg: 'another long witty coment to act as a placeholder so I can try to debug this stupid thing',
   prc: 'string',
@@ -16,13 +17,15 @@ export const MOCK: Inform[] = [
   env: 'NPTES520',
   CD: 'today',
   PD: 'string',
-  ID: 2},
+  ID: 2,
+  err: 'Y'},
   {sys: 'Online Application',
   msg: 'testing this third long witty coment that acts as a placeholder so I can try to debug this stupid thing',
-  prc: 'string',
+  prc: 'shfidrs buisf jhsirea kehjr fiuehrs bgfidrghiug shirg hsgbuifa kalfg hidhf viuyrg hsgbuyrg hsgbuifa kalfg hidhfvi uyrguifa',
   trc: 'asklajoif gjneircv hgpds hgviud jhsirea kehjrfiuehrs bgfidrghiug shfidrs buisf hfviuyrg hsgbuifa kalfg hid',
   env: 'NPTES520',
   CD: 'yesterday',
   PD: 'string',
-  ID: 1}
+  ID: 1,
+  err: 'N'}
 ]
