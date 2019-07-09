@@ -137,7 +137,7 @@
 
   <div class="d-flex flex-wrap justify-content-center">
     &nbsp;&nbsp;&nbsp;<span id="Row-Info">|&nbsp;Total&nbsp;Rows:&nbsp;<b>{{collectionSize}}</b>&nbsp;|&nbsp;Page:&nbsp;<b>{{page}}</b>&nbsp;of&nbsp;<b>{{pageMax}}</b>&nbsp;|</span>&nbsp;&nbsp;&nbsp;
-    <ngb-pagination class="pagination pagination-sm d-flex justify-content-center" [pageSize]="pageSize" [collectionSize]="120" [(page)]="page" [maxSize]="3" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+    <ngb-pagination class="pagination pagination-sm d-flex justify-content-center" [pageSize]="pageSize" [collectionSize]="items.length" [(page)]="page" [maxSize]="3" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
   </div>
 
   <table class="table table-hover">
@@ -154,7 +154,7 @@
     </thead>
     <!--Is there a way to program this so that when a row is selected the message viewer appears with the correct info? most of the info will match between the two, message viewer just displays all text, main table cuts off after a bit b/c space limitations exist-->
     <tbody>
-      <tr class="table-light">
+      <tr class="table-light" *ngFor="let item of items | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
         <td></td>
         <td></td>
         <td></td>
