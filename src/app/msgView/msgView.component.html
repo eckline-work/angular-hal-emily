@@ -1,4 +1,4 @@
-<ng-container *ngIf="idPicked!=-7">
+<ng-container *ngIf="idPicked==-7">
   <table class="table table-hover">
     <thead>
       <tr class="table-secondary" style="text-align:center;">
@@ -57,5 +57,5 @@
       </tr>
     </tbody>
   </table>
-  <button class="btn btn-dark float-right" (click)="msgClose()">Close</button>
+  <button class="btn btn-dark float-right disabled" (click)="msgClose()">Close</button>
 </ng-container>

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Inform} from '../data';
 
 @Component({
@@ -8,39 +8,17 @@ import {Inform} from '../data';
 export class NgbdPagination {
 
   items: Inform[] = [];
-  toShow: Inform[] = [];
+  toShow = this.items;
 
   page = 1;
   pageSize = 26;
-  collectionSize = this.items.length;
+  collectionSize = this.toShow.length;
   pageMax = Math.ceil(this.collectionSize / this.pageSize);
-  PS:string;
-  PI:string;
-  TS:string;
-  TI:string;
-  ES:string;
-  EI:string;
-  Sys:string;
-  Inc:string;
-  FD:string;
-  TD:string;
 
-  critSet(PS: string, PI: string, TS: string, TI: string, ES: string, EI: string, Sys: string, Inc: string, FD: string, TD: string, LPg: number) {
-    //On click
-      //set values equal to selections - OK
+  critSet(LPg: number) {
+    //On clicked
       //parse through table
-
-    //Set values
-      this.PS = PS;
-      this.PI = PI;
-      this.TS = PS;
-      this.TI = PI;
-      this.ES = PS;
-      this.EI = PI;
-      this.Sys = Sys;
-      this.Inc = Inc;
-      this.FD = FD;
-      this.TD = TD;
+      //display proper items
 
     //Table Parsing
       
@@ -67,6 +45,13 @@ export class NgbdPagination {
   //Will need a refresh function that runs every so often so that new items can be
   refresh(){
     //every 2 minutes or when Refresh Table clicked
+  }
+
+  ngOnInit() {
+    this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
+    if (this.pageMax == 0) {
+      this.pageMax = 1;
+    }
   }
 
 }

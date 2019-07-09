@@ -21,7 +21,6 @@ export class msgView {
   found: Inform;
 
   openMsg(id: number) {
-    this.idPicked = id;
     this.found = this.items.find(function(element) {
       return element.ID == id;
     });
@@ -33,6 +32,7 @@ export class msgView {
     this.msg = this.found.msg;
     this.CD = this.found.CD;
     this.PD = this.found.PD;
+    this.idPicked = id;
   }
 
   msgClose() {

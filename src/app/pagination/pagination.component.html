@@ -127,7 +127,7 @@
             </div>
             <br>
             <div class="d-flex flex-wrap justify-content-center">
-              <button type="button" class="btn btn-primary" (click)="critSet(PS.value, PI.value, TS.value, TI.value, ES.value, EI.value, Sys.value, Inc.value, FD.value, TD.value, LPg.value)">Refresh Table</button>
+              <button type="button" class="btn btn-primary" (click)="critSet(LPg.value)">Refresh Table</button>
             </div>
           </fieldset>
         </form>
@@ -156,12 +156,12 @@
     <tbody>
       <tr class="table-light" *ngFor="let i of items | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
         <td>{{i.sys}}</td>
-        <td>{{i.msg}}</td>
-        <td>{{i.prc}}</td>
-        <td>{{i.trc}}</td>
-        <td>{{i.env}}</td>
+        <td>{{i.msg | limitTo:letterLimit}}</td>
+        <td>{{i.prc | limitTo:letterLimit}}</td>
+        <td>{{i.trc | limitTo:letterLimit}}</td>
+        <td>{{i.env | limitTo:letterLimit}}</td>
         <td>{{i.CD}}</td>
-        <td><button class="btn btn-small btn-link" (click)="openMsg(i.ID.value)">{{i.ID}}</button></td>
+        <td><button class="btn btn-link" (click)="openMsg(i.ID.value)">{{i.ID}}</button></td>
       </tr>
     </tbody>
   </table>
