@@ -11,7 +11,7 @@ export class NgbdPagination {
 
   page = 1;
   pageSize = 26;
-  collectionSize = 120;
+  collectionSize = this.items.length;
   pageMax = Math.ceil(this.collectionSize / this.pageSize);
   PS:string;
   PI:string;
@@ -53,8 +53,15 @@ export class NgbdPagination {
       }
 
       this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
+      if (this.pageMax == 0) {
+        this.pageMax = 1;
+      }
       this.page = 1;
   }
+
+
+  //Will need a refresh function that runs every so often so that new items can be
+
 
   //I don't even know how I'll get the message viewer to work.
   //It will definitely need it's own set of functions.
