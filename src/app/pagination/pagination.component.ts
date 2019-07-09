@@ -9,10 +9,34 @@ export class NgbdPagination {
   pageSize = 26;
   collectionSize = 120;
   pageMax = Math.ceil(this.collectionSize / this.pageSize);
+  PS:string;
+  PI:string;
+  TS:string;
+  TI:string;
+  ES:string;
+  EI:string;
+  Sys:string;
+  Inc:string;
+  FD:string;
+  TD:string;
 
   critSet(PS: string, PI: string, TS: string, TI: string, ES: string, EI: string, Sys: string, Inc: string, FD: string, TD: string, LPg: number) {
-    //On click, should set values equal to selections, then use said values to parse through the table.
-  
+    //On click
+      //set values equal to selections - OK
+      //parse through table
+
+    //Set values
+      this.PS = PS;
+      this.PI = PI;
+      this.TS = PS;
+      this.TI = PI;
+      this.ES = PS;
+      this.EI = PI;
+      this.Sys = Sys;
+      this.Inc = Inc;
+      this.FD = FD;
+      this.TD = TD;
+
     //Table Parsing
     //???
 
@@ -20,7 +44,9 @@ export class NgbdPagination {
     if (!LPg){
       this.pageSize = 26;
     }
-    else this.pageSize = LPg;
+    else {
+      this.pageSize = LPg;
+    }
 
     this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
     this.page = 1;
