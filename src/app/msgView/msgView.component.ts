@@ -7,7 +7,7 @@ import {Inform} from '../data';
 })
 
 export class msgView {
-  idPicked = 7;
+  idPicked = -7;
   items: Inform[] = [];
 
   sys: string;

@@ -68,10 +68,4 @@ export class NgbdPagination {
     //every 2 minutes or when Refresh Table clicked
   }
 
-
-  //I don't even know how I'll get the message viewer to work.
-  //It will definitely need it's own set of functions.
-  //I'll code it after I finish the form function.
-  //Hopefully they won't take too long to do.
-
 }
