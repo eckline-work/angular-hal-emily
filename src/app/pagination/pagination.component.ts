@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Inform} from '../data';
+import {MOCK} from '../mock-data';
 
 @Component({
   selector: 'ngbd-pagination',
@@ -7,7 +8,7 @@ import {Inform} from '../data';
 })
 export class NgbdPagination {
 
-  items: Inform[] = [];
+  items = MOCK;
   toShow = this.items;
 
   page = 1;
