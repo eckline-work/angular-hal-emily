@@ -99,7 +99,7 @@
                 </div>
                 <div class="container col-lg-3">
                   <label class="col-form-label col-form-label-sm" for="I-Select">Include:</label>
-                  <select class="form-control form-control-sm" id="I-Select">
+                  <select class="form-control form-control-sm" id="I-Select" #Inc>
 	                  <option selected="selected" value="">All</option>
 	                  <option value="Y">Errors</option>
 	                  <option value="N">Informational</option>
@@ -107,31 +107,27 @@
                 </div>
               </div>
               <div class="row" style="margin-top: 10px;">
-                <div class="container col-lg-3">
+                <div class="container col-lg-4">
                   <div class="form-group">
                     <label class="col-form-label col-form-label-sm" for="input-small">From:</label>
                     <ngbd-datepicker-popup></ngbd-datepicker-popup>
                   </div>
                 </div>
-                <div class="container col-lg-3">
+                <div class="container col-lg-4">
                   <div class="form-group">
                     <label class="col-form-label col-form-label-sm" for="input-small">To:</label>
                     <ngbd-datepicker-popup></ngbd-datepicker-popup>
                   </div>
                 </div>
                 <div class="container col-lg-2">
-                  <label class="col-form-label col-form-label-sm" for="RefTime">Refresh Page:</label>
-                  <input class="form-control form-control-sm" type="number" ng-model="refTime" value="{{refTime}}" id="RefTime" style="text-align:right;">
-                </div>
-                <div class="container col-lg-2">
                   <label class="col-form-label col-form-label-sm" for="LPg">Lines/Page:</label>
-                  <input class="form-control form-control-sm" type="number" ng-model="pageSize" value="{{pageSize}}" id="LPg" style="text-align:right;">
+                  <input class="form-control form-control-sm" type="number" ng-model="pageSize" value="{{pageSize}}" id="LPg" style="text-align:right;" #LPg>
                 </div>
               </div>
             </div>
             <br>
             <div class="d-flex flex-wrap justify-content-center">
-              <button type="button" class="btn btn-primary" (click)="critSet">Refresh Table</button>
+              <button type="button" class="btn btn-primary" (click)="critSet(Inc.value, LPg.value)">Refresh Table</button>
             </div>
           </fieldset>
         </form>

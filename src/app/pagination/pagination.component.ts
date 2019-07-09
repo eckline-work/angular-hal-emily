@@ -7,13 +7,23 @@ import {Component} from '@angular/core';
 export class NgbdPagination {
   page = 1;
   pageSize = 26;
-  refTime = 30;
+  collectionSize = 120;
+  pageMax = Math.ceil(this.collectionSize / this.pageSize);
 
-
-  critSet() {
-    //figuring out how to code this part is driving me insane.
+  critSet(Inc: string, LPg: number) {
     //On click, should set values equal to selections, then use said values to parse through the table.
-    //At least I found a webpage I can use as a reference, I'll begin working through this tomorrow.
+  
+    //Table Parsing
+    //???
+
+    //Pagi Dispaly
+    if (!LPg){
+      this.pageSize = 26;
+    }
+    else this.pageSize = LPg;
+
+    this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
+    this.page = 1;
   }
 
   //I don't even know how I'll get the message viewer to work.
