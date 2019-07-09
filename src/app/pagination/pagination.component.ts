@@ -57,10 +57,16 @@ export class NgbdPagination {
         this.pageMax = 1;
       }
       this.page = 1;
+
+    //Refresh table
+    this.refresh;
   }
 
 
   //Will need a refresh function that runs every so often so that new items can be
+  refresh(){
+    //every 2 minutes or when Refresh Table clicked
+  }
 
 
   //I don't even know how I'll get the message viewer to work.
