@@ -8,6 +8,7 @@ import {Inform} from '../data';
 export class NgbdPagination {
 
   items: Inform[] = [];
+  toShow: Inform[] = [];
 
   page = 1;
   pageSize = 26;
@@ -42,7 +43,7 @@ export class NgbdPagination {
       this.TD = TD;
 
     //Table Parsing
-      //???
+      
 
     //Pagi Dispaly
       if (!LPg){
