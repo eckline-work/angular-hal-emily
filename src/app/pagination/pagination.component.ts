@@ -10,7 +10,7 @@ export class NgbdPagination {
   collectionSize = 120;
   pageMax = Math.ceil(this.collectionSize / this.pageSize);
 
-  critSet(Inc: string, LPg: number) {
+  critSet(PS: string, PI: string, TS: string, TI: string, ES: string, EI: string, Sys: string, Inc: string, FD: string, TD: string, LPg: number) {
     //On click, should set values equal to selections, then use said values to parse through the table.
   
     //Table Parsing

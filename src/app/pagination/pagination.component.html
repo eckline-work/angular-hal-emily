@@ -11,12 +11,12 @@
                   <label class="col-form-label col-form-label-sm" for="ProcSelect; ProcInput;">Process:&nbsp;</label>
                   <div class="form-group">
                     <div class="input-group mb-3">
-                      <select class="form-control form-control-sm" id="ProcSelect">
+                      <select class="form-control form-control-sm" id="ProcSelect" #PS>
                         <option selected="selected">Contains</option>
                         <option>Begins With</option>
                         <option>Ends With</option>
                       </select>
-                      <input type="text" class="form-control form-control-sm" aria-label="ProcessInput" id="ProcInput">
+                      <input type="text" class="form-control form-control-sm" aria-label="ProcessInput" id="ProcInput" #PI>
                     </div>
                   </div>
                 </div>
@@ -24,12 +24,12 @@
                   <label class="col-form-label col-form-label-sm" for="TraceSelect; TraceInput;">Trace:&nbsp;</label>
                   <div class="form-group">
                     <div class="input-group mb-3">
-                      <select class="form-control form-control-sm" id="TraceSelect">
+                      <select class="form-control form-control-sm" id="TraceSelect" #TS>
                         <option selected="selected">Contains</option>
                         <option>Begins With</option>
                         <option>Ends With</option>
                       </select>
-                      <input type="text" class="form-control form-control-sm" aria-label="TraceInput" id="TraceInput">
+                      <input type="text" class="form-control form-control-sm" aria-label="TraceInput" id="TraceInput" #TI>
                     </div>
                   </div>
                 </div>
@@ -37,18 +37,18 @@
                   <label class="col-form-label col-form-label-sm" for="EnvSelect; EnvInput;">Environment:&nbsp;</label>
                   <div class="form-group">
                     <div class="input-group mb-3">
-                      <select class="form-control input-group-prepend form-control-sm" id="EnvSelect">
+                      <select class="form-control input-group-prepend form-control-sm" id="EnvSelect" #ES>
                         <option selected="selected">Contains</option>
                         <option>Begins With</option>
                         <option>Ends With</option>
                       </select>
-                      <input type="text" class="form-control form-control-sm" aria-label="EnvironmentInput" id="EnvInput">
+                      <input type="text" class="form-control form-control-sm" aria-label="EnvironmentInput" id="EnvInput" #EI>
                     </div>
                   </div>
                 </div>
                 <div class="container col-lg-4">
                   <label class="col-form-label col-form-label-sm" for="S-Select">System:</label>
-                  <select class="form-control form-control-sm" id="S-Select">
+                  <select class="form-control form-control-sm" id="S-Select" #Sys>
       	            <option selected="selected" value="">All</option>
 	                  <option value="CLAIMSMGMT">Claims Management</option>
     	              <option value="CONTACTMGMT">Contact Managment</option>
@@ -110,13 +110,13 @@
                 <div class="container col-lg-4">
                   <div class="form-group">
                     <label class="col-form-label col-form-label-sm" for="input-small">From:</label>
-                    <ngbd-datepicker-popup></ngbd-datepicker-popup>
+                    <ngbd-datepicker-popup #FD></ngbd-datepicker-popup>
                   </div>
                 </div>
                 <div class="container col-lg-4">
                   <div class="form-group">
                     <label class="col-form-label col-form-label-sm" for="input-small">To:</label>
-                    <ngbd-datepicker-popup></ngbd-datepicker-popup>
+                    <ngbd-datepicker-popup #TD></ngbd-datepicker-popup>
                   </div>
                 </div>
                 <div class="container col-lg-2">
@@ -127,7 +127,7 @@
             </div>
             <br>
             <div class="d-flex flex-wrap justify-content-center">
-              <button type="button" class="btn btn-primary" (click)="critSet(Inc.value, LPg.value)">Refresh Table</button>
+              <button type="button" class="btn btn-primary" (click)="critSet(PS.value, PI.value, TS.value, TI.value, ES.value, EI.value, Sys.value, Inc.value, FD.value, TD.value, LPg.value)">Refresh Table</button>
             </div>
           </fieldset>
         </form>
