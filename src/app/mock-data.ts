@@ -7,14 +7,14 @@ export const MOCK: Inform[] = [
   prc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
   trc: 'Commencing Keyboard smash in 5... 4...',
   env: 'NPTES520',
-  CD: {year: 2019, month: 7, day: 9},
+  CD: {year: 2019, month: 7, day: 9}, //why are you sending me an error, you insufferable windmill of ignorance. This is ABSOLUTELY assignable to the inform type
   PD: {year: 2019, month: 7, day: 8},
   ID: 3,
   err: 'N',
   eT: {
     code: 'INFO',
     desc: 'Informational'
-  }
+    }
   },
 
   {sys: 'Nova',
@@ -31,7 +31,7 @@ export const MOCK: Inform[] = [
     desc: 'Nova Errors',
     email: 'name@email.com',
     color: 'Warning'
-  }
+    }
   },
 
   {sys: 'Online Application',
@@ -46,6 +46,6 @@ export const MOCK: Inform[] = [
   eT: {
     code: 'NOVA_NOTI',
     desc: 'Nova Notification'
-  }
+    }
   }
 ]
