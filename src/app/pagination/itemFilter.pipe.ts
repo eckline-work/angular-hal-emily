@@ -44,13 +44,6 @@ export class itemFilterPipe implements PipeTransform {
       }
     }
 
-    if (TD){
-      items = items.filter(i => i.CD <= TD);
-    }
-    if (FD){
-      items = items.filter(i => i.CD >= FD);
-    }
-
     if (Sys){
       items = items.filter(i => i.sys == Sys);
     }
