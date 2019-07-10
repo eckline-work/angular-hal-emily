@@ -1,4 +1,5 @@
 import {Inform} from './data';
+import {errorType} from './type';
 
 export const MOCK: Inform[] = [
   {sys: 'Nova',
@@ -12,8 +13,8 @@ export const MOCK: Inform[] = [
   err: 'N',
   eT: {
     code: 'INFO',
-    desc: '	Informational',
-    }
+    desc: 'Informational'
+  }
   },
 
   {sys: 'Nova',
@@ -24,7 +25,13 @@ export const MOCK: Inform[] = [
   CD: {day: 5, month: 7, year: 2019},
   PD: {day: 6, month: 7, year: 2019},
   ID: 2,
-  err: 'Y'},
+  err: 'Y',
+  eT: {
+    code: 'NOVA_ERROR',
+    desc: 'Nova Errors',
+    color: 'Warning'
+  }
+  },
 
   {sys: 'Online Application',
   msg: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
@@ -34,5 +41,10 @@ export const MOCK: Inform[] = [
   CD: {day: 5, month: 7, year: 2019},
   PD: {day: 5, month: 7, year: 2019},
   ID: 1,
-  err: 'N'}
+  err: 'N',
+  eT: {
+    code: 'NOVA_NOTI',
+    desc: 'Nova Notification'
+  }
+  }
 ]
