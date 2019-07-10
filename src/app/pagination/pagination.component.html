@@ -160,7 +160,7 @@
           <td>{{i.prc | slice:0:30}}</td>
           <td>{{i.trc | slice:0:30}}</td>
           <td>{{i.env | slice:0:30}}</td>
-          <td></td>
+          <td>{{i.CD.year}}/{{i.CD.month}}/{{i.CD.day}}</td>
           <td><button class="btn btn-link" (click)="openMsg(i.ID)">{{i.ID}}</button></td>
         </tr>
       </tbody>
@@ -202,11 +202,11 @@
               </tr>
               <tr class="table-light small">
                 <th scope="row">Created:</th>
-                <td>{{CD}}</td>
+                <td>{{CD.year}}/{{CD.month}}/{{CD.day}}</td>
               </tr>
               <tr class="table-light small">
                 <th scope="row">Processed:</th>
-                <td>{{PD}}</td>
+                <td>{{PD.year}}/{{PD.month}}/{{PD.day}}</td>
              </tr>
             </tbody>  
           </table>
