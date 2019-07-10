@@ -9,7 +9,12 @@ export const MOCK: Inform[] = [
   CD: {day: 8, month: 7, year: 2019},
   PD: {day: 9, month: 7, year: 2019},
   ID: 3,
-  err: 'N'},
+  err: 'N',
+  eT: {
+    code: 'INFO',
+    desc: '	Informational',
+    }
+  },
 
   {sys: 'Nova',
   msg: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh. Nullam id dolor id nibh ultricies vehicula ut id elit. Pellentesque ornare sem lacinia quam venenatis vestibulum.',

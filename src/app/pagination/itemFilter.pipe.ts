@@ -1,11 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import {Inform} from '../data';
 
+
 @Pipe({name: 'itemFilter'})
 
 export class itemFilterPipe implements PipeTransform {
 
-  transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, FD?: Date, TD?: Date, PI?: string, TI?: string, EI?: string): Inform[] {
+  transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, PI?: string, TI?: string, EI?: string): Inform[] {
 
     if (PI){
       if (PS == "Contains") {

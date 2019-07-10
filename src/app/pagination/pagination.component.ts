@@ -52,7 +52,7 @@ export class NgbdPagination {
 
   constructor(private filter: itemFilterPipe) {};
 
-  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, FD?: Date, TD?: Date, PI?: string, TI?: string, EI?: string) {
+  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI?: string, TI?: string, EI?: string) {
     if (!LPg){
       this.pageSize = 26;
     }
@@ -60,7 +60,7 @@ export class NgbdPagination {
       this.pageSize = LPg;
     }
 
-    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, FD, TD, PI, TI, EI )
+    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
     
     this.collectionSize = this.toShow.length;
 
@@ -85,8 +85,8 @@ export class NgbdPagination {
     }
   }
 
-  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, FD?: Date, TD?: Date, PI?: string, TI?: string, EI?: string):any {
-     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, FD, TD, PI, TI, EI);
+  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI?: string, TI?: string, EI?: string):any {
+     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI);
   }
 
 }

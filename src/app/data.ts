@@ -1,3 +1,4 @@
+import {errorType} from './type';
 
 export class Inform {
   sys: string;
@@ -9,4 +10,5 @@ export class Inform {
   PD: Date;
   ID: number;
   err: string;
+  eT: errorType;
 }
