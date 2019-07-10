@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Inform} from '../data';
 import {MOCK} from '../mock-data';
+import {errorType} from '../type';
 import {itemFilterPipe} from './itemFilter.pipe';
 
 @Component({
@@ -19,6 +20,7 @@ export class NgbdPagination {
   env: string;
   CD: Date;
   PD: Date;
+  ET: errorType;
 
   found: Inform;
 
@@ -34,6 +36,7 @@ export class NgbdPagination {
     this.msg = this.found.msg;
     this.CD = this.found.CD;
     this.PD = this.found.PD;
+    this.ET = this.found.eT;
     this.idPicked = id;
   }
 
