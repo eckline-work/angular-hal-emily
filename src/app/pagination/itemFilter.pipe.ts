@@ -5,7 +5,7 @@ import {Inform} from '../data';
 
 export class itemFilterPipe implements PipeTransform {
 
-  transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, PI?: string, TI?: string, EI?: string): Inform[] {
+  transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, FD?: Date, TD?: Date, PI?: string, TI?: string, EI?: string): Inform[] {
 
     if (PI){
       if (PS == "Contains") {
@@ -41,6 +41,13 @@ export class itemFilterPipe implements PipeTransform {
       else {
 
       }
+    }
+
+    if (TD){
+      items = items.filter(i => i.CD <= TD);
+    }
+    if (FD){
+      items = items.filter(i => i.CD >= FD);
     }
 
     if (Sys){
