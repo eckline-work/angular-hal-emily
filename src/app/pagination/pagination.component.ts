@@ -77,4 +77,8 @@ export class NgbdPagination {
     }
   }
 
+  applyFilter(PS: string, PI: string, TS: string, TI: string, ES: string, EI: string, Sys: string, Inc: string) {
+
+  }
+
 }
