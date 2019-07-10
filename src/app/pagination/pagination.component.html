@@ -127,7 +127,7 @@
             </div>
             <br>
             <div class="d-flex flex-wrap justify-content-center">
-              <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value); applyFilter(PS.value, PI.value, TS.value, TI.value, ES.value, EI.value, Sys.value, Inc.value)">Refresh Table</button>
+              <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Refresh Table</button>
             </div>
           </fieldset>
         </form>
@@ -154,7 +154,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="table-light" *ngFor="let i of (items | itemFilter )| slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+        <tr class="table-light" *ngFor="let i of toShow | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
           <td>{{i.sys}}</td>
           <td>{{i.msg | slice:0:30}}</td>
           <td>{{i.prc | slice:0:30}}</td>

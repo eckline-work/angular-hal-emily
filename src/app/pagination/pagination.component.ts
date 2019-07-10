@@ -1,10 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {Inform} from '../data';
 import {MOCK} from '../mock-data';
+import {itemFilterPipe} from './itemFilter.pipe';
 
 @Component({
   selector: 'ngbd-pagination',
-  templateUrl: './pagination.component.html'
+  templateUrl: './pagination.component.html',
+  providers: [ itemFilterPipe ]
 })
 export class NgbdPagination {
   //message Viewer Code
@@ -48,15 +50,21 @@ export class NgbdPagination {
   collectionSize = this.toShow.length;
   pageMax = Math.ceil(this.collectionSize / this.pageSize);
 
-  pageSet(LPg: number) {
-      if (!LPg){
-        this.pageSize = 26;
-      }
-      else {
-        this.pageSize = LPg;
-      }
+  constructor(private filter: itemFilterPipe) {};
 
-      this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
+  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI?: string, TI?: string, EI?: string) {
+    if (!LPg){
+      this.pageSize = 26;
+    }
+    else {
+      this.pageSize = LPg;
+    }
+
+    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
+    
+    this.collectionSize = this.toShow.length;
+
+    this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
       if (this.pageMax == 0) {
         this.pageMax = 1;
       }
@@ -77,8 +85,8 @@ export class NgbdPagination {
     }
   }
 
-  applyFilter(PS: string, PI: string, TS: string, TI: string, ES: string, EI: string, Sys: string, Inc: string) {
-
+  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI?: string, TI?: string, EI?: string):any {
+     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI);
   }
 
 }

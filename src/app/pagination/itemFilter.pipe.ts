@@ -5,13 +5,49 @@ import {Inform} from '../data';
 
 export class itemFilterPipe implements PipeTransform {
 
-  transform(items: Inform[], sys: string, inc: string): Inform[] {
+  transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, PI?: string, TI?: string, EI?: string): Inform[] {
 
-    if (sys != ""){
-      items = items.filter(item => item.sys == sys);
+    if (PI){
+      if (PS == "Contains") {
+        items = items.filter(i => i.prc.includes(PI));
+      }
+      else if (PS == "Begins With") {
+        items = items.filter(i => i.prc.indexOf(PI) == 0);
+      }
+      else {
+
+      }
     }
-    if (inc != ""){
-      items = items.filter(item => item.sys == inc);
+
+    if (TI){
+      if (TS == "Contains") {
+        items = items.filter(i => i.trc.includes(TI));
+      }
+      else if (TS == "Begins With") {
+        items = items.filter(i => i.prc.indexOf(TI) == 0);
+      }
+      else {
+
+      }
+    }
+
+    if (EI){
+      if (ES == "Contains") {
+        items = items.filter(i => i.trc.includes(EI));
+      }
+      else if (ES == "Begins With") {
+        items = items.filter(i => i.prc.indexOf(EI) == 0);
+      }
+      else {
+
+      }
+    }
+
+    if (Sys){
+      items = items.filter(i => i.sys == Sys);
+    }
+    if (Inc){
+      items = items.filter(i => i.err == Inc);
     }
 
     return items;
