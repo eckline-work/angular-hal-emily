@@ -16,7 +16,7 @@
                         <option>Begins With</option>
                         <option>Ends With</option>
                       </select>
-                      <input type="text" class="form-control form-control-sm" aria-label="ProcessInput" id="ProcInput" #PI>
+                      <input type="text" class="form-control form-control-sm" id="ProcInput" #PI>
                     </div>
                   </div>
                 </div>
@@ -29,7 +29,7 @@
                         <option>Begins With</option>
                         <option>Ends With</option>
                       </select>
-                      <input type="text" class="form-control form-control-sm" aria-label="TraceInput" id="TraceInput" #TI>
+                      <input type="text" class="form-control form-control-sm" id="TraceInput" #TI>
                     </div>
                   </div>
                 </div>
@@ -42,7 +42,7 @@
                         <option>Begins With</option>
                         <option>Ends With</option>
                       </select>
-                      <input type="text" class="form-control form-control-sm" aria-label="EnvironmentInput" id="EnvInput" #EI>
+                      <input type="text" class="form-control form-control-sm" id="EnvInput" #EI>
                     </div>
                   </div>
                 </div>
@@ -127,7 +127,7 @@
             </div>
             <br>
             <div class="d-flex flex-wrap justify-content-center">
-              <button type="button" class="btn btn-primary" (click)="critSet(LPg.value)">Refresh Table</button>
+              <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value)">Refresh Table</button>
             </div>
           </fieldset>
         </form>

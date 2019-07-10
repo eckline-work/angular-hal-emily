@@ -7,6 +7,7 @@ import {MOCK} from '../mock-data';
   templateUrl: './pagination.component.html'
 })
 export class NgbdPagination {
+  //message Viewer Code
   idPicked = -7;
 
   sys: string;
@@ -38,6 +39,7 @@ export class NgbdPagination {
     this.idPicked = -7;
   }
 
+  //Search and Table Code
   items = MOCK;
   toShow = this.items;
 
@@ -46,15 +48,7 @@ export class NgbdPagination {
   collectionSize = this.toShow.length;
   pageMax = Math.ceil(this.collectionSize / this.pageSize);
 
-  critSet(LPg: number) {
-    //On clicked
-      //parse through table
-      //display proper items
-
-    //Table Parsing
-      
-
-    //Pagi Dispaly
+  pageSet(LPg: number) {
       if (!LPg){
         this.pageSize = 26;
       }
@@ -68,7 +62,6 @@ export class NgbdPagination {
       }
       this.page = 1;
 
-    //Refresh table
     this.refresh;
   }
 
