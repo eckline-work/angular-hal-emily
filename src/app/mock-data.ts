@@ -6,8 +6,8 @@ export const MOCK: Inform[] = [
   prc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
   trc: 'Commencing Keyboard smash in 5... 4...',
   env: 'NPTES520',
-  CD: '2019-07-09',
-  PD: '2019-07-09',
+  CD: {day: 8, month: 7, year: 2019},
+  PD: {day: 9, month: 7, year: 2019},
   ID: 3,
   err: 'N'},
 
@@ -16,8 +16,8 @@ export const MOCK: Inform[] = [
   prc: 'Etiam porta sem malesuada magna mollis euismod.',
   trc: '3... 2... 1...',
   env: 'NPTES520',
-  CD: '2019-07-05',
-  PD: '2019-07-06',
+  CD: {day: 5, month: 7, year: 2019},
+  PD: {day: 6, month: 7, year: 2019},
   ID: 2,
   err: 'Y'},
 
@@ -26,8 +26,8 @@ export const MOCK: Inform[] = [
   prc: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
   trc: "asklajoif gjneircv hgpds hgviud jhsirea kehjrfiuehrs bgfidrghiug shfidrs buisf hfviuyrg hsgbuifa kalfg hid",
   env: 'NPTES520',
-  CD: '2019-07-03',
-  PD: '2019-07-03',
+  CD: {day: 5, month: 7, year: 2019},
+  PD: {day: 5, month: 7, year: 2019},
   ID: 1,
   err: 'N'}
 ]
