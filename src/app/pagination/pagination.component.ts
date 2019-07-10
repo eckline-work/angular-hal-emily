@@ -65,7 +65,6 @@ export class NgbdPagination {
     this.refresh;
   }
 
-
   //Will need a refresh function that runs every so often so that new items can be
   refresh(){
     //every 2 minutes or when Refresh Table clicked

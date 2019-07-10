@@ -2,12 +2,12 @@ import {Inform} from './data';
 
 export const MOCK: Inform[] = [
   {sys: 'Nova',
-  msg: 'long witty coment to act as a placeholder so I can try to debug this stupid thing',
+  msg: "long witty coment to act as a placeholder so I can try to debug this stupid thing. Apparently the formatting looks wonky unless I make this one even longer, so more random typing it is. I don't actually know what to put here, this is just filler after all... Ok, this is long enough to make the formatting behave itself, so that's good. I should probably stop now. Ok, actually stoping in 3, 2, 1",
   prc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
   trc: 'Commencing Keyboard smash in 5... 4...',
   env: 'NPTES520',
-  CD: 'today',
-  PD: 'string',
+  CD: '2019-07-09',
+  PD: '2019-07-09',
   ID: 3,
   err: 'N'},
 
@@ -16,8 +16,8 @@ export const MOCK: Inform[] = [
   prc: 'Etiam porta sem malesuada magna mollis euismod.',
   trc: '3... 2... 1...',
   env: 'NPTES520',
-  CD: 'today',
-  PD: 'string',
+  CD: '2019-07-05',
+  PD: '2019-07-06',
   ID: 2,
   err: 'Y'},
 
@@ -26,8 +26,8 @@ export const MOCK: Inform[] = [
   prc: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
   trc: "asklajoif gjneircv hgpds hgviud jhsirea kehjrfiuehrs bgfidrghiug shfidrs buisf hfviuyrg hsgbuifa kalfg hid",
   env: 'NPTES520',
-  CD: 'yesterday',
-  PD: 'string',
+  CD: '2019-07-03',
+  PD: '2019-07-03',
   ID: 1,
   err: 'N'}
 ]
