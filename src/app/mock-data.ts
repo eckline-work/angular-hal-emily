@@ -7,8 +7,8 @@ export const MOCK: Inform[] = [
   prc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
   trc: 'Commencing Keyboard smash in 5... 4...',
   env: 'NPTES520',
-  CD: {day: 8, month: 7, year: 2019},
-  PD: {day: 9, month: 7, year: 2019},
+  CD: {year: 2019, month: 7, day: 9},
+  PD: {year: 2019, month: 7, day: 8},
   ID: 3,
   err: 'N',
   eT: {
@@ -29,6 +29,7 @@ export const MOCK: Inform[] = [
   eT: {
     code: 'NOVA_ERROR',
     desc: 'Nova Errors',
+    email: 'name@email.com',
     color: 'Warning'
   }
   },
