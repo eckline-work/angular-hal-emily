@@ -4,8 +4,8 @@ export class Inform {
   prc: string;
   trc: string;
   env: string;
-  CD: string;
-  PD: string;
+  CD: Date;
+  PD: Date;
   ID: number;
   err: string;
 }
