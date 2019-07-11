@@ -19,8 +19,8 @@ export class NgbdPagination {
   prc: string;
   trc: string;
   env: string;
-  CD: Date;
-  PD: Date;
+  CD: NbgDate;
+  PD: NbgDate;
   ET: errorType;
 
   found: Inform;
