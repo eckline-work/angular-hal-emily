@@ -12,10 +12,6 @@ export const MOCK: Inform[] = [ //What's your ****ing problem?!
   PD: {day: 9, month: 7, year: 2019},
   ID: 3,
   err: 'N',
-  eT: {
-    code: 'INFO',
-    desc: 'Informational'
-    }
   },
 
   {sys: 'Nova',
@@ -27,12 +23,6 @@ export const MOCK: Inform[] = [ //What's your ****ing problem?!
   PD: {day: 6, month: 7, year: 2019},
   ID: 2,
   err: 'Y',
-  eT: {
-    code: 'NOVA_ERROR',
-    desc: 'Nova Errors',
-    email: 'name@email.com',
-    color: 'Warning'
-    }
   },
 
   {sys: 'Online Application',
@@ -44,9 +34,5 @@ export const MOCK: Inform[] = [ //What's your ****ing problem?!
   PD: {day: 5, month: 7, year: 2019},
   ID: 1,
   err: 'N',
-  eT: {
-    code: 'NOVA_NOTI',
-    desc: 'Nova Notification'
-    }
   }
 ]
