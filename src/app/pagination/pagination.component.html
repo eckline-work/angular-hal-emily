@@ -154,7 +154,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let i of toShow | slice: (page - 1) * pageSize : (page) * pageSize" class="{'table-danger': i.eT.}">
+        <tr *ngFor="let i of toShow | slice: (page - 1) * pageSize : (page) * pageSize" class="">
           <td>{{i.sys}}</td>
           <td>{{i.msg | slice:0:30}}</td>
           <td>{{i.prc | slice:0:30}}</td>
