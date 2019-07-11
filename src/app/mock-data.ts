@@ -1,6 +1,4 @@
 import {Inform} from './data';
-import {errorType} from './type';
-import {NgbDate} from '@ng-bootstrap/ng-bootstrap';
 
 export const MOCK: Inform[] = [ //What's your ****ing problem?!
   {sys: 'Nova',
