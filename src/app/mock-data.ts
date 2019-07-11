@@ -2,13 +2,13 @@ import {Inform} from './data';
 import {errorType} from './type';
 import {NgbDate} from '@ng-bootstrap/ng-bootstrap';
 
-export const MOCK: Inform[] = [
+export const MOCK: Inform[] = [ //What's your ****ing problem?!
   {sys: 'Nova',
   msg: "long witty coment to act as a placeholder so I can try to debug this stupid thing. Apparently the formatting looks wonky unless I make this one even longer, so more random typing it is. I don't actually know what to put here, this is just filler after all... Ok, this is long enough to make the formatting behave itself, so that's good. I should probably stop now. Ok, actually stoping in 3, 2, 1",
   prc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
   trc: 'Commencing Keyboard smash in 5... 4...',
   env: 'NPTES520',
-  CD: {day: 9, month: 7, year: 2019}, //why are you sending me an error, you insufferable windmill of ignorance. This is ABSOLUTELY assignable to the inform type
+  CD: {day: 9, month: 7, year: 2019},
   PD: {day: 9, month: 7, year: 2019},
   ID: 3,
   err: 'N',

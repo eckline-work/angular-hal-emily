@@ -16,7 +16,7 @@ export class itemFilterPipe implements PipeTransform {
         items = items.filter(i => i.prc.indexOf(PI) == 0);
       }
       else {
-
+        items = items.filter(i => i.prc.endsWith(PI));
       }
     }
 
@@ -25,31 +25,31 @@ export class itemFilterPipe implements PipeTransform {
         items = items.filter(i => i.trc.includes(TI));
       }
       else if (TS == "Begins With") {
-        items = items.filter(i => i.prc.indexOf(TI) == 0);
+        items = items.filter(i => i.trc.indexOf(TI) == 0);
       }
       else {
-
+        items = items.filter(i => i.trc.endsWith(TI));
       }
     }
 
     if (EI){
       if (ES == "Contains") {
-        items = items.filter(i => i.trc.includes(EI));
+        items = items.filter(i => i.env.includes(EI));
       }
       else if (ES == "Begins With") {
-        items = items.filter(i => i.prc.indexOf(EI) == 0);
+        items = items.filter(i => i.env.indexOf(EI) == 0);
       }
       else {
-
+        items = items.filter(i => i.env.endsWith(EI));
       }
     }
 
     if(FD){
-
+      items = items.filter(i => !i.CD.before(FD));
     }
 
     if(TD){
-
+      items = items.filter(i => !i.CD.after(TD));
     }
 
     if (Sys){

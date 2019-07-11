@@ -110,13 +110,13 @@
                 <div class="container col-lg-4">
                   <div class="form-group">
                     <label class="col-form-label col-form-label-sm" for="input-small">From:</label>
-                    <ngbd-datepicker-popup #FD></ngbd-datepicker-popup>
+                    <ngbd-datepicker-popup></ngbd-datepicker-popup>
                   </div>
                 </div>
                 <div class="container col-lg-4">
                   <div class="form-group">
                     <label class="col-form-label col-form-label-sm" for="input-small">To:</label>
-                    <ngbd-datepicker-popup #TD></ngbd-datepicker-popup>
+                    <ngbd-datepicker-popup></ngbd-datepicker-popup>
                   </div>
                 </div>
                 <div class="container col-lg-2">
@@ -160,7 +160,7 @@
           <td>{{i.prc | slice:0:30}}</td>
           <td>{{i.trc | slice:0:30}}</td>
           <td>{{i.env | slice:0:30}}</td>
-          <td></td>
+          <td>{{i.CD.year}}-{{i.CD.month}}-{{i.CD.day}}</td>
           <td><button class="btn btn-link" (click)="openMsg(i.ID)">{{i.ID}}</button></td>
         </tr>
       </tbody>

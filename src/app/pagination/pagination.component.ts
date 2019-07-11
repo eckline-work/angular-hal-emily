@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
+import {NgbDateStruct, NgbDate} from '@ng-bootstrap/ng-bootstrap';
 import {Inform} from '../data';
 import {MOCK} from '../mock-data';
 import {errorType} from '../type';
 import {itemFilterPipe} from './itemFilter.pipe';
-import {NgbDateStruct, NgbDate} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'ngbd-pagination',
@@ -19,8 +19,8 @@ export class NgbdPagination {
   prc: string;
   trc: string;
   env: string;
-  CD: NbgDate;
-  PD: NbgDate;
+  CD: NgbDate;
+  PD: NgbDate;
   ET: errorType;
 
   found: Inform;
@@ -46,8 +46,6 @@ export class NgbdPagination {
   }
 
   //Search and Table Code
-  DM: NgbDateStruct;
-
   items = MOCK;
   toShow = this.items;
 
