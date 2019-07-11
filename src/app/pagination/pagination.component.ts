@@ -3,6 +3,7 @@ import {Inform} from '../data';
 import {MOCK} from '../mock-data';
 import {errorType} from '../type';
 import {itemFilterPipe} from './itemFilter.pipe';
+import {NgbDateStruct, NgbDate} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'ngbd-pagination',
@@ -45,6 +46,8 @@ export class NgbdPagination {
   }
 
   //Search and Table Code
+  DM: NgbDateStruct;
+
   items = MOCK;
   toShow = this.items;
 
@@ -55,7 +58,7 @@ export class NgbdPagination {
 
   constructor(private filter: itemFilterPipe) {};
 
-  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI?: string, TI?: string, EI?: string) {
+  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI?: string, TI?: string, EI?: string, FD?: NgbDate, TD?: NgbDate) {
     if (!LPg){
       this.pageSize = 26;
     }
@@ -63,7 +66,7 @@ export class NgbdPagination {
       this.pageSize = LPg;
     }
 
-    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
+    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD )
     
     this.collectionSize = this.toShow.length;
 
@@ -88,8 +91,8 @@ export class NgbdPagination {
     }
   }
 
-  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI?: string, TI?: string, EI?: string):any {
-     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI);
+  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI?: string, TI?: string, EI?: string, FD?: NgbDate, TD?: NgbDate):any {
+     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD);
   }
 
 }

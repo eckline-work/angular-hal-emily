@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NgbCalendar, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
+import {NgbCalendar, NgbDateStruct, NgbDate} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'ngbd-datepicker-popup',
@@ -8,7 +8,7 @@ import {NgbCalendar, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 export class NgbdDatepickerPopup {
   model: NgbDateStruct;
   today = this.calendar.getToday();
-  none = this.calendar;
+  none: NgbDate;
 
   constructor(private calendar: NgbCalendar) {}
 }

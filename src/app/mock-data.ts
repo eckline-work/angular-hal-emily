@@ -1,5 +1,6 @@
 import {Inform} from './data';
 import {errorType} from './type';
+import {NgbDate} from '@ng-bootstrap/ng-bootstrap';
 
 export const MOCK: Inform[] = [
   {sys: 'Nova',
@@ -7,8 +8,8 @@ export const MOCK: Inform[] = [
   prc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
   trc: 'Commencing Keyboard smash in 5... 4...',
   env: 'NPTES520',
-  CD: {year: 2019, month: 7, day: 9}, //why are you sending me an error, you insufferable windmill of ignorance. This is ABSOLUTELY assignable to the inform type
-  PD: {year: 2019, month: 7, day: 8},
+  CD: {day: 9, month: 7, year: 2019}, //why are you sending me an error, you insufferable windmill of ignorance. This is ABSOLUTELY assignable to the inform type
+  PD: {day: 9, month: 7, year: 2019},
   ID: 3,
   err: 'N',
   eT: {
