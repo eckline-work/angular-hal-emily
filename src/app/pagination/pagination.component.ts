@@ -40,7 +40,12 @@ export class NgbdPagination {
     this.msg = this.found.msg;
     this.CD = this.found.CD;
     this.PD = this.found.PD;
-    this.ET = this.found.eT;
+    if (this.found.eT) {
+      this.ET = this.found.eT;
+    }
+    else {
+      this.ET = new errorType;
+    }
     this.idPicked = id;
   }
 
@@ -76,6 +81,8 @@ export class NgbdPagination {
         this.pageMax = 1;
       }
       this.page = 1;
+
+    this.idPicked = -7;
 
     this.refresh;
   }
