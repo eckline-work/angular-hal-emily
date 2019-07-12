@@ -29,6 +29,7 @@ export class NgbdPagination {
   FD: NgbDate;
 
   openMsg(id: number) {
+
     this.found = this.items.find(function(element) {
       return element.ID == id;
     });

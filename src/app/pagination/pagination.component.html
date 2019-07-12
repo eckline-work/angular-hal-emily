@@ -165,8 +165,8 @@
         </tr>
       </tbody>
     </table>
-    <ng-container *ngIf="idPicked!=-7">
-      <div class="card border-info mb-3">
+    <ng-container *ngIf="idPicked!=-7" style="max-width: 60rem; min-width: 20rem;">
+      <div class="card border-info mb-3" cdkDrag style="z-index: 7;">
         <div class="card-header">
           HAL Message Viewer
           <button type="button" class="close float-right" (click)="msgClose()">&times;</button>
