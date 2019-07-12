@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NgbDateStruct, NgbDate} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDateStruct, NgbDate, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 import {Inform} from '../data';
 import {MOCK} from '../mock-data';
 import {errorType} from '../type';
@@ -11,6 +11,7 @@ import {itemFilterPipe} from './itemFilter.pipe';
   providers: [ itemFilterPipe ]
 })
 export class NgbdPagination {
+
   //message Viewer Code
   idPicked = -7;
 
@@ -63,8 +64,6 @@ export class NgbdPagination {
   collectionSize = this.toShow.length;
   pageMax = Math.ceil(this.collectionSize / this.pageSize);
 
-  constructor(private filter: itemFilterPipe) {};
-
   pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD?: NgbDate, TD?: NgbDate) {
     if (!LPg){
       this.pageSize = 26;
@@ -103,5 +102,14 @@ export class NgbdPagination {
   applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD?: NgbDate, TD?: NgbDate):any {
      return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD);
   }
+
+  //Date Fix
+    model1: NgbDateStruct;
+    model2: NgbDateStruct;
+    today = this.calendar.getToday();
+    none: NgbDate;
+
+  //constructor
+  constructor(private filter: itemFilterPipe, private calendar: NgbCalendar) {};
 
 }

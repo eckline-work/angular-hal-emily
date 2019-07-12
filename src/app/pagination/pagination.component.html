@@ -110,13 +110,23 @@
                 <div class="container col-lg-4">
                   <div class="form-group">
                     <label class="col-form-label col-form-label-sm" for="input-small">From:</label>
-                    <ngbd-datepicker-popup></ngbd-datepicker-popup>
+                    <div class="input-group">
+                      <input class="form-control form-control-sm" placeholder="yyyy-mm-dd" name="dp1" value="{{model1}}" [(ngModel)]="model1" ngbDatepicker [footerTemplate]="footerTemplate1" #d1="ngbDatepicker" id="dp" #dp>
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary dropdown-toggle btn-sm" (click)="d1.toggle()" type="button">Select&nbsp;</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="container col-lg-4">
                   <div class="form-group">
                     <label class="col-form-label col-form-label-sm" for="input-small">To:</label>
-                    <ngbd-datepicker-popup></ngbd-datepicker-popup>
+                    <div class="input-group">
+                      <input class="form-control form-control-sm" placeholder="yyyy-mm-dd" name="dp2" [(ngModel)]="model2" ngbDatepicker [footerTemplate]="footerTemplate2" #d2="ngbDatepicker">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary dropdown-toggle btn-sm" (click)="d2.toggle()" type="button">Select&nbsp;</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="container col-lg-2">
@@ -247,3 +257,17 @@
     </div>
   </ng-container>
 </div>
+
+
+
+<ng-template #footerTemplate1>
+  <div class="dropdown-divider"></div>
+  <button class="btn btn-info btn-sm float-left" style="margin-left: 6px; margin-bottom: 8px;" (click)="model1 = today; d1.close()">Today</button>
+  <button class="btn btn-dark btn-sm float-right" style="margin-right: 6px; margin-bottom: 8px;" (click)="model1 = none; d1.close()">Clear</button>
+</ng-template>
+
+<ng-template #footerTemplate2>
+  <div class="dropdown-divider"></div>
+  <button class="btn btn-info btn-sm float-left" style="margin-left: 6px; margin-bottom: 8px;" (click)="model2 = today; d2.close()">Today</button>
+  <button class="btn btn-dark btn-sm float-right" style="margin-right: 6px; margin-bottom: 8px;" (click)="model2 = none; d2.close()">Clear</button>
+</ng-template>
