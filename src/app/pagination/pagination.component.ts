@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NgbDateStruct, NgbDate, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 import {Inform} from '../data';
 import {MOCK} from '../mock-data';
 import {errorType} from '../type';
@@ -20,14 +20,11 @@ export class NgbdPagination {
   prc: string;
   trc: string;
   env: string;
-  CD: NgbDate;
-  PD: NgbDate;
+  CD: NgbDateStruct;
+  PD: NgbDateStruct;
   ET: errorType;
 
   found: Inform;
-
-  TD: NgbDate;
-  FD: NgbDate;
 
   openMsg(id: number) {
 
@@ -64,7 +61,7 @@ export class NgbdPagination {
   collectionSize = this.toShow.length;
   pageMax = Math.ceil(this.collectionSize / this.pageSize);
 
-  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD?: NgbDate, TD?: NgbDate) {
+  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string) {
     if (!LPg){
       this.pageSize = 26;
     }
@@ -72,7 +69,7 @@ export class NgbdPagination {
       this.pageSize = LPg;
     }
 
-    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD )
+    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, this.model1, this.model2 )
     
     this.collectionSize = this.toShow.length;
 
@@ -99,7 +96,7 @@ export class NgbdPagination {
     }
   }
 
-  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD?: NgbDate, TD?: NgbDate):any {
+  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: NgbDateStruct, TD: NgbDateStruct):any {
      return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD);
   }
 

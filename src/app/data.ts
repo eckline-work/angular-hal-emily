@@ -1,5 +1,5 @@
 import {errorType} from './type';
-import {NgbDate} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 export class Inform {
   sys: string;
@@ -7,8 +7,8 @@ export class Inform {
   prc: string;
   trc: string;
   env: string;
-  CD: NgbDate;
-  PD: NgbDate;
+  CD: NgbDateStruct;
+  PD: NgbDateStruct;
   ID: number;
   err: string;
   eT: errorType;

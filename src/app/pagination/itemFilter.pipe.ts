@@ -1,12 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import {Inform} from '../data';
-import {NgbDate} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDate, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 @Pipe({name: 'itemFilter'})
 
 export class itemFilterPipe implements PipeTransform {
 
-  transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD?: NgbDate, TD?: NgbDate): Inform[] {
+  transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: NgbDateStruct, TD: NgbDateStruct): Inform[] {
 
     if (PI){
       if (PS == "Contains") {
