@@ -28,8 +28,7 @@ export const MOCK: Inform[] = [ //What's your ****ing problem?!
   eT: {
     code: 'NOVA_ERROR',
     desc: 'Nova Errors',
-    email: 'name@email.com',
-    color: 'Warning'
+    email: 'name@email.com'
     }
   },
 
