@@ -126,11 +126,13 @@
               </div>
             </div>
             <br>
-            <div class="d-flex flex-wrap justify-content-center">
-              <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Refresh Table</button>
-            </div>
           </fieldset>
         </form>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex flex-wrap justify-content-center">
+              <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Refresh Table</button>
+            </div>
       </div>
     </div>
   </div>
@@ -235,10 +237,13 @@
       </div>
     </ng-container>
   </ng-container>
-  <ng-container class="container justify-content-center" *ngIf="collectionSize == 0">
-    <p style="margin-left: 40px; margin-right: 40px; text-align: center;">
-      There are no items that match the given criteria.<br>
-      Please make changes to your selections, then try again.
-    </p>
+  <ng-container *ngIf="collectionSize == 0">
+    <div class="container" style="width: 100%">
+      <p style="text-align: center;">
+        <br>
+        <span class="lead text-info">There are no items that match the given criteria.</span><br>
+        <span class="text-muted">Please make changes to your selections, then try again.</span>
+      </p>
+    </div>
   </ng-container>
 </div>
