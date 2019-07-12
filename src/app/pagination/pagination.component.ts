@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDateStruct, NgbDate, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 import {Inform} from '../data';
 import {MOCK} from '../mock-data';
 import {errorType} from '../type';
@@ -20,9 +20,12 @@ export class NgbdPagination {
   prc: string;
   trc: string;
   env: string;
-  CD: NgbDateStruct;
-  PD: NgbDateStruct;
+  CD: NgbDate;
+  PD: NgbDate;
   ET: errorType;
+
+  FD: NgbDateStruct;
+  TD: NgbDateStruct;
 
   found: Inform;
 
@@ -69,7 +72,15 @@ export class NgbdPagination {
       this.pageSize = LPg;
     }
 
-    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, this.model1, this.model2 )
+    this.FD.day = this.model1.day;
+    this.FD.month = this.model1.month;
+    this.FD.year = this.model1.year;
+
+    this.TD.day = this.model2.day;
+    this.TD.month = this.model2.month;
+    this.TD.year = this.model2.year;
+
+    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, this.FD, this.TD )
     
     this.collectionSize = this.toShow.length;
 
@@ -104,7 +115,7 @@ export class NgbdPagination {
     model1: NgbDateStruct;
     model2: NgbDateStruct;
     today = this.calendar.getToday();
-    none: NgbDateStruct;
+    none: NgbDate;
 
   //constructor
   constructor(private filter: itemFilterPipe, private calendar: NgbCalendar) {};

@@ -45,11 +45,11 @@ export class itemFilterPipe implements PipeTransform {
     }
 
     if (FD){
-      items = items.filter(i => !i.CD.before(FD));
+      items = items.filter(i => (i.CD.equals(FD) || i.CD.after(FD)));
     }
 
     if (TD){
-      items = items.filter(i => !i.CD.after(TD));
+      items = items.filter(i => (i.CD.before(TD) || i.CD.equals(TD)));
     }
 
     if (Sys){
