@@ -211,7 +211,7 @@
             </tbody>  
           </table>
           <ng-container *ngIf="ET.code">
-            <table class="table table-hover">
+            <table class="table table-hover" style="text-align: center;">
               <thead>
                 <tr class="table-dark">
                   <th scope="col">Action</th>
@@ -221,7 +221,10 @@
               </thead>
               <tbody>
                 <tr class="table-light small">
-                  <td>{{ET.code}}, {{ET.desc}}</td>
+                  <td>
+                    {{ET.code}}<br>
+                    {{ET.desc}}
+                  </td>
                   <td>{{ET.email}}</td>
                   <td>{{ET.pager}}</td>
                 </tr>
