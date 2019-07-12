@@ -111,7 +111,7 @@
                   <div class="form-group">
                     <label class="col-form-label col-form-label-sm" for="input-small">From:</label>
                     <div class="input-group">
-                      <input class="form-control form-control-sm" placeholder="yyyy-mm-dd" name="dp1" [(ngModel)]="model1" ngbDatepicker [footerTemplate]="footerTemplate1" #d1="ngbDatepicker" id="dp" #dp>
+                      <input class="form-control form-control-sm" placeholder="yyyy-mm-dd" name="dp1" [(ngModel)]="model1" ngbDatepicker [minDate]="{year: 2006, month: 1, day: 1}" [footerTemplate]="footerTemplate1" #d1="ngbDatepicker" id="dp" #dp>
                       <div class="input-group-append">
                         <button class="btn btn-outline-secondary dropdown-toggle btn-sm" (click)="d1.toggle()" type="button">Select&nbsp;</button>
                       </div>
@@ -122,7 +122,7 @@
                   <div class="form-group">
                     <label class="col-form-label col-form-label-sm" for="input-small">To:</label>
                     <div class="input-group">
-                      <input class="form-control form-control-sm" placeholder="yyyy-mm-dd" name="dp2" [(ngModel)]="model2" ngbDatepicker [footerTemplate]="footerTemplate2" #d2="ngbDatepicker">
+                      <input class="form-control form-control-sm" placeholder="yyyy-mm-dd" name="dp2" [(ngModel)]="model2" ngbDatepicker [minDate]="{year: 2006, month: 1, day: 1}" [footerTemplate]="footerTemplate2" #d2="ngbDatepicker">
                       <div class="input-group-append">
                         <button class="btn btn-outline-secondary dropdown-toggle btn-sm" (click)="d2.toggle()" type="button">Select&nbsp;</button>
                       </div>

@@ -5,8 +5,9 @@ import {NgbDate, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 @Pipe({name: 'itemFilter'})
 
 export class itemFilterPipe implements PipeTransform {
+  testDay = new NgbDate(2005, 12, 31);
 
-  transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: NgbDateStruct, TD: NgbDateStruct): Inform[] {
+  transform(items:Inform[], PS:string, TS:string, ES:string, Sys:string, Inc:string, PI:string, TI:string, EI:string, FD:NgbDateStruct, TD:NgbDateStruct):Inform[] {
 
     if (PI){
       if (PS == "Contains") {
@@ -44,11 +45,11 @@ export class itemFilterPipe implements PipeTransform {
       }
     }
 
-    if (FD){
+    if (!this.testDay.before(FD)){
       items = items.filter(i => (i.CD.equals(FD) || i.CD.after(FD)));
     }
 
-    if (TD){
+    if (!this.testDay.before(TD)){
       items = items.filter(i => (i.CD.before(TD) || i.CD.equals(TD)));
     }
 
