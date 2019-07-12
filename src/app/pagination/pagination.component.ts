@@ -104,7 +104,7 @@ export class NgbdPagination {
     model1: NgbDateStruct;
     model2: NgbDateStruct;
     today = this.calendar.getToday();
-    none: NgbDate;
+    none: NgbDateStruct;
 
   //constructor
   constructor(private filter: itemFilterPipe, private calendar: NgbCalendar) {};

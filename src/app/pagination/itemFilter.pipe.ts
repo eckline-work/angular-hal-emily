@@ -44,11 +44,11 @@ export class itemFilterPipe implements PipeTransform {
       }
     }
 
-    if(FD){
+    if (FD){
       items = items.filter(i => !i.CD.before(FD));
     }
 
-    if(TD){
+    if (TD){
       items = items.filter(i => !i.CD.after(TD));
     }
 
