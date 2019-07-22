@@ -76,14 +76,6 @@ export class NgbdPagination {
       this.pageSize = LPg;
     }
 
-    this.FD.day = this.model1.day;
-    this.FD.month = this.model1.month;
-    this.FD.year = this.model1.year;
-
-    this.TD.day = this.model2.day;
-    this.TD.month = this.model2.month;
-    this.TD.year = this.model2.year;
-
     this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, this.FD, this.TD )
     
     this.collectionSize = this.toShow.length;

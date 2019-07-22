@@ -45,13 +45,13 @@ export class itemFilterPipe implements PipeTransform {
       }
     }
 
-    if (!this.testDay.before(FD)){
+    /*if (!this.testDay.before(FD)){
       items = items.filter(i => (i.CD.equals(FD) || i.CD.after(FD)));
     }
 
     if (!this.testDay.before(TD)){
       items = items.filter(i => (i.CD.before(TD) || i.CD.equals(TD)));
-    }
+    }*/
 
     if (Sys){
       items = items.filter(i => i.sys == Sys);
