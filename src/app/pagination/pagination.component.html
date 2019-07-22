@@ -173,7 +173,7 @@
           <td>{{i.trc | slice:0:30}}</td>
           <td>{{i.env | slice:0:30}}</td>
           <td>{{i.CD.year}}-{{i.CD.month}}-{{i.CD.day}}</td>
-          <td><button class="btn btn-link" (click)="openMsg(i.ID)">{{i.ID}}</button></td>
+          <td><button class="btn btn-link" (click)="msgTog(i.ID)">{{i.ID}}</button></td>
         </tr>
       </tbody>
     </table>

@@ -29,26 +29,30 @@ export class NgbdPagination {
 
   found: Inform;
 
-  openMsg(id: number) {
-
-    this.found = this.items.find(function(element) {
-      return element.ID == id;
-    });
-
-    this.prc = this.found.prc;
-    this.trc = this.found.trc;
-    this.env = this.found.env;
-    this.sys = this.found.sys;
-    this.msg = this.found.msg;
-    this.CD = this.found.CD;
-    this.PD = this.found.PD;
-    if (this.found.eT) {
-      this.ET = this.found.eT;
+  msgTog(id: number) {
+    if(id == this.idPicked){
+      this.msgClose();
     }
     else {
-      this.ET = new errorType;
+      this.found = this.items.find(function(element) {
+        return element.ID == id;
+      });
+
+      this.prc = this.found.prc;
+      this.trc = this.found.trc;
+      this.env = this.found.env;
+      this.sys = this.found.sys;
+      this.msg = this.found.msg;
+      this.CD = this.found.CD;
+      this.PD = this.found.PD;
+      if (this.found.eT) {
+        this.ET = this.found.eT;
+      }
+      else {
+        this.ET = new errorType;
+      }
+      this.idPicked = id;
     }
-    this.idPicked = id;
   }
 
   msgClose() {
