@@ -18,6 +18,7 @@ export class NgbdPagination {
 
   //message Viewer Code
   numPicked = -7;
+  msgDisp = MOCK;
 
   //Search and Table Code
   items = MOCK;
