@@ -18,7 +18,6 @@ export class NgbdPagination {
   idPicked = -7;
 
   found: Inform;
-  view: Inform;
 
   msgTog(id: number){
     if(id == this.idPicked){
@@ -34,13 +33,11 @@ export class NgbdPagination {
     this.found = this.items.find(function(element) {
         return element.ID == id;
       });
-
-    this.view = this.found;
-    this.idPicked = this.view.ID;
+    this.idPicked = this.found.ID;
   }
 
   msgClose() {
-    this.view = new Inform;
+    this.found = new Inform;
     this.idPicked = -7;
   }
 

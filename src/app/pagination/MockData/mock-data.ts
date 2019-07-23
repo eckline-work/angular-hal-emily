@@ -9,8 +9,9 @@ export const MOCK: Inform[] = [ //What's your ****ing problem?!
   CD: {day: 12, month: 7, year: 2019},
   PD: {day: 12, month: 7, year: 2019},
   ID: 4,
-  err: 'N',
+  err: 'N'
   },
+
   {sys: 'Nova',
   msg: "long witty coment to act as a placeholder so I can try to debug this stupid thing. Apparently the formatting looks wonky unless I make this one even longer, so more random typing it is. I don't actually know what to put here, this is just filler after all... Ok, this is long enough to make the formatting behave itself, so that's good. I should probably stop now. Ok, actually stoping in 3, 2, 1",
   prc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non quam venenatis vestibulum.',
