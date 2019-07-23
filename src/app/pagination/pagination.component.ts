@@ -4,20 +4,18 @@ import {Inform} from './MockData/data';
 import {MOCK} from './MockData/mock-data';
 import {errorType} from './MockData/type';
 
+import {msgView} from './message/msgView.component';
 import {itemFilterPipe} from './itemFilter.pipe';
 
 @Component({
   selector: 'ngbd-pagination',
   templateUrl: './pagination.component.html',
-  providers: [ itemFilterPipe ]
+  providers: [ itemFilterPipe, msgView ]
 })
 export class NgbdPagination {
 
   FD: NgbDateStruct;
   TD: NgbDateStruct;
-
-  //message Viewer Code
-
 
   //Search and Table Code
   items = MOCK;
