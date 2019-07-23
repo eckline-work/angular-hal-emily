@@ -5,12 +5,11 @@ import {MOCK} from '../mock-data';
 import {errorType} from '../type';
 
 import {itemFilterPipe} from './itemFilter.pipe';
-import {msgViewPipe} from './msgView.pipe';
 
 @Component({
   selector: 'ngbd-pagination',
   templateUrl: './pagination.component.html',
-  providers: [ itemFilterPipe, msgViewPipe ]
+  providers: [ itemFilterPipe ]
 })
 export class NgbdPagination {
 
@@ -19,15 +18,6 @@ export class NgbdPagination {
 
   //message Viewer Code
   numPicked = -7;
-  msgDisp: Inform[];
-
-  msgTog(id: number) {
-    this.msgDisp = this.view.transform(this.msgDisp, id, this.items);
-  }
-
-  msgClose(id: number) {
-    this.msgDisp = this.view.transform(this.msgDisp, id);
-  }
 
   //Search and Table Code
   items = MOCK;

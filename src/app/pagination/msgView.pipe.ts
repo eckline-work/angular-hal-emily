@@ -1,3 +1,5 @@
+/*
+
 import { Pipe, PipeTransform } from '@angular/core';
 import {Inform} from '../data';
 
@@ -21,3 +23,5 @@ export class msgViewPipe implements PipeTransform {
   }
 
 }
+
+*/
