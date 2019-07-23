@@ -3,12 +3,14 @@ import {NgbDateStruct, NgbDate, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 import {Inform} from '../data';
 import {MOCK} from '../mock-data';
 import {errorType} from '../type';
+
 import {itemFilterPipe} from './itemFilter.pipe';
+import {msgViewPipe} from './msgView.pipe';
 
 @Component({
   selector: 'ngbd-pagination',
   templateUrl: './pagination.component.html',
-  providers: [ itemFilterPipe ]
+  providers: [ itemFilterPipe, msgViewPipe ]
 })
 export class NgbdPagination {
 
@@ -18,21 +20,13 @@ export class NgbdPagination {
   //message Viewer Code
   numPicked = 0;
   msgDisp: Inform[];
-  infStat: Inform[];
 
   msgTog(id: number) {
-    if(this.msgDisp.find(function(element) {return element.ID == id;})){
-      this.msgClose(id);
-    }
-    else {
-      this.msgDisp.push(this.items.find(function(element) {return element.ID == id;}));
-      this.numPicked = this.msgDisp.length;
-    }
+    this.msgDisp = this.view.transform(this.items, this.msgDisp, id);
   }
 
   msgClose(id: number) {
-    this.msgDisp = this.msgDisp.filter(i => i.ID != id);
-    this.numPicked = this.msgDisp.length;
+    this.msgDisp = this.view.msgClose(this.msgDisp, id);
   }
 
   //Search and Table Code
@@ -91,6 +85,6 @@ export class NgbdPagination {
     none: NgbDate;
 
   //constructor
-  constructor(private filter: itemFilterPipe, private calendar: NgbCalendar) {};
+  constructor(private filter: itemFilterPipe, private calendar: NgbCalendar, private view: msgViewPipe, private infStat: Inform[]) {};
 
 }
