@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NgbDateStruct, NgbDate, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
-import {Inform} from '../data';
-import {errorType} from '../type';
+import {Inform} from '../MockData/data';
+import {errorType} from '../MockData/type';
 
 @Component({
   selector: 'msgView',

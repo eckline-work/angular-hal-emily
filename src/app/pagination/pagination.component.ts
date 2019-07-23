@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {NgbDateStruct, NgbDate, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
-import {Inform} from './data';
-import {MOCK} from './mock-data';
-import {errorType} from './type';
+import {Inform} from './MockData/data';
+import {MOCK} from './MockData/mock-data';
+import {errorType} from './MockData/type';
 
 import {itemFilterPipe} from './itemFilter.pipe';
 
