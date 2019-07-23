@@ -179,11 +179,73 @@
     </table>
   </ng-container>
     
-  <ng-container>
-    <!--Message Viewer will go here when I get it working again-->
-    <!--<ul *ngFor="let s of view" style="list-style-type: none;">
-      <li><msgView></msgView></li>
-    </ul>-->
+  <ng-container *ngIf="idPicked != -7">
+    <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 5rem; max-width: 60rem; width: 50%; min-width: 20rem;">
+      <div class="card-header">
+        HAL Message Viewer
+        <button type="button" class="close float-right" (click)="msgClose(view.ID)">&times;</button>
+      </div>
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead>
+            <tr class="table-info">
+              <th colspan="2" style="text-align: center;">Data for item ID: {{view.ID}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-light small">
+              <th scope="row">System:</th>
+              <td>{{view.sys}}</td>
+            </tr>
+            <tr class="table-light small">
+              <th scope="row">Number/Message:</th>
+              <td>{{view.msg}}</td>
+            </tr>
+            <tr class="table-light small">
+              <th scope="row">Process:</th>
+              <td>{{view.prc}}</td>
+            </tr>
+            <tr class="table-light small">
+              <th scope="row">Trace:</th>
+              <td>{{view.trc}}</td>
+            </tr>
+            <tr class="table-light small">
+              <th scope="row">Environment&nbsp;Info:</th>
+              <td>{{view.env}}</td>
+            </tr>
+            <tr class="table-light small">
+              <th scope="row">Created:</th>
+              <td>{{view.CD.year}}/{{view.CD.month}}/{{view.CD.day}}</td>
+            </tr>
+            <tr class="table-light small">
+              <th scope="row">Processed:</th>
+              <td>{{view.PD.year}}/{{view.PD.month}}/{{view.PD.day}}</td>
+            </tr>
+          </tbody>  
+        </table>
+        <ng-container *ngIf="view.eT.code">
+          <table class="table table-hover" style="text-align: center;">
+            <thead>
+              <tr class="table-dark">
+                <th scope="col">Action</th>
+                <th scope="col">Email</th>
+                <th scope="col">Pager No.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-light small">
+                <td>
+                  {{view.eT.code}}<br>
+                  {{view.eT.desc}}
+                </td>
+                <td>{{view.eT.email}}</td>
+                <td>{{view.eT.pager}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </ng-container>
+      </div>
+    </div>
   </ng-container>
 
   <ng-container *ngIf="collectionSize == 0">

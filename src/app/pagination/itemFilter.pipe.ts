@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {Inform} from '../data';
+import {Inform} from './MockData/data';
 import {NgbDate, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 @Pipe({name: 'itemFilter'})

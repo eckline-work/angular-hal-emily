@@ -25,14 +25,18 @@ export class NgbdPagination {
       this.msgClose();
     }
     else {
-      this.found = this.items.find(function(element) {
+      this.msgOpen(id);
+    }
+   
+  }
+
+  msgOpen(id: number) {
+    this.found = this.items.find(function(element) {
         return element.ID == id;
       });
 
-      this.view = this.found;
-      this.idPicked = id;
-    }
-   
+    this.view = this.found;
+    this.idPicked = this.view.ID;
   }
 
   msgClose() {
