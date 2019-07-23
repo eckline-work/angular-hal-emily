@@ -15,26 +15,29 @@ export class NgbdPagination {
 
   //Message View Toggle
 
+  idPicked = -7;
+
   found: Inform;
-  viewList: Inform[];
-  open = 0;
+  view: Inform;
 
   msgTog(id: number){
-
-    if (this.open == 0){
-      this.found = this.items.find(function(element) {return element.ID == id;})
-      this.open = this.viewList.push(this.found);
+    if(id == this.idPicked){
+      this.msgClose();
     }
     else {
-      if (this.viewList.find(function(element) {return element.ID == id;})) {
-        this.viewList.splice(this.viewList.findIndex(function(element) {return element.ID == id;}), 1);
-      }
-      else {
-        this.found = this.items.find(function(element) {return element.ID == id;})
-        this.viewList.push(this.found);
-      }
-    }
+      this.found = this.items.find(function(element) {
+        return element.ID == id;
+      });
 
+      this.view = this.found;
+      this.idPicked = id;
+    }
+   
+  }
+
+  msgClose() {
+    this.view = new Inform;
+    this.idPicked = -7;
   }
 
   FD: NgbDateStruct;
