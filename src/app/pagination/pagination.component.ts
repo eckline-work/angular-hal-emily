@@ -16,29 +16,21 @@ export class NgbdPagination {
   //Message View Toggle
 
   idPicked = -7;
+  idPicked2 = -7;
 
   found: Inform;
+  found2: Inform;
 
   msgTog(id: number){
-    if(id == this.idPicked){
-      this.msgClose();
-    }
-    else {
-      this.msgOpen(id);
-    }
-   
+
   }
 
-  msgOpen(id: number) {
-    this.found = this.items.find(function(element) {
-        return element.ID == id;
-      });
-    this.idPicked = this.found.ID;
+  msgOpen(id: number, infU: Inform) {
+  
   }
 
-  msgClose() {
-    this.found = new Inform;
-    this.idPicked = -7;
+  msgClose(inf: Inform, id: number) {
+  
   }
 
   FD: NgbDateStruct;
