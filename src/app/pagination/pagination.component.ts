@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {NgbDateStruct, NgbDate, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
-import {Inform} from '../data';
-import {MOCK} from '../mock-data';
-import {errorType} from '../type';
+import {Inform} from './data';
+import {MOCK} from './mock-data';
+import {errorType} from './type';
 
 import {itemFilterPipe} from './itemFilter.pipe';
 
@@ -17,30 +17,7 @@ export class NgbdPagination {
   TD: NgbDateStruct;
 
   //message Viewer Code
-  view: Inform[];
-  idList: number[];
-  clIdx: number;
-  toPush: number;
 
-  msgTog (id: number){
-    this.clIdx = this.idList.indexOf(id);
-    if(this.clIdx < 0){
-      this.idList.push(id);
-      this.toPush = this.items.findIndex(i => (i.ID == id));
-      this.view.push(this.items[this.toPush]);
-    }
-    else{
-      this.msgClear;
-    }
-  }
-
-  msgClear (id: number, clIdx?: number){
-    if(!clIdx){
-      clIdx = this.idList.indexOf(id);
-    }
-    this.view.splice(clIdx, 1);
-    this.idList.splice(clIdx, 1);
-  }
 
   //Search and Table Code
   items = MOCK;
