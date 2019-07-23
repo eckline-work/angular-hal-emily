@@ -13,6 +13,30 @@ import {itemFilterPipe} from './itemFilter.pipe';
 })
 export class NgbdPagination {
 
+  //Message View Toggle
+
+  found: Inform;
+  viewList: Inform[];
+  open = 0;
+
+  msgTog(id: number){
+
+    if (this.open == 0){
+      this.found = this.items.find(function(element) {return element.ID == id;})
+      this.open = this.viewList.push(this.found);
+    }
+    else {
+      if (this.viewList.find(function(element) {return element.ID == id;})) {
+        this.viewList.splice(this.viewList.findIndex(function(element) {return element.ID == id;}), 1);
+      }
+      else {
+        this.found = this.items.find(function(element) {return element.ID == id;})
+        this.viewList.push(this.found);
+      }
+    }
+
+  }
+
   FD: NgbDateStruct;
   TD: NgbDateStruct;
 
