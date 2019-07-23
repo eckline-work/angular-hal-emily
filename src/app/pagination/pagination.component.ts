@@ -4,13 +4,12 @@ import {Inform} from './MockData/data';
 import {MOCK} from './MockData/mock-data';
 import {errorType} from './MockData/type';
 
-import {msgView} from './message/msgView.component';
 import {itemFilterPipe} from './itemFilter.pipe';
 
 @Component({
   selector: 'ngbd-pagination',
   templateUrl: './pagination.component.html',
-  providers: [ itemFilterPipe, msgView ]
+  providers: [ itemFilterPipe ]
 })
 export class NgbdPagination {
 
