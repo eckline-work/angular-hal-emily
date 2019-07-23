@@ -17,8 +17,30 @@ export class NgbdPagination {
   TD: NgbDateStruct;
 
   //message Viewer Code
-  numPicked = -7;
-  msgDisp = MOCK;
+  view: Inform[];
+  idList: number[];
+  clIdx: number;
+  toPush: number;
+
+  msgTog (id: number){
+    this.clIdx = this.idList.indexOf(id);
+    if(this.clIdx < 0){
+      this.idList.push(id);
+      this.toPush = this.items.findIndex(i => (i.ID == id));
+      this.view.push(this.items[this.toPush]);
+    }
+    else{
+      this.msgClear;
+    }
+  }
+
+  msgClear (id: number, clIdx?: number){
+    if(!clIdx){
+      clIdx = this.idList.indexOf(id);
+    }
+    this.view.splice(clIdx, 1);
+    this.idList.splice(clIdx, 1);
+  }
 
   //Search and Table Code
   items = MOCK;
@@ -46,16 +68,9 @@ export class NgbdPagination {
         this.pageMax = 1;
       }
       this.page = 1;
-
-    this.numPicked = -7;
-
-    this.refresh;
   }
 
-  //Will need a refresh function that runs every so often so that new items can be
-  refresh(){
-    //every 2 minutes or when Refresh Table clicked
-  }
+  //Will need a refresh function that runs every so often so that new items can be loaded
 
   ngOnInit() {
     this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
