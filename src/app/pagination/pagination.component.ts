@@ -18,7 +18,7 @@ export class NgbdPagination {
   TD: NgbDateStruct;
 
   //message Viewer Code
-  numPicked = 0;
+  numPicked = -7;
   msgDisp: Inform[];
 
   msgTog(id: number) {
@@ -56,8 +56,7 @@ export class NgbdPagination {
       }
       this.page = 1;
 
-    this.numPicked = 0;
-    this.msgDisp = this.infStat;
+    this.numPicked = -7;
 
     this.refresh;
   }
@@ -85,6 +84,6 @@ export class NgbdPagination {
     none: NgbDate;
 
   //constructor
-  constructor(private filter: itemFilterPipe, private calendar: NgbCalendar, private view: msgViewPipe, private infStat: Inform[]) {};
+  constructor(private filter: itemFilterPipe, private calendar: NgbCalendar ) {};
 
 }
