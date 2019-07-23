@@ -12,51 +12,27 @@ import {itemFilterPipe} from './itemFilter.pipe';
 })
 export class NgbdPagination {
 
-  //message Viewer Code
-  idPicked = -7;
-
-  sys: string;
-  msg: string;
-  prc: string;
-  trc: string;
-  env: string;
-  CD: NgbDate;
-  PD: NgbDate;
-  ET: errorType;
-
   FD: NgbDateStruct;
   TD: NgbDateStruct;
 
-  found: Inform;
+  //message Viewer Code
+  numPicked = 0;
+  msgDisp: Inform[];
+  infStat: Inform[];
 
   msgTog(id: number) {
-    if(id == this.idPicked){
-      this.msgClose();
+    if(this.msgDisp.find(function(element) {return element.ID == id;})){
+      this.msgClose(id);
     }
     else {
-      this.found = this.items.find(function(element) {
-        return element.ID == id;
-      });
-
-      this.prc = this.found.prc;
-      this.trc = this.found.trc;
-      this.env = this.found.env;
-      this.sys = this.found.sys;
-      this.msg = this.found.msg;
-      this.CD = this.found.CD;
-      this.PD = this.found.PD;
-      if (this.found.eT) {
-        this.ET = this.found.eT;
-      }
-      else {
-        this.ET = new errorType;
-      }
-      this.idPicked = id;
+      this.msgDisp.push(this.items.find(function(element) {return element.ID == id;}));
+      this.numPicked = this.msgDisp.length;
     }
   }
 
-  msgClose() {
-    this.idPicked = -7;
+  msgClose(id: number) {
+    this.msgDisp = this.msgDisp.filter(i => i.ID != id);
+    this.numPicked = this.msgDisp.length;
   }
 
   //Search and Table Code
@@ -86,7 +62,8 @@ export class NgbdPagination {
       }
       this.page = 1;
 
-    this.idPicked = -7;
+    this.numPicked = 0;
+    this.msgDisp = this.infStat;
 
     this.refresh;
   }
