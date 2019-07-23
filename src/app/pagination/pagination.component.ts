@@ -22,11 +22,11 @@ export class NgbdPagination {
   msgDisp: Inform[];
 
   msgTog(id: number) {
-    this.msgDisp = this.view.transform(this.items, this.msgDisp, id);
+    this.msgDisp = this.view.transform(this.msgDisp, id, this.items);
   }
 
   msgClose(id: number) {
-    this.msgDisp = this.view.msgClose(this.msgDisp, id);
+    this.msgDisp = this.view.transform(this.msgDisp, id);
   }
 
   //Search and Table Code

@@ -5,19 +5,19 @@ import {Inform} from '../data';
 
 export class msgViewPipe implements PipeTransform {
 
-  transform(items: Inform[], view: Inform[], id: number): Inform[] {
-    if(view.find(function(element) {return element.ID == id;})){
-      this.msgClose(view, id);
+  transform(view: Inform[], id: number, items?: Inform[]): Inform[] {
+    if(items){
+      if(view.find(function(element) {return element.ID == id;})){
+        view = view.filter(i => i.ID != id);
+      }
+      else {
+        view.push(items.find(function(element) {return element.ID == id;}));
+      }
     }
-    else {
-      view.push(items.find(function(element) {return element.ID == id;}));
+    else{
+      view = view.filter(i => i.ID != id);
     }
     return view;
-  }
-
-  msgClose(items: Inform[], id: number): Inform[] {
-    items = items.filter(i => i.ID != id);
-    return items;
   }
 
 }
