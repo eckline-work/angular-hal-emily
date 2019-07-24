@@ -102,6 +102,13 @@ export class NgbdPagination {
      return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD);
   }
 
+  ResetForm(){
+    this.pageSize = 26;
+    this.toShow = this.items;
+    this.collectionSize = this.toShow.length;
+    this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
+  }
+
   //Date Fix
     model1: NgbDateStruct;
     model2: NgbDateStruct;
