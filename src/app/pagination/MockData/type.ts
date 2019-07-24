@@ -1,6 +1,6 @@
 export class errorType {
-  code: string = '';
-  desc: string = '';
-  email: string = '';
-  pager: string = '';
+  code: string;
+  desc: string;
+  email: string;
+  pager: string;
 }

@@ -36,9 +36,6 @@ export class NgbdPagination {
       this.found2 = this.items.find(function(element) {
         return element.ID == id;
       });
-      if (this.found2.eT.code == '') {
-        this.found2.eT = new errorType;
-      }
       this.idPicked2 = id;
     }
     else {
