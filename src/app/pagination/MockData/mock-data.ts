@@ -1,6 +1,64 @@
 import {Inform} from './data';
 
 export const MOCK: Inform[] = [ //What's your ****ing problem?!
+
+  {sys: 'Nova Informatica',
+  msg: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
+  prc: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
+  trc: "asklajoif gjneircv hgpds hgviud jhsirea kehjrfiuehrs bgfidrghiug shfidrs buisf hfviuyrg hsgbuifa kalfg hid",
+  env: 'TEST_ENV',
+  CD: {day: 24, month: 7, year: 2019},
+  PD: {day: 24, month: 7, year: 2019},
+  ID: 8,
+  err: 'N',
+  eT: {
+    code: 'NOVA_NOTI',
+    desc: 'Nova Notification'
+    }
+  },
+
+  {sys: 'DBA',
+  msg: "Pellentesque ornare sem lacinia quam venenatis vestibulum. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Cosby sweater eu tellus ac cursus commodo, tortor mauris nibh. This has been a long (not very) witty coment",
+  prc: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor.',
+  trc: 'For sem malesuada magna, vehicula ut id elit.',
+  env: 'ENV2',
+  CD: {day: 22, month: 7, year: 2019},
+  PD: {day: 22, month: 7, year: 2019},
+  ID: 7,
+  err: 'N',
+  eT: {
+    code: 'INFO',
+    desc: 'Informational'
+    }
+  },
+
+  {sys: 'DBA',
+  msg: "Pellentesque ornare sem lacinia quam venenatis vestibulum. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Cosby sweater eu tellus ac cursus commodo, tortor mauris nibh. This has been a long (not very) witty coment",
+  prc: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor.',
+  trc: 'For sem malesuada magna, vehicula ut id elit.',
+  env: 'ENV',
+  CD: {day: 22, month: 7, year: 2019},
+  PD: {day: 22, month: 7, year: 2019},
+  ID: 6,
+  err: 'N'
+  },
+
+  {sys: 'Nova',
+  msg: "Integer posuere erat a ante. Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+  prc: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor. Something Integer',
+  trc: 'For sem malesuada magna, vehicula ut id elit.',
+  env: 'TESTENV',
+  CD: {day: 20, month: 7, year: 2019},
+  PD: {day: 20, month: 7, year: 2019},
+  ID: 5,
+  err: 'Y',
+  eT: {
+    code: 'NOVA_ERROR',
+    desc: 'Nova Errors',
+    email: 'name@email.com'
+    }
+  },
+
   {sys: 'Vista',
   msg: "Pellentesque ornare sem lacinia quam venenatis vestibulum. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Cosby sweater eu tellus ac cursus commodo, tortor mauris nibh. Vivamus sagittis lacus vel augue nisi erat porttitor ligula posuere erat a dapibus, tellus ac cursus.",
   prc: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor.',

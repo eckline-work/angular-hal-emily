@@ -133,7 +133,7 @@
                 </div>
                 <div class="container col-lg-2">
                   <label class="col-form-label col-form-label-sm" for="LPg">Lines/Page:</label>
-                  <input class="form-control form-control-sm" type="text" placement="bottom" ngbTooltip="Enter 0 for scroll (WIP)" ng-model="pageSize" value="{{pageSize}}" id="LPg" style="text-align:right;" #LPg>
+                  <input class="form-control form-control-sm" type="text" placement="bottom" ngbTooltip="Enter 0 for scroll" ng-model="pageSize" value="{{pageSize}}" id="LPg" style="text-align:right;" #LPg>
                 </div>
               </div>
             </div>
@@ -209,7 +209,7 @@
   </ng-container>
     
   <ng-container *ngIf="idPicked != -7">
-    <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 5rem; max-width: 60rem; width: 50%; min-width: 20rem;">
+    <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 5rem; max-width: 55rem; width: 50%; min-width: 20rem;">
       <div class="card-header">
         HAL Message Viewer
         <button type="button" class="close float-right" (click)="msgClose(idPicked)">&times;</button>
@@ -278,7 +278,7 @@
   </ng-container>
 
   <ng-container *ngIf="idPicked2 != -7">
-    <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 5rem; max-width: 60rem; width: 50%; min-width: 20rem;">
+    <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 5rem; max-width: 55rem; width: 50%; min-width: 20rem;">
       <div class="card-header">
         HAL Message Viewer
         <button type="button" class="close float-right" (click)="msgClose(idPicked2)">&times;</button>
