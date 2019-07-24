@@ -2,14 +2,29 @@ import {Inform} from './data';
 
 export const MOCK: Inform[] = [ //What's your ****ing problem?!
 
+  {sys: 'Data Warehouse',
+  msg: "Integer posuere erat a ante. Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+  prc: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor. Something Integer',
+  trc: 'For sem malesuada magna, vehicula ut id elit.',
+  env: 'TESTENV',
+  CD: {day: 24, month: 7, year: 2019},
+  PD: {day: 24, month: 7, year: 2019},
+  ID: 612,
+  err: 'Y',
+  eT: {
+    code: 'DB_ERROR',
+    desc: 'Database Error'
+    }
+  },
+
   {sys: 'Nova Informatica',
   msg: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
   prc: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
   trc: "asklajoif gjneircv hgpds hgviud jhsirea kehjrfiuehrs bgfidrghiug shfidrs buisf hfviuyrg hsgbuifa kalfg hid",
   env: 'TEST_ENV',
-  CD: {day: 24, month: 7, year: 2019},
-  PD: {day: 24, month: 7, year: 2019},
-  ID: 8,
+  CD: {day: 23, month: 7, year: 2019},
+  PD: {day: 23, month: 7, year: 2019},
+  ID: 413,
   err: 'N',
   eT: {
     code: 'NOVA_NOTI',
@@ -18,13 +33,13 @@ export const MOCK: Inform[] = [ //What's your ****ing problem?!
   },
 
   {sys: 'DBA',
-  msg: "Pellentesque ornare sem lacinia quam venenatis vestibulum. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Cosby sweater eu tellus ac cursus commodo, tortor mauris nibh. This has been a long (not very) witty coment",
-  prc: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor.',
+  msg: "Vivamus pellentesque ornare sem lacinia quam venenatis vestibulum. Nesciunt tofu stumptown aliqua,. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Cosby sweater eu tellus ac cursus commodo, tortor mauris nibh. This has been a long (not very) witty coment",
+  prc: 'Vivamus lacus vel sagittis augue laoreet dolor auctor, tortor mauris nibh.',
   trc: 'For sem malesuada magna, vehicula ut id elit.',
   env: 'ENV2',
-  CD: {day: 22, month: 7, year: 2019},
-  PD: {day: 22, month: 7, year: 2019},
-  ID: 7,
+  CD: {day: 19, month: 7, year: 2019},
+  PD: {day: 19, month: 7, year: 2019},
+  ID: 101,
   err: 'N',
   eT: {
     code: 'INFO',
@@ -33,24 +48,24 @@ export const MOCK: Inform[] = [ //What's your ****ing problem?!
   },
 
   {sys: 'DBA',
-  msg: "Pellentesque ornare sem lacinia quam venenatis vestibulum. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Cosby sweater eu tellus ac cursus commodo, tortor mauris nibh. This has been a long (not very) witty coment",
-  prc: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor.',
-  trc: 'For sem malesuada magna, vehicula ut id elit.',
+  msg: "Pellentesque ornare sem lacinia quam venenatis vestibulum. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Apparently the formatting looks wonky unless I make this one even longer, tortor mauris nibh. This has been a long (not very) witty coment",
+  prc: 'Vivamus porta duis mollis, quam vel sagittis augue laoreet dolor auctor.',
+  trc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
   env: 'ENV',
-  CD: {day: 22, month: 7, year: 2019},
-  PD: {day: 22, month: 7, year: 2019},
-  ID: 6,
+  CD: {day: 19, month: 7, year: 2019},
+  PD: {day: 19, month: 7, year: 2019},
+  ID: 25,
   err: 'N'
   },
 
   {sys: 'Nova',
   msg: "Integer posuere erat a ante. Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-  prc: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor. Something Integer',
+  prc: 'Fusce porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor. Something Integer',
   trc: 'For sem malesuada magna, vehicula ut id elit.',
   env: 'TESTENV',
-  CD: {day: 20, month: 7, year: 2019},
-  PD: {day: 20, month: 7, year: 2019},
-  ID: 5,
+  CD: {day: 16, month: 7, year: 2019},
+  PD: {day: 16, month: 7, year: 2019},
+  ID: 24,
   err: 'Y',
   eT: {
     code: 'NOVA_ERROR',
@@ -66,7 +81,7 @@ export const MOCK: Inform[] = [ //What's your ****ing problem?!
   env: 'TESTENV',
   CD: {day: 12, month: 7, year: 2019},
   PD: {day: 12, month: 7, year: 2019},
-  ID: 4,
+  ID: 7,
   err: 'N'
   },
 
