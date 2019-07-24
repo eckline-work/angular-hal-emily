@@ -84,15 +84,19 @@ export class NgbdPagination {
       this.pageSize = LPg;
     }
 
+    this.idPicked = -7;
+    this.idPicked2 = -7;
+
     this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, this.FD, this.TD )
     
     this.collectionSize = this.toShow.length;
 
     this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
-      if (this.pageMax == 0) {
-        this.pageMax = 1;
-      }
-      this.page = 1;
+    if (this.pageMax == 0) {
+      this.pageMax = 1;
+    }
+    this.page = 1;
+    
   }
 
   //Will need a refresh function that runs every so often so that new items can be loaded
