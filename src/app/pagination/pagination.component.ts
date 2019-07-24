@@ -36,12 +36,18 @@ export class NgbdPagination {
       this.found2 = this.items.find(function(element) {
         return element.ID == id;
       });
+      if (!this.found2.eT) {
+        this.found2.eT = new errorType;
+      }
       this.idPicked2 = id;
     }
     else {
       this.found = this.items.find(function(element) {
         return element.ID == id;
       });
+      if (!this.found.eT) {
+        this.found.eT = new errorType;
+      }
       this.idPicked = id;
     }
     this.clkCt = !this.clkCt;
