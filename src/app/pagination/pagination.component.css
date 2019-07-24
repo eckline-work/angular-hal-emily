@@ -1,6 +1,10 @@
 .scroll {
-  width: 76rem;
   max-height: 400px;
   display: block;
   overflow-y: scroll;
+}
+
+.mtb {
+  display: block;
+  overflow-x: scroll;
 }
