@@ -14,23 +14,51 @@ import {itemFilterPipe} from './itemFilter.pipe';
 export class NgbdPagination {
 
   //Message View Toggle
-
   idPicked = -7;
   idPicked2 = -7;
 
   found: Inform;
   found2: Inform;
 
+  clkCt: boolean = false;
+
   msgTog(id: number){
-
+    if (id == this.idPicked || id == this.idPicked2){
+      this.msgClose(id);
+    }
+    else {
+      this.msgOpen(id);
+    }
   }
 
-  msgOpen(id: number, infU: Inform) {
-  
+  msgOpen(id: number) {
+    if (this.clkCt){
+      this.found2 = this.items.find(function(element) {
+        return element.ID == id;
+      });
+      if (this.found2.eT.code == '') {
+        this.found2.eT = new errorType;
+      }
+      this.idPicked2 = id;
+    }
+    else {
+      this.found = this.items.find(function(element) {
+        return element.ID == id;
+      });
+      this.idPicked = id;
+    }
+    this.clkCt = !this.clkCt;
   }
 
-  msgClose(inf: Inform, id: number) {
-  
+  msgClose(id: number) {
+    if (id == this.idPicked){
+      this.idPicked = -7;
+      this.clkCt = false;
+    }
+    else {
+      this.idPicked2 = -7;
+      this.clkCt = true;
+    }
   }
 
   FD: NgbDateStruct;
