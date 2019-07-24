@@ -133,7 +133,7 @@
                 </div>
                 <div class="container col-lg-2">
                   <label class="col-form-label col-form-label-sm" for="LPg">Lines/Page:</label>
-                  <input class="form-control form-control-sm" type="text" ng-model="pageSize" value="{{pageSize}}" id="LPg" style="text-align:right;" #LPg>
+                  <input class="form-control form-control-sm" type="text" placement="bottom" ngbTooltip="Enter 0 for scroll (WIP)" ng-model="pageSize" value="{{pageSize}}" id="LPg" style="text-align:right;" #LPg>
                 </div>
               </div>
             </div>
@@ -143,18 +143,45 @@
       </div>
       <div class="card-footer">
         <div class="d-flex flex-wrap justify-content-center">
-              <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Refresh Table</button>
-            </div>
+          <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Refresh Table</button>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="d-flex flex-wrap justify-content-center">
+  <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="!scrollOn">
     &nbsp;&nbsp;&nbsp;<span id="Row-Info">|&nbsp;Total&nbsp;Rows:&nbsp;<b>{{collectionSize}}</b>&nbsp;|&nbsp;Page:&nbsp;<b>{{page}}</b>&nbsp;of&nbsp;<b>{{pageMax}}</b>&nbsp;|</span>&nbsp;&nbsp;&nbsp;
     <ngb-pagination class="pagination pagination-sm d-flex justify-content-center" [pageSize]="pageSize" [collectionSize]="toShow.length" [(page)]="page" [maxSize]="3" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
-  </div>
+  </ng-container>
 
-  <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0">
+  <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0 && scrollOn">
+    <table class="table table-hover scroll">
+      <thead>
+        <tr class="table-primary">
+          <th scope="col">System</th>
+          <th scope="col">Message</th>
+          <th scope="col">Process</th>
+          <th scope="col">Trace</th>
+          <th scope="col">Environment</th>
+          <th scope="col">Created&nbsp;Date</th>
+          <th scope="col">ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of toShow" class="table-light">
+          <td>{{i.sys}}</td>
+          <td>{{i.msg | slice:0:30}}</td>
+          <td>{{i.prc | slice:0:30}}</td>
+          <td>{{i.trc | slice:0:30}}</td>
+          <td>{{i.env | slice:0:30}}</td>
+          <td>{{i.CD.year}}-{{i.CD.month}}-{{i.CD.day}}</td>
+          <td><button class="btn btn-link" (click)="msgTog(i.ID)">{{i.ID}}</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+
+  <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0 && !scrollOn">
     <table class="table table-hover">
       <thead>
         <tr class="table-primary">

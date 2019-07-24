@@ -9,6 +9,7 @@ import {itemFilterPipe} from './itemFilter.pipe';
 @Component({
   selector: 'ngbd-pagination',
   templateUrl: './pagination.component.html',
+  styleUrls: [ './pagination.component.css' ],
   providers: [ itemFilterPipe ]
 })
 export class NgbdPagination {
@@ -77,12 +78,6 @@ export class NgbdPagination {
   pageMax = Math.ceil(this.collectionSize / this.pageSize);
 
   pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string) {
-    if (!LPg){
-      this.pageSize = 26;
-    }
-    else {
-      this.pageSize = LPg;
-    }
 
     this.idPicked = -7;
     this.idPicked2 = -7;
@@ -91,9 +86,26 @@ export class NgbdPagination {
     
     this.collectionSize = this.toShow.length;
 
-    this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
-    if (this.pageMax == 0) {
+    
+    if (LPg == 0){
+      this.scrollOn = true;
+      this.pageSize = 0;
       this.pageMax = 1;
+    }
+    else {
+      if (!LPg || LPg < 0){
+        this.pageSize = 26;
+      }
+      else {
+        this.pageSize = LPg;
+      }
+
+      this.scrollOn = false;
+
+      this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
+      if (this.pageMax == 0) {
+        this.pageMax = 1;
+      }
     }
     this.page = 1;
     
@@ -117,6 +129,11 @@ export class NgbdPagination {
     model2: NgbDateStruct;
     today = this.calendar.getToday();
     none: NgbDate;
+
+  //Scroll Code
+  scrollOn: boolean = false;
+
+
 
   //constructor
   constructor(private filter: itemFilterPipe, private calendar: NgbCalendar ) {};
