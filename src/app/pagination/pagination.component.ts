@@ -73,7 +73,7 @@ export class NgbdPagination {
   toShow = this.items;
 
   page = 1;
-  pageSize = 26;
+  pageSize = 10;
   collectionSize = this.toShow.length;
   pageMax = Math.ceil(this.collectionSize / this.pageSize);
 
@@ -94,7 +94,7 @@ export class NgbdPagination {
     }
     else {
       if (!LPg || LPg < 0){
-        this.pageSize = 26;
+        this.pageSize = 10;
       }
       else {
         this.pageSize = LPg;
