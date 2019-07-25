@@ -82,7 +82,7 @@ export class NgbdPagination {
     this.idPicked2 = -7;
 
     this.disp = d1;
-    this.dip2 = d2;
+    this.disp2 = d2;
 
     this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
     
