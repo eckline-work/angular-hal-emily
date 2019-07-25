@@ -65,9 +65,6 @@ export class NgbdPagination {
     }
   }
 
-  FD: NgbDateStruct;
-  TD: NgbDateStruct;
-
   //Search and Table Code
   items = MOCK;
   toShow = this.items;
@@ -77,12 +74,12 @@ export class NgbdPagination {
   collectionSize = this.toShow.length;
   pageMax = Math.ceil(this.collectionSize / this.pageSize);
 
-  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string) {
+  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, d1: NgbDate | NgbDateStruct, d2: NgbDate | NgbDateStruct ) {
 
     this.idPicked = -7;
     this.idPicked2 = -7;
 
-    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, this.FD, this.TD )
+    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, d1, d2 )
     
     this.collectionSize = this.toShow.length;
 
@@ -115,7 +112,7 @@ export class NgbdPagination {
     }
   }
 
-  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: NgbDateStruct, TD: NgbDateStruct):any {
+  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: NgbDate | NgbDateStruct, TD: NgbDate | NgbDateStruct):any {
      return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD);
   }
 
@@ -123,7 +120,7 @@ export class NgbdPagination {
     model1: NgbDateStruct;
     model2: NgbDateStruct;
     today = this.calendar.getToday();
-    none: NgbDate;
+    none: NgbDateStruct;
 
   //Scroll Code
   scrollOn: boolean = false;

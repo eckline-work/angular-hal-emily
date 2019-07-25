@@ -5,9 +5,11 @@ import {NgbDate, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 @Pipe({name: 'itemFilter'})
 
 export class itemFilterPipe implements PipeTransform {
-  testDay = new NgbDate(2005, 12, 31);
 
-  transform(items:Inform[], PS:string, TS:string, ES:string, Sys:string, Inc:string, PI:string, TI:string, EI:string, FD:NgbDateStruct, TD:NgbDateStruct):Inform[] {
+  FD: NgbDateStruct = {year: 1999, month: 1, day: 1};
+  TD: NgbDateStruct = {year: 1999, month: 1, day: 1};
+
+  transform(items:Inform[], PS:string, TS:string, ES:string, Sys:string, Inc:string, PI:string, TI:string, EI:string, FD:NgbDate|NgbDateStruct, TD:NgbDate|NgbDateStruct):Inform[] {
 
     if (PI){
       if (PS == "Contains") {
@@ -45,13 +47,19 @@ export class itemFilterPipe implements PipeTransform {
       }
     }
 
-    /*if (!this.testDay.before(FD)){
-      items = items.filter(i => (i.CD.equals(FD) || i.CD.after(FD)));
+    if (TD instanceof NgbDate){
+      this.TD.day = TD.day;
+      this.TD.month = TD.month;
+      this.TD.year = TD.year;
+      items = items.filter(i => !i.CD.after(this.TD));
     }
 
-    if (!this.testDay.before(TD)){
-      items = items.filter(i => (i.CD.before(TD) || i.CD.equals(TD)));
-    }*/
+    if (FD instanceof NgbDate){
+      this.FD.day = FD.day;
+      this.FD.month = FD.month;
+      this.FD.year = FD.year;
+      items = items.filter(i => !i.CD.before(this.FD));
+    }
 
     if (Sys){
       items = items.filter(i => i.sys == Sys);
