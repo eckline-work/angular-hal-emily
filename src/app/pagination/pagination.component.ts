@@ -73,19 +73,16 @@ export class NgbdPagination {
   pageSize = 10;
   collectionSize = this.toShow.length;
   pageMax = Math.ceil(this.collectionSize / this.pageSize);
-  check: boolean;
+  disp: any;
+  disp2: any;
 
   pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, d1: any, d2: any ) {
 
     this.idPicked = -7;
     this.idPicked2 = -7;
 
-    if (d1 instanceof 'any'){
-      this.check = true;
-    }
-    else {
-      this.check = false;
-    }
+    this.disp = d1;
+    this.dip2 = d2;
 
     this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
     
