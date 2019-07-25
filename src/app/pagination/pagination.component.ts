@@ -73,9 +73,10 @@ export class NgbdPagination {
   toShow = this.items;
 
   page = 1;
-  pageSize = 10;
+  pageSize = 0;
   collectionSize = this.toShow.length;
-  pageMax = Math.ceil(this.collectionSize / this.pageSize);
+  pageMax = 1;
+  scrollOn: boolean = true;
 
   pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string) {
 
@@ -86,7 +87,7 @@ export class NgbdPagination {
     
     this.collectionSize = this.toShow.length;
 
-    
+    //Scroll Code
     if (0 >= LPg || !LPg){
       this.scrollOn = true;
       this.pageSize = 0;
@@ -109,10 +110,6 @@ export class NgbdPagination {
   //Will need a refresh function that runs every so often so that new items can be loaded
 
   ngOnInit() {
-    this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
-    if (this.pageMax == 0) {
-      this.pageMax = 1;
-    }
   }
 
   applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: NgbDateStruct, TD: NgbDateStruct):any {
@@ -124,11 +121,6 @@ export class NgbdPagination {
     model2: NgbDateStruct;
     today = this.calendar.getToday();
     none: NgbDate;
-
-  //Scroll Code
-  scrollOn: boolean = false;
-
-
 
   //constructor
   constructor(private filter: itemFilterPipe, private calendar: NgbCalendar ) {};
