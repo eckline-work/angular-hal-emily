@@ -143,11 +143,16 @@
       </div>
       <div class="card-footer">
         <div class="d-flex flex-wrap justify-content-center">
-          <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value, model1, model2)">Refresh Table</button>
+          <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value, dp1.value, dp2.value)">Refresh Table</button>
         </div>
       </div>
     </div>
   </div>
+
+  <ng-container *ngIf="check == true">
+    its text. les go.
+  </ng-container>
+
 
   <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="!scrollOn">
     &nbsp;&nbsp;&nbsp;<span id="Row-Info">|&nbsp;Total&nbsp;Rows:&nbsp;<b>{{collectionSize}}</b>&nbsp;|&nbsp;Page:&nbsp;<b>{{page}}</b>&nbsp;of&nbsp;<b>{{pageMax}}</b>&nbsp;|</span>&nbsp;&nbsp;&nbsp;

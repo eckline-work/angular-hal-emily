@@ -73,13 +73,21 @@ export class NgbdPagination {
   pageSize = 10;
   collectionSize = this.toShow.length;
   pageMax = Math.ceil(this.collectionSize / this.pageSize);
+  check: boolean;
 
-  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, d1: NgbDate | NgbDateStruct, d2: NgbDate | NgbDateStruct ) {
+  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, d1: any, d2: any ) {
 
     this.idPicked = -7;
     this.idPicked2 = -7;
 
-    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, d1, d2 )
+    if (d1 instanceof 'any'){
+      this.check = true;
+    }
+    else {
+      this.check = false;
+    }
+
+    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
     
     this.collectionSize = this.toShow.length;
 
@@ -112,8 +120,8 @@ export class NgbdPagination {
     }
   }
 
-  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: NgbDate | NgbDateStruct, TD: NgbDate | NgbDateStruct):any {
-     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD);
+  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string):any {
+     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI);
   }
 
   //Date Fix
