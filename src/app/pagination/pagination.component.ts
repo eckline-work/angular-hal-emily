@@ -87,18 +87,13 @@ export class NgbdPagination {
     this.collectionSize = this.toShow.length;
 
     
-    if (LPg == 0){
+    if (0 >= LPg || !LPg){
       this.scrollOn = true;
       this.pageSize = 0;
       this.pageMax = 1;
     }
     else {
-      if (!LPg || LPg < 0){
-        this.pageSize = 10;
-      }
-      else {
-        this.pageSize = LPg;
-      }
+      this.pageSize = LPg;
 
       this.scrollOn = false;
 
