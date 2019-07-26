@@ -65,35 +65,30 @@ export class NgbdPagination {
     }
   }
 
-  FD: NgbDateStruct;
-  TD: NgbDateStruct;
-
   //Search and Table Code
   items = MOCK;
   toShow = this.items;
 
+
+  scrollOn: boolean = true;
   page = 1;
   pageSize = 0;
   collectionSize = this.toShow.length;
   pageMax = 1;
-  scrollOn: boolean = true;
 
-  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string) {
+  disp: any;
+  disp2: any;
+
+  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string ) {
 
     this.idPicked = -7;
     this.idPicked2 = -7;
 
-    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, this.FD, this.TD )
+    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
     
     this.collectionSize = this.toShow.length;
 
-    //Scroll Code
-    if (0 >= LPg || !LPg){
-      this.scrollOn = true;
-      this.pageSize = 0;
-      this.pageMax = 1;
-    }
-    else {
+    if (LPg > 0){
       this.pageSize = LPg;
 
       this.scrollOn = false;
@@ -102,6 +97,11 @@ export class NgbdPagination {
       if (this.pageMax == 0) {
         this.pageMax = 1;
       }
+    }
+    else {
+      this.scrollOn = true;
+      this.pageSize = 0;
+      this.pageMax = 1;
     }
     this.page = 1;
     
@@ -112,15 +112,17 @@ export class NgbdPagination {
   ngOnInit() {
   }
 
-  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: NgbDateStruct, TD: NgbDateStruct):any {
-     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD);
+  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string):any {
+     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI);
   }
 
   //Date Fix
     model1: NgbDateStruct;
     model2: NgbDateStruct;
     today = this.calendar.getToday();
-    none: NgbDate;
+
+    none: NgbDateStruct;
+
 
   //constructor
   constructor(private filter: itemFilterPipe, private calendar: NgbCalendar ) {};
