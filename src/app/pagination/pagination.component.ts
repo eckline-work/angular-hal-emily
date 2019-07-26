@@ -69,10 +69,12 @@ export class NgbdPagination {
   items = MOCK;
   toShow = this.items;
 
+  scrollOn: boolean = true;
+
   page = 1;
-  pageSize = 10;
+  pageSize = 0;
   collectionSize = this.toShow.length;
-  pageMax = Math.ceil(this.collectionSize / this.pageSize);
+  pageMax = 1;
   disp: any;
   disp2: any;
 
@@ -88,13 +90,7 @@ export class NgbdPagination {
     
     this.collectionSize = this.toShow.length;
 
-    
-    if (0 >= LPg || !LPg){
-      this.scrollOn = true;
-      this.pageSize = 0;
-      this.pageMax = 1;
-    }
-    else {
+    if (0 < LPg){
       this.pageSize = LPg;
 
       this.scrollOn = false;
@@ -103,6 +99,11 @@ export class NgbdPagination {
       if (this.pageMax == 0) {
         this.pageMax = 1;
       }
+    }
+    else {
+      this.scrollOn = true;
+      this.pageSize = 0;
+      this.pageMax = 1;
     }
     this.page = 1;
     
@@ -126,11 +127,6 @@ export class NgbdPagination {
     model2: NgbDateStruct;
     today = this.calendar.getToday();
     none: NgbDateStruct;
-
-  //Scroll Code
-  scrollOn: boolean = false;
-
-
 
   //constructor
   constructor(private filter: itemFilterPipe, private calendar: NgbCalendar ) {};
