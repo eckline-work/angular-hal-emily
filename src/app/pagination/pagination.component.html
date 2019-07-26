@@ -113,7 +113,7 @@
                   <div class="form-group">
                     <label class="col-form-label col-form-label-sm" for="input-small">From:</label>
                     <div class="input-group">
-                      <input class="form-control form-control-sm" aria-label="dp1" name="dp1" id="dp1" placeholder="yyyy-mm-dd" [(ngModel)]="model1" ngbDatepicker [minDate]="{year: 2006, month: 1, day: 1}" [footerTemplate]="footerTemplate1" #d1="ngbDatepicker">
+                      <input class="form-control form-control-sm" aria-label="dp1" name="dp1" id="dp1" placeholder="yyyy-mm-dd" [(ngModel)]="model1" ngbDatepicker [minDate]="{year: 2006, month: 1, day: 1}" [footerTemplate]="footerTemplate1" #d1="ngbDatepicker"/>
                       <div class="input-group-append">
                         <button class="btn btn-outline-secondary dropdown-toggle btn-sm" (click)="d1.toggle()" type="button">Select&nbsp;</button>
                       </div>
@@ -124,7 +124,7 @@
                   <div class="form-group">
                     <label class="col-form-label col-form-label-sm" for="input-small">To:</label>
                     <div class="input-group">
-                      <input class="form-control form-control-sm" aria-label="dp2" name="dp2" id="dp2" placeholder="yyyy-mm-dd" [(ngModel)]="model2" ngbDatepicker [minDate]="{year: 2006, month: 1, day: 1}" [footerTemplate]="footerTemplate2" #d2="ngbDatepicker">
+                      <input class="form-control form-control-sm" aria-label="dp2" name="dp2" id="dp2" placeholder="yyyy-mm-dd" [(ngModel)]="model2" ngbDatepicker [minDate]="{year: 2006, month: 1, day: 1}" [footerTemplate]="footerTemplate2" #d2="ngbDatepicker"/>
                       <div class="input-group-append">
                         <button class="btn btn-outline-secondary dropdown-toggle btn-sm" (click)="d2.toggle()" type="button">Select&nbsp;</button>
                       </div>
@@ -143,7 +143,7 @@
       </div>
       <div class="card-footer">
         <div class="d-flex flex-wrap justify-content-center">
-          <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value, dp1.value, dp2.value)">Refresh Table</button>
+          <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Refresh Table</button>
         </div>
       </div>
     </div>
@@ -154,7 +154,6 @@
       Total Rows:&nbsp;<b>{{collectionSize}}</b><span *ngIf="!scrollOn">&nbsp;| Page:&nbsp;<b>{{page}}</b>&nbsp;of&nbsp;<b>{{pageMax}}</b><br></span>
       <ngb-pagination *ngIf="!scrollOn" class="pagination pagination-sm d-flex justify-content-center" style="margin-top: 10px;" [pageSize]="pageSize" [collectionSize]="toShow.length" [(page)]="page" [maxSize]="3" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
       <span *ngIf="scrollOn"><br></span>
-      {{disp}} {{disp2}}
     </p>
   </ng-container>
 
