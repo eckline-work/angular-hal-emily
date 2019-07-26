@@ -75,10 +75,10 @@ export class NgbdPagination {
   pageSize = 0;
   collectionSize = this.toShow.length;
   pageMax = 1;
-  disp: any;
-  disp2: any;
+  disp: string;
+  disp2: string;
 
-  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, d1: any, d2: any ) {
+  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, d1: string, d2: string ) {
 
     this.idPicked = -7;
     this.idPicked2 = -7;
