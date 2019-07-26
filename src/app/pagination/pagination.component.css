@@ -8,3 +8,10 @@
   display: block;
   overflow-x: scroll;
 }
+
+thead {
+  text-align: center;
+}
+tbody {
+  text-align: justify
+}

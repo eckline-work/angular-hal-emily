@@ -172,13 +172,13 @@
       </thead>
       <tbody>
         <tr *ngFor="let i of toShow" class="table-light">
+          <td>{{i.sys}}</td>
           <td>{{i.msg | slice:0:30}}<span *ngIf="i.msg.length > 30">...</span></td>
           <td>{{i.prc | slice:0:30}}<span *ngIf="i.prc.length > 30">...</span></td>
           <td>{{i.trc | slice:0:30}}<span *ngIf="i.trc.length > 30">...</span></td>
           <td style="text-align: right">{{i.env | slice:0:30}}<span *ngIf="i.env.length > 30">...</span></td>
           <td style="text-align: center">{{i.CD.year}}-{{i.CD.month}}-{{i.CD.day}}</td>
           <td style="text-align: center"><button class="btn btn-link" (click)="msgTog(i.ID)">{{i.ID}}</button></td>
-          <td><button class="btn btn-link" (click)="msgTog(i.ID)">{{i.ID}}</button></td>
         </tr>
       </tbody>
     </table>
@@ -199,13 +199,13 @@
       </thead>
       <tbody>
         <tr *ngFor="let i of toShow | slice: (page - 1) * pageSize : (page) * pageSize" class="table-light">
+          <td>{{i.sys}}</td>
           <td>{{i.msg | slice:0:30}}<span *ngIf="i.msg.length > 30">...</span></td>
           <td>{{i.prc | slice:0:30}}<span *ngIf="i.prc.length > 30">...</span></td>
           <td>{{i.trc | slice:0:30}}<span *ngIf="i.trc.length > 30">...</span></td>
           <td style="text-align: right">{{i.env | slice:0:30}}<span *ngIf="i.env.length > 30">...</span></td>
           <td style="text-align: center">{{i.CD.year}}-{{i.CD.month}}-{{i.CD.day}}</td>
           <td style="text-align: center"><button class="btn btn-link" (click)="msgTog(i.ID)">{{i.ID}}</button></td>
-          <td><button class="btn btn-link" (click)="msgTog(i.ID)">{{i.ID}}</button></td>
         </tr>
       </tbody>
     </table>
