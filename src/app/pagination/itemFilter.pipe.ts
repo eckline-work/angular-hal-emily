@@ -44,13 +44,13 @@ export class itemFilterPipe implements PipeTransform {
       }
     }
 
-    if (TD[0] != 0){
+    /*if (TD[0] != 0){
       items = items.filter(i => (i.CD.year < TD[0] || (i.CD.year == TD[0] && (i.CD.month < TD[1] || (i.CD.month == TD[1] && i.CD.day <= TD[2])))));
     }
 
     if (FD[0] != 0){
       items = items.filter(i => (i.CD.year > TD[0] || (i.CD.year == TD[0] && (i.CD.month > TD[1] || (i.CD.month == TD[1] && i.CD.day >= TD[2])))));
-    }
+    }*/
 
     if (Sys){
       items = items.filter(i => i.sys == Sys);

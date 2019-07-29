@@ -153,25 +153,6 @@
     </div>
   </div>
 
-  <ng-container *ngIf="TEST">
-    <div>
-      <div class="form-group">
-        <fieldset>
-          <input class="form-control" id="M1txt" type="text" readonly="" value="{{ model1 | json }}" #M1txt>
-        </fieldset>
-      </div>
-      <p>{{disp}}</p>
-      <br>
-      <div class="form-group">
-        <fieldset>
-          <input class="form-control" id="M2txt" type="text" readonly="" value="{{ model2 | json }}" #M2txt>
-        </fieldset>
-      </div>
-      <p>{{disp2}}</p>
-      <br>
-    </div>
-  </ng-container>
-
   <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0">
     <p>
       Total Rows:&nbsp;<b>{{collectionSize}}</b><span *ngIf="!scrollOn">&nbsp;| Page:&nbsp;<b>{{page}}</b>&nbsp;of&nbsp;<b>{{pageMax}}</b><br></span>
@@ -233,7 +214,16 @@
       </tbody>
     </table>
   </ng-container>
-    
+
+  <div class="invisible" cdkDrag style="z-index: -2; position: fixed; top: 0; right: 0; max-width: 1rem;">
+    <div class="form-group">
+      <fieldset>
+        <input class="form-control" id="M1txt" type="text" readonly="" value="{{ model1 | json }}" #M1txt>
+        <input class="form-control" id="M2txt" type="text" readonly="" value="{{ model2 | json }}" #M2txt>
+      </fieldset>
+    </div>
+  </div>
+
   <ng-container *ngIf="idPicked != -7">
     <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 5rem; max-width: 55rem; width: 50%; min-width: 20rem;">
       <div class="card-header">
