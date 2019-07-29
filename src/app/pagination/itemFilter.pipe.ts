@@ -48,16 +48,12 @@ export class itemFilterPipe implements PipeTransform {
     }
 
     if (TD){
-      this.TD.day = TD.day;
-      this.TD.month = TD.month;
-      this.TD.year = TD.year;
+      this.TD = {year: TD.year, month: TD.month, day: TD.day}
       items = items.filter(i => !i.CD.after(this.TD));
     }
 
     if (FD){
-      this.FD.day = FD.day;
-      this.FD.month = FD.month;
-      this.FD.year = FD.year;
+      this.FD = {year: FD.year, month: FD.month, day: FD.day}
       items = items.filter(i => !i.CD.before(this.FD));
     }
 
