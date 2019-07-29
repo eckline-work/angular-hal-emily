@@ -82,8 +82,6 @@ export class NgbdPagination {
   disp2: string;
 
   toret: number[];
-  blankIn1: Inform[];
-  blankIn2: Inform[];
 
   FD: number[];
   TD: number[];
@@ -133,7 +131,7 @@ export class NgbdPagination {
   }
 
   applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, F: number[], T: number[]):any {
-     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, F, T, this.blankIn1, this.blankIn2);
+     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, F, T);
   }
 
   //Date Fix

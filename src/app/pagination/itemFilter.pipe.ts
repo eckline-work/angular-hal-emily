@@ -6,7 +6,7 @@ import {NgbDate, NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 
 export class itemFilterPipe implements PipeTransform {
 
-  transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: number[], TD: number[], nuIn1: Inform[], nuIn2: Inform[]): Inform[] {
+  transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: number[], TD: number[]): Inform[] {
 
     if (PI){
       if (PS == "Contains") {
@@ -45,11 +45,11 @@ export class itemFilterPipe implements PipeTransform {
     }
 
     if (TD[0] != 0){
-      items = this.before(items, TD, nuIn1);
+      items = items.filter(i => (i.CD.year < TD[0] || (i.CD.year == TD[0] && (i.CD.month < TD[1] || (i.CD.month == TD[1] && i.CD.day <= TD[2])))));
     }
 
     if (FD[0] != 0){
-      items = this.after(items, FD, nuIn2);
+      items = items.filter(i => (i.CD.year > TD[0] || (i.CD.year == TD[0] && (i.CD.month > TD[1] || (i.CD.month == TD[1] && i.CD.day >= TD[2])))));
     }
 
     if (Sys){
@@ -61,31 +61,6 @@ export class itemFilterPipe implements PipeTransform {
 
     return items;
 
-  }
-
-  before (items: Inform[], D: number[], nuIn): Inform[]{
-    items.forEach(function(element){
-      if (D[0] <= element.CD.year){
-        if(D[1] <= element.CD.month){
-          if(D[2] <= element.CD.day){
-            nuIn.push(element);
-          }
-        }
-      }
-    });
-    return nuIn;
-  }
-  after (items: Inform[], D: number[], nuIn): Inform[]{
-    items.forEach(function(element){
-      if (D[0] >= element.CD.year){
-        if(D[1] >= element.CD.month){
-          if(D[2] >= element.CD.day){
-            nuIn.push(element);
-          }
-        }
-      }
-    });
-    return this.nuIn;
   }
 
   constructor( private calendar: NgbCalendar ) {};
