@@ -149,22 +149,24 @@
     </div>
   </div>
 
-  <div>
-    <div class="form-group">
-      <fieldset>
-        <input class="form-control" id="M1txt" type="text" readonly="" value="{{ model1 | json }}" #M1txt>
-      </fieldset>
+  <ng-container>
+    <div>
+      <div class="form-group">
+        <fieldset>
+          <input class="form-control" id="M1txt" type="text" readonly="" value="{{ model1 | json }}" #M1txt>
+        </fieldset>
+      </div>
+      <p>{{disp}}</p>
+      <br>
+      <div class="form-group">
+        <fieldset>
+          <input class="form-control" id="M2txt" type="text" readonly="" value="{{ model2 | json }}" #M2txt>
+        </fieldset>
+      </div>
+      <p>{{disp2}}</p>
+      <br>
     </div>
-    <p>{{disp}}</p>
-    <br>
-    <div class="form-group">
-      <fieldset>
-        <input class="form-control" id="M2txt" type="text" readonly="" value="{{ model2 | json }}" #M2txt>
-      </fieldset>
-    </div>
-    <p>{{disp2}}</p>
-    <br>
-  </div>
+  </ng-container>
 
   <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0">
     <p>

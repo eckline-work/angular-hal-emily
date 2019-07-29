@@ -1,15 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import {Inform} from './MockData/data';
-import {NgbDate, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDate, NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 
 @Pipe({name: 'itemFilter'})
 
 export class itemFilterPipe implements PipeTransform {
 
-  FD: NgbDateStruct = {year: 1999, month: 1, day: 1};
-  TD: NgbDateStruct = {year: 1999, month: 1, day: 1};
-
-  transform(items:Inform[], PS:string, TS:string, ES:string, Sys:string, Inc:string, PI:string, TI:string, EI:string, FD:NgbDate, TD:NgbDate):Inform[] {
+  transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: number[], TD: number[], nuIn1: Inform[], nuIn2: Inform[]): Inform[] {
 
     if (PI){
       if (PS == "Contains") {
@@ -47,14 +44,12 @@ export class itemFilterPipe implements PipeTransform {
       }
     }
 
-    if (TD){
-      this.TD = {year: TD.year, month: TD.month, day: TD.day}
-      items = items.filter(i => !i.CD.after(this.TD));
+    if (TD[0] != 0){
+      items = this.before(items, TD, nuIn1);
     }
 
-    if (FD){
-      this.FD = {year: FD.year, month: FD.month, day: FD.day}
-      items = items.filter(i => !i.CD.before(this.FD));
+    if (FD[0] != 0){
+      items = this.after(items, FD, nuIn2);
     }
 
     if (Sys){
@@ -67,4 +62,31 @@ export class itemFilterPipe implements PipeTransform {
     return items;
 
   }
+
+  before (items: Inform[], D: number[], nuIn): Inform[]{
+    items.forEach(function(element){
+      if (D[0] <= element.CD.year){
+        if(D[1] <= element.CD.month){
+          if(D[2] <= element.CD.day){
+            nuIn.push(element);
+          }
+        }
+      }
+    });
+    return nuIn;
+  }
+  after (items: Inform[], D: number[], nuIn): Inform[]{
+    items.forEach(function(element){
+      if (D[0] >= element.CD.year){
+        if(D[1] >= element.CD.month){
+          if(D[2] >= element.CD.day){
+            nuIn.push(element);
+          }
+        }
+      }
+    });
+    return this.nuIn;
+  }
+
+  constructor( private calendar: NgbCalendar ) {};
 }

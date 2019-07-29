@@ -14,6 +14,8 @@ import {itemFilterPipe} from './itemFilter.pipe';
 })
 export class NgbdPagination {
 
+  TEST = true;
+
   //Message View Toggle
   idPicked = -7;
   idPicked2 = -7;
@@ -78,8 +80,13 @@ export class NgbdPagination {
 
   disp: string;
   disp2: string;
-  FD: NgbDate;
-  TD: NgbDate;
+
+  toret: number[];
+  blankIn1: Inform[];
+  blankIn2: Inform[];
+
+  FD: number[];
+  TD: number[];
 
   pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, M1: string, M2: string,) {
 
@@ -96,7 +103,9 @@ export class NgbdPagination {
     }
 
     this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, this.FD, this.TD )
-    
+    this.blankIn1 = [];
+    this.blankIn2 = [];
+
     this.collectionSize = this.toShow.length;
 
     if (LPg > 0){
@@ -123,8 +132,8 @@ export class NgbdPagination {
   ngOnInit() {
   }
 
-  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, F: NgbDate, T: NgbDate):any {
-     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, F, T);
+  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, F: number[], T: number[]):any {
+     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, F, T, this.blankIn1, this.blankIn2);
   }
 
   //Date Fix
@@ -151,20 +160,21 @@ export class NgbdPagination {
       return disp;
     }
 
-    parse(value: any): NgbDate | null {
-    if ((typeof value == 'string') && (value.indexOf('/') > -1)) {
-      const str = value.split('/');
+    parse(value: any): number[] | null {
+      this.toret = [];
+      if ((typeof value == 'string') && (value.indexOf('/') > -1)) {
+        const str = value.split('/');
 
-      const year = Number(str[2]);
-      const month = Number(str[1]) - 1;
-      const date = Number(str[0]);
-      
-      return new NgbDate(year, month, date);
+        this.toret.push(Number(str[0]));
+        this.toret.push(Number(str[1]));
+        this.toret.push(Number(str[2]));
+
+        return this.toret;
+      }
+      else {
+        return null;
+      }
     }
-    else {
-      return null;
-    }
-  }
 
   //constructor
   constructor(private filter: itemFilterPipe, private calendar: NgbCalendar ) {};
