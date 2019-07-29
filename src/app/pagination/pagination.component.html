@@ -143,10 +143,27 @@
       </div>
       <div class="card-footer">
         <div class="d-flex flex-wrap justify-content-center">
-          <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Refresh Table</button>
+          <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value, M1txt.value, M2txt.value)">Refresh Table</button>
         </div>
       </div>
     </div>
+  </div>
+
+  <div>
+    <div class="form-group">
+      <fieldset>
+        <input class="form-control" id="M1txt" type="text" readonly="" value="{{ model1 | json }}" #M1txt>
+      </fieldset>
+    </div>
+    <p>{{disp}}</p>
+    <br>
+    <div class="form-group">
+      <fieldset>
+        <input class="form-control" id="M2txt" type="text" readonly="" value="{{ model2 | json }}" #M2txt>
+      </fieldset>
+    </div>
+    <p>{{disp2}}</p>
+    <br>
   </div>
 
   <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0">

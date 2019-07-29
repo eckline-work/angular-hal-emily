@@ -9,7 +9,7 @@ export class itemFilterPipe implements PipeTransform {
   FD: NgbDateStruct = {year: 1999, month: 1, day: 1};
   TD: NgbDateStruct = {year: 1999, month: 1, day: 1};
 
-  transform(items:Inform[], PS:string, TS:string, ES:string, Sys:string, Inc:string, PI:string, TI:string, EI:string):Inform[] {
+  transform(items:Inform[], PS:string, TS:string, ES:string, Sys:string, Inc:string, PI:string, TI:string, EI:string, FD:NgbDate, TD:NgbDate):Inform[] {
 
     if (PI){
       if (PS == "Contains") {
@@ -47,19 +47,19 @@ export class itemFilterPipe implements PipeTransform {
       }
     }
 
-    /*if (TD instanceof NgbDate){
+    if (TD){
       this.TD.day = TD.day;
       this.TD.month = TD.month;
       this.TD.year = TD.year;
       items = items.filter(i => !i.CD.after(this.TD));
     }
 
-    if (FD instanceof NgbDate){
+    if (FD){
       this.FD.day = FD.day;
       this.FD.month = FD.month;
       this.FD.year = FD.year;
       items = items.filter(i => !i.CD.before(this.FD));
-    }*/
+    }
 
     if (Sys){
       items = items.filter(i => i.sys == Sys);
