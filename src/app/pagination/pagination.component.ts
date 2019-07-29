@@ -14,7 +14,7 @@ import {itemFilterPipe} from './itemFilter.pipe';
 })
 export class NgbdPagination {
 
-  TEST = true;
+  TEST = false;
 
   //Message View Toggle
   idPicked = -7;
