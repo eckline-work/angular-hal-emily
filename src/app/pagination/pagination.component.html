@@ -9,7 +9,7 @@
           <fieldset>
             <div class="d-flex flex-wrap justify-content-center">
               <div class="row">
-                <div class="container col-lg-3">
+                <div class="container col-lg-4">
                   <label class="col-form-label col-form-label-sm" for="ProcSelect; ProcInput;">Process:&nbsp;</label>
                   <div class="form-group">
                     <div class="input-group mb-3">
@@ -22,7 +22,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="container col-lg-3">
+                <div class="container col-lg-4">
                   <label class="col-form-label col-form-label-sm" for="TraceSelect; TraceInput;">Trace:&nbsp;</label>
                   <div class="form-group">
                     <div class="input-group mb-3">
@@ -35,7 +35,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="container col-lg-3">
+                <div class="container col-lg-4">
                   <label class="col-form-label col-form-label-sm" for="EnvSelect; EnvInput;">Environment:&nbsp;</label>
                   <div class="form-group">
                     <div class="input-group mb-3">
@@ -48,7 +48,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="container col-lg-4">
+              </div>
+              <div class="row" style="margin-top: 10px;">
+                <div class="container col-lg-5">
                   <label class="col-form-label col-form-label-sm" for="S-Select">System:</label>
                   <select class="form-control form-control-sm" id="S-Select" #Sys>
       	            <option selected="selected" value="">All</option>
@@ -99,41 +101,13 @@
                     <option>Agency Management</option>
                   </select>
                 </div>
-                <div class="container col-lg-3">
+                <div class="container col-lg-5">
                   <label class="col-form-label col-form-label-sm" for="I-Select">Include:</label>
                   <select class="form-control form-control-sm" id="I-Select" #Inc>
 	                  <option selected="selected" value="">All</option>
 	                  <option value="Y">Errors</option>
 	                  <option value="N">Informational</option>
                   </select>
-                </div>
-              </div>
-              <div class="row" style="margin-top: 10px;">
-                <div class="container col-lg-4">
-                  <div class="form-group">
-                    <fieldset disabled="">
-                      <label class="col-form-label col-form-label-sm" for="input-small">From:</label>
-                      <div class="input-group">
-                        <input class="form-control form-control-sm" aria-label="dp1" name="dp1" id="dp1" placeholder="yyyy-mm-dd" [(ngModel)]="model1" ngbDatepicker [minDate]="{year: 2006, month: 1, day: 1}" [footerTemplate]="footerTemplate1" #d1="ngbDatepicker"/>
-                        <div class="input-group-append">
-                          <button class="btn btn-secondary dropdown-toggle btn-sm disabled" (click)="d1.toggle()" type="button">Select&nbsp;</button>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                </div>
-                <div class="container col-lg-4">
-                  <div class="form-group">
-                    <fieldset disabled="">
-                      <label class="col-form-label col-form-label-sm" for="input-small">To:</label>
-                      <div class="input-group">
-                        <input class="form-control form-control-sm" aria-label="dp2" name="dp2" id="dp2" placeholder="yyyy-mm-dd" [(ngModel)]="model2" ngbDatepicker [minDate]="{year: 2006, month: 1, day: 1}" [footerTemplate]="footerTemplate2" #d2="ngbDatepicker"/>
-                        <div class="input-group-append">
-                          <button class="btn btn-secondary dropdown-toggle btn-sm disabled" (click)="d2.toggle()" type="button">Select&nbsp;</button>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
                 </div>
                 <div class="container col-lg-2">
                   <label class="col-form-label col-form-label-sm" for="LPg">Lines/Page:</label>
@@ -147,7 +121,7 @@
       </div>
       <div class="card-footer">
         <div class="d-flex flex-wrap justify-content-center">
-          <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value, M1txt.value, M2txt.value)">Refresh Table</button>
+          <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Refresh Table</button>
         </div>
       </div>
     </div>
@@ -214,15 +188,6 @@
       </tbody>
     </table>
   </ng-container>
-
-  <div class="invisible" cdkDrag style="z-index: -2; position: fixed; top: 0; right: 0; max-width: 1rem;">
-    <div class="form-group">
-      <fieldset>
-        <input class="form-control" id="M1txt" type="text" readonly="" value="{{ model1 | json }}" #M1txt>
-        <input class="form-control" id="M2txt" type="text" readonly="" value="{{ model2 | json }}" #M2txt>
-      </fieldset>
-    </div>
-  </div>
 
   <ng-container *ngIf="idPicked != -7">
     <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 5rem; max-width: 55rem; width: 50%; min-width: 20rem;">

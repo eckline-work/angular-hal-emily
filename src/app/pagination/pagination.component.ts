@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NgbDateStruct, NgbDate, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDate} from '@ng-bootstrap/ng-bootstrap';
 import {Inform} from './MockData/data';
 import {MOCK} from './MockData/mock-data';
 import {errorType} from './MockData/type';
@@ -78,29 +78,12 @@ export class NgbdPagination {
   collectionSize = this.toShow.length;
   pageMax = 1;
 
-  disp: string;
-  disp2: string;
-
-  toret: number[];
-
-  FD: number[];
-  TD: number[];
-
-  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, M1: string, M2: string,) {
+  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string) {
 
     this.idPicked = -7;
     this.idPicked2 = -7;
 
-    this.disp = this.DateFix1(this.disp, M1);
-    this.disp2 = this.DateFix1(this.disp2, M2);
-    if (this.disp != "//" && this.disp != null){
-      this.FD = this.parse(this.disp);
-    }
-    if (this.disp2 == "//" && this.disp2 != null){
-      this.TD = this.parse(this.disp2);
-    }
-
-    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, this.FD, this.TD )
+    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
 
     this.collectionSize = this.toShow.length;
 
@@ -128,51 +111,11 @@ export class NgbdPagination {
   ngOnInit() {
   }
 
-  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, F: number[], T: number[]):any {
-     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, F, T);
+  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string):any {
+     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI);
   }
 
-  //Date Fix
-    model1: NgbDateStruct;
-    model2: NgbDateStruct;
-    today = this.calendar.getToday();
-
-    none: NgbDateStruct;
-
-    DateFix1 (disp: string, M1: string): string {
-      disp = M1.charAt(11) + M1.charAt(12) + M1.charAt(13) + M1.charAt(14) + '/' + M1.charAt(27);
-      if (M1.charAt(28) != ",") {
-        disp = disp + M1.charAt(28) + '/' + M1.charAt(39);
-        if (M1.charAt(40) !="}"){
-          disp = disp + M1.charAt(40)
-        }
-      }
-      else {
-        disp = disp + '/' + M1.charAt(38);
-        if (M1.charAt(39) !="}"){
-          disp = disp + M1.charAt(39)
-        }
-      }
-      return disp;
-    }
-
-    parse(value: any): number[] | null {
-      this.toret = [];
-      if ((typeof value == 'string') && (value.indexOf('/') > -1)) {
-        const str = value.split('/');
-
-        this.toret.push(Number(str[0]));
-        this.toret.push(Number(str[1]));
-        this.toret.push(Number(str[2]));
-
-        return this.toret;
-      }
-      else {
-        return null;
-      }
-    }
-
   //constructor
-  constructor(private filter: itemFilterPipe, private calendar: NgbCalendar ) {};
+  constructor(private filter: itemFilterPipe) {};
 
 }
