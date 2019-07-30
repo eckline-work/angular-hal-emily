@@ -18,6 +18,7 @@ export class AppComponent  {
   public show: boolean = false;
   public show2: boolean = false;
   public idPicked: boolean = false;
+  vpr:boolean = true;
 
   //names of things
   public SIB: any = 'Show Server/Service Information';

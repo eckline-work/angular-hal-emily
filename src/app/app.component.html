@@ -65,8 +65,8 @@
     </button>
   </div>
   <br>
-  <div class="container" style="text-align: left">
-    <h3>Progress Report</h3>
+  <ng-container class="container" style="text-align: left" *ngIf="vpr">
+    <h3>Progress Report <button type="button" class="close float-right" (click)="vpr=false">&times;</button></h3>
     <div class="d-flex flex-wrap justify-content-center">
       <div class="card border-success mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
         <div class="card-header">Added:</div>
@@ -148,7 +148,13 @@
         </div>
       </div>
     </div>
-  </div>
+    <div class="container" style="text-align: right;">
+      <br>
+      <button type="button" class="btn btn-link">
+        <a href="#nav">Return to Top</a>
+      </button>
+    </div>
+  </ng-container>
 </ng-container>
 
 <ng-container *ngIf="showAct">
@@ -380,14 +386,13 @@
         </tbody>
       </table> 
   </div>
-</ng-container>
-
   <div class="container" style="text-align: right;">
     <br>
     <button type="button" class="btn btn-link">
       <a href="#nav">Return to Top</a>
     </button>
   </div>
+</ng-container>
 </div>
 
 <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-primary" style="position:fixed; top:0; width: 100% ">
