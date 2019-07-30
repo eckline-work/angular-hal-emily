@@ -68,14 +68,9 @@ export class NgbdPagination {
   items = MockData;
   toShow = this.items;
 
-
-  scrollOn: boolean = true;
-  page = 1;
-  pageSize = 0;
   collectionSize = this.toShow.length;
-  pageMax = 1;
 
-  pageSet(LPg: number, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string) {
+  pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string) {
 
     this.idPicked = -7;
     this.idPicked2 = -7;
@@ -83,23 +78,6 @@ export class NgbdPagination {
     this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
 
     this.collectionSize = this.toShow.length;
-
-    if (LPg > 0){
-      this.pageSize = LPg;
-
-      this.scrollOn = false;
-
-      this.pageMax = Math.ceil(this.collectionSize / this.pageSize);
-      if (this.pageMax == 0) {
-        this.pageMax = 1;
-      }
-    }
-    else {
-      this.scrollOn = true;
-      this.pageSize = 0;
-      this.pageMax = 1;
-    }
-    this.page = 1;
     
   }
 

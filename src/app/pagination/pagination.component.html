@@ -109,10 +109,6 @@
 	                  <option value="N">Informational</option>
                   </select>
                 </div>
-                <div class="container col-lg-2">
-                  <label class="col-form-label col-form-label-sm" for="LPg">Lines/Page:</label>
-                  <input class="form-control form-control-sm" type="text" placement="bottom" ngbTooltip="Enter 0 for scroll" ng-model="pageSize" value="{{pageSize}}" id="LPg" style="text-align:right;" #LPg>
-                </div>
               </div>
             </div>
             <br>
@@ -121,7 +117,7 @@
       </div>
       <div class="card-footer">
         <div class="d-flex flex-wrap justify-content-center">
-          <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Refresh Table</button>
+          <button type="button" class="btn btn-primary" (click)="pageSet(PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Refresh Table</button>
         </div>
       </div>
     </div>
@@ -129,14 +125,10 @@
 
   <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0">
     <p>
-      Total Rows:&nbsp;<b>{{collectionSize}}</b><span *ngIf="!scrollOn">&nbsp;| Page:&nbsp;<b>{{page}}</b>&nbsp;of&nbsp;<b>{{pageMax}}</b><br></span>
-      <ngb-pagination *ngIf="!scrollOn && (pageSize < collectionSize)" class="pagination pagination-sm d-flex justify-content-center" style="margin-top: 10px;" [pageSize]="pageSize" [collectionSize]="toShow.length" [(page)]="page" [maxSize]="3" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
-      <span *ngIf="scrollOn"><br></span>
+      Total Rows:&nbsp;<b>{{collectionSize}}</b><br>
     </p>
-  </ng-container>
 
-  <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0 && scrollOn">
-    <table class="table table-hover scroll mtb">
+    <table class="table table-hover mtb">
       <thead>
         <tr class="table-primary">
           <th scope="col" style="width: 8rem;">System</th>
@@ -157,33 +149,6 @@
           <td style="text-align: right">{{i.env | slice:0:30}}<span *ngIf="i.env.length > 30">...</span></td>
           <td style="text-align: center">{{i.CD | date :'yyyy-MM-dd'}}</td>
           <td style="text-align: center" class="text-primary">{{i.ID}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </ng-container>
-
-  <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0 && !scrollOn">
-    <table class="table table-hover mtb">
-      <thead>
-        <tr class="table-primary">
-          <th scope="col" style="width: 8rem;">System</th>
-          <th scope="col" style="width: 13rem;">Message</th>
-          <th scope="col" style="width: 13rem;">Process</th>
-          <th scope="col" style="width: 13rem;">Trace</th>
-          <th scope="col" style="width: 8rem;">Environment</th>
-          <th scope="col" style="width: 8rem;">Created&nbsp;Date</th>
-          <th scope="col">ID</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let i of toShow | slice: (page - 1) * pageSize : (page) * pageSize" class="table-light" placement="auto" ngbPopover="{{i.msg}}" triggers="hover focus click">
-          <td>{{i.sys}}</td>
-          <td>{{i.msg | slice:0:30}}<span *ngIf="i.msg.length > 30">...</span></td>
-          <td>{{i.prc | slice:0:30}}<span *ngIf="i.prc.length > 30">...</span></td>
-          <td>{{i.trc | slice:0:30}}<span *ngIf="i.trc.length > 30">...</span></td>
-          <td style="text-align: right">{{i.env | slice:0:30}}<span *ngIf="i.env.length > 30">...</span></td>
-          <td style="text-align: center">{{i.CD | date :'yyyy-MM-dd'}}</td>
-          <td style="text-align: center"><button class="btn btn-link" (click)="msgTog(i.ID)">{{i.ID}}</button></td>
         </tr>
       </tbody>
     </table>
