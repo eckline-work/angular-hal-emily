@@ -182,7 +182,7 @@
           <td>{{i.prc | slice:0:30}}<span *ngIf="i.prc.length > 30">...</span></td>
           <td>{{i.trc | slice:0:30}}<span *ngIf="i.trc.length > 30">...</span></td>
           <td style="text-align: right">{{i.env | slice:0:30}}<span *ngIf="i.env.length > 30">...</span></td>
-          <td style="text-align: center">{{i.CD.year}}-{{i.CD.month}}-{{i.CD.day}}</td>
+          <td style="text-align: center">{{i.CD | date :'yyyy-MM-dd'}}</td>
           <td style="text-align: center"><button class="btn btn-link" (click)="msgTog(i.ID)">{{i.ID}}</button></td>
         </tr>
       </tbody>
@@ -225,11 +225,11 @@
             </tr>
             <tr class="table-light small">
               <th scope="row">Created:</th>
-              <td>{{found.CD.year}}/{{found.CD.month}}/{{found.CD.day}}</td>
+              <td>{{found.CD | date :'yyyy-MM-dd'}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Processed:</th>
-              <td>{{found.PD.year}}/{{found.PD.month}}/{{found.PD.day}}</td>
+              <td>{{found.PD | date :'yyyy-MM-dd'}}</td>
             </tr>
           </tbody>  
         </table>
@@ -294,11 +294,11 @@
             </tr>
             <tr class="table-light small">
               <th scope="row">Created:</th>
-              <td>{{found2.CD.year}}/{{found2.CD.month}}/{{found2.CD.day}}</td>
+              <td>{{found2.CD | date :'yyyy-MM-dd'}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Processed:</th>
-              <td>{{found2.PD.year}}/{{found2.PD.month}}/{{found2.PD.day}}</td>
+              <td>{{found2.PD | date :'yyyy-MM-dd'}}</td>
             </tr>
           </tbody>  
         </table>
