@@ -149,7 +149,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let i of toShow" class="table-light" placement="top" ngbPopover="{{i.msg}}" triggers="hover focus click">
+        <tr *ngFor="let i of toShow" class="table-light" placement="auto" ngbPopover="{{i.msg}}" triggers="hover focus click">
           <td >{{i.sys}}</td>
           <td>{{i.msg | slice:0:30}}<span *ngIf="i.msg.length > 30">...</span></td>
           <td>{{i.prc | slice:0:30}}<span *ngIf="i.prc.length > 30">...</span></td>
@@ -176,7 +176,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let i of toShow | slice: (page - 1) * pageSize : (page) * pageSize" class="table-light" placement="top" ngbPopover="{{i.msg}}" triggers="hover focus click">
+        <tr *ngFor="let i of toShow | slice: (page - 1) * pageSize : (page) * pageSize" class="table-light" placement="auto" ngbPopover="{{i.msg}}" triggers="hover focus click">
           <td>{{i.sys}}</td>
           <td>{{i.msg | slice:0:30}}<span *ngIf="i.msg.length > 30">...</span></td>
           <td>{{i.prc | slice:0:30}}<span *ngIf="i.prc.length > 30">...</span></td>
