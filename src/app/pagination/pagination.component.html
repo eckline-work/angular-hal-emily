@@ -155,7 +155,7 @@
           <td>{{i.prc | slice:0:30}}<span *ngIf="i.prc.length > 30">...</span></td>
           <td>{{i.trc | slice:0:30}}<span *ngIf="i.trc.length > 30">...</span></td>
           <td style="text-align: right">{{i.env | slice:0:30}}<span *ngIf="i.env.length > 30">...</span></td>
-          <td style="text-align: center">{{i.CD.year}}-{{i.CD.month}}-{{i.CD.day}}</td>
+          <td style="text-align: center">{{i.CD | date :'yyyy-MM-dd'}}</td>
           <td style="text-align: center"><button class="btn btn-link" (click)="msgTog(i.ID)">{{i.ID}}</button></td>
         </tr>
       </tbody>

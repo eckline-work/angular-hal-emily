@@ -1,6 +1,6 @@
 import {Inform} from './data';
 
-export const MOCK: Inform[] = [ //What's your ****ing problem?!
+export const MockData: Inform[] = [ //What's your ****ing problem?!
 
   {sys: 'Data Warehouse',
   msg: "Integer posuere erat a ante. Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh. Nullam id dolor id nibh ultricies vehicula ut id elit.",

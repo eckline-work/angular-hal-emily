@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NgbDate} from '@ng-bootstrap/ng-bootstrap';
 import {Inform} from './MockData/data';
-import {MOCK} from './MockData/mock-data';
+import {MockData} from './MockData/mock-data';
 import {errorType} from './MockData/type';
 
 import {itemFilterPipe} from './itemFilter.pipe';
@@ -68,7 +68,7 @@ export class NgbdPagination {
   }
 
   //Search and Table Code
-  items = MOCK;
+  items = MockData;
   toShow = this.items;
 
 
