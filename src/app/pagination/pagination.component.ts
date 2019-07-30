@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {NgbDate} from '@ng-bootstrap/ng-bootstrap';
 import {Inform} from './MockData/data';
 import {MockData} from './MockData/mock-data';
 import {errorType} from './MockData/type';
