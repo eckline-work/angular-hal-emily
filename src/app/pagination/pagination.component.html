@@ -130,7 +130,7 @@
   <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0">
     <p>
       Total Rows:&nbsp;<b>{{collectionSize}}</b><span *ngIf="!scrollOn">&nbsp;| Page:&nbsp;<b>{{page}}</b>&nbsp;of&nbsp;<b>{{pageMax}}</b><br></span>
-      <ngb-pagination *ngIf="!scrollOn" class="pagination pagination-sm d-flex justify-content-center" style="margin-top: 10px;" [pageSize]="pageSize" [collectionSize]="toShow.length" [(page)]="page" [maxSize]="3" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+      <ngb-pagination *ngIf="!scrollOn && (pageSize < collectionSize)" class="pagination pagination-sm d-flex justify-content-center" style="margin-top: 10px;" [pageSize]="pageSize" [collectionSize]="toShow.length" [(page)]="page" [maxSize]="3" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
       <span *ngIf="scrollOn"><br></span>
     </p>
   </ng-container>
