@@ -1,168 +1,10 @@
 <div class="d-flex flex-wrap justify-content-center">
-  <div class="d-flex flex-wrap">
-    <div class="card border-primary mb-3">
-      <div class="card-header">
-        Set Search Criteria
-      </div>
-      <div class="card-body">
-        <form>
-          <fieldset>
-            <div class="d-flex flex-wrap justify-content-center">
-              <div class="row">
-                <div class="container col-lg-4">
-                  <label class="col-form-label col-form-label-sm" for="ProcSelect; ProcInput;">Process:&nbsp;</label>
-                  <div class="form-group">
-                    <div class="input-group mb-3">
-                      <select class="form-control form-control-sm" id="ProcSelect" #PS>
-                        <option selected="selected">Contains</option>
-                        <option>Begins With</option>
-                        <option>Ends With</option>
-                      </select>
-                      <input type="text" class="form-control form-control-sm" id="ProcInput" #PI>
-                    </div>
-                  </div>
-                </div>
-                <div class="container col-lg-4">
-                  <label class="col-form-label col-form-label-sm" for="TraceSelect; TraceInput;">Trace:&nbsp;</label>
-                  <div class="form-group">
-                    <div class="input-group mb-3">
-                      <select class="form-control form-control-sm" id="TraceSelect" #TS>
-                        <option selected="selected">Contains</option>
-                        <option>Begins With</option>
-                        <option>Ends With</option>
-                      </select>
-                      <input type="text" class="form-control form-control-sm" id="TraceInput" #TI>
-                    </div>
-                  </div>
-                </div>
-                <div class="container col-lg-4">
-                  <label class="col-form-label col-form-label-sm" for="EnvSelect; EnvInput;">Environment:&nbsp;</label>
-                  <div class="form-group">
-                    <div class="input-group mb-3">
-                      <select class="form-control input-group-prepend form-control-sm" id="EnvSelect" #ES>
-                        <option selected="selected">Contains</option>
-                        <option>Begins With</option>
-                        <option>Ends With</option>
-                      </select>
-                      <input type="text" class="form-control form-control-sm" id="EnvInput" #EI>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row" style="margin-top: 10px;">
-                <div class="container col-lg-5">
-                  <label class="col-form-label col-form-label-sm" for="S-Select">System:</label>
-                  <select class="form-control form-control-sm" id="S-Select" #Sys>
-      	            <option selected="selected" value="">All</option>
-	                  <option>Claims Management</option>
-    	              <option>Contact Managment</option>
-                    <option>Mandatory Medicare Reporting</option>
-	                  <option>Patient Safety</option>
-                  	<option>Rate Load Database</option>
-  	                <option>Rate Staging Database</option>
-                    <option>Tdc Agency Management Web API</option>
-                    <option>Agent Broker</option>
-                    <option>Framework Web API Service</option>
-	                  <option>Application Log</option>
-	                  <option>Application Log Database</option>
-	                  <option>EDoc - Clean Files</option>
-      	            <option>Accounts Payable -  Informatica</option>
-	                  <option>DBA</option>
-	                  <option>Data Warehouse</option>
-                    <option>DWS</option>
-	                  <option>EDoc Data Provider Server</option>
-      	            <option>EDoc Server</option>
-        	          <option>Email Server</option>
-	                  <option>End of Day Jobs</option>
-	                  <option>Folder Splitter</option>
-                    <option>iManage Server</option>
-    	              <option>LBM Printer Server</option>
-	                  <option>Members Only</option>
-                    <option>Members Only Internal (CSU)</option>
-                    <option>Macro Processor Server</option>
-	                  <option>Nova</option>
-	                  <option>Nova Informatica</option>
-    	              <option>Online  Application</option>
-	                  <option>Pitney Bowes</option>
-  	                <option>Print Server</option>
-  	                <option>Producer Compensation</option>
-                    <option>Retention Billing</option>
-	                  <option>Report API</option>
-                    <option>OPCO Conversion</option>
-	                  <option>Security</option>
-	                  <option>Security Server</option>
-  	                <option>Star</option>
-	                  <option>Vista</option>
-                    <option>Unicenter</option>
-  	                <option>Report Server</option>
-	                  <option>DW - Nova Load</option>
-  	                <option>SQL - SERVER</option>
-                    <option>Unknown</option>
-                    <option>Agency Management</option>
-                  </select>
-                </div>
-                <div class="container col-lg-5">
-                  <label class="col-form-label col-form-label-sm" for="I-Select">Include:</label>
-                  <select class="form-control form-control-sm" id="I-Select" #Inc>
-	                  <option selected="selected" value="">All</option>
-	                  <option value="Y">Errors</option>
-	                  <option value="N">Informational</option>
-                  </select>
-                </div>
-                <div class="container col-lg-2">
-                  <label class="col-form-label col-form-label-sm" for="LPg">Lines/Page:</label>
-                  <input class="form-control form-control-sm" type="text" placement="bottom" ngbTooltip="Enter 0 for scroll" ng-model="pageSize" value="{{pageSize}}" id="LPg" style="text-align:right;" #LPg>
-                </div>
-              </div>
-            </div>
-            <br>
-          </fieldset>
-        </form>
-      </div>
-      <div class="card-footer">
-        <div class="d-flex flex-wrap justify-content-center">
-          <button type="button" class="btn btn-primary" (click)="pageSet(LPg.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Refresh Table</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0">
     <p>
-      Total Rows:&nbsp;<b>{{collectionSize}}</b><span *ngIf="!scrollOn">&nbsp;| Page:&nbsp;<b>{{page}}</b>&nbsp;of&nbsp;<b>{{pageMax}}</b><br></span>
-      <ngb-pagination *ngIf="!scrollOn && (pageSize < collectionSize)" class="pagination pagination-sm d-flex justify-content-center" style="margin-top: 10px;" [pageSize]="pageSize" [collectionSize]="toShow.length" [(page)]="page" [maxSize]="3" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
-      <span *ngIf="scrollOn"><br></span>
+      Total Rows:&nbsp;<b>{{collectionSize}}</b><br>
     </p>
-  </ng-container>
 
-  <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0 && scrollOn">
-    <table class="table table-hover scroll mtb">
-      <thead>
-        <tr class="table-primary">
-          <th scope="col" style="width: 8rem;">System</th>
-          <th scope="col" style="width: 13rem;">Message</th>
-          <th scope="col" style="width: 13rem;">Process</th>
-          <th scope="col" style="width: 13rem;">Trace</th>
-          <th scope="col" style="width: 8rem;">Environment</th>
-          <th scope="col" style="width: 8rem;">Created&nbsp;Date</th>
-          <th scope="col">ID</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let i of toShow" class="table-light" placement="auto" ngbPopover="{{i.msg}}" triggers="hover focus click">
-          <td >{{i.sys}}</td>
-          <td>{{i.msg | slice:0:30}}<span *ngIf="i.msg.length > 30">...</span></td>
-          <td>{{i.prc | slice:0:30}}<span *ngIf="i.prc.length > 30">...</span></td>
-          <td>{{i.trc | slice:0:30}}<span *ngIf="i.trc.length > 30">...</span></td>
-          <td style="text-align: right">{{i.env | slice:0:30}}<span *ngIf="i.env.length > 30">...</span></td>
-          <td style="text-align: center">{{i.CD | date :'yyyy-MM-dd'}}</td>
-          <td style="text-align: center"><button class="btn btn-link" (click)="msgTog(i.ID)">{{i.ID}}</button></td>
-        </tr>
-      </tbody>
-    </table>
-  </ng-container>
-
-  <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0 && !scrollOn">
     <table class="table table-hover mtb">
       <thead>
         <tr class="table-primary">
@@ -176,21 +18,21 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let i of toShow | slice: (page - 1) * pageSize : (page) * pageSize" class="table-light" placement="auto" ngbPopover="{{i.msg}}" triggers="hover focus click">
+        <tr *ngFor="let i of toShow" class="table-light" (click)="msgTog(i.ID)">
           <td>{{i.sys}}</td>
-          <td>{{i.msg | slice:0:30}}<span *ngIf="i.msg.length > 30">...</span></td>
+          <td placement="auto" ngbPopover="{{i.msg}}" container="body" triggers="hover focus click" >{{i.msg | slice:0:30}}<span *ngIf="i.msg.length > 30">...</span></td>
           <td>{{i.prc | slice:0:30}}<span *ngIf="i.prc.length > 30">...</span></td>
           <td>{{i.trc | slice:0:30}}<span *ngIf="i.trc.length > 30">...</span></td>
           <td style="text-align: right">{{i.env | slice:0:30}}<span *ngIf="i.env.length > 30">...</span></td>
           <td style="text-align: center">{{i.CD | date :'yyyy-MM-dd'}}</td>
-          <td style="text-align: center"><button class="btn btn-link" (click)="msgTog(i.ID)">{{i.ID}}</button></td>
+          <td style="text-align: center" class="text-primary">{{i.ID}}</td>
         </tr>
       </tbody>
     </table>
   </ng-container>
 
   <ng-container *ngIf="idPicked != -7">
-    <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 5rem; max-width: 55rem; width: 50%; min-width: 20rem;">
+    <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 4rem; left: 1rem; max-width: 55rem; width: 50%; min-width: 20rem;">
       <div class="card-header">
         HAL Message Viewer
         <button type="button" class="close float-right" (click)="msgClose(idPicked)">&times;</button>
@@ -259,7 +101,7 @@
   </ng-container>
 
   <ng-container *ngIf="idPicked2 != -7">
-    <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 5rem; max-width: 55rem; width: 50%; min-width: 20rem;">
+    <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 6.5rem; left: 2rem; max-width: 55rem; width: 50%; min-width: 20rem;">
       <div class="card-header">
         HAL Message Viewer
         <button type="button" class="close float-right" (click)="msgClose(idPicked2)">&times;</button>
@@ -337,3 +179,118 @@
     </div>
   </ng-container>
 </div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position:fixed; top: 3.5rem; left: 0; width: 100%;">
+  <a class="navbar-brand">Set Search Criteria:</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <form class="form-inline my-2 my-lg-0">
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
+          <label class="col-form-label col-form-label-sm" for="ProcSelect; ProcInput;"></label>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <select class="form-control form-control-sm" id="ProcSelect" #PS>
+                <option selected="selected">Contains</option>
+                <option>Begins With</option>
+                <option>Ends With</option>
+              </select>
+              <input type="text" class="form-control form-control-sm" placeholder="Process" id="ProcInput" #PI>
+            </div>
+          </div>
+        </div>
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
+          <label class="col-form-label col-form-label-sm" for="TraceSelect; TraceInput;"></label>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <select class="form-control form-control-sm" id="TraceSelect" #TS>
+                <option selected="selected">Contains</option>
+                <option>Begins With</option>
+                <option>Ends With</option>
+              </select>
+              <input type="text" class="form-control form-control-sm" placeholder="Trace" id="TraceInput" #TI>
+            </div>
+          </div>
+        </div>
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
+          <label class="col-form-label col-form-label-sm" for="EnvSelect; EnvInput;"></label>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <select class="form-control input-group-prepend form-control-sm" placeholder="Environment" id="EnvSelect" #ES>
+                <option selected="selected">Contains</option>
+                <option>Begins With</option>
+                <option>Ends With</option>
+              </select>
+              <input type="text" class="form-control form-control-sm" id="EnvInput" #EI>
+            </div>
+          </div>
+        </div>
+        <div class="container col-sm-1" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
+          <label class="col-form-label col-form-label-sm" for="S-Select"></label>
+          <div class="form-group input-group mb-3">
+            <select class="form-control form-control-sm" id="S-Select" #Sys>
+      	    <option selected="selected" value="">System</option>
+	          <option>Claims Management</option>
+    	      <option>Contact Managment</option>
+            <option>Mandatory Medicare Reporting</option>
+	          <option>Patient Safety</option>
+          	<option>Rate Load Database</option>
+  	        <option>Rate Staging Database</option>
+            <option>Tdc Agency Management Web API</option>
+            <option>Agent Broker</option>
+            <option>Framework Web API Service</option>
+            <option>Application Log</option>
+	          <option>Application Log Database</option>
+	          <option>EDoc - Clean Files</option>
+            <option>Accounts Payable -  Informatica</option>
+            <option>DBA</option>
+            <option>Data Warehouse</option>
+            <option>DWS</option>
+            <option>EDoc Data Provider Server</option>
+            <option>EDoc Server</option>
+            <option>Email Server</option>
+            <option>End of Day Jobs</option>
+            <option>Folder Splitter</option>
+            <option>iManage Server</option>
+            <option>LBM Printer Server</option>
+            <option>Members Only</option>
+            <option>Members Only Internal (CSU)</option>
+            <option>Macro Processor Server</option>
+            <option>Nova</option>
+            <option>Nova Informatica</option>
+            <option>Online  Application</option>
+            <option>Pitney Bowes</option>
+            <option>Print Server</option>
+            <option>Producer Compensation</option>
+            <option>Retention Billing</option>
+            <option>Report API</option>
+            <option>OPCO Conversion</option>
+            <option>Security</option>
+            <option>Security Server</option>
+            <option>Star</option>
+            <option>Vista</option>
+            <option>Unicenter</option>
+            <option>Report Server</option>
+            <option>DW - Nova Load</option>
+            <option>SQL - SERVER</option>
+            <option>Unknown</option>
+            <option>Agency Management</option>
+            </select>
+          </div>
+        </div>
+        <div class="container col-sm-1" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
+          <label class="col-form-label col-form-label-sm" for="I-Select"></label>
+          <div class="form-group input-group mb-3">
+            <select class="form-control form-control-sm" id="I-Select" #Inc>
+	            <option selected="selected" value="">Include</option>
+	            <option value="Y">Errors</option>
+	            <option value="N">Informational</option>
+            </select>
+          </div>
+        </div>
+      <button class="btn btn-outline-primary" (click)="pageSet(PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Set Criteria</button>
+    </form>
+  </div>
+</nav>

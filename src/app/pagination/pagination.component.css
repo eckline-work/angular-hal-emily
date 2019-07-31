@@ -1,12 +1,9 @@
-.scroll {
-  max-height: 400px;
-  display: block;
-  overflow-y: scroll;
-}
 
 .mtb {
+  max-height: 600px;
   display: block;
   overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 thead {
