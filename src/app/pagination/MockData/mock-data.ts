@@ -7,6 +7,36 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   prc: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor. Something Integer',
   trc: 'For sem malesuada magna, vehicula ut id elit.',
   env: 'TESTENV',
+  CD: '2019-07-31',
+  PD: '2019-07-31',
+  ID: 1025,
+  err: 'Y',
+  eT: {
+    code: 'DB_ERROR',
+    desc: 'Database Error'
+    }
+  },
+
+  {sys: 'Data Warehouse',
+  msg: "Integer posuere erat a ante. Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+  prc: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor. Something Integer',
+  trc: 'For sem malesuada magna, vehicula ut id elit.',
+  env: 'TESTENV',
+  CD: '2019-07-26',
+  PD: '2019-07-26',
+  ID: 666,
+  err: 'Y',
+  eT: {
+    code: 'DB_ERROR',
+    desc: 'Database Error'
+    }
+  },
+
+  {sys: 'Data Warehouse',
+  msg: "Integer posuere erat a ante. Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+  prc: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor. Something Integer',
+  trc: 'For sem malesuada magna, vehicula ut id elit.',
+  env: 'TESTENV',
   CD: '2019-07-26',
   PD: '2019-07-26',
   ID: 612,
