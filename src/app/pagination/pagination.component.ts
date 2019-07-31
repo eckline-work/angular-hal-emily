@@ -3,6 +3,9 @@ import {Inform} from './MockData/data';
 import {MockData} from './MockData/mock-data';
 import {errorType} from './MockData/type';
 
+
+import { InfiniteScrollerDirective } from './infinite-scroller.directive';
+
 import {itemFilterPipe} from './itemFilter.pipe';
 
 @Component({

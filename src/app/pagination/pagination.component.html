@@ -141,9 +141,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let i of toShow" class="table-light" placement="auto" ngbPopover="{{i.msg}}" triggers="hover focus click" (click)="msgTog(i.ID)">
+        <tr *ngFor="let i of toShow" class="table-light" (click)="msgTog(i.ID)">
           <td>{{i.sys}}</td>
-          <td>{{i.msg | slice:0:30}}<span *ngIf="i.msg.length > 30">...</span></td>
+          <td placement="auto" ngbPopover="{{i.msg}}" container="body" triggers="hover focus click" >{{i.msg | slice:0:30}}<span *ngIf="i.msg.length > 30">...</span></td>
           <td>{{i.prc | slice:0:30}}<span *ngIf="i.prc.length > 30">...</span></td>
           <td>{{i.trc | slice:0:30}}<span *ngIf="i.trc.length > 30">...</span></td>
           <td style="text-align: right">{{i.env | slice:0:30}}<span *ngIf="i.env.length > 30">...</span></td>
