@@ -218,20 +218,21 @@
           <label class="col-form-label col-form-label-sm" for="EnvSelect; EnvInput;"></label>
           <div class="form-group">
             <div class="input-group mb-3">
-              <select class="form-control input-group-prepend form-control-sm" placeholder="Environment" id="EnvSelect" #ES>
+              <select class="form-control input-group-prepend form-control-sm" id="EnvSelect" #ES>
                 <option selected="selected">Contains</option>
                 <option>Begins With</option>
                 <option>Ends With</option>
               </select>
-              <input type="text" class="form-control form-control-sm" id="EnvInput" #EI>
+              <input type="text" class="form-control form-control-sm" placeholder="Environment" id="EnvInput" #EI>
             </div>
           </div>
         </div>
-        <div class="container col-sm-1" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
           <label class="col-form-label col-form-label-sm" for="S-Select"></label>
           <div class="form-group input-group mb-3">
             <select class="form-control form-control-sm" id="S-Select" #Sys>
-      	    <option selected="selected" value="">System</option>
+      	    <option selected="selected" value="">--Select System--</option>
+            <option value="">All</option>
 	          <option>Claims Management</option>
     	      <option>Contact Managment</option>
             <option>Mandatory Medicare Reporting</option>
@@ -280,11 +281,12 @@
             </select>
           </div>
         </div>
-        <div class="container col-sm-1" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
           <label class="col-form-label col-form-label-sm" for="I-Select"></label>
           <div class="form-group input-group mb-3">
             <select class="form-control form-control-sm" id="I-Select" #Inc>
-	            <option selected="selected" value="">Include</option>
+	            <option selected="selected" value="">--Include--</option>
+              <option value="">All</option>
 	            <option value="Y">Errors</option>
 	            <option value="N">Informational</option>
             </select>
