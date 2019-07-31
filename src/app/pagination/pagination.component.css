@@ -14,3 +14,7 @@ thead, tbody tr {
   width: 100%;
   table-layout: fixed;
 }
+
+td {
+  word-wrap: break-word;
+}
