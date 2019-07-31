@@ -5,7 +5,7 @@
       Total Rows:&nbsp;<b>{{collectionSize}}</b><br>
     </p>
 
-    <table class="table table-hover mtb">
+    <table class="table table-hover">
       <thead>
         <tr class="table-primary">
           <th scope="col" style="width: 8rem;">System</th>
@@ -17,8 +17,8 @@
           <th scope="col">ID</th>
         </tr>
       </thead>
-      <tbody infinite-scroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="throttle" [scrollWindow]="false" (scrolled)="onScrollDown()">
-        <tr *ngFor="let i of toShow" class="table-light" (click)="msgTog(i.ID)">
+      <tbody infinite-scroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="throttle" [scrollWindow]="false" (scrolled)="onScroll()">
+        <tr *ngFor="let i of array" class="table-light" (click)="msgTog(i.ID)">
           <td>{{i.sys}}</td>
           <td placement="auto" ngbPopover="{{i.msg}}" container="body" triggers="hover focus click" >{{i.msg | slice:0:30}}<span *ngIf="i.msg.length > 30">...</span></td>
           <td>{{i.prc | slice:0:30}}<span *ngIf="i.prc.length > 30">...</span></td>

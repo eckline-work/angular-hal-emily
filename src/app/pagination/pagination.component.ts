@@ -87,7 +87,7 @@ export class NgbdPagination {
   throttle = 300;
   scrollDistance = 1;
 
-  onScrollDown () {
+  onScroll() {
     console.log('scrolled');
     const start = this.sum;
     this.sum += 20;

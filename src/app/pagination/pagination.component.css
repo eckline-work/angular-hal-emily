@@ -1,14 +1,16 @@
 
-.mtb {
-  max-height: 600px;
-  display: block;
-  overflow-x: scroll;
-  overflow-y: scroll;
-}
-
 thead {
   text-align: center;
 }
 tbody {
+  max-height: 600px;
   text-align: left;
+  display: block;
+  overflow: scroll;
+}
+
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
