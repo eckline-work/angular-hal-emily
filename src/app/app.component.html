@@ -1,3 +1,4 @@
+
 <div class="container" style="margin-bottom: 8rem; margin-top: 5rem;">
   <ng-container *ngIf="show2">
     <div class="jumbotron">
@@ -66,23 +67,23 @@
       </button>
     </div>
     <br>
-    <ng-container class="container" style="text-align: left" *ngIf="vpr">
+    <ng-container class="container" style="text-align: left; z-index: -1;" *ngIf="vpr">
       <h3>Progress Report <button type="button" class="close float-right" (click)="vpr=false">&times;</button></h3>
       <div class="d-flex flex-wrap justify-content-center">
         <div class="card border-success mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
           <div class="card-header">Added:</div>
           <div class="card-body">
-            <p style="padding-right: 2rem; padding-left: 2rem;">
+            <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
               Search Criteria Form
+            </p>
+            <p class="small text-success" style="padding-right: 2rem; padding-left: 3rem;">
+              Now at top of page
             </p>
             <p style="padding-right: 2rem; padding-left: 2rem;">
               Table
             </p>
             <p style="padding-right: 2rem; padding-left: 2rem;">
               Working Navs
-            </p>
-            <p style="padding-right: 2rem; padding-left: 2rem;">
-              John's Extras
             </p>
           </div>
         </div>
@@ -95,6 +96,9 @@
             </p>
             <p class="small text-success" style="padding-right: 2rem; padding-left: 3rem;">
               Data import (technically) works
+            </p>
+            <p style="padding-right: 2rem; padding-left: 2rem;">
+              John's Extras
             </p>
             <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
               Angular
@@ -134,17 +138,17 @@
             <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
               I killed the date filter because it refused to work no matter what I did.
             </p>
-            <p class="text-danger" style="padding-right: 2rem; padding-left: 3rem;">
+            <p class="text-danger" style="padding-right: 2rem; padding-left: 3rem; margin-bottom: 2px;">
               That thing was <b>PURE EVIL</b>.
+            </p>
+            <p class="text-warning" style="padding-right: 2rem; padding-left: 3rem;">
+              Will add back in later
             </p>
             <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
               Scrollable table is implemented.
             </p>
-            <p class="text-success" style="padding-right: 2rem; padding-left: 3rem; margin-bottom: 2px;">
-              Default setting; Can also use by entering 0 in the Lines/Page selection.
-            </p>
-            <p class="text-info" style="padding-right: 2rem; padding-left: 3rem;">
-              If you want this as the only option, let me know.
+            <p class="text-warning" style="padding-right: 2rem; padding-left: 3rem; margin-bottom: 2px;">
+              Working on changing it to infinite scroll.
             </p>
           </div>
         </div>

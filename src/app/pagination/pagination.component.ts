@@ -81,7 +81,33 @@ export class NgbdPagination {
     
   }
 
-  //Will need a refresh function that runs every so often so that new items can be loaded
+  //scroll Code
+  array = [];
+  sum = 20;
+  throttle = 60;
+  scrollDistance = 2;
+
+  onScroll() {
+    console.log('scrolled');
+    const start = this.sum;
+    this.sum += 20;
+    this.appendItems(start, this.sum);
+  }
+
+  addItems(startIndex, endIndex, _method) {
+    for (let i = startIndex; i < endIndex; ++i) {
+      if (this.toShow[i]) {
+        this.array[_method](this.toShow[i]);
+      }
+      else {
+        break;
+      }
+    }
+  }
+  
+  appendItems(startIndex, endIndex) {
+    this.addItems(startIndex, endIndex, 'push');
+  }
 
   ngOnInit() {
   }
@@ -91,6 +117,8 @@ export class NgbdPagination {
   }
 
   //constructor
-  constructor(private filter: itemFilterPipe) {};
+  constructor(private filter: itemFilterPipe) {
+    this.appendItems(0, this.sum);
+  };
 
 }
