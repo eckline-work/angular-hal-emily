@@ -3,7 +3,7 @@ thead {
   text-align: center;
 }
 tbody {
-  max-height: 50rem;
+  max-height: 40rem;
   text-align: left;
   display: block;
   overflow: scroll;
