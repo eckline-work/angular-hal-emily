@@ -81,7 +81,21 @@ export class NgbdPagination {
     
   }
 
-  //Will need a refresh function that runs every so often so that new items can be loaded
+  //scroll Code
+  array = [];
+  sum = 100;
+
+  scrollDistance = 2;
+  throttle = 50;
+
+  onScrollDown () {
+    console.log('scrolled!!');
+    const start = this.sum;
+    this.sum += 20;
+    for (let i = start; i < this.sum; ++i) {
+      this.array.push(i);
+    }
+  }
 
   ngOnInit() {
   }

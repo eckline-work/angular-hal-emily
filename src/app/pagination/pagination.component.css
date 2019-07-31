@@ -3,7 +3,6 @@
   max-height: 600px;
   display: block;
   overflow-x: scroll;
-  overflow-y: scroll;
 }
 
 thead {
