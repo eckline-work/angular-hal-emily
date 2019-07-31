@@ -1,127 +1,4 @@
 <div class="d-flex flex-wrap justify-content-center">
-  <div class="d-flex flex-wrap">
-    <div class="card border-primary mb-3">
-      <div class="card-header">
-        Set Search Criteria
-      </div>
-      <div class="card-body">
-        <form>
-          <fieldset>
-            <div class="d-flex flex-wrap justify-content-center">
-              <div class="row">
-                <div class="container col-lg-4">
-                  <label class="col-form-label col-form-label-sm" for="ProcSelect; ProcInput;">Process:&nbsp;</label>
-                  <div class="form-group">
-                    <div class="input-group mb-3">
-                      <select class="form-control form-control-sm" id="ProcSelect" #PS>
-                        <option selected="selected">Contains</option>
-                        <option>Begins With</option>
-                        <option>Ends With</option>
-                      </select>
-                      <input type="text" class="form-control form-control-sm" id="ProcInput" #PI>
-                    </div>
-                  </div>
-                </div>
-                <div class="container col-lg-4">
-                  <label class="col-form-label col-form-label-sm" for="TraceSelect; TraceInput;">Trace:&nbsp;</label>
-                  <div class="form-group">
-                    <div class="input-group mb-3">
-                      <select class="form-control form-control-sm" id="TraceSelect" #TS>
-                        <option selected="selected">Contains</option>
-                        <option>Begins With</option>
-                        <option>Ends With</option>
-                      </select>
-                      <input type="text" class="form-control form-control-sm" id="TraceInput" #TI>
-                    </div>
-                  </div>
-                </div>
-                <div class="container col-lg-4">
-                  <label class="col-form-label col-form-label-sm" for="EnvSelect; EnvInput;">Environment:&nbsp;</label>
-                  <div class="form-group">
-                    <div class="input-group mb-3">
-                      <select class="form-control input-group-prepend form-control-sm" id="EnvSelect" #ES>
-                        <option selected="selected">Contains</option>
-                        <option>Begins With</option>
-                        <option>Ends With</option>
-                      </select>
-                      <input type="text" class="form-control form-control-sm" id="EnvInput" #EI>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row" style="margin-top: 10px;">
-                <div class="container col-lg-5">
-                  <label class="col-form-label col-form-label-sm" for="S-Select">System:</label>
-                  <select class="form-control form-control-sm" id="S-Select" #Sys>
-      	            <option selected="selected" value="">All</option>
-	                  <option>Claims Management</option>
-    	              <option>Contact Managment</option>
-                    <option>Mandatory Medicare Reporting</option>
-	                  <option>Patient Safety</option>
-                  	<option>Rate Load Database</option>
-  	                <option>Rate Staging Database</option>
-                    <option>Tdc Agency Management Web API</option>
-                    <option>Agent Broker</option>
-                    <option>Framework Web API Service</option>
-	                  <option>Application Log</option>
-	                  <option>Application Log Database</option>
-	                  <option>EDoc - Clean Files</option>
-      	            <option>Accounts Payable -  Informatica</option>
-	                  <option>DBA</option>
-	                  <option>Data Warehouse</option>
-                    <option>DWS</option>
-	                  <option>EDoc Data Provider Server</option>
-      	            <option>EDoc Server</option>
-        	          <option>Email Server</option>
-	                  <option>End of Day Jobs</option>
-	                  <option>Folder Splitter</option>
-                    <option>iManage Server</option>
-    	              <option>LBM Printer Server</option>
-	                  <option>Members Only</option>
-                    <option>Members Only Internal (CSU)</option>
-                    <option>Macro Processor Server</option>
-	                  <option>Nova</option>
-	                  <option>Nova Informatica</option>
-    	              <option>Online  Application</option>
-	                  <option>Pitney Bowes</option>
-  	                <option>Print Server</option>
-  	                <option>Producer Compensation</option>
-                    <option>Retention Billing</option>
-	                  <option>Report API</option>
-                    <option>OPCO Conversion</option>
-	                  <option>Security</option>
-	                  <option>Security Server</option>
-  	                <option>Star</option>
-	                  <option>Vista</option>
-                    <option>Unicenter</option>
-  	                <option>Report Server</option>
-	                  <option>DW - Nova Load</option>
-  	                <option>SQL - SERVER</option>
-                    <option>Unknown</option>
-                    <option>Agency Management</option>
-                  </select>
-                </div>
-                <div class="container col-lg-5">
-                  <label class="col-form-label col-form-label-sm" for="I-Select">Include:</label>
-                  <select class="form-control form-control-sm" id="I-Select" #Inc>
-	                  <option selected="selected" value="">All</option>
-	                  <option value="Y">Errors</option>
-	                  <option value="N">Informational</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <br>
-          </fieldset>
-        </form>
-      </div>
-      <div class="card-footer">
-        <div class="d-flex flex-wrap justify-content-center">
-          <button type="button" class="btn btn-primary" (click)="pageSet(PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Refresh Table</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <ng-container class="d-flex flex-wrap justify-content-center" *ngIf="collectionSize > 0">
     <p>
@@ -302,3 +179,118 @@
     </div>
   </ng-container>
 </div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position:fixed; top: 3.5rem; left: 0; width: 100%;">
+  <a class="navbar-brand">Set Search Criteria:</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <form class="form-inline my-2 my-lg-0">
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
+          <label class="col-form-label col-form-label-sm" for="ProcSelect; ProcInput;"></label>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <select class="form-control form-control-sm" id="ProcSelect" #PS>
+                <option selected="selected">Contains</option>
+                <option>Begins With</option>
+                <option>Ends With</option>
+              </select>
+              <input type="text" class="form-control form-control-sm" placeholder="Process" id="ProcInput" #PI>
+            </div>
+          </div>
+        </div>
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
+          <label class="col-form-label col-form-label-sm" for="TraceSelect; TraceInput;"></label>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <select class="form-control form-control-sm" id="TraceSelect" #TS>
+                <option selected="selected">Contains</option>
+                <option>Begins With</option>
+                <option>Ends With</option>
+              </select>
+              <input type="text" class="form-control form-control-sm" placeholder="Trace" id="TraceInput" #TI>
+            </div>
+          </div>
+        </div>
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
+          <label class="col-form-label col-form-label-sm" for="EnvSelect; EnvInput;"></label>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <select class="form-control input-group-prepend form-control-sm" placeholder="Environment" id="EnvSelect" #ES>
+                <option selected="selected">Contains</option>
+                <option>Begins With</option>
+                <option>Ends With</option>
+              </select>
+              <input type="text" class="form-control form-control-sm" id="EnvInput" #EI>
+            </div>
+          </div>
+        </div>
+        <div class="container col-sm-1" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
+          <label class="col-form-label col-form-label-sm" for="S-Select"></label>
+          <div class="form-group input-group mb-3">
+            <select class="form-control form-control-sm" id="S-Select" #Sys>
+      	    <option selected="selected" value="">System</option>
+	          <option>Claims Management</option>
+    	      <option>Contact Managment</option>
+            <option>Mandatory Medicare Reporting</option>
+	          <option>Patient Safety</option>
+          	<option>Rate Load Database</option>
+  	        <option>Rate Staging Database</option>
+            <option>Tdc Agency Management Web API</option>
+            <option>Agent Broker</option>
+            <option>Framework Web API Service</option>
+            <option>Application Log</option>
+	          <option>Application Log Database</option>
+	          <option>EDoc - Clean Files</option>
+            <option>Accounts Payable -  Informatica</option>
+            <option>DBA</option>
+            <option>Data Warehouse</option>
+            <option>DWS</option>
+            <option>EDoc Data Provider Server</option>
+            <option>EDoc Server</option>
+            <option>Email Server</option>
+            <option>End of Day Jobs</option>
+            <option>Folder Splitter</option>
+            <option>iManage Server</option>
+            <option>LBM Printer Server</option>
+            <option>Members Only</option>
+            <option>Members Only Internal (CSU)</option>
+            <option>Macro Processor Server</option>
+            <option>Nova</option>
+            <option>Nova Informatica</option>
+            <option>Online  Application</option>
+            <option>Pitney Bowes</option>
+            <option>Print Server</option>
+            <option>Producer Compensation</option>
+            <option>Retention Billing</option>
+            <option>Report API</option>
+            <option>OPCO Conversion</option>
+            <option>Security</option>
+            <option>Security Server</option>
+            <option>Star</option>
+            <option>Vista</option>
+            <option>Unicenter</option>
+            <option>Report Server</option>
+            <option>DW - Nova Load</option>
+            <option>SQL - SERVER</option>
+            <option>Unknown</option>
+            <option>Agency Management</option>
+            </select>
+          </div>
+        </div>
+        <div class="container col-sm-1" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
+          <label class="col-form-label col-form-label-sm" for="I-Select"></label>
+          <div class="form-group input-group mb-3">
+            <select class="form-control form-control-sm" id="I-Select" #Inc>
+	            <option selected="selected" value="">Include</option>
+	            <option value="Y">Errors</option>
+	            <option value="N">Informational</option>
+            </select>
+          </div>
+        </div>
+      <button class="btn btn-outline-primary" (click)="pageSet(PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Set Criteria</button>
+    </form>
+  </div>
+</nav>

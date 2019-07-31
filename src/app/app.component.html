@@ -58,103 +58,105 @@
   </ng-container>
 
 <ng-container *ngIf="showMain">
-  <ngbd-pagination></ngbd-pagination>
-  <div class="container" style="text-align: right;">
-    <button type="button" class="btn btn-link">
-      <a href="#nav">Return to Top</a>
-    </button>
-  </div>
-  <br>
-  <ng-container class="container" style="text-align: left" *ngIf="vpr">
-    <h3>Progress Report <button type="button" class="close float-right" (click)="vpr=false">&times;</button></h3>
-    <div class="d-flex flex-wrap justify-content-center">
-      <div class="card border-success mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
-        <div class="card-header">Added:</div>
-        <div class="card-body">
-          <p style="padding-right: 2rem; padding-left: 2rem;">
-            Search Criteria Form
-          </p>
-          <p style="padding-right: 2rem; padding-left: 2rem;">
-            Table
-          </p>
-          <p style="padding-right: 2rem; padding-left: 2rem;">
-            Working Navs
-          </p>
-          <p style="padding-right: 2rem; padding-left: 2rem;">
-            John's Extras
-          </p>
-        </div>
-      </div>
-
-      <div class="card border-warning mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
-        <div class="card-header">In Progress:</div>
-        <div class="card-body">
-          <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
-            Table Data
-          </p>
-          <p class="small text-success" style="padding-right: 2rem; padding-left: 3rem;">
-            Data import (technically) works
-          </p>
-          <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
-            Angular
-          </p>
-          <p class="small text-warning" style="padding-right: 2rem; padding-left: 3rem;">
-            Approx. 80( ? ) % done
-          </p>
-        </div>
-      </div>
-
-      <div class="card border-danger mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
-        <div class="card-header">To Do:</div>
-        <div class="card-body">
-          <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
-            Get the Actual Data
-          </p>
-          <p class="small text-warning" style="padding-right: 2rem; padding-left: 3rem;">
-            John, you said you had something for me?
-          </p>
-        </div>
-      </div>
-
-      <div class="card border-info mb-3" style="max-width: 60rem; min-width: 20rem;">
-        <div class="card-header">Other:</div>
-        <div class="card-body">
-          <p style="padding-right: 2rem; padding-left: 2rem;">
-            Something in the mock-data file is throwing an error that isn't real.<br>
-            It's super annoying, and I don't know why it's happening.<span class="text-secondary">&nbsp;&nbsp;&#242;_&#243;</span>
-          </p>
-          <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
-            GOT THE MESSAGE VIEWERS WORKING!!!<span class="text-success">&nbsp;&nbsp;(^&cup;^)b</span>
-          </p>
-          <p class="text-info" style="padding-right: 2rem; padding-left: 3rem;">
-            Don't ask for a way to view more than two at once. I'm an intern, not a miracle worker.<br>
-            Also implemented hover-over messages for the table rows.
-          </p>
-          <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
-            I killed the date filter because it refused to work no matter what I did.
-          </p>
-          <p class="text-danger" style="padding-right: 2rem; padding-left: 3rem;">
-            That thing was <b>PURE EVIL</b>.
-          </p>
-          <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
-            Scrollable table is implemented.
-          </p>
-          <p class="text-success" style="padding-right: 2rem; padding-left: 3rem; margin-bottom: 2px;">
-            Default setting; Can also use by entering 0 in the Lines/Page selection.
-          </p>
-          <p class="text-info" style="padding-right: 2rem; padding-left: 3rem;">
-            If you want this as the only option, let me know.
-          </p>
-        </div>
-      </div>
-    </div>
+  <div style="margin-top: 10rem;">
+    <ngbd-pagination></ngbd-pagination>
     <div class="container" style="text-align: right;">
-      <br>
       <button type="button" class="btn btn-link">
-        <a href="#nav">Return to Top</a>
+        <a href="#">Return to Top</a>
       </button>
     </div>
-  </ng-container>
+    <br>
+    <ng-container class="container" style="text-align: left" *ngIf="vpr">
+      <h3>Progress Report <button type="button" class="close float-right" (click)="vpr=false">&times;</button></h3>
+      <div class="d-flex flex-wrap justify-content-center">
+        <div class="card border-success mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
+          <div class="card-header">Added:</div>
+          <div class="card-body">
+            <p style="padding-right: 2rem; padding-left: 2rem;">
+              Search Criteria Form
+            </p>
+            <p style="padding-right: 2rem; padding-left: 2rem;">
+              Table
+            </p>
+            <p style="padding-right: 2rem; padding-left: 2rem;">
+              Working Navs
+            </p>
+            <p style="padding-right: 2rem; padding-left: 2rem;">
+              John's Extras
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-warning mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
+          <div class="card-header">In Progress:</div>
+          <div class="card-body">
+            <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
+              Table Data
+            </p>
+            <p class="small text-success" style="padding-right: 2rem; padding-left: 3rem;">
+              Data import (technically) works
+            </p>
+            <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
+              Angular
+            </p>
+            <p class="small text-warning" style="padding-right: 2rem; padding-left: 3rem;">
+              Approx. 80( ? ) % done
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-danger mb-3" style="max-width: 20rem; min-width: 20rem; margin:.5rem;">
+          <div class="card-header">To Do:</div>
+          <div class="card-body">
+            <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
+              Get the Actual Data
+            </p>
+            <p class="small text-warning" style="padding-right: 2rem; padding-left: 3rem;">
+              John, you said you had something for me?
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-info mb-3" style="max-width: 60rem; min-width: 20rem;">
+          <div class="card-header">Other:</div>
+          <div class="card-body">
+            <p style="padding-right: 2rem; padding-left: 2rem;">
+              Something in the mock-data file is throwing an error that isn't real.<br>
+              It's super annoying, and I don't know why it's happening.<span class="text-secondary">&nbsp;&nbsp;&#242;_&#243;</span>
+            </p>
+            <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
+              GOT THE MESSAGE VIEWERS WORKING!!!<span class="text-success">&nbsp;&nbsp;(^&cup;^)b</span>
+            </p>
+            <p class="text-info" style="padding-right: 2rem; padding-left: 3rem;">
+              Don't ask for a way to view more than two at once. I'm an intern, not a miracle worker.<br>
+              Also implemented hover-over messages for the table rows.
+            </p>
+            <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
+              I killed the date filter because it refused to work no matter what I did.
+            </p>
+            <p class="text-danger" style="padding-right: 2rem; padding-left: 3rem;">
+              That thing was <b>PURE EVIL</b>.
+            </p>
+            <p style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
+              Scrollable table is implemented.
+            </p>
+            <p class="text-success" style="padding-right: 2rem; padding-left: 3rem; margin-bottom: 2px;">
+              Default setting; Can also use by entering 0 in the Lines/Page selection.
+            </p>
+            <p class="text-info" style="padding-right: 2rem; padding-left: 3rem;">
+              If you want this as the only option, let me know.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="text-align: right;">
+        <br>
+        <button type="button" class="btn btn-link">
+          <a href="#">Return to Top</a>
+        </button>
+      </div>
+    </ng-container>
+  </div>
 </ng-container>
 
 <ng-container *ngIf="showAct">
