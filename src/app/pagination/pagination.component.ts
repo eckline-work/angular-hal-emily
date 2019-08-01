@@ -76,12 +76,6 @@ export class NgbdPagination {
     this.idPicked = -7;
     this.idPicked2 = -7;
 
-    this.dayhelp1b = this.adapter.toModel(c1);
-    this.dayhelp2b = this.adapter.toModel(c2);
-
-    this.dayhelp1a = typeof this.dayhelp1b;
-    this.dayhelp2a = typeof this.dayhelp2b;
-
     this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
 
     this.collectionSize = this.toShow.length;
@@ -130,13 +124,11 @@ export class NgbdPagination {
   //Datefix 2: Fixlectric Boogaloo
   model1: NgbDateStruct;
   model2: NgbDateStruct;
-  dayhelp1a: string;
-  dayhelp2a: string;
-  dayhelp1b: Date;
-  dayhelp2b: Date;
+  dayhelp1a: Date;
+  dayhelp2a: Date;
 
   //constructor
-  constructor(private filter: itemFilterPipe, private adapter: NgbDateNativeAdapter) {
+  constructor(private filter: itemFilterPipe) {
     this.appendItems(0, this.sum);
   };
 
