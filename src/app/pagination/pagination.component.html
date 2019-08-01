@@ -180,16 +180,24 @@
   </ng-container>
 </div>
 
+<ng-container *ngIf="TestMode">
+  <div class="form-group">
+    <fieldset disabled="">
+      <input class="form-control" type="text" placeholder="Readonly input here…" value="{{c1.value | date: 'yyyy/MM/dd'}}" #RO1>
+      <input class="form-control" type="text" placeholder="Readonly input here…" value="{{c2.value | date: 'yyyy/MM/dd'}}" #RO2>
+    </fieldset>
+    <p>{{dayhelp1a}} {{dayhelp1a}}</p>
+  </div>
+</ng-container>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position:fixed; top: 3.5rem; left: 0; width: 100%; z-index: 3;">
-  <a class="navbar-brand">Set Search Criteria:</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarColor03">
     <form class="form-inline my-2 my-lg-0">
-        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
-          <label class="col-form-label col-form-label-sm" for="ProcSelect; ProcInput;"></label>
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
           <div class="form-group">
             <div class="input-group mb-3">
               <select class="form-control form-control-sm" id="ProcSelect" #PS>
@@ -201,8 +209,7 @@
             </div>
           </div>
         </div>
-        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
-          <label class="col-form-label col-form-label-sm" for="TraceSelect; TraceInput;"></label>
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
           <div class="form-group">
             <div class="input-group mb-3">
               <select class="form-control form-control-sm" id="TraceSelect" #TS>
@@ -214,8 +221,7 @@
             </div>
           </div>
         </div>
-        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
-          <label class="col-form-label col-form-label-sm" for="EnvSelect; EnvInput;"></label>
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
           <div class="form-group">
             <div class="input-group mb-3">
               <select class="form-control input-group-prepend form-control-sm" id="EnvSelect" #ES>
@@ -227,11 +233,10 @@
             </div>
           </div>
         </div>
-        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
-          <label class="col-form-label col-form-label-sm" for="S-Select"></label>
+        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
           <div class="form-group input-group mb-3">
             <select class="form-control form-control-sm" id="S-Select" #Sys>
-      	    <option selected="selected" value="">--Select System--</option>
+      	    <option selected="selected" value="">-Select System-</option>
             <option value="">All</option>
 	          <option>Claims Management</option>
     	      <option>Contact Managment</option>
@@ -281,18 +286,37 @@
             </select>
           </div>
         </div>
-        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 5px;">
-          <label class="col-form-label col-form-label-sm" for="I-Select"></label>
+        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
           <div class="form-group input-group mb-3">
             <select class="form-control form-control-sm" id="I-Select" #Inc>
-	            <option selected="selected" value="">--Include--</option>
+	            <option selected="selected" value="">-Include-</option>
               <option value="">All</option>
 	            <option value="Y">Errors</option>
 	            <option value="N">Informational</option>
             </select>
           </div>
         </div>
-      <button class="btn btn-outline-primary" (click)="pageSet(PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value)">Set Criteria</button>
+        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
+          <div class="form-group input-group mb-3">
+            <input class="form-control form-control-sm" placeholder="From" name="d1" #c1="ngModel" [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker">
+            <div class="input-group-append">
+              <button class="btn btn-sm btn-outline-secondary dropdown-toggle" (click)="d1.toggle()" type="button"></button>
+            </div>
+          </div>
+        </div>
+        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
+          <div class="form-group input-group mb-3">
+            <input class="form-control form-control-sm" placeholder="To" name="d2" #c2="ngModel" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker">
+            <div class="input-group-append">
+              <button class="btn btn-sm btn-outline-secondary dropdown-toggle" (click)="d2.toggle()" type="button"></button>
+            </div>
+          </div>
+        </div>
+        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
+          <button class="btn btn-outline-primary btn-sm" (click)="pageSet(PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value, RO1.value, RO2.value)">
+            Set Search Criteria
+          </button>
+        </div>
     </form>
   </div>
 </nav>

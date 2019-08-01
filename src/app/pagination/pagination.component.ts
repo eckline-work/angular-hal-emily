@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Inform} from './MockData/data';
 import {MockData} from './MockData/mock-data';
 import {errorType} from './MockData/type';
+import {NgbDate, NgbDateStruct, NgbDateAdapter, NgbDateNativeAdapter} from '@ng-bootstrap/ng-bootstrap';
 
 import {itemFilterPipe} from './itemFilter.pipe';
 
@@ -9,7 +10,7 @@ import {itemFilterPipe} from './itemFilter.pipe';
   selector: 'ngbd-pagination',
   templateUrl: './pagination.component.html',
   styleUrls: [ './pagination.component.css' ],
-  providers: [ itemFilterPipe ]
+  providers: [ itemFilterPipe, {provide: NgbDateAdapter, useClass: NgbDateNativeAdapter} ]
 })
 export class NgbdPagination {
 
@@ -70,10 +71,13 @@ export class NgbdPagination {
 
   collectionSize = this.toShow.length;
 
-  pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string) {
+  pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: any, c2: any) {
 
     this.idPicked = -7;
     this.idPicked2 = -7;
+
+    this.dayhelp1a = typeof c1;
+    this.dayhelp2a = typeof c2;
 
     this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
 
@@ -119,6 +123,14 @@ export class NgbdPagination {
   applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string):any {
      return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI);
   }
+
+  //Datefix 2: Fixlectric Boogaloo
+  model1: NgbDateStruct;
+  model2: NgbDateStruct;
+  dayhelp1a: string;
+  dayhelp2a: string;
+
+  TestMode = true;
 
   //constructor
   constructor(private filter: itemFilterPipe) {
