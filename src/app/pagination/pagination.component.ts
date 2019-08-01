@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Inform} from './MockData/data';
 import {MockData} from './MockData/mock-data';
 import {errorType} from './MockData/type';
-import {NgbDate, NgbDateStruct, NgbDateAdapter, NgbDateNativeAdapter} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDate, NgbDateStruct, NgbDateAdapter, NgbDateNativeAdapter, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 
 import {itemFilterPipe} from './itemFilter.pipe';
 
@@ -128,7 +128,7 @@ export class NgbdPagination {
   dayhelp2a: Date;
 
   //constructor
-  constructor(private filter: itemFilterPipe) {
+  constructor(private filter: itemFilterPipe, private calendar: NgbCalendar) {
     this.appendItems(0, this.sum);
   };
 
