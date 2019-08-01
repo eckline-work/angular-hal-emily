@@ -180,16 +180,6 @@
   </ng-container>
 </div>
 
-<ng-container *ngIf="TestMode">
-  <div class="form-group">
-    <fieldset disabled="">
-      <input class="form-control" type="text" placeholder="Readonly input here…" value="{{c1.value | date: 'yyyy/MM/dd'}}" #RO1>
-      <input class="form-control" type="text" placeholder="Readonly input here…" value="{{c2.value | date: 'yyyy/MM/dd'}}" #RO2>
-    </fieldset>
-    <p>{{dayhelp1a}} {{dayhelp1a}}</p>
-  </div>
-</ng-container>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position:fixed; top: 3.5rem; left: 0; width: 100%; z-index: 3;">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -313,7 +303,7 @@
           </div>
         </div>
         <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
-          <button class="btn btn-outline-primary btn-sm" (click)="pageSet(PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value, RO1.value, RO2.value)">
+          <button class="btn btn-outline-primary btn-sm" (click)="pageSet(PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value, c1.value, c2.value)">
             Set Search Criteria
           </button>
         </div>

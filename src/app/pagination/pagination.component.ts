@@ -71,13 +71,16 @@ export class NgbdPagination {
 
   collectionSize = this.toShow.length;
 
-  pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: any, c2: any) {
+  pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
 
     this.idPicked = -7;
     this.idPicked2 = -7;
 
-    this.dayhelp1a = typeof c1;
-    this.dayhelp2a = typeof c2;
+    this.dayhelp1b = this.adapter.toModel(c1);
+    this.dayhelp2b = this.adapter.toModel(c2);
+
+    this.dayhelp1a = typeof this.dayhelp1b;
+    this.dayhelp2a = typeof this.dayhelp2b;
 
     this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
 
@@ -129,11 +132,11 @@ export class NgbdPagination {
   model2: NgbDateStruct;
   dayhelp1a: string;
   dayhelp2a: string;
-
-  TestMode = true;
+  dayhelp1b: Date;
+  dayhelp2b: Date;
 
   //constructor
-  constructor(private filter: itemFilterPipe) {
+  constructor(private filter: itemFilterPipe, private adapter: NgbDateNativeAdapter) {
     this.appendItems(0, this.sum);
   };
 
