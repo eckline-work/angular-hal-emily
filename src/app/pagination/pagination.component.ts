@@ -78,6 +78,10 @@ export class NgbdPagination {
     this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
 
     this.collectionSize = this.toShow.length;
+
+    this.array = [];
+    this.sum = 20;
+    this.appendItems(0, this.sum);
     
   }
 
