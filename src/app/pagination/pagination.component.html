@@ -20,7 +20,7 @@
       <tbody infinite-scroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="throttle" [scrollWindow]="false" (scrolled)="onScroll()">
         <tr *ngFor="let i of array" class="table-light" (click)="msgTog(i.ID)">
           <td style="width: 10%;">{{i.SourceSystem}}</td>
-          <td style="width: 20%;" placement="auto" ngbPopover="{{i.Message}}" container="body" triggers="hover focus click" ><span *ngIf="i.LogNumber">{{i.LogNumber}}, </span>{{i.Message | slice:0:30}}<span *ngIf="i.Message.length > 30">...</span></td>
+          <td style="width: 20%;" placement="auto" ngbPopover="{{i.Message}}" container="body" triggers="hover focus click" ><span *ngIf="i.LogNumber">({{i.LogNumber}}) </span>{{i.Message | slice:0:30}}<span *ngIf="i.Message.length > 30">...</span></td>
           <td style="width: 20%;">{{i.ProcessName | slice:0:30}}<span *ngIf="i.ProcessName.length > 30">...</span></td>
           <td style="width: 20%;">{{i.TraceInfo | slice:0:30}}<span *ngIf="i.TraceInfo.length > 30">...</span></td>
           <td style="text-align: right; width: 10%;">{{i.EnvironmentInfo | slice:0:30}}<span *ngIf="i.EnvironmentInfo.length > 30">...</span></td>
@@ -51,7 +51,7 @@
             </tr>
             <tr class="table-light small">
               <th scope="row">Number/Message:</th>
-              <td><span *ngIf="found.LogNumber">{{found.LogNumber}}, </span>{{found.Message}}</td>
+              <td><span *ngIf="found.LogNumber">({{found.LogNumber}}) </span>{{found.Message}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Process:</th>
@@ -120,7 +120,7 @@
             </tr>
             <tr class="table-light small">
               <th scope="row">Number/Message:</th>
-              <td><span *ngIf="found2.LogNumber">{{found2.LogNumber}}, </span>{{found2.Message}}</td>
+              <td><span *ngIf="found2.LogNumber">({{found2.LogNumber}}) </span>{{found2.Message}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Process:</th>
