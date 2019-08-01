@@ -154,7 +154,9 @@
               Infinite scroll is done.
             </p>
             <p class="text-info" style="padding-right: 2rem; padding-left: 3rem;">
-              Need extra data points to make it more noticable, but it works.
+              Need
+              <button class="btn btn-link btn-sm text-dark" style="margin: 0; padding: 0;" placement="bottom" [ngbTooltip]="tipContent">extra data points</button>
+              to make it more noticable, but it works.
             </p>
           </div>
         </div>
@@ -168,6 +170,8 @@
     </ng-container>
   </div>
 </ng-container>
+
+<ng-template #tipContent>Like, an absolute <i>TON</i></ng-template>
 
 <ng-container *ngIf="showAct">
   <div class="d-flex flex-wrap justify-content-center">
