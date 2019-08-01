@@ -1,13 +1,13 @@
 import {errorType} from './type';
 
 export class Inform {
-  sys: string;
+  SystemCode: string;
   msg: string;
-  prc: string;
-  trc: string;
-  env: string;
-  CD: Date;
-  PD: Date;
+  ProcessTextSearch: string;
+  TraceTextSearch: string;
+  EnvironmentTextSearch: string;
+  StartDate: Date;
+  EndDate: Date;
   ID: number;
   err: string;
   eT: errorType;

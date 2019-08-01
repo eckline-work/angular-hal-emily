@@ -88,8 +88,8 @@ export class NgbdPagination {
   //scroll Code
   array = [];
   sum = 20;
-  throttle = 60;
-  scrollDistance = 2;
+  throttle = 100;
+  scrollDistance = 1;
 
   onScroll() {
     console.log('scrolled');
