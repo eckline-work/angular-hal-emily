@@ -6,7 +6,7 @@ import {NgbDate, NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 
 export class itemFilterPipe implements PipeTransform {
 
-  transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string): Inform[] {
+  transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: string, TD: string): Inform[] {
 
     if (PI){
       if (PS == "Contains") {
@@ -42,6 +42,15 @@ export class itemFilterPipe implements PipeTransform {
       else {
         items = items.filter(i => i.EnvironmentInfo.endsWith(EI));
       }
+    }
+
+    if (FD != ""){
+      var F = new Date(FD);
+      items = items.filter(i => i.StartDate !< F);
+    }
+    if (TD != ""){
+      var T = new Date(TD);
+      items = items.filter(i => i.StartDate !> T);
     }
 
     if (Sys){

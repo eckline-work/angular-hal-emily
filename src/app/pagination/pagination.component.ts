@@ -73,6 +73,9 @@ export class NgbdPagination {
 
   pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
 
+    this.testp1 = "";
+    this.testp2 = "";
+
     if (c1) {
       this.testp1 = c1.toString();
     }
@@ -83,7 +86,7 @@ export class NgbdPagination {
     this.idPicked = -7;
     this.idPicked2 = -7;
 
-    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI )
+    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, this.testp1, this.testp2 )
 
     this.collectionSize = this.toShow.length;
 
@@ -124,8 +127,8 @@ export class NgbdPagination {
   ngOnInit() {
   }
 
-  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string):any {
-     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI);
+  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: string, TD: string):any {
+     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD);
   }
 
   //Datefix 2: Fixlectric Boogaloo
