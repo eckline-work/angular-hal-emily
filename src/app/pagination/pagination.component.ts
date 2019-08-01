@@ -73,6 +73,13 @@ export class NgbdPagination {
 
   pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
 
+    if (c1) {
+      this.testp1 = c1.toString();
+    }
+    if (c2) {
+      this.testp2 = c2.toString();
+    }
+
     this.idPicked = -7;
     this.idPicked2 = -7;
 
@@ -126,6 +133,8 @@ export class NgbdPagination {
   model2: NgbDateStruct;
   dayhelp1a: Date;
   dayhelp2a: Date;
+  testp1: string;
+  testp2: string;
 
   //constructor
   constructor(private filter: itemFilterPipe, private calendar: NgbCalendar) {
