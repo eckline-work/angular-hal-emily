@@ -9,7 +9,7 @@
       <thead>
         <tr class="table-primary">
           <th scope="col" style="width: 10%;">System</th>
-          <th scope="col" style="width: 20%;">Message</th>
+          <th scope="col" style="width: 20%;">Number/Message</th>
           <th scope="col" style="width: 20%;">Process</th>
           <th scope="col" style="width: 20%;">Trace</th>
           <th scope="col" style="width: 10%;">Environment</th>
@@ -19,11 +19,11 @@
       </thead>
       <tbody infinite-scroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="throttle" [scrollWindow]="false" (scrolled)="onScroll()">
         <tr *ngFor="let i of array" class="table-light" (click)="msgTog(i.ID)">
-          <td style="width: 10%;">{{i.SystemCode}}</td>
-          <td style="width: 20%;" placement="auto" ngbPopover="{{i.msg}}" container="body" triggers="hover focus click" >{{i.msg | slice:0:30}}<span *ngIf="i.msg.length > 30">...</span></td>
-          <td style="width: 20%;">{{i.ProcessTextSearch | slice:0:30}}<span *ngIf="i.ProcessTextSearch.length > 30">...</span></td>
-          <td style="width: 20%;">{{i.TraceTextSearch | slice:0:30}}<span *ngIf="i.TraceTextSearch.length > 30">...</span></td>
-          <td style="text-align: right; width: 10%;">{{i.EnvironmentTextSearch | slice:0:30}}<span *ngIf="i.EnvironmentTextSearch.length > 30">...</span></td>
+          <td style="width: 10%;">{{i.SourceSystem}}</td>
+          <td style="width: 20%;" placement="auto" ngbPopover="{{i.Message}}" container="body" triggers="hover focus click" ><span *ngIf="i.LogNumber">{{i.LogNumber}}, </span>{{i.Message | slice:0:30}}<span *ngIf="i.Message.length > 30">...</span></td>
+          <td style="width: 20%;">{{i.ProcessName | slice:0:30}}<span *ngIf="i.ProcessName.length > 30">...</span></td>
+          <td style="width: 20%;">{{i.TraceInfo | slice:0:30}}<span *ngIf="i.TraceInfo.length > 30">...</span></td>
+          <td style="text-align: right; width: 10%;">{{i.EnvironmentInfo | slice:0:30}}<span *ngIf="i.EnvironmentInfo.length > 30">...</span></td>
           <td style="text-align: center; width: 10%;">{{i.StartDate | date :'yyyy-MM-dd'}}</td>
           <td style="text-align: center; width: 5rem;" class="text-primary">{{i.ID}}</td>
         </tr>
@@ -47,23 +47,23 @@
           <tbody>
             <tr class="table-light small">
               <th scope="row">System:</th>
-              <td>{{found.SystemCode}}</td>
+              <td>{{found.SourceSystem}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Number/Message:</th>
-              <td>{{found.msg}}</td>
+              <td><span *ngIf="found.LogNumber">{{found.LogNumber}}, </span>{{found.Message}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Process:</th>
-              <td>{{found.ProcessTextSearch}}</td>
+              <td>{{found.ProcessName}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Trace:</th>
-              <td>{{found.TraceTextSearch}}</td>
+              <td>{{found.TraceInfo}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Environment&nbsp;Info:</th>
-              <td>{{found.EnvironmentTextSearch}}</td>
+              <td>{{found.EnvironmentInfo}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Created:</th>
@@ -116,23 +116,23 @@
           <tbody>
             <tr class="table-light small">
               <th scope="row">System:</th>
-              <td>{{found2.SystemCode}}</td>
+              <td>{{found2.SourceSystem}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Number/Message:</th>
-              <td>{{found2.msg}}</td>
+              <td><span *ngIf="found2.LogNumber">{{found2.LogNumber}}, </span>{{found2.Message}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Process:</th>
-              <td>{{found2.ProcessTextSearch}}</td>
+              <td>{{found2.ProcessName}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Trace:</th>
-              <td>{{found2.TraceTextSearch}}</td>
+              <td>{{found2.TraceInfo}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Environment&nbsp;Info:</th>
-              <td>{{found2.EnvironmentTextSearch}}</td>
+              <td>{{found2.EnvironmentInfo}}</td>
             </tr>
             <tr class="table-light small">
               <th scope="row">Created:</th>

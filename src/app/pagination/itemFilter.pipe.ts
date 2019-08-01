@@ -10,42 +10,42 @@ export class itemFilterPipe implements PipeTransform {
 
     if (PI){
       if (PS == "Contains") {
-        items = items.filter(i => i.ProcessTextSearch.includes(PI));
+        items = items.filter(i => i.ProcessName.includes(PI));
       }
       else if (PS == "Begins With") {
-        items = items.filter(i => i.ProcessTextSearch.indexOf(PI) == 0);
+        items = items.filter(i => i.ProcessName.indexOf(PI) == 0);
       }
       else {
-        items = items.filter(i => i.ProcessTextSearch.endsWith(PI));
+        items = items.filter(i => i.ProcessName.endsWith(PI));
       }
     }
 
     if (TI){
       if (TS == "Contains") {
-        items = items.filter(i => i.TraceTextSearch.includes(TI));
+        items = items.filter(i => i.TraceInfo.includes(TI));
       }
       else if (TS == "Begins With") {
-        items = items.filter(i => i.TraceTextSearch.indexOf(TI) == 0);
+        items = items.filter(i => i.TraceInfo.indexOf(TI) == 0);
       }
       else {
-        items = items.filter(i => i.TraceTextSearch.endsWith(TI));
+        items = items.filter(i => i.TraceInfo.endsWith(TI));
       }
     }
 
     if (EI){
       if (ES == "Contains") {
-        items = items.filter(i => i.EnvironmentTextSearch.includes(EI));
+        items = items.filter(i => i.EnvironmentInfo.includes(EI));
       }
       else if (ES == "Begins With") {
-        items = items.filter(i => i.EnvironmentTextSearch.indexOf(EI) == 0);
+        items = items.filter(i => i.EnvironmentInfo.indexOf(EI) == 0);
       }
       else {
-        items = items.filter(i => i.EnvironmentTextSearch.endsWith(EI));
+        items = items.filter(i => i.EnvironmentInfo.endsWith(EI));
       }
     }
 
     if (Sys){
-      items = items.filter(i => i.SystemCode == Sys);
+      items = items.filter(i => i.SourceSystem == Sys);
     }
     if (Inc){
       items = items.filter(i => i.err == Inc);
