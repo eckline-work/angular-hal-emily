@@ -33,12 +33,12 @@
   </ng-container>
 
   <ng-container *ngIf="idPicked != -7">
-    <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 4rem; right: 1rem; max-width: 55rem; width: 50%; min-width: 20rem;">
+    <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 10rem; right: 1rem; max-width: 46.5rem; width: 50%; min-width: 20rem; height: 39%;">
       <div class="card-header">
         HAL Message Viewer
         <button type="button" class="close float-right" (click)="msgClose(idPicked)">&times;</button>
       </div>
-      <div class="card-body">
+      <div class="card-body" style="overflow-y: scroll;">
         <table class="table table-hover">
           <thead>
             <tr class="table-info">
@@ -63,7 +63,7 @@
               <td>{{found.TraceInfo}}<span *ngIf="found.TraceInfo == ''"> N/A</span></td>
             </tr>
             <tr class="table-light small">
-              <th scope="row">Environment&nbsp;Info:</th>
+              <th scope="row">Environment Info:</th>
               <td>{{found.EnvironmentInfo}}</td>
             </tr>
             <tr class="table-light small">
@@ -102,12 +102,12 @@
   </ng-container>
 
   <ng-container *ngIf="idPicked2 != -7">
-    <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; top: 6.5rem; right: .5rem; max-width: 55rem; width: 50%; min-width: 20rem;">
+    <div class="card border-info mb-3" cdkDrag style="z-index: 7; position: fixed; bottom: 1rem; right: 1rem; max-width: 46.5rem; width: 50%; min-width: 20rem; height: 39%;">
       <div class="card-header">
         HAL Message Viewer
         <button type="button" class="close float-right" (click)="msgClose(idPicked2)">&times;</button>
       </div>
-      <div class="card-body">
+      <div class="card-body" style="overflow-y: scroll;">
         <table class="table table-hover">
           <thead>
             <tr class="table-info">
@@ -132,7 +132,7 @@
               <td>{{found2.TraceInfo}}<span *ngIf="found2.TraceInfo == ''">N/A</span></td>
             </tr>
             <tr class="table-light small">
-              <th scope="row">Environment&nbsp;Info:</th>
+              <th scope="row">Environment Info:</th>
               <td>{{found2.EnvironmentInfo}}</td>
             </tr>
             <tr class="table-light small">
@@ -182,6 +182,7 @@
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position:fixed; top: 3.5rem; left: 0; width: 100%; z-index: 3;">
+  <a class="navbar-brand"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
