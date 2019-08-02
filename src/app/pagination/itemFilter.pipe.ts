@@ -45,12 +45,44 @@ export class itemFilterPipe implements PipeTransform {
     }
 
     if (FD != ""){
+      var filtered = [];
       var F = new Date(FD);
-      items = items.filter(i => i.StartDate !< F);
+      for (let i = 0; i < items.length; i++){
+        if (F.getFullYear() < items[i].StartDate.getFullYear()) {
+          filtered.push(items[i]);
+        }
+        else if (F.getFullYear() == items[i].StartDate.getFullYear()) {
+          if (F.getMonth() < items[i].StartDate.getMonth()) {
+            filtered.push(items[i]);
+          }
+          else if (F.getMonth() == items[i].StartDate.getMonth()) {
+            if (F.getDate() <= items[i].StartDate.getDate()) {
+              filtered.push(items[i]);
+            }
+          }
+        }
+      }
+      items = filtered;
     }
     if (TD != ""){
+      var filtered = [];
       var T = new Date(TD);
-      items = items.filter(i => i.StartDate !> T);
+      for (let i = 0; i < items.length; i++){
+        if (T.getFullYear() > items[i].StartDate.getFullYear()) {
+          filtered.push(items[i]);
+        }
+        else if (T.getFullYear() == items[i].StartDate.getFullYear()) {
+          if (T.getMonth() > items[i].StartDate.getMonth()) {
+            filtered.push(items[i]);
+          }
+          else if (T.getMonth() == items[i].StartDate.getMonth()) {
+            if (T.getDate() >= items[i].StartDate.getDate()) {
+              filtered.push(items[i]);
+            }
+          }
+        }
+      }
+      items = filtered;
     }
 
     if (Sys){
