@@ -10,5 +10,5 @@ import {errorType} from '../MockData/type';
 })
 
 export class messageViewer {
-  
+  @Input() inform: Inform;
 }

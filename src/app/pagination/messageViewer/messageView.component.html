@@ -7,41 +7,41 @@
     <table class="table table-hover">
       <thead>
         <tr class="table-info">
-          <th colspan="2" style="text-align: center;">Data for item ID: {{found.ID}}</th>
+          <th colspan="2" style="text-align: center;">Data for item ID: {{inform.ID}}</th>
         </tr>
       </thead>
       <tbody class="mvt">
         <tr class="table-light small">
           <th scope="row">System:</th>
-          <td>{{found.SourceSystem}}</td>
+          <td>{{inform.SourceSystem}}</td>
         </tr>
         <tr class="table-light small">
           <th scope="row">Number/Message:</th>
-          <td><span *ngIf="found.LogNumber">({{found.LogNumber}}) </span>{{found.Message}}<span *ngIf="found.Message == ''">No message included</span></td>
+          <td><span *ngIf="inform.LogNumber">({{inform.LogNumber}}) </span>{{inform.Message}}<span *ngIf="inform.Message == ''">No message included</span></td>
         </tr>
         <tr class="table-light small">
           <th scope="row">Process:</th>
-          <td>{{found.ProcessName}}<span *ngIf="found.ProcessName == ''"> N/A</span></td>
+          <td>{{inform.ProcessName}}<span *ngIf="inform.ProcessName == ''"> N/A</span></td>
         </tr>
         <tr class="table-light small">
           <th scope="row">Trace:</th>
-          <td>{{found.TraceInfo}}<span *ngIf="found.TraceInfo == ''"> N/A</span></td>
+          <td>{{inform.TraceInfo}}<span *ngIf="inform.TraceInfo == ''"> N/A</span></td>
         </tr>
         <tr class="table-light small">
           <th scope="row">Environment Info:</th>
-          <td>{{found.EnvironmentInfo}}</td>
+          <td>{{inform.EnvironmentInfo}}</td>
         </tr>
         <tr class="table-light small">
           <th scope="row">Created:</th>
-          <td>{{found.StartDate | date :'yyyy-MM-dd'}}</td>
+          <td>{{inform.StartDate | date :'yyyy-MM-dd'}}</td>
       </tr>
       <tr class="table-light small">
         <th scope="row">Processed:</th>
-        <td>{{found.EndDate | date :'yyyy-MM-dd'}}</td>
+        <td>{{inform.EndDate | date :'yyyy-MM-dd'}}</td>
         </tr>
       </tbody>  
     </table>
-    <ng-container *ngIf="found.eT.code">
+    <ng-container *ngIf="inform.eT.code">
       <table class="table table-hover" style="text-align: center;">
         <thead>
           <tr class="table-dark">
@@ -53,11 +53,11 @@
         <tbody class="mvt">
           <tr class="table-light small">
             <td>
-              {{found.eT.code}}<br>
-              {{found.eT.desc}}
+              {{inform.eT.code}}<br>
+              {{inform.eT.desc}}
             </td>
-            <td>{{found.eT.email}}</td>
-            <td>{{found.eT.pager}}</td>
+            <td>{{inform.eT.email}}</td>
+            <td>{{inform.eT.pager}}</td>
           </tr>
         </tbody>
       </table>
