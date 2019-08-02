@@ -9,23 +9,23 @@
       <thead>
         <tr class="table-primary">
           <th style="width: 12rem;" scope="col">System</th>
-          <th style="width: 15rem;" scope="col">Number/Message</th>
-          <th style="width: 15rem;" scope="col">Process</th>
-          <th style="width: 15rem;" scope="col">Trace</th>
+          <th style="width: 14rem;" scope="col">Number/Message</th>
+          <th style="width: 14rem;" scope="col">Process</th>
+          <th style="width: 14rem;" scope="col">Trace</th>
           <th style="width: 10rem;" scope="col">Environment</th>
           <th style="width: 10rem;" scope="col">Created&nbsp;Date</th>
-          <th style="width: 5rem;" scope="col">ID</th>
+          <th style="width: 6rem;" scope="col">ID</th>
         </tr>
       </thead>
-      <tbody infinite-scroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="throttle" [scrollWindow]="false" (scrolled)="onScroll()">
+      <tbody style="width: 80rem; overflow-x: hidden;" infinite-scroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="throttle" [scrollWindow]="false" (scrolled)="onScroll()">
         <tr *ngFor="let i of array;" class="table-light" (click)="msgTog(i.ID)">
           <td style="width: 12rem;">{{i.SourceSystem}}</td>
-          <td style="width: 15rem;" placement="auto" ngbPopover="{{i.Message}}" container="body" triggers="hover focus click" ><span *ngIf="i.LogNumber">({{i.LogNumber}}) </span><span *ngIf="!i.LogNumber">(0) </span>{{i.Message | slice:0:30}}<span *ngIf="i.Message.length > 30">...</span><span *ngIf="i.Message == ''">No message included</span></td>
-          <td style="width: 15rem;">{{i.ProcessName | slice:0:30}}<span *ngIf="i.ProcessName.length > 30">...</span><span *ngIf="i.ProcessName == ''"> N/A</span></td>
-          <td style="width: 15rem;">{{i.TraceInfo | slice:0:30}}<span *ngIf="i.TraceInfo.length > 30">...</span><span *ngIf="i.TraceInfo == ''"> N/A</span></td>
-          <td style="text-align: right; width: 10rem;">{{i.EnvironmentInfo | slice:0:30}}<span *ngIf="i.EnvironmentInfo.length > 30">...</span></td>
+          <td style="width: 14rem;" placement="auto" ngbPopover="{{i.Message}}" container="body" triggers="hover focus click" ><span *ngIf="i.LogNumber">({{i.LogNumber}}) </span><span *ngIf="!i.LogNumber">(0) </span>{{i.Message | slice:0:30}}<span *ngIf="i.Message.length > 30">...</span><span *ngIf="i.Message == ''">No message included</span></td>
+          <td style="width: 14rem;">{{i.ProcessName | slice:0:30}}<span *ngIf="i.ProcessName.length > 30">...</span><span *ngIf="i.ProcessName == ''"> N/A</span></td>
+          <td style="width: 14rem;">{{i.TraceInfo | slice:0:30}}<span *ngIf="i.TraceInfo.length > 30">...</span><span *ngIf="i.TraceInfo == ''"> N/A</span></td>
+          <td style="width: 10rem;">{{i.EnvironmentInfo | slice:0:30}}<span *ngIf="i.EnvironmentInfo.length > 30">...</span></td>
           <td style="text-align: center; width: 10rem;">{{i.StartDate | date :'yyyy-MM-dd'}}</td>
-          <td style="text-align: center; width: 5rem;" class="text-primary">{{i.ID}}</td>
+          <td style="text-align: center; width: 6rem;" class="text-primary">{{i.ID}}</td>
         </tr>
       </tbody>
     </table>
