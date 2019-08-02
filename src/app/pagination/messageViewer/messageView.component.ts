@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {Inform} from '../MockData/data';
 import {MockData} from '../MockData/mock-data';
 import {errorType} from '../MockData/type';
@@ -11,4 +11,13 @@ import {errorType} from '../MockData/type';
 
 export class messageViewer {
   @Input() inform: Inform;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  msgClose(inform: Inform){
+    
+  }
 }
