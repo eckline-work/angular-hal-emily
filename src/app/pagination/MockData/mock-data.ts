@@ -2,6 +2,20 @@ import {Inform} from './data';
 
 export const MockData: Inform[] = [ //What's your ****ing problem?!
 
+  {SourceSystem: 'Unicenter',
+  Message: "On the bright side, I fixed the table formatting.",
+  ProcessName: "something about how something be done darn did",
+  TraceInfo: 'place/location/file/innerfile/itemname.doctype',
+  EnvironmentInfo: 'Work Computer',
+  StartDate: '2019-08-02',
+  EndDate: '2019-08-02',
+  err: 'N',
+  eT: {
+    code: 'INFO',
+    desc: 'Informational'
+    }
+  },
+
   {SourceSystem: 'Data Warehouse',
   Message: "more test items for testing because i want to show the infinite scroll works",
   ProcessName: "legit just typing things",
@@ -9,7 +23,11 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV',
   StartDate: '2019-08-02',
   EndDate: '2019-08-02',
-  err: 'N'
+  err: 'N',
+  eT: {
+    code: 'INFO',
+    desc: 'Informational'
+    }
   },
 
   {SourceSystem: 'Star',
@@ -75,7 +93,11 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV',
   StartDate: '2019-08-01',
   EndDate: '2019-08-01',
-  err: 'N'
+  err: 'N',
+  eT: {
+    code: 'INFO',
+    desc: 'Informational'
+    }
   },
 
   {SourceSystem: 'Data Warehouse',
