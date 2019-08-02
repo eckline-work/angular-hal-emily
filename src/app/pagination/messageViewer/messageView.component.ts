@@ -17,7 +17,4 @@ export class messageViewer {
   ngOnInit() {
   }
 
-  msgClose(inform: Inform){
-    
-  }
 }
