@@ -37,7 +37,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   err: 'N'
   },
 
-  {SourceSystem: 'Data Warehouse',
+  {SourceSystem: 'EDoc Server',
   Message: "more test items for testing because i want to show the infinite scroll works",
   ProcessName: "",
   TraceInfo: 'merp',
@@ -47,7 +47,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   err: 'N'
   },
 
-  {SourceSystem: 'Data Warehouse',
+  {SourceSystem: 'Vista',
   LogNumber: 100,
   Message: "more test items for testing",
   ProcessName: "",
