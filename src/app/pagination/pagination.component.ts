@@ -125,6 +125,9 @@ export class NgbdPagination {
   }
 
   ngOnInit() {
+    for (let i = this.items.length; i > 0; i--){
+      this.items[this.items.length-i].ID = i;
+    }
   }
 
   applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: string, TD: string):any {

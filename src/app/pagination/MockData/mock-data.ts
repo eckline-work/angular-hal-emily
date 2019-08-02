@@ -9,7 +9,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV2',
   StartDate: '2019-08-01',
   EndDate: '2019-08-01',
-  ID: 1114,
   err: 'N'
   },
 
@@ -21,7 +20,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV2',
   StartDate: '2019-08-01',
   EndDate: '2019-08-01',
-  ID: 1113,
   err: 'N'
   },
 
@@ -32,7 +30,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV2',
   StartDate: '2019-08-01',
   EndDate: '2019-08-01',
-  ID: 1112,
   err: 'N'
   },
 
@@ -43,7 +40,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV',
   StartDate: '2019-08-01',
   EndDate: '2019-08-01',
-  ID: 1111,
   err: 'N'
   },
 
@@ -54,7 +50,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-07-31',
   EndDate: '2019-07-31',
-  ID: 1025,
   err: 'Y',
   eT: {
     code: 'DB_ERROR',
@@ -70,7 +65,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Dev',
   StartDate: '2019-07-29',
   EndDate: '2019-07-29',
-  ID: 911,
   err: 'N'
   },
 
@@ -81,7 +75,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Dev',
   StartDate: '2019-07-29',
   EndDate: '2019-07-29',
-  ID: 777,
   err: 'N'
   },
 
@@ -92,7 +85,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'NPTES520',
   StartDate: '2019-07-27',
   EndDate: '2019-07-27',
-  ID: 711,
   err: 'N',
   eT: {
     code: 'NOVA_NOTI',
@@ -108,7 +100,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-07-26',
   EndDate: '2019-07-26',
-  ID: 666,
   err: 'N'
   },
 
@@ -119,7 +110,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-07-25',
   EndDate: '2019-07-25',
-  ID: 612,
   err: 'Y',
   eT: {
     code: 'DB_ERROR',
@@ -135,7 +125,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV',
   StartDate: '2019-07-22',
   EndDate: '2019-07-23',
-  ID: 413,
   err: 'N',
   eT: {
     code: 'NOVA_NOTI',
@@ -150,7 +139,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'ENV2',
   StartDate: '2019-07-20',
   EndDate: '2019-07-20',
-  ID: 101,
   err: 'N',
   eT: {
     code: 'INFO',
@@ -166,7 +154,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-07-16',
   EndDate: '2019-07-16',
-  ID: 96,
   err: 'N'
   },
 
@@ -177,7 +164,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'ENV',
   StartDate: '2019-07-14',
   EndDate: '2019-07-15',
-  ID: 69,
   err: 'N'
   },
 
@@ -188,7 +174,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-07-08',
   EndDate: '2019-07-08',
-  ID: 34,
   err: 'Y',
   eT: {
     code: 'NOVA_ERROR',
@@ -204,7 +189,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'ENV',
   StartDate: '2019-06-30',
   EndDate: '2019-06-30',
-  ID: 25,
   err: 'N'
   },
 
@@ -215,7 +199,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-06-25',
   EndDate: '2019-06-25',
-  ID: 24,
   err: 'Y',
   eT: {
     code: 'NOVA_ERROR',
@@ -232,7 +215,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'NPTOTHER',
   StartDate: '2019-06-14',
   EndDate: '2019-06-14',
-  ID: 13,
   err: 'N',
   eT: {
     code: 'INFO',
@@ -247,7 +229,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-07-11',
   EndDate: '2019-07-12',
-  ID: 7,
   err: 'N'
   },
 
@@ -258,7 +239,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'NPTOTHER',
   StartDate: '2019-06-14',
   EndDate: '2019-06-14',
-  ID: 3,
   err: 'N',
   eT: {
     code: 'INFO',
@@ -273,7 +253,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'NPTES520',
   StartDate: '2019-06-12',
   EndDate: '2019-06-12',
-  ID: 2,
   err: 'Y',
   eT: {
     code: 'NOVA_ERROR',
@@ -289,7 +268,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'NPTES520',
   StartDate: '2019-06-09',
   EndDate: '2019-06-09',
-  ID: 1,
   err: 'N',
   eT: {
     code: 'NOVA_NOTI',
