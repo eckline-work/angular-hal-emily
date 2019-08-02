@@ -18,3 +18,9 @@ thead, tbody tr {
 td {
   word-wrap: break-word;
 }
+
+.mvt {
+  display: table;
+  overflow: visible;
+  height: fit-content;
+}
