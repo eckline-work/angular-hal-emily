@@ -48,15 +48,16 @@ export class itemFilterPipe implements PipeTransform {
       var filtered = [];
       var F = new Date(FD);
       for (let i = 0; i < items.length; i++){
-        if (F.getFullYear() < items[i].StartDate.getFullYear()) {
+        var testday = new Date(items[i].StartDate);
+        if (F.getFullYear() < testday.getFullYear()) {
           filtered.push(items[i]);
         }
-        else if (F.getFullYear() == items[i].StartDate.getFullYear()) {
-          if (F.getMonth() < items[i].StartDate.getMonth()) {
+        else if (F.getFullYear() == testday.getFullYear()) {
+          if (F.getMonth() < testday.getMonth()) {
             filtered.push(items[i]);
           }
-          else if (F.getMonth() == items[i].StartDate.getMonth()) {
-            if (F.getDate() <= items[i].StartDate.getDate()) {
+          else if (F.getMonth() == testday.getMonth()) {
+            if (F.getDate() <= testday.getDate()) {
               filtered.push(items[i]);
             }
           }
@@ -68,15 +69,16 @@ export class itemFilterPipe implements PipeTransform {
       var filtered = [];
       var T = new Date(TD);
       for (let i = 0; i < items.length; i++){
-        if (T.getFullYear() > items[i].StartDate.getFullYear()) {
+        var testday = new Date(items[i].StartDate);
+        if (T.getFullYear() > testday.getFullYear()) {
           filtered.push(items[i]);
         }
-        else if (T.getFullYear() == items[i].StartDate.getFullYear()) {
-          if (T.getMonth() > items[i].StartDate.getMonth()) {
+        else if (T.getFullYear() == testday.getFullYear()) {
+          if (T.getMonth() > testday.getMonth()) {
             filtered.push(items[i]);
           }
-          else if (T.getMonth() == items[i].StartDate.getMonth()) {
-            if (T.getDate() >= items[i].StartDate.getDate()) {
+          else if (T.getMonth() == testday.getMonth()) {
+            if (T.getDate() >= testday.getDate()) {
               filtered.push(items[i]);
             }
           }
