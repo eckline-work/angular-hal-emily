@@ -1,5 +1,4 @@
 thead {
-  overflow-x: scroll;
   text-align: center;
 }
 tbody {
@@ -15,9 +14,8 @@ thead, tbody tr {
   table-layout: fixed;
 }
 
-th, td {
-  overflow: hidden;
-  width: fit-content;
+td {
+  word-break: break-all;
 }
 
 .mvt {
