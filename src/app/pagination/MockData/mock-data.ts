@@ -4,8 +4,42 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
 
   {SourceSystem: 'Data Warehouse',
   Message: "more test items for testing because i want to show the infinite scroll works",
-  ProcessName: "n/a",
-  TraceInfo: 'kek',
+  ProcessName: "legit just typing things",
+  TraceInfo: '',
+  EnvironmentInfo: 'TEST_ENV',
+  StartDate: '2019-08-02',
+  EndDate: '2019-08-02',
+  err: 'N'
+  },
+
+  {SourceSystem: 'Star',
+  Message: "",
+  ProcessName: "hngggggg",
+  TraceInfo: "I'm actually kinda curious, what does 'Trace' even actually mean? Is it like, a url or something?",
+  EnvironmentInfo: 'Dev_Server',
+  StartDate: '2019-08-02',
+  EndDate: '2019-08-02',
+  err: 'Y',
+  eT: {
+    code: 'DB_ERROR',
+    desc: 'Database Error'
+    }
+  },
+
+  {SourceSystem: 'Data Warehouse',
+  Message: "even more test items for testing because i want to show the infinite scroll works",
+  ProcessName: "legit just typing things",
+  TraceInfo: '',
+  EnvironmentInfo: 'TEST_ENV',
+  StartDate: '2019-08-01',
+  EndDate: '2019-08-01',
+  err: 'N'
+  },
+
+  {SourceSystem: 'Data Warehouse',
+  Message: "more test items for testing because i want to show the infinite scroll works",
+  ProcessName: "",
+  TraceInfo: 'merp',
   EnvironmentInfo: 'TEST_ENV2',
   StartDate: '2019-08-01',
   EndDate: '2019-08-01',
@@ -15,8 +49,8 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   {SourceSystem: 'Data Warehouse',
   LogNumber: 100,
   Message: "more test items for testing",
-  ProcessName: "n/a",
-  TraceInfo: 'n/a',
+  ProcessName: "",
+  TraceInfo: '',
   EnvironmentInfo: 'TEST_ENV2',
   StartDate: '2019-08-01',
   EndDate: '2019-08-01',
@@ -26,7 +60,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   {SourceSystem: 'Data Warehouse',
   Message: "more test items for testing",
   ProcessName: "blep/kek",
-  TraceInfo: 'n/a',
+  TraceInfo: '',
   EnvironmentInfo: 'TEST_ENV2',
   StartDate: '2019-08-01',
   EndDate: '2019-08-01',
@@ -35,7 +69,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
 
   {SourceSystem: 'Data Warehouse',
   Message: "Fixed",
-  ProcessName: "n/a",
+  ProcessName: "",
   TraceInfo: 'idk, something',
   EnvironmentInfo: 'TEST_ENV',
   StartDate: '2019-08-01',
