@@ -73,20 +73,20 @@ export class NgbdPagination {
 
   pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
 
-    this.testp1 = "";
-    this.testp2 = "";
+    var testp1 = "";
+    var testp2 = "";
 
     if (c1) {
-      this.testp1 = c1.toString();
+      testp1 = c1.toString();
     }
     if (c2) {
-      this.testp2 = c2.toString();
+       testp2 = c2.toString();
     }
 
     this.idPicked = -7;
     this.idPicked2 = -7;
 
-    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, this.testp1, this.testp2 )
+    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, testp1, testp2 )
 
     this.collectionSize = this.toShow.length;
 
@@ -137,11 +137,7 @@ export class NgbdPagination {
   //Datefix 2: Fixlectric Boogaloo
   model1: NgbDateStruct;
   model2: NgbDateStruct;
-  dayhelp1a: Date;
-  dayhelp2a: Date;
-  testp1: string;
-  testp2: string;
-
+  
   //constructor
   constructor(private filter: itemFilterPipe, private calendar: NgbCalendar) {
     this.appendItems(0, this.sum);
