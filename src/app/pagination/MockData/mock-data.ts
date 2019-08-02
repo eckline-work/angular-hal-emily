@@ -13,6 +13,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   },
 
   {SourceSystem: 'Star',
+  LogNumber: 1,
   Message: "",
   ProcessName: "hngggggg",
   TraceInfo: "I'm actually kinda curious, what does 'Trace' even actually mean? Is it like, a url or something?",
