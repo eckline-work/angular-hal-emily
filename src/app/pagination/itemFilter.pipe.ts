@@ -57,7 +57,7 @@ export class itemFilterPipe implements PipeTransform {
             filtered.push(items[i]);
           }
           else if (F.getMonth() == testday.getMonth()) {
-            if (F.getDate() <= testday.getDate()) {
+            if (F.getDate() < testday.getDate() || F.getDate() == testday.getDate()) {
               filtered.push(items[i]);
             }
           }
@@ -78,7 +78,7 @@ export class itemFilterPipe implements PipeTransform {
             filtered.push(items[i]);
           }
           else if (T.getMonth() == testday.getMonth()) {
-            if (T.getDate() >= testday.getDate()) {
+            if (T.getDate() > testday.getDate() || T.getDate() == testday.getDate()) {
               filtered.push(items[i]);
             }
           }
