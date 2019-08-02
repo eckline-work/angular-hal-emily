@@ -1,12 +1,12 @@
-
 thead {
+  overflow-x: scroll;
   text-align: center;
 }
 tbody {
   max-height: 40rem;
   text-align: left;
   display: block;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 thead, tbody tr {
@@ -15,8 +15,9 @@ thead, tbody tr {
   table-layout: fixed;
 }
 
-td {
-  word-wrap: break-word;
+th, td {
+  overflow: hidden;
+  width: fit-content;
 }
 
 .mvt {
