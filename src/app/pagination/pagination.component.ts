@@ -38,9 +38,13 @@ export class NgbdPagination {
   }
 
   msgOpen(id: number){
-    this.viewing.push(this.items.find(function(element) {
+    var hold = (this.items.find(function(element) {
       return element.ID == id;
     }));
+    if (hold.eT.code == ''){
+      hold.eT = new errorType;
+    }
+    this.viewing.push(hold);
   }
 
   msgClose(index: number){

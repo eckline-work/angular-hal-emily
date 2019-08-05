@@ -18,7 +18,7 @@
         <tr class="table-light small">
           <th scope="row">Number/Message:</th>
           <td>
-            <span *ngIf="inform.LogNumber">({{inform.LogNumber}}) </span><span *ngIf="!inform.LogNumber">(0) </span>{{inform.Message}}<span *ngIf="inform.Message == ''">No message included</span>
+            {{inform.Message}}<span *ngIf="inform.Message == ''">No message included</span>
           </td>
         </tr>
         <tr class="table-light small">
