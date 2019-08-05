@@ -32,12 +32,8 @@
     </div>
   </ng-container>
 
-  <ng-container *ngIf="viewing.length() > 0">
-    <ul>
-      <li *ngFor="let s of viewing;">
-        <messageViewer [inform]="viewing[s]"></messageViewer>
-      </li>
-    </ul>
+  <ng-container *ngIf="viewing">
+    <messageViewer [inform]="viewing[s]"></messageViewer>
   </ng-container>
 
   <ng-container *ngIf="collectionSize == 0">

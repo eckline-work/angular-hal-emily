@@ -16,18 +16,11 @@ import { messageViewer } from './messageViewer/messageView.component'
 export class NgbdPagination {
 
   //Message View Toggle
-  viewing: Inform[] = [];
+  viewing: Inform;
 
   msgTog(id: number){
-    var idOpen: boolean = false;
-    for (let s = 0; s < this.viewing.length; s++){
-      if(id == this.viewing[s].ID){
-        idOpen = true;
-        break;
-      }
-    }
-    if (idOpen){
-      this.msgClose(id);
+    if(id == this.viewing.ID){
+      this.msgClose();
     }
     else {
       this.msgOpen(id);
@@ -35,12 +28,13 @@ export class NgbdPagination {
   }
 
   msgOpen(id: number) {
-    var hold = this.items.findIndex(i => i.ID == id);
-    this.viewing.push(this.items[hold]);
+    this.viewing = this.items.find(i => i.ID == id);
   }
 
-  msgClose(id: number) {
-    this.viewing.filter(i => i.ID != id);
+  msgClose() {
+    var clean: Inform;
+    clean.ID = 0;
+    this.viewing = clean;
   }
 
   //Search and Table Code
@@ -51,7 +45,7 @@ export class NgbdPagination {
 
   pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
 
-    this.viewing = [];
+    this.msgClose();
     var testp1 = "";
     var testp2 = "";
 
@@ -104,6 +98,7 @@ export class NgbdPagination {
     for (let i = this.items.length; i > 0; i--){
       this.items[this.items.length-i].ID = i;
     }
+    this.viewing.ID = 0;
   }
 
   applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: string, TD: string):any {
