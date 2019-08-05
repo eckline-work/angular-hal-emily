@@ -28,13 +28,13 @@ export class NgbdPagination {
   }
 
   msgOpen(id: number) {
-    this.viewing = this.items.find(i => i.ID == id);
+    this.viewing = this.items.find(function(element) {
+      return element.ID == id;
+    });
   }
 
   msgClose() {
-    var clean: Inform;
-    clean.ID = 0;
-    this.viewing = clean;
+    this.viewing = new Inform();
   }
 
   //Search and Table Code
