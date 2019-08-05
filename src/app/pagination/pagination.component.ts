@@ -38,7 +38,8 @@ export class NgbdPagination {
   }
 
   msgOpen(id: number){
-    var hold = (this.items.find(function(element) {
+    var hold: Inform;
+    hold = (this.items.find(function(element) {
       return element.ID == id;
     }));
     if (hold.eT.code == ''){
