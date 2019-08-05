@@ -32,10 +32,10 @@
     </div>
   </ng-container>
 
-  <ng-container *ngIf="openMssg.length() != 0">
+  <ng-container *ngIf="viewing.length() != 0">
     <ul>
-      <li *ngFor="let s of openMssg;">
-        <messageViewer [inform]="openMssg[s]"></messageViewer>
+      <li *ngFor="let s of viewing;">
+        <messageViewer [inform]="viewing[s]"></messageViewer>
       </li>
     </ul>
   </ng-container>
