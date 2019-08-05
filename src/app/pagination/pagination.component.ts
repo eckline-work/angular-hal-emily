@@ -19,7 +19,15 @@ export class NgbdPagination {
   viewing: Inform[];
 
   msgTog(id: number){
-    var opened = this.viewing.findIndex()
+    var opened = this.viewing.findIndex(function(element) {
+      return element.ID == id;
+    });
+    if (opened == -1) {
+      this.msgOpen(id);
+    }
+    else {
+      this.msgClose(id);
+    }
   }
 
   msgOpen(id: number){
