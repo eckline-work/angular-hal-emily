@@ -3,8 +3,8 @@
     HAL Message Viewer
     <button type="button" class="close float-right" (click)="msgClose()">&times;</button>
   </div>
-  <div class="card-body" style="overflow-y: scroll; height: 39%;">
-    <table class="table table-hover">
+  <div class="card-body" style="overflow: scroll; height: 39%;">
+    <table class="table table-hover" style="min-width: 25rem;">
       <thead>
         <tr class="table-info">
           <th colspan="2" style="text-align: center;">Data for item ID: {{inform.ID}}</th>
@@ -44,7 +44,7 @@
       </tbody>  
     </table>
     <ng-container *ngIf="inform.eT.code">
-      <table class="table table-hover" style="text-align: center;">
+      <table class="table table-hover" style="text-align: center; min-width: 25rem;">
         <thead>
           <tr class="table-dark">
             <th scope="col">Action</th>
