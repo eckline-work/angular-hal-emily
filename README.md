@@ -6,4 +6,4 @@ I am working on an update to the message viewer in a second branch, but that see
 
 StackBlitz also gets really unhappy when I switch to the master branch from the test branch. Which concerns me.
 
-Ok, it breaks less things now. Namely, itself. But only under certain circumstances. I have yet to determine exactly what makes it break. ... :/
+Ok, it breaks less things now. Namely, itself. But only under certain circumstances. I have yet to determine exactly what makes it break...
