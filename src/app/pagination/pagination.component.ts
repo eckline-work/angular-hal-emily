@@ -26,16 +26,18 @@ export class NgbdPagination {
       this.msgOpen(id);
     }
     else {
-      this.msgClose(id);
+      this.msgClose(opened);
     }
   }
 
   msgOpen(id: number){
-
+    this.viewing.push(this.items.find(function(element) {
+      return element.ID == id;
+    }));
   }
 
-  msgClose(id: number){
-
+  msgClose(index: number){
+    this.viewing.splice(index, 1);
   }
 
   //Search and Table Code
@@ -46,7 +48,7 @@ export class NgbdPagination {
 
   pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
 
-    this.viewing = [];
+    this.viewing.splice(0, this.viewing.length)
     var testp1 = "";
     var testp2 = "";
 
