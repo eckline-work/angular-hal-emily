@@ -6,7 +6,6 @@ import {errorType} from '../MockData/type';
 @Component({
   selector: 'messageViewer',
   templateUrl: './messageView.component.html',
-  styleUrls: [ '../pagination.component.css' ]
 })
 
 export class messageViewer implements OnInit {
