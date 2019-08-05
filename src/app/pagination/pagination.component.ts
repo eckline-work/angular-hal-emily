@@ -19,6 +19,8 @@ export class NgbdPagination {
   viewing: Inform[] = [];
   noViewed = 0;
 
+  hold: Inform;
+
   msgTog(id: number){
     if (this.noViewed == 0) {
       this.msgOpen(id);
@@ -38,14 +40,14 @@ export class NgbdPagination {
   }
 
   msgOpen(id: number){
-    var hold: Inform;
-    hold = this.items.find(function(element) {
+    this.hold = new Inform;
+    this.hold = this.items.find(function(element) {
       return element.ID == id;
     });
-    if (hold.eT.code == '') {
-      hold.eT = new errorType;
+    if (this.hold.eT.code == '') {
+      this.hold.eT = new errorType;
     }
-    this.viewing.push(hold);
+    this.viewing.push(this.hold);
   }
 
   msgClose(index: number){
