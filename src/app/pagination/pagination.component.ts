@@ -16,9 +16,18 @@ import { messageViewer } from './messageViewer/messageView.component'
 export class NgbdPagination {
 
   //Message View Toggle
-  viewing: Inform;
+  viewing: Inform[];
 
   msgTog(id: number){
+    var opened = this.viewing.findIndex()
+  }
+
+  msgOpen(id: number){
+
+  }
+
+  msgClose(id: number){
+
   }
 
   //Search and Table Code
@@ -29,7 +38,7 @@ export class NgbdPagination {
 
   pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
 
-    this.viewing = new Inform();
+    this.viewing = [];
     var testp1 = "";
     var testp2 = "";
 
