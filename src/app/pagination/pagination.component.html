@@ -32,13 +32,13 @@
     </div>
   </ng-container>
 
-  <ng-container *ngIf="viewing">
-    <ul>
+  <div *ngIf="viewing" style="max-width: 46.5rem; width: 50%; min-width: 20rem; position: fixed; right: 1rem; top: 8.5rem;">
+    <ul style="list-style-type: none;">
       <li *ngFor="let inform of viewing">
-        <messageViewer [inform]="inform" cdkDrag style="z-index: 7; max-width: 46.5rem; width: 50%; min-width: 20rem; position: fixed; right: 1rem; top: 8.5rem;"></messageViewer>
+        <messageViewer [inform]="inform" cdkDrag style="z-index: 7; position: fixed; right: 1rem; top: 8.5rem;"></messageViewer>
       </li>
     </ul>
-  </ng-container>
+  </div>
 
   <ng-container *ngIf="collectionSize == 0">
     <div class="container" style="width: 100%">

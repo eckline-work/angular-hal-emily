@@ -16,10 +16,11 @@ import { messageViewer } from './messageViewer/messageView.component'
 export class NgbdPagination {
 
   //Message View Toggle
-  viewing: Inform[];
+  viewing: Inform[] = [];
+  noViewed = 0;
 
   msgTog(id: number){
-    if (this.viewing.length == 0) {
+    if (this.noViewed == 0) {
       this.msgOpen(id);
     }
     else {
@@ -33,6 +34,7 @@ export class NgbdPagination {
         this.msgClose(opened);
       }
     }
+    this.noViewed = this.viewing.length;
   }
 
   msgOpen(id: number){
@@ -53,7 +55,8 @@ export class NgbdPagination {
 
   pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
 
-    this.viewing.splice(0, this.viewing.length)
+    this.viewing.splice(0, this.noViewed)
+    this.noViewed = 0;
     var testp1 = "";
     var testp2 = "";
 
