@@ -39,10 +39,10 @@ export class NgbdPagination {
 
   msgOpen(id: number){
     var hold: Inform;
-    hold = (this.items.find(function(element) {
+    hold = this.items.find(function(element) {
       return element.ID == id;
-    }));
-    if (hold.eT.code == ''){
+    });
+    if (hold.eT.code == '') {
       hold.eT = new errorType;
     }
     this.viewing.push(hold);
