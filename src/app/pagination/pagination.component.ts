@@ -44,7 +44,7 @@ export class NgbdPagination {
     this.hold = this.items.find(function(element) {
       return element.ID == id;
     });
-    if (this.hold.eT.code == '') {
+    if (!this.hold.eT.code) {
       this.hold.eT = new errorType;
     }
     this.viewing.push(this.hold);
@@ -116,7 +116,7 @@ export class NgbdPagination {
     for (let i = this.items.length; i > 0; i--){
       this.items[this.items.length-i].ID = i;
     }
-    this.viewing.ID = 0;
+    this.viewing = [];
   }
 
   applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: string, TD: string):any {
