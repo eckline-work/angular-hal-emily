@@ -19,22 +19,6 @@ export class NgbdPagination {
   viewing: Inform;
 
   msgTog(id: number){
-    if(id == this.viewing.ID){
-      this.msgClose();
-    }
-    else {
-      this.msgOpen(id);
-    }
-  }
-
-  msgOpen(id: number) {
-    this.viewing = this.items.find(function(element) {
-      return element.ID == id;
-    });
-  }
-
-  msgClose() {
-    this.viewing = new Inform();
   }
 
   //Search and Table Code
@@ -45,7 +29,7 @@ export class NgbdPagination {
 
   pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
 
-    this.msgClose();
+    this.viewing = new Inform();
     var testp1 = "";
     var testp2 = "";
 

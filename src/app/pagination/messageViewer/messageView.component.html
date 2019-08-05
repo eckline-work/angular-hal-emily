@@ -1,9 +1,9 @@
-<div class="card border-info mb-3" cdkDrag style="z-index: 7; max-width: 46.5rem; width: 50%; min-width: 20rem; height: 39%;">
+<div class="card border-info mb-3">
   <div class="card-header">
     HAL Message Viewer
     <button type="button" class="close float-right" (click)="msgClose()">&times;</button>
   </div>
-  <div class="card-body" style="overflow-y: scroll;">
+  <div class="card-body" style="overflow-y: scroll; height: 39%;">
     <table class="table table-hover">
       <thead>
         <tr class="table-info">
@@ -17,7 +17,9 @@
         </tr>
         <tr class="table-light small">
           <th scope="row">Number/Message:</th>
-          <td><span *ngIf="inform.LogNumber">({{inform.LogNumber}}) </span>{{inform.Message}}<span *ngIf="inform.Message == ''">No message included</span></td>
+          <td>
+            <span *ngIf="inform.LogNumber">({{inform.LogNumber}}) </span><span *ngIf="!inform.LogNumber">(0) </span>{{inform.Message}}<span *ngIf="inform.Message == ''">No message included</span>
+          </td>
         </tr>
         <tr class="table-light small">
           <th scope="row">Process:</th>
