@@ -9,7 +9,7 @@ import {errorType} from '../MockData/type';
   styleUrls: [ '../pagination.component.css' ]
 })
 
-export class messageViewer {
+export class messageViewer implements OnInit {
   @Input() inform: Inform;
 
   constructor() { }

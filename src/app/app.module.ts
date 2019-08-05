@@ -8,10 +8,11 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { AppComponent } from './app.component';
 import { NgbdPagination } from './pagination/pagination.component';
 import { itemFilterPipe } from './pagination/itemFilter.pipe';
+import { messageViewer } from './pagination/messageViewer/messageView.component'
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, NgbModule, DragDropModule, InfiniteScrollModule ],
-  declarations: [ AppComponent, NgbdPagination, itemFilterPipe ],
+  declarations: [ AppComponent, NgbdPagination, itemFilterPipe, messageViewer ],
   exports:      [ AppComponent, NgbdPagination ],
   bootstrap:    [ AppComponent, NgbdPagination ]
 })
