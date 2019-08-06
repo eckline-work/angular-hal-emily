@@ -97,7 +97,7 @@ export class NgbdPagination {
   onScroll() {
     console.log('scrolled');
     const start = this.sum;
-    this.sum += 20;
+    this.sum += 10;
     this.appendItems(start, this.sum);
   }
 
