@@ -19,7 +19,6 @@ export class itemFilterPipe implements PipeTransform {
         items = items.filter(i => i.ProcessName.endsWith(PI));
       }
     }
-
     if (TI){
       if (TS == "Contains") {
         items = items.filter(i => i.TraceInfo.includes(TI));
@@ -31,7 +30,6 @@ export class itemFilterPipe implements PipeTransform {
         items = items.filter(i => i.TraceInfo.endsWith(TI));
       }
     }
-
     if (EI){
       if (ES == "Contains") {
         items = items.filter(i => i.EnvironmentInfo.includes(EI));
@@ -90,6 +88,7 @@ export class itemFilterPipe implements PipeTransform {
     if (Sys){
       items = items.filter(i => i.SourceSystem == Sys);
     }
+
     if (Inc == "Y"){
       items = items.filter(i => i.err == true);
     }
