@@ -20,7 +20,7 @@
       <tbody style="width: 69.375rem; overflow-x: hidden;" infinite-scroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="throttle" [scrollWindow]="false" (scrolled)="onScroll()">
         <tr *ngFor="let i of array;" class="table-light" (click)="msgTog(i.ID)">
           <td style="width: 10rem;">{{i.SourceSystem}}</td>
-          <td style="width: 12rem;" placement="auto" ngbPopover="{{i.Message}}" container="body" triggers="hover focus" ><span *ngIf="i.LogNumber">({{i.LogNumber}}) </span><span *ngIf="!i.LogNumber">(0) </span>{{i.Message | slice:0:30}}<span *ngIf="i.Message.length > 30">...</span><span *ngIf="i.Message == ''">No message included</span></td>
+          <td style="width: 12rem;" placement="auto" ngbPopover="{{i.Message}}" container="body" triggers="hover focus click" ><span *ngIf="i.LogNumber">({{i.LogNumber}}) </span><span *ngIf="!i.LogNumber">(0) </span>{{i.Message | slice:0:30}}<span *ngIf="i.Message.length > 30">...</span><span *ngIf="i.Message == ''">No message included</span></td>
           <td style="width: 12rem;">{{i.ProcessName | slice:0:30}}<span *ngIf="i.ProcessName.length > 30">...</span><span *ngIf="i.ProcessName == ''"> N/A</span></td>
           <td style="width: 12rem;">{{i.TraceInfo | slice:0:30}}<span *ngIf="i.TraceInfo.length > 30">...</span><span *ngIf="i.TraceInfo == ''"> N/A</span></td>
           <td style="width: 9.375rem;">{{i.EnvironmentInfo | slice:0:30}}<span *ngIf="i.EnvironmentInfo.length > 30">...</span></td>
