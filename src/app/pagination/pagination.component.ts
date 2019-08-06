@@ -21,6 +21,10 @@ export class NgbdPagination {
 
   hold: Inform;
 
+  CloseItem($event){
+    this.msgTog($event);
+  }
+
   msgTog(id: number){
     if (this.noViewed == 0) {
       this.msgOpen(id);
