@@ -3,8 +3,7 @@ import {Inform} from '../MockData/data';
 
 @Component({
   selector: 'messageViewer',
-  templateUrl: './messageView.component.html',
-  styleUrls: [ '../pagination.component.css' ]
+  templateUrl: './messageView.component.html'
 })
 
 export class messageViewer implements OnInit {
