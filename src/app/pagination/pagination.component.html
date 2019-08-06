@@ -9,23 +9,27 @@
       <thead>
         <tr class="table-primary">
           <th style="width: 10rem;" scope="col">System</th>
-          <th style="width: 12rem;" scope="col">Number/Message</th>
-          <th style="width: 12rem;" scope="col">Process</th>
-          <th style="width: 12rem;" scope="col">Trace</th>
+          <th style="width: 11rem;" scope="col">Number/Message</th>
+          <th style="width: 11rem;" scope="col">Process</th>
+          <th style="width: 11rem;" scope="col">Trace</th>
           <th style="width: 9.375;" scope="col">Environment</th>
           <th style="width: 8rem;" scope="col">Created&nbsp;Date</th>
-          <th style="width: 6rem;" scope="col">ID</th>
+          <th style="width: 5rem;" scope="col">ID</th>
+          <th style="width: 3rem;" scope="col">Error</th>
+          <th style="width: 1rem;" scope="col"></th>
         </tr>
       </thead>
       <tbody style="width: 69.375rem; overflow-x: hidden;" infinite-scroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="throttle" [scrollWindow]="false" (scrolled)="onScroll()">
         <tr *ngFor="let i of array;" class="table-light" (click)="msgTog(i.ID)">
           <td style="width: 10rem;">{{i.SourceSystem}}</td>
-          <td style="width: 12rem;" placement="auto" ngbPopover="{{i.Message}}" container="body" triggers="hover focus click" ><span *ngIf="i.LogNumber">({{i.LogNumber}}) </span><span *ngIf="!i.LogNumber">(0) </span>{{i.Message | slice:0:30}}<span *ngIf="i.Message.length > 30">...</span><span *ngIf="i.Message == ''">No message included</span></td>
-          <td style="width: 12rem;">{{i.ProcessName | slice:0:30}}<span *ngIf="i.ProcessName.length > 30">...</span><span *ngIf="i.ProcessName == ''"> N/A</span></td>
-          <td style="width: 12rem;">{{i.TraceInfo | slice:0:30}}<span *ngIf="i.TraceInfo.length > 30">...</span><span *ngIf="i.TraceInfo == ''"> N/A</span></td>
+          <td style="width: 11rem;" placement="auto" ngbPopover="{{i.Message}}" container="body" triggers="hover focus click" ><span *ngIf="i.LogNumber">({{i.LogNumber}}) </span><span *ngIf="!i.LogNumber">(0) </span>{{i.Message | slice:0:30}}<span *ngIf="i.Message.length > 30">...</span><span *ngIf="i.Message == ''">No message included</span></td>
+          <td style="width: 11rem;">{{i.ProcessName | slice:0:30}}<span *ngIf="i.ProcessName.length > 30">...</span><span *ngIf="i.ProcessName == ''"> N/A</span></td>
+          <td style="width: 11rem;">{{i.TraceInfo | slice:0:30}}<span *ngIf="i.TraceInfo.length > 30">...</span><span *ngIf="i.TraceInfo == ''"> N/A</span></td>
           <td style="width: 9.375rem;">{{i.EnvironmentInfo | slice:0:30}}<span *ngIf="i.EnvironmentInfo.length > 30">...</span></td>
           <td style="text-align: center; width: 8rem;">{{i.StartDate | date :'yyyy-MM-dd'}}</td>
-          <td style="text-align: center; width: 6rem;" class="text-primary">{{i.ID}}</td>
+          <td style="text-align: center; width: 5rem;" class="text-primary">{{i.ID}}</td>
+          <td style="text-align: center; width: 3rem;"><span *ngIf="i.err">&#10003;</span></td>
+          <td style="width: 1rem;"></td>
         </tr>
       </tbody>
     </table>
