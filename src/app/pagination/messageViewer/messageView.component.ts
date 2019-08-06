@@ -15,8 +15,8 @@ export class messageViewer implements OnInit {
   ngOnInit() {
   }
 
-  msgClose() {
-    this.closeEvent.emit(this.inform.ID);
+  msgClose(id: number) {
+    this.closeEvent.emit(id);
   }
 
 }
