@@ -5,7 +5,6 @@ import {NgbDate, NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 @Pipe({name: 'itemFilter'})
 
 export class itemFilterPipe implements PipeTransform {
-
   transform(items: Inform[], PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: string, TD: string): Inform[] {
 
     if (PI){
