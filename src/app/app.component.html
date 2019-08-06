@@ -139,13 +139,10 @@
               I'm working to fix that.
             </p>
             <p class="text-primary" style="padding-right: 2rem; padding-left: 3rem;">
-              Also implemented hover-over messages for the table rows.
+              Hover-over messages for table rows working.
             </p>
-            <p class="text-success" style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
+            <p class="text-success" style="padding-right: 2rem; padding-left: 2rem;">
               <b>Date Filter works.</b>
-            </p>
-            <p style="padding-right: 2rem; padding-left: 3rem;">
-              Fun story, I figured out how to fix it at 1 am last night while eating marshmallows.
             </p>
             <p class="text-dark" style="padding-right: 2rem; padding-left: 2rem; margin-bottom: 2px;">
               Scrollable table is implemented.
@@ -169,10 +166,11 @@
 <ng-template #tipContent>Like, an absolute <i>TON</i></ng-template>
 
 <ng-container *ngIf="showAct">
-  <div class="d-flex flex-wrap justify-content-center">
-      <table class="table table-hover">
+  <div class="container">
+    <div class="container" style="overflow-x: scroll; padding: 0;">
+      <table class="table table-hover" style="width: 100%; text-align: center; margin: 0;">
         <thead>
-          <tr class="table-primary small" style="text-align: center;">
+          <tr class="table-primary small">
             <th scope="col">Code</th>
             <th scope="col">Description</th>
             <th scope="col">Email</th>
@@ -395,12 +393,13 @@
             <td>&nbsp;</td>
           </tr>
         </tbody>
-      </table> 
+      </table>
+    </div>
   </div>
   <div class="container" style="text-align: right;">
     <br>
     <button type="button" class="btn btn-link">
-      <a href="#nav">Return to Top</a>
+      <a href="#">Return to Top</a>
     </button>
   </div>
 </ng-container>
