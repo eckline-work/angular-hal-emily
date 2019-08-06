@@ -32,12 +32,13 @@
     </div>
   </ng-container>
 
-  <div *ngIf="viewing" style="position: fixed; right: 1rem; top: 8.5rem; max-width: 46.5rem; width: 50%; min-width: 20rem;">
+  <div style="position: fixed; right: 1rem; top: 9.3rem; max-width: 46.5rem; width: 50%; min-width: 20rem;">
+    <p style="text-align: center">Items Opened: {{viewing.length}} <span *ngIf="viewing.length > 0">&nbsp; &nbsp;<button class="btn btn-sm btn-dark" (click)="allClose()">Close All</button></span></p>
     <ul style="list-style-type: none;">
-      <li *ngFor="let x of viewing" style="height: 3rem;">
+      <li *ngFor="let x of viewing">
         <messageViewer
           [inform]="x" cdkDrag
-          style="z-index: 7; position: fixed; right: 1rem; max-width: 46.5rem; width: 50%; min-width: 20rem;"
+          style="z-index: 7; position: fixed; right: 1rem; top: 12rem; max-width: 46.5rem; width: 50%; min-width: 20rem;"
           (closeEvent)="CloseItem($event)">
         </messageViewer>
       </li>

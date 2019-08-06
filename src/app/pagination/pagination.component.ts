@@ -58,6 +58,11 @@ export class NgbdPagination {
     this.viewing.splice(index, 1);
   }
 
+  allClose(){
+    this.viewing.splice(0, this.noViewed)
+    this.noViewed = 0;
+  }
+
   //Search and Table Code
   items = MockData;
   toShow = this.items;
@@ -66,8 +71,7 @@ export class NgbdPagination {
 
   pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
 
-    this.viewing.splice(0, this.noViewed)
-    this.noViewed = 0;
+    this.allClose();
     var testp1 = "";
     var testp2 = "";
 
