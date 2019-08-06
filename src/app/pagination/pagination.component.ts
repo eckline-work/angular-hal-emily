@@ -44,7 +44,7 @@ export class NgbdPagination {
     this.hold = this.items.find(function(element) {
       return element.ID == id;
     });
-    if (this.hold.eT.code == '') {
+    if (!this.hold.eT) {
       this.hold.eT = new errorType;
     }
     this.viewing.push(this.hold);
