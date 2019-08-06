@@ -1,0 +1,69 @@
+<div class="card border-info mb-3">
+  <div class="card-header">
+    HAL Message Viewer
+    <button type="button" class="close float-right" (click)="msgClose(inform.ID)">&times;</button>
+  </div>
+  <div class="card-body" style="overflow: scroll; height: 25rem;">
+    <table class="table table-hover" style="min-width: 25rem;">
+      <thead>
+        <tr class="table-info">
+          <th colspan="2" style="text-align: center;">Data for item ID: {{inform.ID}}</th>
+        </tr>
+      </thead>
+      <tbody class="mvt">
+        <tr class="table-light small">
+          <th scope="row">System:</th>
+          <td>{{inform.SourceSystem}}</td>
+        </tr>
+        <tr class="table-light small">
+          <th scope="row">Number/Message:</th>
+          <td>
+            <span *ngIf="inform.LogNumber">({{inform.LogNumber}}) </span><span *ngIf="!inform.LogNumber">(0) </span>{{inform.Message}}<span *ngIf="inform.Message == ''">No message included</span>
+          </td>
+        </tr>
+        <tr class="table-light small">
+          <th scope="row">Process:</th>
+          <td>{{inform.ProcessName}}<span *ngIf="inform.ProcessName == ''"> N/A</span></td>
+        </tr>
+        <tr class="table-light small">
+          <th scope="row">Trace:</th>
+          <td>{{inform.TraceInfo}}<span *ngIf="inform.TraceInfo == ''"> N/A</span></td>
+        </tr>
+        <tr class="table-light small">
+          <th scope="row">Environment Info:</th>
+          <td>{{inform.EnvironmentInfo}}</td>
+        </tr>
+        <tr class="table-light small">
+          <th scope="row">Created:</th>
+          <td>{{inform.StartDate | date :'yyyy-MM-dd'}}</td>
+      </tr>
+      <tr class="table-light small">
+        <th scope="row">Processed:</th>
+        <td>{{inform.EndDate | date :'yyyy-MM-dd'}}</td>
+        </tr>
+      </tbody>  
+    </table>
+    <ng-container *ngIf="inform.eT.code">
+      <table class="table table-hover" style="text-align: center; min-width: 25rem;">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col">Action</th>
+            <th scope="col">Email</th>
+            <th scope="col">Pager No.</th>
+          </tr>
+        </thead>
+        <tbody class="mvt">
+          <tr class="table-light small">
+            <td>
+              {{inform.eT.code}}<br>
+              {{inform.eT.desc}}
+            </td>
+            <td>{{inform.eT.email}}</td>
+            <td>{{inform.eT.pager}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-container>
+  </div>
+  <div class="card-footer"></div>
+</div>

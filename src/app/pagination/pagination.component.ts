@@ -5,6 +5,7 @@ import {errorType} from './MockData/type';
 import {NgbDate, NgbDateStruct, NgbDateAdapter, NgbDateNativeAdapter, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 
 import {itemFilterPipe} from './itemFilter.pipe';
+import { messageViewer } from './messageViewer/messageView.component'
 
 @Component({
   selector: 'ngbd-pagination',
@@ -15,54 +16,42 @@ import {itemFilterPipe} from './itemFilter.pipe';
 export class NgbdPagination {
 
   //Message View Toggle
-  idPicked = -7;
-  idPicked2 = -7;
+  viewing: Inform[] = [];
+  noViewed = 0;
 
-  found: Inform;
-  found2: Inform;
-
-  clkCt: boolean = false;
+  hold: Inform;
 
   msgTog(id: number){
-    if (id == this.idPicked || id == this.idPicked2){
-      this.msgClose(id);
-    }
-    else {
+    if (this.noViewed == 0) {
       this.msgOpen(id);
     }
-  }
-
-  msgOpen(id: number) {
-    if (this.clkCt){
-      this.found2 = this.items.find(function(element) {
+    else {
+      var opened = this.viewing.findIndex(function(element) {
         return element.ID == id;
       });
-      if (!this.found2.eT) {
-        this.found2.eT = new errorType;
+      if (opened == -1) {
+        this.msgOpen(id);
       }
-      this.idPicked2 = id;
-    }
-    else {
-      this.found = this.items.find(function(element) {
-        return element.ID == id;
-      });
-      if (!this.found.eT) {
-        this.found.eT = new errorType;
+      else {
+        this.msgClose(opened);
       }
-      this.idPicked = id;
     }
-    this.clkCt = !this.clkCt;
+    this.noViewed = this.viewing.length;
   }
 
-  msgClose(id: number) {
-    if (id == this.idPicked){
-      this.idPicked = -7;
-      this.clkCt = false;
+  msgOpen(id: number){
+    this.hold = new Inform;
+    this.hold = this.items.find(function(element) {
+      return element.ID == id;
+    });
+    if (!this.hold.eT) {
+      this.hold.eT = new errorType;
     }
-    else {
-      this.idPicked2 = -7;
-      this.clkCt = true;
-    }
+    this.viewing.push(this.hold);
+  }
+
+  msgClose(index: number){
+    this.viewing.splice(index, 1);
   }
 
   //Search and Table Code
@@ -73,6 +62,8 @@ export class NgbdPagination {
 
   pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
 
+    this.viewing.splice(0, this.noViewed)
+    this.noViewed = 0;
     var testp1 = "";
     var testp2 = "";
 
@@ -82,9 +73,6 @@ export class NgbdPagination {
     if (c2) {
        testp2 = c2.toString();
     }
-
-    this.idPicked = -7;
-    this.idPicked2 = -7;
 
     this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, testp1, testp2 )
 
@@ -128,6 +116,7 @@ export class NgbdPagination {
     for (let i = this.items.length; i > 0; i--){
       this.items[this.items.length-i].ID = i;
     }
+    this.viewing = [];
   }
 
   applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: string, TD: string):any {
