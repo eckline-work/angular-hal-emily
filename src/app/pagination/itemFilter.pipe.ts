@@ -98,6 +98,5 @@ export class itemFilterPipe implements PipeTransform {
 
     return items;
 
-  }
-  
+  } 
 }
