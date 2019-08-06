@@ -90,14 +90,13 @@ export class NgbdPagination {
 
   //scroll Code
   array = [];
-  sum = 20;
+  sum = 30;
   throttle = 80;
   scrollDistance = 1;
 
   onScroll() {
-    console.log('scrolled');
     const start = this.sum;
-    this.sum += 10;
+    this.sum += Math.floor(this.sum/3);
     this.appendItems(start, this.sum);
   }
 
