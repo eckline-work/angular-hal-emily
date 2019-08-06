@@ -15,7 +15,7 @@ thead, tbody tr {
 }
 
 td {
-  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 .mvt {
