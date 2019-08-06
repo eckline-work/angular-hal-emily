@@ -90,8 +90,8 @@ export class itemFilterPipe implements PipeTransform {
     if (Sys){
       items = items.filter(i => i.SourceSystem == Sys);
     }
-    if (Inc){
-      items = items.filter(i => i.err == Inc);
+    if (Inc == "Y"){
+      items = items.filter(i => i.err == true);
     }
 
     return items;

@@ -10,7 +10,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Unknown',
   StartDate: '2019-08-05 GMT-0700',
   EndDate: '2019-08-05 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'NOVA_NOTI',
     desc: 'Nova Notification'
@@ -25,7 +25,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Unknown',
   StartDate: '2019-08-05 GMT-0700',
   EndDate: '2019-08-05 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Nova',
@@ -35,7 +35,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-08-05 GMT-0700',
   EndDate: '2019-08-05 GMT-0700',
-  err: 'Y',
+  err: true,
   eT: {
     code: 'NOVA_ERROR',
     desc: 'Nova Errors',
@@ -50,7 +50,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV3',
   StartDate: '2019-08-04 GMT-0700',
   EndDate: '2019-08-04 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'INFO',
     desc: 'Informational'
@@ -64,7 +64,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Work Computer',
   StartDate: '2019-08-04 GMT-0700',
   EndDate: '2019-08-04 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'EDoc Server',
@@ -74,7 +74,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV3',
   StartDate: '2019-08-04 GMT-0700',
   EndDate: '2019-08-04 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Data Warehouse',
@@ -84,7 +84,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV',
   StartDate: '2019-08-03 GMT-0700',
   EndDate: '2019-08-03 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Data Warehouse',
@@ -94,7 +94,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV',
   StartDate: '2019-08-03 GMT-0700',
   EndDate: '2019-08-03 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Rate Load Database',
@@ -104,7 +104,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-08-02 GMT-0700',
   EndDate: '2019-08-03 GMT-0700',
-  err: 'Y',
+  err: true,
   eT: {
     code: 'DB_ERROR',
     desc: 'Database Error'
@@ -118,7 +118,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Work Computer',
   StartDate: '2019-08-02 GMT-0700',
   EndDate: '2019-08-02 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'INFO',
     desc: 'Informational'
@@ -132,7 +132,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV',
   StartDate: '2019-08-02 GMT-0700',
   EndDate: '2019-08-02 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'INFO',
     desc: 'Informational'
@@ -147,7 +147,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Dev_Server',
   StartDate: '2019-08-02 GMT-0700',
   EndDate: '2019-08-02 GMT-0700',
-  err: 'Y',
+  err: true,
   eT: {
     code: 'DB_ERROR',
     desc: 'Database Error'
@@ -161,7 +161,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV',
   StartDate: '2019-08-01 GMT-0700',
   EndDate: '2019-08-01 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'EDoc Server',
@@ -171,7 +171,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV2',
   StartDate: '2019-08-01 GMT-0700',
   EndDate: '2019-08-01 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Vista',
@@ -182,7 +182,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV2',
   StartDate: '2019-08-01 GMT-0700',
   EndDate: '2019-08-01 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Data Warehouse',
@@ -192,7 +192,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV2',
   StartDate: '2019-08-01 GMT-0700',
   EndDate: '2019-08-01 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Data Warehouse',
@@ -202,7 +202,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV',
   StartDate: '2019-08-01 GMT-0700',
   EndDate: '2019-08-01 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'INFO',
     desc: 'Informational'
@@ -216,7 +216,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-07-31 GMT-0700',
   EndDate: '2019-07-31 GMT-0700',
-  err: 'Y',
+  err: true,
   eT: {
     code: 'DB_ERROR',
     desc: 'Database Error'
@@ -231,7 +231,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Dev',
   StartDate: '2019-07-29 GMT-0700',
   EndDate: '2019-07-29 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Star',
@@ -241,7 +241,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Dev',
   StartDate: '2019-07-29 GMT-0700',
   EndDate: '2019-07-29 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Online Application',
@@ -251,7 +251,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'NPTES520',
   StartDate: '2019-07-27 GMT-0700',
   EndDate: '2019-07-27 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'NOVA_NOTI',
     desc: 'Nova Notification'
@@ -266,7 +266,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-07-26 GMT-0700',
   EndDate: '2019-07-26 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Data Warehouse',
@@ -276,7 +276,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-07-25 GMT-0700',
   EndDate: '2019-07-25 GMT-0700',
-  err: 'Y',
+  err: true,
   eT: {
     code: 'DB_ERROR',
     desc: 'Database Error'
@@ -290,7 +290,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-07-25 GMT-0700',
   EndDate: '2019-07-25 GMT-0700',
-  err: 'Y',
+  err: true,
   eT: {
     code: 'DB_ERROR',
     desc: 'Database Error'
@@ -305,7 +305,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV',
   StartDate: '2019-07-22 GMT-0700',
   EndDate: '2019-07-23 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'NOVA_NOTI',
     desc: 'Nova Notification'
@@ -319,7 +319,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'ENV2',
   StartDate: '2019-07-20 GMT-0700',
   EndDate: '2019-07-20 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'INFO',
     desc: 'Informational'
@@ -334,7 +334,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-07-16 GMT-0700',
   EndDate: '2019-07-16 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'DBA',
@@ -344,7 +344,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'ENV',
   StartDate: '2019-07-14 GMT-0700',
   EndDate: '2019-07-15 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Nova',
@@ -354,7 +354,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-07-08 GMT-0700',
   EndDate: '2019-07-08 GMT-0700',
-  err: 'Y',
+  err: true,
   eT: {
     code: 'NOVA_ERROR',
     desc: 'Nova Errors',
@@ -369,7 +369,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'ENV',
   StartDate: '2019-06-30 GMT-0700',
   EndDate: '2019-06-30 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Nova',
@@ -379,7 +379,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-06-25 GMT-0700',
   EndDate: '2019-06-25 GMT-0700',
-  err: 'Y',
+  err: true,
   eT: {
     code: 'NOVA_ERROR',
     desc: 'Nova Errors',
@@ -395,7 +395,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'NPTOTHER',
   StartDate: '2019-06-14 GMT-0700',
   EndDate: '2019-06-14 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'INFO',
     desc: 'Informational'
@@ -409,7 +409,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TESTENV',
   StartDate: '2019-06-14 GMT-0700',
   EndDate: '2019-06-14 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Nova',
@@ -419,7 +419,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'NPTOTHER',
   StartDate: '2019-06-14 GMT-0700',
   EndDate: '2019-06-14 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'INFO',
     desc: 'Informational'
@@ -433,7 +433,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'NPTES520',
   StartDate: '2019-06-12 GMT-0700',
   EndDate: '2019-06-12 GMT-0700',
-  err: 'Y',
+  err: true,
   eT: {
     code: 'NOVA_ERROR',
     desc: 'Nova Errors',
@@ -448,7 +448,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'NPTES520',
   StartDate: '2019-06-12 GMT-0700',
   EndDate: '2019-06-12 GMT-0700',
-  err: 'Y',
+  err: true,
   eT: {
     code: 'NOVA_ERROR',
     desc: 'Nova Errors',
@@ -463,7 +463,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'NPTES520',
   StartDate: '2019-06-10 GMT-0700',
   EndDate: '2019-06-10 GMT-0700',
-  err: 'Y',
+  err: true,
   eT: {
     code: 'NOVA_ERROR',
     desc: 'Nova Errors',
@@ -478,7 +478,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'NPTES520',
   StartDate: '2019-06-09 GMT-0700',
   EndDate: '2019-06-09 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'NOVA_NOTI',
     desc: 'Nova Notification'
@@ -492,7 +492,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Work Computer',
   StartDate: '2019-06-04 GMT-0700',
   EndDate: '2019-06-04 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Online Application',
@@ -502,7 +502,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'NPTES520',
   StartDate: '2019-06-04 GMT-0700',
   EndDate: '2019-06-04 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'NOVA_NOTI',
     desc: 'Nova Notification'
@@ -516,7 +516,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Work Computer',
   StartDate: '2019-06-02 GMT-0700',
   EndDate: '2019-06-02 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'DBA',
@@ -526,7 +526,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'ENV',
   StartDate: '2019-06-01 GMT-0700',
   EndDate: '2019-06-01 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'Nova Informatica',
@@ -537,7 +537,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'TEST_ENV',
   StartDate: '2019-05-22 GMT-0700',
   EndDate: '2019-05-22 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'NOVA_NOTI',
     desc: 'Nova Notification'
@@ -551,7 +551,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'ENV2',
   StartDate: '2019-05-20 GMT-0700',
   EndDate: '2019-05-20 GMT-0700',
-  err: 'N',
+  err: false,
   eT: {
     code: 'INFO',
     desc: 'Informational'
@@ -565,7 +565,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Work Computer',
   StartDate: '2019-05-12 GMT-0700',
   EndDate: '2019-05-12 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'DBA',
@@ -575,7 +575,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'ENV2',
   StartDate: '2019-05-09 GMT-0700',
   EndDate: '2019-05-09 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'DBA',
@@ -585,7 +585,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Work Computer 2',
   StartDate: '2019-05-02 GMT-0700',
   EndDate: '2019-05-02 GMT-0700',
-  err: 'N'
+  err: false
   },
 
   {SourceSystem: 'DBA',
@@ -595,6 +595,6 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   EnvironmentInfo: 'Test_ENV',
   StartDate: '2019-05-01 GMT-0700',
   EndDate: '2019-05-01 GMT-0700',
-  err: 'N'
+  err: false
   },
 ]

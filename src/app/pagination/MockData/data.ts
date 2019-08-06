@@ -10,6 +10,6 @@ export class Inform {
   StartDate: Date;
   EndDate: Date;
   ID: number;
-  err: string;
+  err: boolean;
   eT: errorType;
 }
