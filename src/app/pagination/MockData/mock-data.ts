@@ -326,7 +326,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
     }
   },
 
-  {SourceSystem: 'Vista',
+  {SourceSystem: 'Security',
   LogNumber: 1,
   Message: "Integer posuere erat a ante. Integer posuere erat a ante. Integer posuere erat a ante. Integer posuere erat a ante.",
   ProcessName: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor.',
@@ -387,7 +387,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
     }
   },
 
-  {SourceSystem: 'Nova',
+  {SourceSystem: 'Security',
   LogNumber: 5,
   Message: "long witty coment to act as a placeholder so I can try to debug this stupid thing. Apparently the formatting looks wonky unless I make this one even longer, so more random typing it is. I don't actually know what to put here, this is just filler after all... Ok, this is long enough to make the formatting behave itself, so that's good. I should probably stop now. Ok, actually stoping in 3, 2, 1",
   ProcessName: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non quam venenatis vestibulum.',
