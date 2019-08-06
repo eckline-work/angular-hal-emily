@@ -93,6 +93,9 @@ export class itemFilterPipe implements PipeTransform {
     if (Inc == "Y"){
       items = items.filter(i => i.err == true);
     }
+    else if (Inc == "N"){
+      items = items.filter(i => i.err == false);
+    }
 
     return items;
 
