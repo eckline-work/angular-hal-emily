@@ -2,6 +2,115 @@ import {Inform} from './data';
 
 export const MockData: Inform[] = [ //What's your ****ing problem?!
 
+  {SourceSystem: 'Nova Informatica',
+  LogNumber: 24,
+  Message: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
+  ProcessName: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
+  TraceInfo: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  EnvironmentInfo: 'Unknown',
+  StartDate: '2019-08-05 GMT-0700',
+  EndDate: '2019-08-05 GMT-0700',
+  err: 'N',
+  eT: {
+    code: 'NOVA_NOTI',
+    desc: 'Nova Notification'
+    }
+  },
+
+  {SourceSystem: 'Nova Informatica',
+  LogNumber: 23,
+  Message: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
+  ProcessName: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
+  TraceInfo: "",
+  EnvironmentInfo: 'Unknown',
+  StartDate: '2019-08-05 GMT-0700',
+  EndDate: '2019-08-05 GMT-0700',
+  err: 'N'
+  },
+
+  {SourceSystem: 'Nova',
+  Message: "Integer posuere erat a ante. Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+  ProcessName: 'Fusce porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor. Something Integer',
+  TraceInfo: 'For sem malesuada magna, vehicula ut id elit.',
+  EnvironmentInfo: 'TESTENV',
+  StartDate: '2019-08-05 GMT-0700',
+  EndDate: '2019-08-05 GMT-0700',
+  err: 'Y',
+  eT: {
+    code: 'NOVA_ERROR',
+    desc: 'Nova Errors',
+    email: 'name@email.com'
+    }
+  },
+
+  {SourceSystem: 'EDoc Server',
+  Message: "even more test items for testing because i want to show the infinite scroll works",
+  ProcessName: "legit just typing things",
+  TraceInfo: '',
+  EnvironmentInfo: 'TEST_ENV3',
+  StartDate: '2019-08-04 GMT-0700',
+  EndDate: '2019-08-04 GMT-0700',
+  err: 'N',
+  eT: {
+    code: 'INFO',
+    desc: 'Informational'
+    }
+  },
+
+  {SourceSystem: 'Unicenter',
+  Message: "On the bright side, I fixed the table formatting.",
+  ProcessName: "something about how something be done darn did",
+  TraceInfo: 'place/location/file/innerfile/itemname.doctype',
+  EnvironmentInfo: 'Work Computer',
+  StartDate: '2019-08-04 GMT-0700',
+  EndDate: '2019-08-04 GMT-0700',
+  err: 'N'
+  },
+
+  {SourceSystem: 'EDoc Server',
+  Message: "even more test items for testing because i want to show the infinite scroll works",
+  ProcessName: "legit just typing things",
+  TraceInfo: '',
+  EnvironmentInfo: 'TEST_ENV3',
+  StartDate: '2019-08-04 GMT-0700',
+  EndDate: '2019-08-04 GMT-0700',
+  err: 'N'
+  },
+
+  {SourceSystem: 'Data Warehouse',
+  Message: "even more test items for testing because i want to show the infinite scroll works",
+  ProcessName: "legit just typing things",
+  TraceInfo: '',
+  EnvironmentInfo: 'TEST_ENV',
+  StartDate: '2019-08-03 GMT-0700',
+  EndDate: '2019-08-03 GMT-0700',
+  err: 'N'
+  },
+
+  {SourceSystem: 'Data Warehouse',
+  Message: "even more test items for testing because i want to show the infinite scroll works",
+  ProcessName: "legit just typing things",
+  TraceInfo: '',
+  EnvironmentInfo: 'TEST_ENV',
+  StartDate: '2019-08-03 GMT-0700',
+  EndDate: '2019-08-03 GMT-0700',
+  err: 'N'
+  },
+
+  {SourceSystem: 'Rate Load Database',
+  Message: "Integer posuere erat a ante. Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+  ProcessName: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor. Something Integer',
+  TraceInfo: 'For sem malesuada magna, vehicula ut id elit.',
+  EnvironmentInfo: 'TESTENV',
+  StartDate: '2019-08-02 GMT-0700',
+  EndDate: '2019-08-03 GMT-0700',
+  err: 'Y',
+  eT: {
+    code: 'DB_ERROR',
+    desc: 'Database Error'
+    }
+  },
+
   {SourceSystem: 'Unicenter',
   Message: "On the bright side, I fixed the table formatting.",
   ProcessName: "something about how something be done darn did",
@@ -174,6 +283,20 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
     }
   },
 
+  {SourceSystem: 'Rate Load Database',
+  Message: "Integer posuere erat a ante. Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+  ProcessName: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor. Something Integer',
+  TraceInfo: 'For sem malesuada magna, vehicula ut id elit.',
+  EnvironmentInfo: 'TESTENV',
+  StartDate: '2019-07-25 GMT-0700',
+  EndDate: '2019-07-25 GMT-0700',
+  err: 'Y',
+  eT: {
+    code: 'DB_ERROR',
+    desc: 'Database Error'
+    }
+  },
+
   {SourceSystem: 'Nova Informatica',
   LogNumber: 22,
   Message: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
@@ -284,8 +407,8 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   ProcessName: 'Vivamus porta sem malesuada magna mollis lacus vel sagittis augue laoreet dolor auctor.',
   TraceInfo: 'For sem malesuada magna, vehicula ut id elit.',
   EnvironmentInfo: 'TESTENV',
-  StartDate: '2019-07-11 GMT-0700',
-  EndDate: '2019-07-12 GMT-0700',
+  StartDate: '2019-06-14 GMT-0700',
+  EndDate: '2019-06-14 GMT-0700',
   err: 'N'
   },
 
@@ -318,6 +441,36 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
     }
   },
 
+  {SourceSystem: 'Nova',
+  Message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh. Nullam id dolor id nibh ultricies vehicula ut id elit. Pellentesque ornare sem lacinia quam venenatis vestibulum.',
+  ProcessName: 'Etiam porta sem malesuada magna mollis euismod.',
+  TraceInfo: '3... 2... 1...',
+  EnvironmentInfo: 'NPTES520',
+  StartDate: '2019-06-12 GMT-0700',
+  EndDate: '2019-06-12 GMT-0700',
+  err: 'Y',
+  eT: {
+    code: 'NOVA_ERROR',
+    desc: 'Nova Errors',
+    email: 'name@email.com'
+    }
+  },
+
+  {SourceSystem: 'Nova',
+  Message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh. Nullam id dolor id nibh ultricies vehicula ut id elit. Pellentesque ornare sem lacinia quam venenatis vestibulum.',
+  ProcessName: 'Etiam porta sem malesuada magna mollis euismod.',
+  TraceInfo: '3... 2... 1...',
+  EnvironmentInfo: 'NPTES520',
+  StartDate: '2019-06-10 GMT-0700',
+  EndDate: '2019-06-10 GMT-0700',
+  err: 'Y',
+  eT: {
+    code: 'NOVA_ERROR',
+    desc: 'Nova Errors',
+    email: 'name@email.com'
+    }
+  },
+
   {SourceSystem: 'Online Application',
   Message: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
   ProcessName: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
@@ -330,5 +483,118 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
     code: 'NOVA_NOTI',
     desc: 'Nova Notification'
     }
-  }
+  },
+
+  {SourceSystem: 'DBA',
+  Message: "",
+  ProcessName: '',
+  TraceInfo: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
+  EnvironmentInfo: 'Work Computer',
+  StartDate: '2019-06-04 GMT-0700',
+  EndDate: '2019-06-04 GMT-0700',
+  err: 'N'
+  },
+
+  {SourceSystem: 'Online Application',
+  Message: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
+  ProcessName: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
+  TraceInfo: "asklajoif gjneircv hgpds hgviud jhsirea kehjrfiuehrs bgfidrghiug shfidrs buisf hfviuyrg hsgbuifa kalfg hid",
+  EnvironmentInfo: 'NPTES520',
+  StartDate: '2019-06-04 GMT-0700',
+  EndDate: '2019-06-04 GMT-0700',
+  err: 'N',
+  eT: {
+    code: 'NOVA_NOTI',
+    desc: 'Nova Notification'
+    }
+  },
+
+  {SourceSystem: 'DBA',
+  Message: "",
+  ProcessName: '',
+  TraceInfo: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
+  EnvironmentInfo: 'Work Computer',
+  StartDate: '2019-06-02 GMT-0700',
+  EndDate: '2019-06-02 GMT-0700',
+  err: 'N'
+  },
+
+  {SourceSystem: 'DBA',
+  Message: "Pellentesque ornare sem lacinia quam venenatis vestibulum. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Apparently the formatting looks wonky unless I make this one even longer, tortor mauris nibh. This has been a long (not very) witty coment",
+  ProcessName: 'Vivamus porta duis mollis, quam vel sagittis augue laoreet dolor auctor.',
+  TraceInfo: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
+  EnvironmentInfo: 'ENV',
+  StartDate: '2019-06-01 GMT-0700',
+  EndDate: '2019-06-01 GMT-0700',
+  err: 'N'
+  },
+
+  {SourceSystem: 'Nova Informatica',
+  LogNumber: 22,
+  Message: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
+  ProcessName: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
+  TraceInfo: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  EnvironmentInfo: 'TEST_ENV',
+  StartDate: '2019-05-22 GMT-0700',
+  EndDate: '2019-05-22 GMT-0700',
+  err: 'N',
+  eT: {
+    code: 'NOVA_NOTI',
+    desc: 'Nova Notification'
+    }
+  },
+
+  {SourceSystem: 'DBA',
+  Message: "Vivamus pellentesque ornare sem lacinia quam venenatis vestibulum. Nesciunt tofu stumptown aliqua,. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Cosby sweater eu tellus ac cursus commodo, tortor mauris boop. This has been a long (not very) witty coment",
+  ProcessName: 'Vivamus lacus vel sagittis augue laoreet dolor auctor, tortor mauris nibh.',
+  TraceInfo: 'For sem malesuada magna, vehicula ut id elit.',
+  EnvironmentInfo: 'ENV2',
+  StartDate: '2019-05-20 GMT-0700',
+  EndDate: '2019-05-20 GMT-0700',
+  err: 'N',
+  eT: {
+    code: 'INFO',
+    desc: 'Informational'
+    }
+  },
+
+  {SourceSystem: 'DBA',
+  Message: "",
+  ProcessName: '',
+  TraceInfo: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
+  EnvironmentInfo: 'Work Computer',
+  StartDate: '2019-05-12 GMT-0700',
+  EndDate: '2019-05-12 GMT-0700',
+  err: 'N'
+  },
+
+  {SourceSystem: 'DBA',
+  Message: "Pellentesque ornare sem lacinia quam venenatis vestibulum. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Apparently the formatting looks wonky unless I make this one even longer, tortor mauris nibh. This has been a long (not very) witty coment",
+  ProcessName: '',
+  TraceInfo: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
+  EnvironmentInfo: 'ENV2',
+  StartDate: '2019-05-09 GMT-0700',
+  EndDate: '2019-05-09 GMT-0700',
+  err: 'N'
+  },
+
+  {SourceSystem: 'DBA',
+  Message: "",
+  ProcessName: '',
+  TraceInfo: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
+  EnvironmentInfo: 'Work Computer 2',
+  StartDate: '2019-05-02 GMT-0700',
+  EndDate: '2019-05-02 GMT-0700',
+  err: 'N'
+  },
+
+  {SourceSystem: 'DBA',
+  Message: "Pellentesque ornare sem lacinia quam venenatis vestibulum. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Apparently the formatting looks wonky unless I make this one even longer, tortor mauris nibh. This has been a long (not very) witty coment",
+  ProcessName: 'Vivamus porta duis mollis, quam vel sagittis augue laoreet dolor auctor.',
+  TraceInfo: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
+  EnvironmentInfo: 'Test_ENV',
+  StartDate: '2019-05-01 GMT-0700',
+  EndDate: '2019-05-01 GMT-0700',
+  err: 'N'
+  },
 ]
