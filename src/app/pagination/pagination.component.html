@@ -34,9 +34,9 @@
     </div>
   </ng-container>
 
-  <div style="position: fixed; right: 1rem; top: 8.4rem; max-width: 46.5rem; width: 50%; min-width: 20rem;">
-    <p *ngIf="viewing.length > 0" style="text-align: center;">
-      Messages Open: {{viewing.length}}<br><button class="btn btn-sm btn-dark" (click)="allClose()">Close All Messages</button>
+  <div style="position: fixed; right: 1rem; top: 9.3rem; max-width: 46.5rem; width: 50%; min-width: 20rem;">
+    <p style="text-align: center;">
+      Messages Open: {{viewing.length}} &nbsp; <button class="btn btn-sm btn-dark" (click)="allClose()">Close All</button>
     </p>
     <ul style="list-style-type: none;">
       <li *ngFor="let x of viewing">
