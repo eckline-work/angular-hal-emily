@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgbModule, NgbDate, NgbDateStruct, NgbDateAdapter, NgbDateNativeAdapter } from '@ng-bootstrap/ng-bootstrap';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { NgbdPagination } from './pagination/pagination.component';
@@ -11,7 +12,7 @@ import { itemFilterPipe } from './pagination/itemFilter.pipe';
 import { messageViewer } from './pagination/messageViewer/messageView.component'
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, NgbModule, DragDropModule, InfiniteScrollModule ],
+  imports:      [ BrowserModule, FormsModule, NgbModule, DragDropModule, InfiniteScrollModule, FlexLayoutModule ],
   declarations: [ AppComponent, NgbdPagination, itemFilterPipe, messageViewer ],
   exports:      [ AppComponent, NgbdPagination ],
   bootstrap:    [ AppComponent, NgbdPagination ]
