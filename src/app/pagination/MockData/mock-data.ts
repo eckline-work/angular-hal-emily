@@ -3,6 +3,81 @@ import {Inform} from './data';
 export const MockData: Inform[] = [ //What's your ****ing problem?!
 
   {SourceSystem: 'Nova Informatica',
+  LogNumber: 29,
+  Message: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
+  ProcessName: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
+  TraceInfo: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  EnvironmentInfo: 'Unknown',
+  StartDate: '2019-08-05 GMT-0700',
+  EndDate: '2019-08-05 GMT-0700',
+  err: false,
+  eT: {
+    code: 'NOVA_NOTI',
+    desc: 'Nova Notification'
+    }
+  },
+
+  {SourceSystem: 'Nova Informatica',
+  LogNumber: 28,
+  Message: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
+  ProcessName: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
+  TraceInfo: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  EnvironmentInfo: 'Unknown',
+  StartDate: '2019-08-05 GMT-0700',
+  EndDate: '2019-08-05 GMT-0700',
+  err: false,
+  eT: {
+    code: 'NOVA_NOTI',
+    desc: 'Nova Notification'
+    }
+  },
+
+  {SourceSystem: 'Nova Informatica',
+  LogNumber: 27,
+  Message: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
+  ProcessName: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
+  TraceInfo: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  EnvironmentInfo: 'Unknown',
+  StartDate: '2019-08-05 GMT-0700',
+  EndDate: '2019-08-05 GMT-0700',
+  err: false,
+  eT: {
+    code: 'NOVA_NOTI',
+    desc: 'Nova Notification'
+    }
+  },
+
+  {SourceSystem: 'Nova Informatica',
+  LogNumber: 26,
+  Message: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
+  ProcessName: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
+  TraceInfo: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  EnvironmentInfo: 'Unknown',
+  StartDate: '2019-08-05 GMT-0700',
+  EndDate: '2019-08-05 GMT-0700',
+  err: false,
+  eT: {
+    code: 'NOVA_NOTI',
+    desc: 'Nova Notification'
+    }
+  },
+
+  {SourceSystem: 'Nova Informatica',
+  LogNumber: 25,
+  Message: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
+  ProcessName: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
+  TraceInfo: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  EnvironmentInfo: 'Unknown',
+  StartDate: '2019-08-05 GMT-0700',
+  EndDate: '2019-08-05 GMT-0700',
+  err: false,
+  eT: {
+    code: 'NOVA_NOTI',
+    desc: 'Nova Notification'
+    }
+  },
+
+  {SourceSystem: 'Nova Informatica',
   LogNumber: 24,
   Message: "Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.",
   ProcessName: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula.",
