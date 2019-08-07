@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, HostListener} from '@angular/core';
 import {Inform} from './MockData/data';
 import {MockData} from './MockData/mock-data';
 import {errorType} from './MockData/type';
@@ -133,6 +133,13 @@ export class NgbdPagination {
   //Datefix 2: Fixlectric Boogaloo
   model1: NgbDateStruct;
   model2: NgbDateStruct;
+
+  //Display Help;
+  intViewportWidth: number = window.innerWidth;
+  @HostListener('window:resize', ['$event'])
+    onResize(event) {
+      this.intViewportWidth = event.target.innerWidth;
+    }
   
   //constructor
   constructor(private filter: itemFilterPipe, private calendar: NgbCalendar) {

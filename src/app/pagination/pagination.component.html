@@ -46,13 +46,13 @@
     </ul>
   </div>
 
-  <div fxHide="true" fxShow.gt-md="true" style="position: fixed; right: 1rem; top: 9.3rem; max-width: 46.5rem; width: 50%; min-width: 20rem;">
+  <div *ngIf="intViewportWidth >= 1530" style="position: fixed; left: 80%; top: 9.3rem;">
     <p style="text-align: center;">
       Messages Open: {{viewing.length}} &nbsp; <button class="btn btn-sm btn-dark" (click)="allClose()">Close All</button>
     </p>
   </div>
 
-  <div fxShow fxShow.gt-md="false">
+  <div *ngIf="intViewportWidth < 1530">
     <p style="text-align: center;">
       <br>
       Messages Open: {{viewing.length}} &nbsp; <button class="btn btn-sm btn-dark" (click)="allClose()">Close All</button>
