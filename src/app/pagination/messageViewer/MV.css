@@ -1,0 +1,9 @@
+td {
+  overflow-wrap: break-word;
+}
+
+thead, tbody tr {
+  display: table;
+  width: 110%;
+  table-layout: fixed;
+}
