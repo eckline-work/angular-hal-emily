@@ -51,7 +51,9 @@
 
   <div *ngIf="intViewportWidth >= 1530" style="position: fixed; right: 0; top: 9.3rem; width: 25%; text-align: center;">
     <p style="text-align: center;">
-      Messages Open: {{viewing.length}} &nbsp; <button class="btn btn-sm btn-dark" (click)="allClose()">Close All</button>
+      Messages Open: {{viewing.length}} &nbsp;
+      <button *ngIf="viewing.length > 0" class="btn btn-sm btn-dark" (click)="allClose()">Close All</button>
+      <button *ngIf="viewing.length < 1" class="btn btn-sm btn-dark disabled">Close All</button>
       <span *ngIf="intViewportWidth > 1585">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
     </p>
   </div>
