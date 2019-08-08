@@ -10,7 +10,7 @@ export const MockData: Inform[] = [ //What"s your ****ing problem?!
     EnvironmentInfo: "Test_ENV_3",
     StartDate: new Date('2019-07-25T12:35:20'),
     EndDate: new Date('2019-07-25T12:35:20'),
-    err: "",
+    err: false,
     ID: 0,
     eT: {
       code: "DBA_MSG",
@@ -21,7 +21,7 @@ export const MockData: Inform[] = [ //What"s your ****ing problem?!
     UserName: "the IT intern"
   },
   {
-    SourceSystem: "DBA",
+    SourceSystem: "Unknown",
     LogNumber: 2,
     Message: "WHY DO YOU KEEP BREAKING THE TEST ENVIRONMENTS?!",
     ProcessName: "Screaming",
