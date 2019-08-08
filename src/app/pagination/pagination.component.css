@@ -23,3 +23,7 @@ td {
   overflow: visible;
   height: fit-content;
 }
+
+.idItem:hover {
+  text-decoration: underline;
+}

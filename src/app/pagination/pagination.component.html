@@ -26,7 +26,7 @@
           <td style="width: 11rem;">{{i.TraceInfo | slice:0:30}}<span *ngIf="i.TraceInfo.length > 30">...</span><span *ngIf="i.TraceInfo == ''"> N/A</span></td>
           <td style="width: 9.375rem;">{{i.EnvironmentInfo | slice:0:30}}<span *ngIf="i.EnvironmentInfo.length > 30">...</span></td>
           <td style="text-align: center; width: 8rem;">{{i.StartDate | date :'yyyy-MM-dd'}}</td>
-          <td style="text-align: center; width: 5rem;" class="text-primary">{{i.ID}}</td>
+          <td style="text-align: center; width: 5rem;" class="text-primary"><span class="idItem">{{i.ID}}</span></td>
           <td style="text-align: center; width: 4rem;">
             <span class="text-danger" *ngIf="i.err" placement="auto" ngbPopover="{{i.eT.code}} / {{i.eT.desc}}" container="body" triggers="hover focus click"><b>&#10003;</b></span>
             <span class="text-warning" *ngIf="i.eT && !i.err && i.eT.code" placement="auto" ngbPopover="{{i.eT.code}} / {{i.eT.desc}}" container="body" triggers="hover focus click"><b>?</b></span>
