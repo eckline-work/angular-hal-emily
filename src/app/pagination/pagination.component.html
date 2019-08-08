@@ -84,7 +84,7 @@
 
   <div class="collapse navbar-collapse" id="navbarColor03">
     <form class="form-inline my-2 my-lg-0">
-        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
+        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px; padding-left: 4px; padding-right: 4px;">
           <div class="form-group input-group mb-3">
             <select class="form-control form-control-sm" id="S-Select" #Sys>
       	    <option disabled selected="selected" value="">-Select System-</option>
@@ -137,12 +137,14 @@
             </select>
           </div>
         </div>
-        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
+        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px; padding-left: 4px; padding-right: 4px;">
           <div class="form-group">
-            <input type="text" class="form-control form-control-sm" placeholder="Message" id="MsgInput" #MI>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control form-control-sm" placeholder="Message" id="MsgInput" #MI>
+            </div>
           </div>
         </div>
-        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 15px; padding-left: 4px; padding-right: 4px;">
           <div class="form-group">
             <div class="input-group mb-3">
               <select class="form-control form-control-sm" id="ProcSelect" #PS>
@@ -154,7 +156,7 @@
             </div>
           </div>
         </div>
-        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 15px; padding-left: 4px; padding-right: 4px;">
           <div class="form-group">
             <div class="input-group mb-3">
               <select class="form-control form-control-sm" id="TraceSelect" #TS>
@@ -166,7 +168,7 @@
             </div>
           </div>
         </div>
-        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
+        <div class="container col-sm-2" style="margin-left: 0; margin-right: 0; padding-top: 15px; padding-left: 4px; padding-right: 4px;">
           <div class="form-group">
             <div class="input-group mb-3">
               <select class="form-control input-group-prepend form-control-sm" id="EnvSelect" #ES>
@@ -178,7 +180,7 @@
             </div>
           </div>
         </div>
-        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
+        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px; padding-left: 4px; padding-right: 4px;">
           <div class="form-group input-group mb-3">
             <select class="form-control form-control-sm" id="I-Select" #Inc>
 	            <option disabled selected="selected" value="">-Include-</option>
@@ -188,7 +190,7 @@
             </select>
           </div>
         </div>
-        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
+        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px; padding-left: 4px; padding-right: 4px;">
           <div class="form-group input-group mb-3">
             <input class="form-control form-control-sm" placeholder="From" name="d1" #c1="ngModel" [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker">
             <div class="input-group-append">
@@ -196,7 +198,7 @@
             </div>
           </div>
         </div>
-        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px;">
+        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px; padding-left: 4px; padding-right: 4px;">
           <div class="form-group input-group mb-3">
             <input class="form-control form-control-sm" placeholder="To" name="d2" #c2="ngModel" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker">
             <div class="input-group-append">
@@ -204,10 +206,12 @@
             </div>
           </div>
         </div>
-        <div class="container col-sm" style="margin-left: 0; margin-right: 0;">
+        <div class="container col-sm" style="margin-left: 0; margin-right: 0; padding-top: 15px; padding-left: 4px; padding-right: 4px;">
+          <div class="form-group input-group mb-3">
           <button class="btn btn-outline-primary btn-sm" (click)="pageSet(MI.value, PS.value, TS.value, ES.value, Sys.value, Inc.value, PI.value, TI.value, EI.value, c1.value, c2.value)">
             Set Search Criteria
           </button>
+          </div>
         </div>
     </form>
   </div>
