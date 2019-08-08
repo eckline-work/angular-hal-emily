@@ -12,4 +12,5 @@ export class Inform {
   ID: number;
   err: boolean;
   eT: errorType;
+  un: string;
 }

@@ -35,7 +35,10 @@
         </tr>
         <tr class="table-light small">
           <th scope="row">Created:</th>
-          <td>{{inform.StartDate | date :'yyyy-MM-dd'}}</td>
+          <td>
+            <span *ngIf="inform.un">{{inform.un}} - </span>
+            {{inform.StartDate | date :'yyyy-MM-dd'}}
+          </td>
       </tr>
       <tr class="table-light small">
         <th scope="row">Processed:</th>
