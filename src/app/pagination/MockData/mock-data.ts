@@ -1,6 +1,44 @@
 import { Inform } from "./data";
 
-export const MockData: Inform[] = [ //What"s your ****ing problem?!
+export const MockData: Inform[] = [
+  {
+    SourceSystem: "Unicenter",
+    LogNumber: 0,
+    Message: "So the filter is no longer case-sensitive, which I personally think is a good thing.",
+    ProcessName: "copy-pasting some code to change the strings used in the filtering process so that they're all uppercase",
+    TraceInfo: "idunno",
+    EnvironmentInfo: "Somewhere on a computer, obviously",
+    StartDate: new Date('2019-08-08T12:50:27'),
+    EndDate: new Date('2019-08-08T12:50:27'),
+    err: false,
+    ID: 0,
+    eT: {
+      code: "UNICTR_OK",
+      desc: "Unicenter",
+      email: "ekline@thedoctors.com",
+      pager: ""
+    },
+    UserName: "EKline"
+  },
+  {
+    SourceSystem: "Unicenter",
+    LogNumber: 2,
+    Message: "",
+    ProcessName: "Look, I'm just putting in different systems and messages and whatnot so I can test the different filters.",
+    TraceInfo: "",
+    EnvironmentInfo: "UNICTR",
+    StartDate: new Date('2019-08-07T12:50:27'),
+    EndDate: new Date('2019-08-07T12:50:27'),
+    err: false,
+    ID: 0,
+    eT: {
+      code: "",
+      desc: "",
+      email: "",
+      pager: ""
+    },
+    UserName: ""
+  },
   {
     SourceSystem: "DBA",
     LogNumber: 4,
