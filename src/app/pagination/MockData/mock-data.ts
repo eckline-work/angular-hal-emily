@@ -21,14 +21,90 @@ export const MockData: Inform[] = [
     UserName: "EKline"
   },
   {
+    SourceSystem: "Report Server",
+    LogNumber: 3,
+    Message: "Look, I'm just putting in different systems and messages and whatnot so I can test the different filters.",
+    ProcessName: "",
+    TraceInfo: "",
+    EnvironmentInfo: "REPORT_SERVER_C",
+    StartDate: new Date('2019-08-07T12:54:41'),
+    EndDate: new Date('2019-08-07T12:54:41'),
+    err: false,
+    ID: 0,
+    eT: {
+      code: "",
+      desc: "",
+      email: "",
+      pager: ""
+    },
+    UserName: ""
+  },
+  {
     SourceSystem: "Unicenter",
     LogNumber: 2,
     Message: "",
     ProcessName: "Look, I'm just putting in different systems and messages and whatnot so I can test the different filters.",
-    TraceInfo: "",
+    TraceInfo: "Look, I'm just putting in different systems and messages and whatnot so I can test the different filters.",
     EnvironmentInfo: "UNICTR",
     StartDate: new Date('2019-08-07T12:50:27'),
     EndDate: new Date('2019-08-07T12:50:27'),
+    err: false,
+    ID: 0,
+    eT: {
+      code: "",
+      desc: "",
+      email: "",
+      pager: ""
+    },
+    UserName: ""
+  },
+  {
+    SourceSystem: "Report Server",
+    LogNumber: 1,
+    Message: "Look, I'm just putting in different systems and messages and whatnot so I can test the different filters.",
+    ProcessName: "saying 'never looking at this thing again' before was apparently a big fat lie.",
+    TraceInfo: "",
+    EnvironmentInfo: "REPORT_SERVER_B",
+    StartDate: new Date('2019-08-06T12:54:41'),
+    EndDate: new Date('2019-08-06T12:54:41'),
+    err: false,
+    ID: 0,
+    eT: {
+      code: "",
+      desc: "",
+      email: "",
+      pager: ""
+    },
+    UserName: ""
+  },
+  {
+    SourceSystem: "Report Server",
+    LogNumber: 1,
+    Message: "Reminder: set up an auto-reload system somehow",
+    ProcessName: "Coding, obviously. What else would I use to make it work?",
+    TraceInfo: "I'm still not sure what exactly 'Trace' is supposed to refer to :/",
+    EnvironmentInfo: "REPORT_SERVER_C",
+    StartDate: new Date('2019-07-29T12:21:09'),
+    EndDate: new Date('2019-07-29T12:21:09'),
+    err: false,
+    ID: 0,
+    eT: {
+      code: "INFO",
+      desc: "Informational",
+      email: "",
+      pager: ""
+    },
+    UserName: ""
+  },
+  {
+    SourceSystem: "Report Server",
+    LogNumber: 0,
+    Message: "Reminder: set up an auto-reload system somehow",
+    ProcessName: "Coding, obviously. What else would I use to make it work?",
+    TraceInfo: "I'm still not sure what exactly 'Trace' is supposed to refer to :/",
+    EnvironmentInfo: "REPORT_SERVER_A",
+    StartDate: new Date('2019-07-28T12:54:41'),
+    EndDate: new Date('2019-07-28T12:54:41'),
     err: false,
     ID: 0,
     eT: {
