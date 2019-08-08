@@ -140,18 +140,6 @@ export class NgbdPagination {
   onResize(event) {
     this.intViewportWidth = event.target.innerWidth;
   }
-
-  //update mock?
-  /*
-    let me think for a minute...
-    ok, so I need to add in a component to add new items,
-    then make the mock data file update to include the item on a submit.
-    Hm.
-    Def gonna need to use the tutorial thing to figure out how to do that.
-    It will have to use value-binding I guess.
-    Probably need to use a form.
-    Having it in a modal could work, button either in bottom right or under message close depending on screen size.
-  */
   
   //constructor
   constructor(private filter: itemFilterPipe, private calendar: NgbCalendar) {
