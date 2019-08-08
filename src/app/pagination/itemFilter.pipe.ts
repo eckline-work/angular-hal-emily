@@ -9,40 +9,40 @@ export class itemFilterPipe implements PipeTransform {
 
     if (PI){
       if (PS == "Contains") {
-        items = items.filter(i => i.ProcessName.includes(PI));
+        items = items.filter(i => i.ProcessName.toUpperCase().includes(PI.toUpperCase()));
       }
       else if (PS == "Begins With") {
-        items = items.filter(i => i.ProcessName.indexOf(PI) == 0);
+        items = items.filter(i => i.ProcessName.toUpperCase().indexOf(PI.toUpperCase()) == 0);
       }
       else {
-        items = items.filter(i => i.ProcessName.endsWith(PI));
+        items = items.filter(i => i.ProcessName.toUpperCase().endsWith(PI.toUpperCase()));
       }
     }
     if (TI){
       if (TS == "Contains") {
-        items = items.filter(i => i.TraceInfo.includes(TI));
+        items = items.filter(i => i.TraceInfo.toUpperCase().includes(TI.toUpperCase()));
       }
       else if (TS == "Begins With") {
-        items = items.filter(i => i.TraceInfo.indexOf(TI) == 0);
+        items = items.filter(i => i.TraceInfo.toUpperCase().indexOf(TI.toUpperCase()) == 0);
       }
       else {
-        items = items.filter(i => i.TraceInfo.endsWith(TI));
+        items = items.filter(i => i.TraceInfo.toUpperCase().endsWith(TI.toUpperCase()));
       }
     }
     if (EI){
       if (ES == "Contains") {
-        items = items.filter(i => i.EnvironmentInfo.includes(EI));
+        items = items.filter(i => i.EnvironmentInfo.toUpperCase().includes(EI.toUpperCase()));
       }
       else if (ES == "Begins With") {
-        items = items.filter(i => i.EnvironmentInfo.indexOf(EI) == 0);
+        items = items.filter(i => i.EnvironmentInfo.toUpperCase().indexOf(EI.toUpperCase()) == 0);
       }
       else {
-        items = items.filter(i => i.EnvironmentInfo.endsWith(EI));
+        items = items.filter(i => i.EnvironmentInfo.toUpperCase().endsWith(EI.toUpperCase()));
       }
     }
 
     if (MI){
-      items = items.filter(i => i.Message.includes(MI));
+      items = items.filter(i => i.Message.toUpperCase().includes(MI.toUpperCase()));
     }
 
     if (FD != ""){
