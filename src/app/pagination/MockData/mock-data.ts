@@ -3,7 +3,7 @@ import { Inform } from "./data";
 export const MockData: Inform[] = [ //What"s your ****ing problem?!
   {
     SourceSystem: "DBA",
-    LogNumber: 3,
+    LogNumber: 4,
     Message: "It works. Thank whatever higher power fixed this mess.",
     ProcessName: "never looking at this thing again.",
     TraceInfo: "",
@@ -21,8 +21,8 @@ export const MockData: Inform[] = [ //What"s your ****ing problem?!
     UserName: "the IT intern"
   },
   {
-    SourceSystem: "Unknown",
-    LogNumber: 2,
+    SourceSystem: "DBA",
+    LogNumber: 3,
     Message: "WHY DO YOU KEEP BREAKING THE TEST ENVIRONMENTS?!",
     ProcessName: "Screaming",
     TraceInfo: "Screaming",
