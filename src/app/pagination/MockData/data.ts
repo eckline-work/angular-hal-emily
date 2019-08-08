@@ -1,4 +1,4 @@
-import {errorType} from './type';
+import { errorType } from './type';
 
 export class Inform {
   SourceSystem: string;
