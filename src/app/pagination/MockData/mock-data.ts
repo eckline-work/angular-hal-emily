@@ -15,7 +15,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
     desc: 'Undefined',
     email: 'firstname.lastname@thedoctors.com'
   },
-  un: 'me'
+  UserName: 'me'
   },
 
   {SourceSystem: 'Framework Web API Service',
@@ -59,7 +59,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   StartDate: '2019-08-06 GMT-0700',
   EndDate: '2019-08-06 GMT-0700',
   err: false,
-  un: 'me'
+  UserName: 'me'
   },
 
   {SourceSystem: 'Framework Web API Service',
@@ -112,7 +112,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
     code: 'NOVA_NOTI',
     desc: 'Nova Notification'
     },
-  un: 'me'
+  UserName: 'me'
   },
 
   {SourceSystem: 'Nova Informatica',
@@ -128,7 +128,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
     code: 'NOVA_NOTI',
     desc: 'Nova Notification'
     },
-  un: 'me'
+  UserName: 'me'
   },
 
   {SourceSystem: 'Nova Informatica',
@@ -155,7 +155,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
     desc: 'Nova Errors',
     email: 'name@email.com'
     },
-  un: 'me'
+  UserName: 'me'
   },
 
   {SourceSystem: 'EDoc Server',
@@ -277,7 +277,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   StartDate: '2019-08-01 GMT-0700',
   EndDate: '2019-08-01 GMT-0700',
   err: false,
-  un: 'it me'
+  UserName: 'it me'
   },
 
   {SourceSystem: 'EDoc Server',
@@ -358,7 +358,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
   StartDate: '2019-07-29 GMT-0700',
   EndDate: '2019-07-29 GMT-0700',
   err: false,
-  un: 'the intern'
+  UserName: 'the intern'
   },
 
   {SourceSystem: 'Online Application',
@@ -441,7 +441,7 @@ export const MockData: Inform[] = [ //What's your ****ing problem?!
     code: 'INFO',
     desc: 'Informational'
     },
-  un: 'do you really care?'
+  UserName: 'do you really care?'
   },
 
   {SourceSystem: 'Security',
