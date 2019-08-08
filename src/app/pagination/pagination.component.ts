@@ -69,7 +69,7 @@ export class NgbdPagination {
 
   collectionSize = this.toShow.length;
 
-  pageSet(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
+  pageSet(MI: string, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
 
     this.allClose();
     var testp1 = "";
@@ -82,7 +82,7 @@ export class NgbdPagination {
        testp2 = c2.toString();
     }
 
-    this.toShow = this.applyFilter( PS, TS, ES, Sys, Inc, PI, TI, EI, testp1, testp2 )
+    this.toShow = this.applyFilter( MI, PS, TS, ES, Sys, Inc, PI, TI, EI, testp1, testp2 )
 
     this.collectionSize = this.toShow.length;
 
@@ -126,8 +126,8 @@ export class NgbdPagination {
     this.viewing = [];
   }
 
-  applyFilter(PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: string, TD: string):any {
-     return this.filter.transform(this.items, PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD);
+  applyFilter(MI: string, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: string, TD: string):any {
+     return this.filter.transform(this.items, MI, PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD);
   }
 
   //Datefix 2: Fixlectric Boogaloo
