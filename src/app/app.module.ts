@@ -11,12 +11,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { NgbdPagination } from './pagination/pagination.component';
 import { itemFilterPipe } from './pagination/itemFilter.pipe';
-import { messageViewer } from './pagination/messageViewer/messageView.component'
+import { messageViewer } from './pagination/messageViewer/messageView.component';
+import { ConfigService } from './config/config.service'
 
 @NgModule({
   imports:      [ BrowserModule, HttpClientModule, FormsModule, NgbModule, DragDropModule, InfiniteScrollModule, FlexLayoutModule ],
   declarations: [ AppComponent, NgbdPagination, itemFilterPipe, messageViewer ],
   exports:      [ AppComponent, NgbdPagination ],
-  bootstrap:    [ AppComponent, NgbdPagination ]
+  bootstrap:    [ AppComponent, NgbdPagination ],
+  providers: [ConfigService]
 })
 export class AppModule { }

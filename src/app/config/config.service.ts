@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable()
+import {Inform} from '../pagination/MockData/data';
+
+@Injectable({
+  providedIn: 'root'
+})
 export class ConfigService {
 
   constructor(private http: HttpClient) { }
 
+  items: Inform[] = [];
 
-  
+  addMsgLog(){
+    this.items.unshift();
+  }
+
 }
