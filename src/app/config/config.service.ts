@@ -16,7 +16,7 @@ export class ConfigService {
     this.items.unshift(log);
   }
 
-  getItems() {
+  getItems() { 
     return this.items;
   }
 
