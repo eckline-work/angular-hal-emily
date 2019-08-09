@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import {Inform} from '../pagination/MockData/data';
+import { Inform } from '../pagination/MockData/data';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +18,10 @@ export class ConfigService {
 
   getItems() {
     return this.items;
+  }
+
+  getNewLogs() {
+    return this.http.get('');
   }
 
 }
