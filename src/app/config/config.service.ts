@@ -20,9 +20,9 @@ export class ConfigService {
     return this.items;
   }
 
-  getNewLogs() {
+  /*getNewLogs() {
     return this.http.get('');
     //where do the newly logged items /go/?
-  }
+  }*/
 
 }
