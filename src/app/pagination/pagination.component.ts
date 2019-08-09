@@ -33,7 +33,7 @@ export class NgbdPagination implements OnInit {
     }
   //
 
-  //
+  //config part
     logNew(message){
       this.configService.addMsgLog(message);
     }
