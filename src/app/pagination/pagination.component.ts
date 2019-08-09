@@ -33,6 +33,12 @@ export class NgbdPagination implements OnInit {
     }
   //
 
+  //
+    logNew(message){
+      this.configService.addMsgLog(message);
+    }
+  //
+
   //Message View Toggle
     viewing: Inform[] = [];
     noViewed = 0;
