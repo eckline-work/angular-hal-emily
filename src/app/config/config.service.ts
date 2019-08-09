@@ -22,7 +22,7 @@ export class ConfigService {
 
   /*getNewLogs() {
     return this.http.get('');
-    //where do the newly logged items /go/?
+    //where do the newly logged items go?
   }*/
 
 }
