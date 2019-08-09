@@ -12,8 +12,12 @@ export class ConfigService {
 
   items: Inform[] = [];
 
-  addMsgLog(){
-    this.items.unshift();
+  addMsgLog(log){
+    this.items.unshift(log);
+  }
+
+  getItems() {
+    return this.items;
   }
 
 }
