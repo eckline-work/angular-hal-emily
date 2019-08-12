@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Adapter } from '../../config/adapter';
+import { Adapter } from '../../config/adapter'; //yes it is you soggy walnut
 import { errorType } from './type';
 
 export class Inform {
