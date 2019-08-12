@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Inform } from '../pagination/MockData/data';
+import { errorType } from '../pagination/MockData/type';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -9,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class ConfigService {
 
-  private baseUrl = '';
+  private baseUrl = ''; //need url of the data
 
   constructor(private http: HttpClient) { }
 
@@ -23,11 +24,11 @@ export class ConfigService {
         item.ProcessName,
         item.TraceInfo,
         item.EnvironmentInfo,
-        item.StartDate
-        item.EndDate,
-        item.ID,
+        new Date(),
+        new Date(),
+        0,
         item.err,
-        item.eT,
+        new errorType(),
         item.UserName,
       ))),
     );
