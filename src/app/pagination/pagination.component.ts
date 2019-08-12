@@ -3,6 +3,7 @@ import { NgbDate, NgbDateStruct, NgbDateAdapter, NgbDateNativeAdapter, NgbCalend
 
 import { Inform } from './MockData/data';
 import { errorType } from './MockData/type';
+import { MockData } from './MockData/MockDataStorage';
 
 import { itemFilterPipe } from './itemFilter.pipe';
 import { messageViewer } from './messageViewer/messageView.component'
@@ -26,15 +27,15 @@ export class NgbdPagination implements OnInit {
       private calendar: NgbCalendar,
       private configService: ConfigService
     ) {
-      this.items = [];
+      this.items = MockData;
       this.toShow = this.items;
       this.appendItems(0, this.sum);
     }
 
     ngOnInit() {
-      this.configService.list().subscribe((items: Inform[]) => {
+      /*this.configService.list().subscribe((items: Inform[]) => {
         this.items = items;
-      });
+      });*/
       for (let i = this.items.length; i > 0; i--){
         this.items[this.items.length-i].ID = i;
       }
