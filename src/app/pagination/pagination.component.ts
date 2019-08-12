@@ -1,10 +1,10 @@
-import {Component, OnInit, HostListener} from '@angular/core';
-import {NgbDate, NgbDateStruct, NgbDateAdapter, NgbDateNativeAdapter, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { NgbDate, NgbDateStruct, NgbDateAdapter, NgbDateNativeAdapter, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
 
-import {Inform} from './MockData/data';
-import {errorType} from './MockData/type';
+import { Inform } from './MockData/data';
+import { errorType } from './MockData/type';
 
-import {itemFilterPipe} from './itemFilter.pipe';
+import { itemFilterPipe } from './itemFilter.pipe';
 import { messageViewer } from './messageViewer/messageView.component'
 import { ConfigService } from '../config/config.service';
 
@@ -32,6 +32,9 @@ export class NgbdPagination implements OnInit {
     }
 
     ngOnInit() {
+      this.configService.list().subscribe((items: Inform[]) => {
+        this.items = items;
+      });
       for (let i = this.items.length; i > 0; i--){
         this.items[this.items.length-i].ID = i;
       }
