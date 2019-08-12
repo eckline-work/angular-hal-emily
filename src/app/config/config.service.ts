@@ -23,7 +23,7 @@ export class ConfigService {
         item.ProcessName,
         item.TraceInfo,
         item.EnvironmentInfo,
-        item.StartDate,
+        item.StartDate
         item.EndDate,
         item.ID,
         item.err,
