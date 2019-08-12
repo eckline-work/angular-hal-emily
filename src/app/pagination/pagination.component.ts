@@ -18,8 +18,8 @@ import { ConfigService } from '../config/config.service';
 export class NgbdPagination implements OnInit {
 
   //constructor
-    items: Inform[];
-    toShow: Inform[];
+    items: Inform[] = MockData;
+    toShow: Inform[] = this.items;
     collectionSize = this.toShow.length;
 
     constructor(
@@ -27,8 +27,6 @@ export class NgbdPagination implements OnInit {
       private calendar: NgbCalendar,
       private configService: ConfigService
     ) {
-      this.items = MockData;
-      this.toShow = this.items;
       this.appendItems(0, this.sum);
     }
 
