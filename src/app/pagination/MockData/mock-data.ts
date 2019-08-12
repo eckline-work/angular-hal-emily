@@ -1,24 +1,22 @@
-import { Inform } from "./data";
-
-export const MockData: Inform[] = [
+MockData = [
   {
-    SourceSystem: "Unicenter",
-    LogNumber: 0,
-    Message: "So the filter is no longer case-sensitive, which I personally think is a good thing.",
-    ProcessName: "copy-pasting some code to change the strings used in the filtering process so that they're all uppercase",
-    TraceInfo: "idunno",
-    EnvironmentInfo: "Somewhere on a computer, obviously",
-    StartDate: new Date('2019-08-08T12:50:27'),
-    EndDate: new Date('2019-08-08T12:50:27'),
-    err: false,
-    ID: 0,
-    eT: {
-      code: "UNICTR_OK",
-      desc: "Unicenter",
-      email: "ekline@thedoctors.com",
-      pager: ""
+    "SourceSystem": "Unicenter",
+    "LogNumber": 0,
+    "Message": "So the filter is no longer case-sensitive, which I personally think is a good thing.",
+    "ProcessName": "copy-pasting some code to change the strings used in the filtering process so that they're all uppercase",
+    "TraceInfo": "idunno",
+    "EnvironmentInfo": "Somewhere on a computer, obviously",
+    "StartDate": "2019-08-08T12:50:27",
+    "EndDate": "2019-08-08T12:50:27",
+    "err": false,
+    "ID": 0,
+    "eT": {
+      "code": "UNICTR_OK",
+      "desc": "Unicenter",
+      "email": "ekline@thedoctors.com",
+      "pager": ""
     },
-    UserName: "EKline"
+    "UserName": "EKline"
   },
   {
     SourceSystem: "Report Server",
