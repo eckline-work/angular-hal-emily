@@ -4,5 +4,5 @@ export class errorType {
     desc: string,
     email: string,
     pager: string,
-    ) {}
+    ) { }
 }

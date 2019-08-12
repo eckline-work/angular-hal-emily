@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Observable, of } from 'rxjs';
 import { Inform } from '../pagination/MockData/data';
 
 @Injectable({
@@ -8,21 +8,13 @@ import { Inform } from '../pagination/MockData/data';
 })
 export class ConfigService {
 
+  private baseUrl = '';
+
   constructor(private http: HttpClient) { }
 
-  items: Inform[] = [];
-
-  addMsgLog(log) {
-    this.items.unshift(log);
+  list(): Observable<Inform[]> {
+    const url = `${this.baseUrl}/`;
+    return of([]);
   }
-
-  getItems() { 
-    return this.items;
-  }
-
-  /*getNewLogs() {
-    return this.http.get('');
-    //where do the newly logged items go?
-  }*/
 
 }
