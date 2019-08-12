@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Inform, itemAdapter } from '../pagination/MockData/data'; //it's an injectable you insufferable hog swill
+import { Inform, itemAdapter } from '../pagination/MockData/data';
 import { errorType } from '../pagination/MockData/type';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';

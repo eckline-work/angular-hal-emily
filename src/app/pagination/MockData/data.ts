@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Adapter } from './adapter'; //because it's an interface object, you soggy half-brained walnut
+import { Adapter } from './adapter';
 import { errorType } from './type';
 
 export class Inform {
