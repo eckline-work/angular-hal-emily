@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { NgbDate, NgbDateStruct, NgbDateAdapter, NgbDateNativeAdapter, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
 
-import { Inform } from './MockData/data';
+import { Inform, itemAdapter } from './MockData/data';
 import { errorType } from './MockData/type';
 import { MockData } from './MockData/MockDataStorage';
 
