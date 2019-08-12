@@ -1,6 +1,3 @@
-
-
-
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Inform, itemAdapter } from '../pagination/MockData/data';
