@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class ConfigService {
 
-  private baseUrl = ''; //need url of the data, and what things are called
+  private baseUrl = ''; //need url of the data
 
   constructor(
     private http: HttpClient,
