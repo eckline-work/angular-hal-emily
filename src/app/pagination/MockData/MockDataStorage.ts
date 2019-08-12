@@ -1,4 +1,4 @@
-MockData = [
+export const MockData = [
   {
     "SourceSystem": "Unicenter",
     "LogNumber": 0,
