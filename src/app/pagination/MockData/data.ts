@@ -1,3 +1,5 @@
+import { Injectable } from '@angular/core';
+import { Adapter } from '../../config/adapter';
 import { errorType } from './type';
 
 export class Inform {
@@ -15,4 +17,27 @@ export class Inform {
     eT: errorType,
     UserName: string,
   ) {}
+}
+
+@Injectable({
+    providedIn: 'root'
+})
+export class itemAdapter implements Adapter<Inform> {
+  adapt(item: any): Inform {
+    return new Inform(
+      item.SourceSystem,
+      item.LogNumber,
+      item.Message,
+      item.ProcessName,
+      item.TraceInfo,
+      item.EnvironmentInfo,
+      new Date(),
+      new Date(),
+      0,
+      item.err,
+      new errorType(item.eT.code, item.eT.desc, item.eT.email, item.eT.pager),
+      item.UserName,
+    );
+  }
+
 }
