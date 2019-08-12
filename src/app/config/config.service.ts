@@ -13,7 +13,7 @@ export class ConfigService {
 
   constructor(private http: HttpClient) { }
 
-  list(): Observable<Inform[]> {
+  /*list(): Observable<Inform[]> {
     const url = `${this.baseUrl}/`;
     return this.http.get(url).pipe(
       map((data: any[]) => data.map((item: any) => new Inform(
@@ -28,9 +28,9 @@ export class ConfigService {
         item.ID,
         item.err,
         item.eT,
-        item.UserName
+        item.UserName,
       ))),
     );
-  }
+  }*/
 
 }
