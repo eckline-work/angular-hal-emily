@@ -2,7 +2,6 @@ import {Component, OnInit, HostListener} from '@angular/core';
 import {NgbDate, NgbDateStruct, NgbDateAdapter, NgbDateNativeAdapter, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 
 import {Inform} from './MockData/data';
-import {MockData} from './MockData/mock-data';
 import {errorType} from './MockData/type';
 
 import {itemFilterPipe} from './itemFilter.pipe';
@@ -18,12 +17,19 @@ import { ConfigService } from '../config/config.service';
 export class NgbdPagination implements OnInit {
 
   //constructor
+    items: Inform[];
+    toShow: Inform[];
+    collectionSize = this.toShow.length;
+
     constructor(
       private filter: itemFilterPipe,
       private calendar: NgbCalendar,
       private configService: ConfigService
-    )
-    { this.appendItems(0, this.sum); }
+    ) {
+      this.items = [];
+      this.toShow = this.items;
+      this.appendItems(0, this.sum);
+    }
 
     ngOnInit() {
       for (let i = this.items.length; i > 0; i--){
@@ -89,10 +95,6 @@ export class NgbdPagination implements OnInit {
   //
 
   //Search and Table Code
-    items = MockData;
-    toShow = this.items;
-    collectionSize = this.toShow.length;
-
     pageSet(MI: string, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, c1: NgbDateStruct, c2: NgbDateStruct) {
 
       this.allClose();
