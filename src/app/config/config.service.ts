@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class ConfigService {
 
-  private baseUrl = 'http://api.myapp.com/data';
+  private baseUrl = '';
 
   constructor(private http: HttpClient) { }
 
