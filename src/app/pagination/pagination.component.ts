@@ -70,12 +70,11 @@ export class NgbdPagination implements OnInit {
     }
 
     msgOpen(id: number){
-      this.hold = new Inform;
       this.hold = this.items.find(function(element) {
         return element.ID == id;
       });
       if (!this.hold.eT) {
-        this.hold.eT = new errorType;
+        this.hold.eT = new errorType("", "", "", "");
       }
       this.viewing.push(this.hold);
     }
