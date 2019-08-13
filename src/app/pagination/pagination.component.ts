@@ -35,7 +35,7 @@ export class NgbdPagination implements OnInit {
         this.items = items;
       });*/
       for (let i = this.items.length; i > 0; i--){
-        this.items[this.items.length-i].ID = i; //yes it does you abominable poptart
+        this.items[this.items.length-i].ID = i;
       }
       this.viewing = [];
     }
