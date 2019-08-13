@@ -19,7 +19,7 @@ export class ConfigService {
 
   list(): Observable<Inform[]> {
     const url = `${this.baseUrl}/`;
-    return this.http.get(url).pipe(
+    return this.http.get(url).pipe( //this will get the items once we know where they are
       map((data: any[]) => data.map(item => this.adapter.adapt(item))),
     );
   }
