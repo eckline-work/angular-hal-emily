@@ -9,10 +9,10 @@ export class itemFilterPipe implements PipeTransform {
 
     if (PI){
       if (PS == "Contains") {
-        items = items.filter(i => i.ProcessName.toUpperCase().includes(PI.toUpperCase()));
+        items = items.filter(i => i.ProcessName.toUpperCase().includes(PI.toUpperCase())); //Lies and slander
       }
       else if (PS == "Begins With") {
-        items = items.filter(i => i.ProcessName.toUpperCase().indexOf(PI.toUpperCase()) == 0);
+        items = items.filter(i => i.ProcessName.toUpperCase().indexOf(PI.toUpperCase()) == 0); //this exists on the type
       }
       else {
         items = items.filter(i => i.ProcessName.toUpperCase().endsWith(PI.toUpperCase()));
