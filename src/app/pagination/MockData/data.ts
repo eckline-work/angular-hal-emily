@@ -20,7 +20,7 @@ export class Inform {
 }
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 export class itemAdapter implements Adapter<Inform> {
   adapt(item: any): Inform {
