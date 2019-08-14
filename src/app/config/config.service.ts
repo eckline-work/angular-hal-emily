@@ -18,7 +18,7 @@ export class ConfigService {
     private adapter: itemAdapter
   ) { }
 
-  list(): Observable<any[]> {
+  list(): Observable<Inform[]> {
     const url = `${this.baseUrl}/`;
     return this.http.post(url, {
       "StartDate": "2019-08-13T17:50:32.364Z",
@@ -31,8 +31,8 @@ export class ConfigService {
       "TraceTextSearch": "",
       "EnvironmentTextSearch": ""
     }).pipe(
-      map((data: any[]) => data.map(item => this.adapter.adapt(item))),
-    );
+      map((data: any[]) => data.map(item => this.adapter.adapt(item)))
+    ); //need to fix
   }
 
   /*
