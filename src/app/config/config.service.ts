@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class ConfigService {
 
-  private baseUrl = ''; //need url of the data
+  private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/api/hal/filter-application-logs'; //need url of the data
 
   constructor(
     private http: HttpClient,
