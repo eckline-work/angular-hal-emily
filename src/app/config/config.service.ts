@@ -10,14 +10,17 @@ import { map } from 'rxjs/operators';
 })
 export class ConfigService {
 
-  private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/api/hal/filter-application-logs';
+  //private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/api/hal/filter-application-logs';
+  private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/swagger/ui/index#!/HAL/HAL_FilterApplicationLogs';
 
   constructor(
     private http: HttpClient,
     private adapter: itemAdapter
-  ) { 
-    http.post('https://www1.novadev.appservices.thedoctors.com/HALWebAPI/swagger/ui/index#!/HAL/HAL_FilterApplicationLogs',
-    {
+  ) { }
+
+  list(): Observable<any[]> {
+    const url = `${this.baseUrl}/`;
+    return this.http.post(url, {
       "StartDate": "2019-08-13T17:50:32.364Z",
       "EndDate": "2019-08-14T17:50:32.364Z",
       "SystemCode": "",
@@ -27,17 +30,12 @@ export class ConfigService {
       "ProcessTextSearch": "",
       "TraceTextSearch": "",
       "EnvironmentTextSearch": ""
-    })
-  }
-
-  list(): Observable<Inform[]> {
-    const url = `${this.baseUrl}/`;
-    return this.http.get(url).pipe(
+    }).pipe(
       map((data: any[]) => data.map(item => this.adapter.adapt(item))),
-    ); //need to fix
+    );
   }
 
-  /* holding this for now
+  /*
   {
   "StartDate": "2019-08-13T17:50:32.364Z",
   "EndDate": "2019-08-14T17:50:32.364Z",
