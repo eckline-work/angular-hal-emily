@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class ConfigService {
 
-  private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/api/hal/filter-application-logs'; //need url of the data
+  private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/api/hal/filter-application-logs';
 
   constructor(
     private http: HttpClient,
@@ -19,13 +19,12 @@ export class ConfigService {
 
   list(): Observable<Inform[]> {
     const url = `${this.baseUrl}/`;
-    return this.http.get(url).pipe( //this will get the items once we know where they are
+    return this.http.get(url).pipe(
       map((data: any[]) => data.map(item => this.adapter.adapt(item))),
-    );
+    ); //need to fix
   }
 
-  /*
-  
+  /* holding this for now
   {
   "StartDate": "2019-08-13T17:50:32.364Z",
   "EndDate": "2019-08-14T17:50:32.364Z",
@@ -39,8 +38,6 @@ export class ConfigService {
   }
 
   https://www1.novadev.appservices.thedoctors.com/HALWebAPI/swagger/ui/index#!/HAL/HAL_FilterApplicationLogs
-
-
   */
 
 }
