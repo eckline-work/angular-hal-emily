@@ -18,7 +18,8 @@ import { ConfigService } from '../config/config.service';
 export class NgbdPagination implements OnInit {
 
   //constructor
-    items: Inform[] = MockData;
+    //items: Inform[] = MockData;
+    items: Inform[];
     toShow: Inform[] = this.items;
     collectionSize = this.toShow.length;
 
@@ -27,13 +28,14 @@ export class NgbdPagination implements OnInit {
       private calendar: NgbCalendar,
       private configService: ConfigService
     ) {
+      this.items = [];
       this.appendItems(0, this.sum);
     }
 
     ngOnInit() {
-      /*this.configService.list().subscribe((items: Inform[]) => {
+      this.configService.list().subscribe((items: Inform[]) => {
         this.items = items;
-      });*/
+      });
       for (let i = this.items.length; i > 0; i--){
         this.items[this.items.length-i].ID = i;
       }
