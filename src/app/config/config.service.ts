@@ -26,12 +26,11 @@ export class ConfigService {
     list(): Observable<Inform[]> {
     const url = `${this.baseUrl}/`;
     return this.http.post(url, {
-      "StartDate": this.today,
-      "EndDate": this.yesterday,
+      "StartDate": "2019-08-13T17:50:32.364Z",
+      "EndDate": "2019-08-15T17:50:32.364Z",
       "SystemCode": "",
       "ProcessedFlag": "",
       "RowType": "",
-      "MaxRows": 20,
       "ProcessTextSearch": "",
       "TraceTextSearch": "",
       "EnvironmentTextSearch": ""
