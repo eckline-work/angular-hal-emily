@@ -15,14 +15,19 @@ export class ConfigService {
 
   constructor(
     private http: HttpClient,
-    private adapter: itemAdapter
-  ) { }
+    private adapter: itemAdapter,
+    private today: Date,
+    private yesterday: Date
+  ) {
+    today = new Date();
+    yesterday = (function(d){ d.setDate(d.getDate()-1); return d})(new Date);
+  }
 
     list(): Observable<Inform[]> {
     const url = `${this.baseUrl}/`;
     return this.http.post(url, {
-      "StartDate": "2019-08-13T17:50:32.364Z",
-      "EndDate": "2019-08-15T17:50:32.364Z",
+      "StartDate": this.today,
+      "EndDate": this.yesterday,
       "SystemCode": "",
       "ProcessedFlag": "",
       "RowType": "",
