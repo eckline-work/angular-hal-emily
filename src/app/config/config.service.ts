@@ -10,8 +10,8 @@ import { map } from 'rxjs/operators';
 })
 export class ConfigService {
 
-  private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/api/hal/filter-application-logs';
-  //private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/swagger/ui/index#!/HAL/HAL_FilterApplicationLogs';
+  //private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/api/hal/filter-application-logs';
+  private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/swagger/ui/index#!/HAL/HAL_FilterApplicationLogs';
 
   constructor(
     private http: HttpClient,
@@ -20,7 +20,7 @@ export class ConfigService {
 
   list(): Observable<any[]> {
     const url = `${this.baseUrl}/`;
-    return this.http.post(url, { //if I could figure out where in the mess of code the display on swagger is, I would just copy/paste it here... Sigh
+    return this.http.get(url/*, {
       "APPLICATION_LOG_ID": new Number,
       "LOG_NUM": new Number,
       "LOG_SYSTEM_CODE": "",
@@ -37,7 +37,7 @@ export class ConfigService {
       "CREATED_DATE": new Date,
       "LAST_UPDATED_BY": "",
       "LAST_UPDATED_DATE": new Date
-    }).pipe(
+    }*/).pipe(
       map((data: any[]) => data.map(item => this.adapter.adapt(item)))
     ); //need to fix
   }

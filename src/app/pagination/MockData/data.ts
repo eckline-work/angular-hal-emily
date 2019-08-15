@@ -44,7 +44,7 @@ export class itemAdapter implements Adapter<Inform> {
       item.LOG_MESSAGE,
       item.PROCESS_NAME,
       item.TRACE_INFO + item.TRACE_INFO2,
-      item.ENVIRONMENT_INFO +item.ENVIRONMENT_INFO2,
+      item.ENVIRONMENT_INFO + item.ENVIRONMENT_INFO2,
       new Date(item.CREATED_DATE),
       new Date(item.PROCESS_DATE),
       item.APPLICATION_LOG_ID,
