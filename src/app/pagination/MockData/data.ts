@@ -56,23 +56,4 @@ export class itemAdapter implements Adapter<Inform> {
     );
   }
 
-  /*
-  
-  {
-  "StartDate": "2019-08-13T17:50:32.364Z",
-  "EndDate": "2019-08-14T17:50:32.364Z",
-  "SystemCode": "",
-  "ProcessedFlag": "",
-  "RowType": "",
-  "MaxRows": 0,
-  "ProcessTextSearch": "",
-  "TraceTextSearch": "",
-  "EnvironmentTextSearch": ""
-  }
-
-  https://www1.novadev.appservices.thedoctors.com/HALWebAPI/swagger/ui/index#!/HAL/HAL_FilterApplicationLogs
-
-
-  */
-
 }
