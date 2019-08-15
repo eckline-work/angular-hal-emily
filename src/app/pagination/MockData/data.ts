@@ -49,7 +49,7 @@ export class itemAdapter implements Adapter<Inform> {
       new Date(item.PROCESS_DATE),
       item.APPLICATION_LOG_ID,
       false,
-      new errorType(item.eT.code, item.eT.desc, item.eT.email, item.eT.pager),
+      new errorType("","","",""),
       item.CREATED_BY,
     );
   }
