@@ -18,7 +18,7 @@ export class ConfigService {
     private adapter: itemAdapter
   ) { }
 
-  list(): Observable<Inform[]> {
+  list(): Observable<any[]> {
     const url = `${this.baseUrl}/`;
     return this.http.post(url, { //if I could figure out where in the mess of code the display on swagger is, I would just copy/paste it here... Sigh
       "StartDate": "2019-08-13T17:50:32.364Z",
