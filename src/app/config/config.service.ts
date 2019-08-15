@@ -10,8 +10,8 @@ import { map } from 'rxjs/operators';
 })
 export class ConfigService {
 
-  //private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/api/hal/filter-application-logs';
-  private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/swagger/ui/index#!/HAL/HAL_FilterApplicationLogs';
+  private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/api/hal/filter-application-logs';
+  //private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/swagger/ui/index#!/HAL/HAL_FilterApplicationLogs';
 
   constructor(
     private http: HttpClient,
@@ -30,13 +30,13 @@ export class ConfigService {
       "TRACE_INFO2": "",
       "ENVIRONMENT_INFO": "",
       "ENVIRONMENT_INFO2": "",
-      "PROCESS_DATE": "",
+      "PROCESS_DATE": new Date,
       "LOG_NUMBER_DESC": "",
       "LOG_SYSTEM_DESC": "",
       "CREATED_BY": "",
-      "CREATED_DATE": "",
+      "CREATED_DATE": new Date,
       "LAST_UPDATED_BY": "",
-      "LAST_UPDATED_DATE": ""
+      "LAST_UPDATED_DATE": new Date
     }).pipe(
       map((data: any[]) => data.map(item => this.adapter.adapt(item)))
     ); //need to fix
