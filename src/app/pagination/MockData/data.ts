@@ -38,13 +38,15 @@ export class Inform {
 })
 export class itemAdapter implements Adapter<Inform> {
   adapt(item: any): Inform {
+    var trace = item.TRACE_INFO + item.TRACE_INFO2;
+    var env = item.ENVIRONMENT_INFO + item.ENVIRONMENT_INFO2;
     return new Inform(
       item.LOG_SYSTEM_CODE,
       item.LOG_NUM,
       item.LOG_MESSAGE,
       item.PROCESS_NAME,
-      item.TRACE_INFO + item.TRACE_INFO2,
-      item.ENVIRONMENT_INFO + item.ENVIRONMENT_INFO2,
+      trace,
+      env,
       new Date(item.CREATED_DATE),
       new Date(item.PROCESS_DATE),
       item.APPLICATION_LOG_ID,

@@ -25,6 +25,7 @@ export class ConfigService {
       "SystemCode": "",
       "ProcessedFlag": "",
       "RowType": "",
+      "MaxRows": 20,
       "ProcessTextSearch": "",
       "TraceTextSearch": "",
       "EnvironmentTextSearch": ""
