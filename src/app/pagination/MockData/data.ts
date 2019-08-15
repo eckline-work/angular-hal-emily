@@ -39,18 +39,18 @@ export class Inform {
 export class itemAdapter implements Adapter<Inform> {
   adapt(item: any): Inform {
     return new Inform(
-      item.SourceSystem,
-      item.LogNumber,
-      item.Message,
-      item.ProcessName,
-      item.TraceInfo,
-      item.EnvironmentInfo,
-      new Date(),
-      new Date(),
-      0,
-      item.err,
+      item.LOG_SYSTEM_CODE,
+      item.LOG_NUM,
+      item.LOG_MESSAGE,
+      item.PROCESS_NAME,
+      item.TRACE_INFO + item.TRACE_INFO2,
+      item.ENVIRONMENT_INFO +item.ENVIRONMENT_INFO2,
+      new Date(item.CREATED_DATE),
+      new Date(item.PROCESS_DATE),
+      item.APPLICATION_LOG_ID,
+      false,
       new errorType(item.eT.code, item.eT.desc, item.eT.email, item.eT.pager),
-      item.UserName,
+      item.CREATED_BY,
     );
   }
 
