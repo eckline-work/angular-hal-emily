@@ -18,9 +18,10 @@ export class ConfigService {
     private adapter: itemAdapter
   ) { }
 
-  list(): Observable<any[]> {
+  /*
+    list(): Observable<any[]> {
     const url = `${this.baseUrl}/`;
-    return this.http.get(url/*, {
+    return this.http.post(url, {
       "APPLICATION_LOG_ID": new Number,
       "LOG_NUM": new Number,
       "LOG_SYSTEM_CODE": "",
@@ -37,25 +38,33 @@ export class ConfigService {
       "CREATED_DATE": new Date,
       "LAST_UPDATED_BY": "",
       "LAST_UPDATED_DATE": new Date
-    }*/).pipe(
+    }).pipe(
       map((data: any[]) => data.map(item => this.adapter.adapt(item)))
     ); //need to fix
+  }*/
+
+
+  list(): Observable<any[]> {
+    const url = `${this.baseUrl}/`;
+    return this.http.get(url).pipe(
+      map((data: any[]) => data.map(item => item))
+    );
   }
+
 
   /*
-  {
-  "StartDate": "2019-08-13T17:50:32.364Z",
-  "EndDate": "2019-08-15T17:50:32.364Z",
-  "SystemCode": "",
-  "ProcessedFlag": "",
-  "RowType": "",
-  "MaxRows": 0,
-  "ProcessTextSearch": "",
-  "TraceTextSearch": "",
-  "EnvironmentTextSearch": ""
-  }
-
-  https://www1.novadev.appservices.thedoctors.com/HALWebAPI/swagger/ui/index#!/HAL/HAL_FilterApplicationLogs
+    {
+      "StartDate": "2019-08-13T17:50:32.364Z",
+      "EndDate": "2019-08-15T17:50:32.364Z",
+      "SystemCode": "",
+      "ProcessedFlag": "",
+      "RowType": "",
+      "MaxRows": 0,
+      "ProcessTextSearch": "",
+      "TraceTextSearch": "",
+      "EnvironmentTextSearch": ""
+    }
+    https://www1.novadev.appservices.thedoctors.com/HALWebAPI/swagger/ui/index#!/HAL/HAL_FilterApplicationLogs
   */
 
 }
