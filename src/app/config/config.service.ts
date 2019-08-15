@@ -47,7 +47,7 @@ export class ConfigService {
   list(): Observable<any[]> {
     const url = `${this.baseUrl}/`;
     return this.http.get(url).pipe(
-      map((data: any[]) => data.map(item => item))
+      map((data: any[]) => data.map(item => this.adapter.adapt(item)))
     );
   }
 
