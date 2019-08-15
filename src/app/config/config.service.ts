@@ -38,7 +38,7 @@ export class ConfigService {
   /*
   {
   "StartDate": "2019-08-13T17:50:32.364Z",
-  "EndDate": "2019-08-14T17:50:32.364Z",
+  "EndDate": "2019-08-15T17:50:32.364Z",
   "SystemCode": "",
   "ProcessedFlag": "",
   "RowType": "",
