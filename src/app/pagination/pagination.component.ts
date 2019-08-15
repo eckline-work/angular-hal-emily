@@ -36,9 +36,7 @@ export class NgbdPagination implements OnInit {
       this.configService.list().subscribe((items: Inform[]) => {
         this.items = items;
       });
-      for (let i = this.items.length; i > 0; i--){
-        this.items[this.items.length-i].ID = i;
-      }
+      this.toShow = this.items;
       this.viewing = [];
     }
   //
