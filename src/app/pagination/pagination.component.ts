@@ -38,7 +38,6 @@ export class NgbdPagination implements OnInit {
       private configService: ConfigService
     ) {
       this.items = [];
-      this.appendItems(0, this.sum);
     }
 
     ngOnInit() {
@@ -46,6 +45,7 @@ export class NgbdPagination implements OnInit {
         this.items = log;
       });
       this.toShow = this.items;
+      this.appendItems(0, this.sum);
       this.viewing = [];
     }
   //
@@ -136,14 +136,14 @@ export class NgbdPagination implements OnInit {
     }
 
     addItems(startIndex, endIndex, _method) {
-      //for (let i = startIndex; i < endIndex; ++i) {
-        //if (this.toShow[i]) {
-          //this.array[_method](this.toShow[i]);
-        //}
-        //else {
-          //break;
-        //}
-      //}
+      for (let i = startIndex; i < endIndex; ++i) {
+        if (this.toShow[i]) {
+          this.array[_method](this.toShow[i]);
+        }
+        else {
+          break;
+        }
+      }
     }
   
     appendItems(startIndex, endIndex) {

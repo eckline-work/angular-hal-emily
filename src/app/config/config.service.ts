@@ -15,13 +15,8 @@ export class ConfigService {
 
   constructor(
     private http: HttpClient,
-    private adapter: itemAdapter,
-    private today: Date,
-    private yesterday: Date
-  ) {
-    today = new Date();
-    yesterday = (function(d){ d.setDate(d.getDate()-1); return d})(new Date);
-  }
+    private adapter: itemAdapter
+  ) {}
 
     list(): Observable<Inform[]> {
     const url = `${this.baseUrl}/`;
