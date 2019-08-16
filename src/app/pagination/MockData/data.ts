@@ -13,8 +13,8 @@ export class Inform {
   StartDate: Date;
   EndDate: Date;
   ID: number;
-  err: boolean;
   UserName: string;
+  err: boolean;
   eT: errorType;
 
   constructor(
@@ -27,8 +27,8 @@ export class Inform {
     StartDate: Date,
     EndDate: Date,
     ID: number,
-    err: boolean,
     UserName: string,
+    err?: boolean,
     eT?: errorType,
   ) {}
 }
@@ -50,7 +50,6 @@ export class itemAdapter implements Adapter<Inform> {
       new Date(item.CREATED_DATE),
       new Date(item.PROCESS_DATE),
       item.APPLICATION_LOG_ID,
-      false,
       item.CREATED_BY,
     );
   }
