@@ -30,8 +30,8 @@ export class ConfigService {
       "ProcessTextSearch": "",
       "TraceTextSearch": "",
       "EnvironmentTextSearch": ""
-    }).pipe(
-      map((data: []) => data.map(item => this.adapter.adapt(item)))
+    }).pipe( //Here's where it's going wrong
+      map((data: []) => data.map(item => this.adapter.adapt(item))) //I'm not sure how to fix it
     );
   }
 
