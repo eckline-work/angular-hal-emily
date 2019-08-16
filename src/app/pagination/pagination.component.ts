@@ -18,19 +18,17 @@ import { ConfigService } from '../config/config.service';
 export class NgbdPagination implements OnInit {
 
   //constructor
-    //items: Inform[] = MockData;
     items: Inform[];
     toShow: Inform[] = this.items;
 
     get collectionSize(): number {
-        if (this.toShow != null){
-          return this.toShow.length
-        }
-        else{
-          return 0; 
-        }
+      if (this.toShow != null){
+        return this.toShow.length
+      }
+      else{
+        return 0;
+      }
     }
-    //collectionSize = this.toShow.length;
 
     constructor(
       private filter: itemFilterPipe,
