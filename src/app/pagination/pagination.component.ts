@@ -111,7 +111,12 @@ export class NgbdPagination implements OnInit {
 
       this.toShow = this.applyFilter( MI, PS, TS, ES, Sys, Inc, PI, TI, EI, testp1, testp2 )
 
-      this.collectionSize = this.toShow.length;
+      if (this.toShow != null){
+        this.collectionSize = this.toShow.length
+      }
+      else{
+        this.collectionSize = 0;
+      }
 
       this.array = [];
       this.sum = 20;
