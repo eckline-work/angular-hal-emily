@@ -111,16 +111,17 @@ export class NgbdPagination implements OnInit {
 
       this.toShow = this.applyFilter( MI, PS, TS, ES, Sys, Inc, PI, TI, EI, testp1, testp2 )
 
+      this.array = [];
+
       if (this.toShow != null){
         this.collectionSize = this.toShow.length
+        this.appendItems(0, this.sum);
       }
       else{
         this.collectionSize = 0;
       }
 
-      this.array = [];
-      this.sum = 20;
-      this.appendItems(0, this.sum);
+      
     
     }
   //
@@ -153,7 +154,15 @@ export class NgbdPagination implements OnInit {
     }
 
     applyFilter(MI: string, PS: string, TS: string, ES: string, Sys: string, Inc: string, PI: string, TI: string, EI: string, FD: string, TD: string):any {
-     return this.filter.transform(this.items, MI, PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD);
+      this.configService.list().subscribe((log: Inform[]) => {
+        this.items = log;
+      });
+      if (this.items != null) {
+        return this.filter.transform(this.items, MI, PS, TS, ES, Sys, Inc, PI, TI, EI, FD, TD);
+      }
+      else {
+        return null;
+      }
     }
   //
 
