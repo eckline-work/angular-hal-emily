@@ -31,7 +31,7 @@ export class ConfigService {
       "TraceTextSearch": "",
       "EnvironmentTextSearch": ""
     }).pipe(
-      map((data: any[]) => data.map(item => this.adapter.adapt(item)))
+      map((data: []) => data.map(item => this.adapter.adapt(item)))
     );
   }
 
