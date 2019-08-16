@@ -32,7 +32,7 @@ export class NgbdPagination implements OnInit {
     }
 
     ngOnInit() {
-      this.configService.list().subscribe((log: Inform[]) => {
+      this.configService.getConfig().subscribe((log: Inform[]) => {
         this.items = log;
       });
       this.toShow = this.items;

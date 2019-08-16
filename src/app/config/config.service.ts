@@ -14,13 +14,14 @@ export class ConfigService {
     private http: HttpClient,
     private adapter: itemAdapter
   ) {}
+  private url = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/api/hal/filter-application-logs/';
 
-    list(): Observable<Inform[]> {
+    list() {
       var dte = new Date();
       var dte2 = new Date();
       dte2.setDate(dte2.getDate() - 1);
 
-    return this.http.post('https://www1.novadev.appservices.thedoctors.com/HALWebAPI/api/hal/filter-application-logs/', {
+    return this.http.post(this.url, {
       "StartDate": dte2.toString(),
       "EndDate": dte.toString(),
       "SystemCode": "",
@@ -34,5 +35,13 @@ export class ConfigService {
       map((data: []) => data.map(item => this.adapter.adapt(item))) //I'm not sure how to fix it
     );
   }
+
+  //It seems like post ADDS data to the server, whereas get retrives data from the server.
+  getConfig() {
+    return this.http.get(this.url).pipe(
+      map((data: []) => data.map(item => this.adapter.adapt(item)))
+    );;
+  }
+
 
 }
