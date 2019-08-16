@@ -10,18 +10,19 @@ import { map } from 'rxjs/operators';
 })
 export class ConfigService {
 
-  private baseUrl = 'https://www1.novadev.appservices.thedoctors.com/HALWebAPI/api/hal/filter-application-logs';
-
   constructor(
     private http: HttpClient,
     private adapter: itemAdapter
   ) {}
 
     list(): Observable<Inform[]> {
-    const url = `${this.baseUrl}/`;
-    return this.http.post(url, {
-      "StartDate": "2019-08-13T17:50:32.364Z",
-      "EndDate": "2019-08-15T17:50:32.364Z",
+      var dte = new Date();
+      var dte2 = new Date();
+      dte2.setDate(dte2.getDate() - 1);
+
+    return this.http.post('https://www1.novadev.appservices.thedoctors.com/HALWebAPI/api/hal/filter-application-logs/', {
+      "StartDate": dte2.toString(),
+      "EndDate": dte.toString(),
       "SystemCode": "",
       "ProcessedFlag": "",
       "RowType": "",
