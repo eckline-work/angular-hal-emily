@@ -37,11 +37,5 @@ export class ConfigService {
   }
 
   //It seems like post ADDS data to the server, whereas get retrives data from the server.
-  getConfig() {
-    return this.http.get(this.url).pipe(
-      map((data: []) => data.map(item => this.adapter.adapt(item)))
-    );;
-  }
-
 
 }
