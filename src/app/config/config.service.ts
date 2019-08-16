@@ -36,6 +36,6 @@ export class ConfigService {
     );
   }
 
-  //It seems like post ADDS data to the server, whereas get retrives data from the server.
+  //It seems like post adds data TO the server, whereas get retrives data FROM the server.
 
 }
