@@ -14,8 +14,8 @@ export class Inform {
   EndDate: Date;
   ID: number;
   err: boolean;
-  eT: errorType;
   UserName: string;
+  eT: errorType;
 
   constructor(
     SourceSystem: string,
@@ -28,8 +28,8 @@ export class Inform {
     EndDate: Date,
     ID: number,
     err: boolean,
-    eT: errorType,
     UserName: string,
+    eT?: errorType,
   ) {}
 }
 
@@ -51,7 +51,6 @@ export class itemAdapter implements Adapter<Inform> {
       new Date(item.PROCESS_DATE),
       item.APPLICATION_LOG_ID,
       false,
-      new errorType("","","",""),
       item.CREATED_BY,
     );
   }
