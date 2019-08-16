@@ -21,14 +21,7 @@ export class NgbdPagination implements OnInit {
     items: Inform[];
     toShow: Inform[] = this.items;
 
-    get collectionSize(): number {
-      if (this.toShow != null){
-        return this.toShow.length
-      }
-      else{
-        return 0;
-      }
-    }
+    collectionSize: number;
 
     constructor(
       private filter: itemFilterPipe,
@@ -43,6 +36,12 @@ export class NgbdPagination implements OnInit {
         this.items = log;
       });
       this.toShow = this.items;
+      if (this.toShow != null){
+        this.collectionSize = this.toShow.length
+      }
+      else{
+        this.collectionSize = 0;
+      }
       this.appendItems(0, this.sum);
       this.viewing = [];
     }
